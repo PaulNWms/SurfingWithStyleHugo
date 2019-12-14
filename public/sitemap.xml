@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://surfingwithstyle.com/junk/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://surfingwithstyle.com/categories/</loc>
   </url>
   
