@@ -1,0 +1,86 @@
+baseURL: 'http://surfingwithstyle.com/'
+languageCode: en-us
+title: Surfing With Style
+theme: bootie-docs
+params:
+  description: The place to be.
+  withSitePosts: true
+  #searchDomain: your-domain.org
+  repositoryUrl: 'http://your-repository-url'
+  highlightStyle: github
+  noCategoryLink: true
+menu:
+  main:
+  - name: Tools
+    url: /about/
+    weight: 100
+  - name: Timer
+    parent: Tools
+    weight: 100
+  - name: What's My IP?
+    parent: Tools
+    weight: 200
+  - name: Calculator
+    parent: Tools
+    weight: 300
+  - name: Old English Letters
+    parent: Tools
+    weight: 400
+    
+  - name: Practice
+    url: /usage/
+    weight: 200
+  - name: Metronome
+    parent: Practice
+    weight: 100
+  - name: Scheduled Metronome
+    parent: Practice
+    weight: 200
+  - name: Accelerating Metronome
+    parent: Practice
+    weight: 300
+  - name: Presets
+    parent: Practice
+    weight: 400
+
+  - name: Notes
+    url: /index/
+    weight: 300
+  - name: MS
+    parent: Notes
+    weight: 100
+  - name: Python
+    parent: Notes
+    weight: 200
+  - name: Web
+    parent: Notes
+    weight: 300
+  - name: Design Patterns
+    parent: Notes
+    weight: 400
+  - name: Git
+    parent: Notes
+    weight: 500
+  - name: SOLID
+    parent: Notes
+    weight: 600
+  - name: SQL
+    parent: Notes
+    weight: 700
+  - name: Other
+    parent: Notes
+    weight: 800
+  - name: Food
+    parent: Other
+    weight: 100
+  
+
+  - name: Links
+    url: /index/
+    weight: 400
+  - name: Tools2
+    parent: Links
+    weight: 100
+  - name: Books
+    parent: Links
+    weight: 200

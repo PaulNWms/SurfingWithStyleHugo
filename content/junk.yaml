@@ -1,0 +1,47 @@
+## Direct Emojis
+Smile please :smile:
+
+I :heart: Hugo
+
+Wink :wink:
+
+
+## Fractions
+
+1/2
+
+100/999
+
+Not a Number/5
+
+A link to [Fractions](#fractions)
+
+
+## Definition Lists
+
+Alex
+: Hippy Web Developer
+: Technophile
+
+Bob
+: Classic SysAdmin
+: Conservative
+
+Gabby
+: Cool Content Master
+: Cautious
+
+# Multi-line string with newline characters can be declared with a |(pipe) character
+key1: |
+   This is a multi line string
+   where enter keys are valid
+
+   This is another para. The string ends with two
+   empty lines.
+
+
+key2: >
+    This is a multi line string where new lines
+    will be merged back in.
+
+    Again we need two blank lines to close it.
