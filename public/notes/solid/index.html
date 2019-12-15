@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Surfing With Style">
     <link rel="icon" href="http://surfingwithstyle.com//favicon.ico">
-    <title>Categories - Surfing With Style</title>
+    <title>SOLID and DRY Principles - Surfing With Style</title>
     
     <link rel="stylesheet" href="http://surfingwithstyle.com//css/highlight/github.css">
     <link rel="stylesheet" href="http://surfingwithstyle.com//css/bootstrap.min.css">
@@ -149,19 +149,105 @@
 <div class="row">
 	<div class="col-sm-8 doc-main">
 		<main role="main">
-			<div class="doc-list-header">
-				<h3>Pages in Categories</h3>
-			</div>
-			<div class="doc-list-entry">
-			<ul>
-	
-			</ul>
-			</div>
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">SOLID and DRY Principles</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2019-12-15">December 15, 2019</time></span>
+				</div>
+				<section>
+					<p>Links:</p>
+<p><a href="https://deviq.com/solid/">DevIQ SOLID Principles of Object Oriented Design</a></p>
+<p><a href="http://www.getatomiq.com/">Atomiq - Code Similarity Finder</a></p>
+<pre><code>Single Responsibility Principle
+- Every object should have a single responsibility, and that responsibility should be entirely
+  encapsulated by the class. 
+- There should never be more than one reason for a class to change.
+
+Open / Closed Principle
+- Software entities (classes, modules, functions, etc.) should be open for extension, but
+  closed for modification.
+- Achieved with interfaces, abstract base classes and parameters
+- Dont apply OCP at first
+- If the module changes once, accept it.
+- If it changes a second time, refactor to achieve OCP
+- OCP adds complexity to design
+- No design can be closed against all changes
+
+Liskov Substitution Principle
+- Subtypes must be substitutable for their base types.
+- Client code expects child classes to work in place of their base classes
+- LSP violation smells
+  - conditional based on object type (especially inside a loop)
+  - partially implemented interfaces/base classes
+
+Interface Segregation Principle
+- Clients should not be forced to depend on methods they do not use.
+- Keep interfaces lean and focused.
+- Refactor large interfaces so they inherit smaller interfaces.
+
+Dependency Inversion Principle
+- High-level modules should not depend on low-level modules.  Both should depend on
+  abstractions. 
+- Abstractions should not depend on details.  Details should depend on abstractions
+- Common dependencies
+  - Framework
+  - Third Party Libraries
+  - Database
+  - File System
+  - Email
+  - Web Services
+  - System Resources (Clock)
+  - Configuration
+  - The new Keyword
+  - Static methods
+  - Thread.Sleep
+  - Random 
+- The Hollywood Principle - &quot;Dont call us; well call you&quot;
+- Three Primary Techniques
+  - Constructor Injection (Strategy pattern)
+  - Property Injection
+  - Parameter Injection
+- Design smells
+  - new keyword
+  - static methods &amp; properties (DateTime.Now)
+  - No way to change implementation details without recompile (OCP violation)
+
+Don't Repeat Yourself
+- Magic strings &amp; values
+- Duplicate logic
+- Repeated if-then logic
+- Conditional instead of polymorphism
+- Static Methods 
+  - Tightly coupled 
+  - Difficult to test 
+  - Difficult to change behavior (violates OCP) 
+  - Cannot use object oriented design techniques (inheritance, polymorphism)
+- Related patterns:
+  - Template Method Pattern
+  - Command Pattern
+  - Dependency Inversion Principle
+- Repetition in Process 
+  - Performing { testing, builds, deployments } by hand is tedious and wasteful
+</code></pre>
+				</section>
+			</article>
 		</main>
 	</div> 
 
 	
+
 <div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div id="sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4 class="sidebar-heading">Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">SOLID and DRY Principles</a></strong></li>
+			</ul>
+			<nav id="TableOfContents"></nav>
+		</div>
+	</div>
 	<div class="sidebar-module">
 		<h4 class="sidebar-heading">Pages in Categories</h4>
 		<ul class="sidebar-category-list">
@@ -173,6 +259,7 @@
 		<div class="tag-box">
 		
 		</div>
+	</div>
 	</div>
 </div>
 

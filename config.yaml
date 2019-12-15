@@ -63,9 +63,11 @@ menu:
     weight: 500
   - name: SOLID
     parent: Notes
+    url: /Notes/SOLID/
     weight: 600
   - name: SQL
     parent: Notes
+    url: /Notes/SQL/
     weight: 700
   - name: Other
     parent: Notes

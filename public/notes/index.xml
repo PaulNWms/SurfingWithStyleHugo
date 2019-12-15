@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Surfing With Style</title>
-    <link>http://surfingwithstyle.com/</link>
-    <description>Recent content on Surfing With Style</description>
+    <title>Notes on Surfing With Style</title>
+    <link>http://surfingwithstyle.com/notes/</link>
+    <description>Recent content in Notes on Surfing With Style</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Dec 2019 05:37:00 -0800</lastBuildDate>
     
-	<atom:link href="http://surfingwithstyle.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surfingwithstyle.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,15 +30,6 @@
 DevIQ SOLID Principles of Object Oriented Design
 Atomiq - Code Similarity Finder
 Single Responsibility Principle - Every object should have a single responsibility, and that responsibility should be entirely encapsulated by the class. - There should never be more than one reason for a class to change. Open / Closed Principle - Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification. - Achieved with interfaces, abstract base classes and parameters - Dont apply OCP at first - If the module changes once, accept it.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://surfingwithstyle.com/junk/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://surfingwithstyle.com/junk/</guid>
-      <description></description>
     </item>
     
   </channel>
