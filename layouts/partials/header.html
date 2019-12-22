@@ -1,77 +1,97 @@
 ﻿<!DOCTYPE html>
 {{ $baseUrl := .Site.BaseURL }}
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
     <link rel="icon" href="{{ $baseUrl }}/favicon.ico">
     <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
-    <!--<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">-->
-    <link rel="stylesheet" href="{{ $baseUrl }}/css/highlight/{{ with .Site.Params.highlightStyle }}{{ . }}{{ else }}default{{ end }}.css">
-    <link rel="stylesheet" href="{{ $baseUrl }}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ $baseUrl }}/css/bootstrap-theme.min.css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+        href="{{ $baseUrl }}/css/highlight/{{ with .Site.Params.highlightStyle }}{{ . }}{{ else }}default{{ end }}.css">
+    <!-- <link rel="stylesheet" href="{{ $baseUrl }}/css/bootstrap.min.css"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ $baseUrl }}/css/theme.css">
     <link rel="stylesheet" href="{{ $baseUrl }}/css/bootie-docs.css">
     <link rel="stylesheet" href="{{ $baseUrl }}/css/site.css">
+    <link rel="stylesheet" href="{{ $baseUrl }}/css/math.css">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+        </script>
 </head>
 
 <body role="document">
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ $baseUrl }}/">{{ .Site.Title }}</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    {{ $url := .URL }}
-                    {{ with .Site.Menus.main }}
-                    {{ range $menu := . }}
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{.Name}}<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            {{ range .Children }}
-                            {{ if .HasChildren }}
-                            <li><a href="{{ .URL }}">{{ .Name }} ...</a></li>
-                            {{ else }}
-                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                            {{ end }}
-                            {{ end }}
-                        </ul>
-                    </li>
-                    {{ end }}
-                    {{ end }}
-                    {{ if not .Site.Params.noCategoryLink }}
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                            <li><a href="{{ $baseUrl }}/categories/{{ $name | urlize }}">{{ title $name }}</a></li>
-                            {{ end }}
-                        </ul>
-                    </li>
-                    {{ end }}
-                </ul>
-                {{ with .Site.Params.searchDomain }}
-                <form class="navbar-form navbar-left" role="search" action="https://www.google.co.jp/search" method="get">
-                    <div class="input-group doc-search-form">
-                        <input type="hidden" name="as_sitesearch" value="{{ . }}">
-                        <input type="text" name="as_q" class="search-query doc-search-input-text" placeholder="Search Site">
-                        <span class="input-group-addon input-group-btn doc-search-input-btn">
-                            <button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                        </span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ $baseUrl }}/">{{ .Site.Title }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                {{ $url := .URL }}
+                {{ with .Site.Menus.main }}
+                {{ range $menu := . }}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{.Name}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {{ range .Children }}
+                        {{ if .HasChildren }}
+                        <a class="dropdown-item" href="{{ .URL }}">{{ .Name }} ...</a>
+                        {{ else }}
+                        <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+                        {{ end }}
+                        {{ end }}
                     </div>
-                </form>
+                </li>
                 {{ end }}
-            </div><!--/.nav-collapse -->
+                {{ end }}
+
+                {{ if not .Site.Params.noCategoryLink }}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-expanded="false">Categories<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                        <li><a href="{{ $baseUrl }}/categories/{{ $name | urlize }}">{{ title $name }}</a></li>
+                        {{ end }}
+                    </ul>
+                </li>
+                {{ end }}
+
+
+                {{ if not .Site.Params.noCategoryLink }}
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                        <a class="dropdown-item"
+                            href="{{ $baseUrl }}/categories/{{ $name | urlize }}">{{ title $name }}</a>
+                        {{ end }}
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+            {{ with .Site.Params.searchDomain }}
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            {{ end }}
         </div>
     </nav>
 

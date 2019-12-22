@@ -1,0 +1,279 @@
+﻿Encapsulate a family of related algorithms
+Strategy Pattern
+
+Use the Strategy Pattern when
+adding a new calculation will cause a class file to be modified
+
+Consequences of the Strategy Pattern
+Strategies may not use members of the containing class
+Tests may now be written for individual concrete strategies
+Strategies may be mocked when testing the Context class
+Adding a new Strategy does not modify the Context class
+
+Encapsulate and enforce a workflow or process that is not variable
+Template Method Pattern
+
+Use the Template Method Pattern when
+two or more classes follow the same common algorithm or workflow
+and the workflow is invariant.
+
+Methods declared in the abstract class that have no implementation
+Hooks
+
+Provide a simple, purpose-built interface to a larger, more complex body of code or interfaces
+Façade Pattern
+
+Rid program logic of null checks where possible
+Null Object Pattern
+
+Make the class itself responsible for keeping track of its sole instance
+Singleton Pattern
+
+Use the Singleton Pattern when
+there must be one and only one instance of a class
+
+MVVM: The ViewModel must implement
+INotifyPropertyChanged
+
+MVVM: INotifyPropertyChanged has these members:
+event PropertyChangedEventHandler PropertyChanged
+
+MVVM: The Model implements these to push changes to the View
+INotifyPropertyChanged
+IDataErrorInfo
+
+Use a factory when
+Unsure which concrete implementation of an interface I want to return
+Creation should be separated from representation of an object
+
+Encapsulates object creation
+Simple Factory
+
+A base class or interface defines the creation method
+Factory Method
+
+Concrete factory classes may return various objects from a “family” of objects
+Abstract Factory
+
+Factories in .NET commonly make use of
+reflection
+
+Represents an action as an object
+Command Pattern
+
+A Command Pattern object implements this interface
+interface ICommand { void Execute(); }
+
+If a Command Pattern object needs state passed to it, use
+a factory, or
+constructor parameters
+
+Consider the Command Pattern when
+the client should be decoupled from the command logic and its dependencies
+building a command-line application
+implementing validation
+implementing undo
+
+Provides a way to access collection members without knowing about its internal structure
+Iterator Pattern
+
+IEnumerable
+interface IEnumerable { IEnumerator GetEnumerator(); }
+
+Treats individual objects and compositions of objects uniformly
+Composite Pattern
+
+When to use the Composite Pattern
+Groups or collections
+Can you add an interface?
+Trees
+Distribution
+
+You want to use an existing class, but its interface does not match the one you require
+(Object) Adapter Pattern
+
+Creates an instance of several families of classes 
+Abstract Factory
+
+classification of the Abstract Factory pattern
+Creational
+
+Match interfaces of different classes 
+Adapter
+
+classification of the Adapter pattern
+Structural
+
+Separates an object’s interface from its implementation 
+Bridge
+
+classification of the Bridge pattern
+Structural
+
+Separates object construction from its representation 
+Builder
+
+classification of the Builder pattern
+Creational
+
+A way of passing a request between a chain of objects 
+Chain of responsibility
+
+classification of the Chain of responsibility pattern
+Behavioral
+
+Encapsulate a command request as an object 
+Command
+
+classification of the Command pattern
+Behavioral
+
+A tree structure of simple and composite objects 
+Composite
+
+classification of the Composite pattern
+Structural
+
+Add responsibilities to objects dynamically 
+Decorator
+
+classification of the Decorator pattern
+Structural
+
+A single class that represents an entire subsystem 
+Façade
+
+classification of the Façade pattern
+Structural
+
+Creates an instance of several derived classes 
+Factory Method
+
+classification of the Factory Method pattern
+Creational
+
+A fine-grained instance used for efficient sharing 
+Flyweight
+
+classification of the Flyweight pattern
+Structural
+
+A way to include language elements in a program 
+Interpreter
+
+classification of the Interpreter pattern
+Behavioral
+
+Sequentially access the elements of a collection 
+Iterator
+
+classification of the Iterator pattern
+Behavioral
+
+classification of the Lazy Instantiation pattern
+Creational
+
+Defines simplified communication between classes 
+Mediator
+
+classification of the Mediator pattern
+Behavioral
+
+Capture and restore an object's internal state 
+Memento
+
+classification of the Memento pattern
+Behavioral
+
+Avoid expensive acquisition and release of resources by recycling objects that are no longer in use 
+Object Pool
+
+classification of the Object Pool pattern
+Creational
+
+Restricts accessor/mutator access 
+Private Class Data
+
+classification of the Private Class Data pattern
+Structural
+
+Designed to act as a default value of an object 
+Null Object
+
+classification of the Null Object pattern
+Behavioral
+
+A way of notifying change to a number of classes 
+Observer
+
+classification of the Observer pattern
+Behavioral
+
+A fully initialized instance to be copied or cloned 
+Prototype
+
+classification of the Prototype pattern
+Creational
+
+An object representing another object 
+Proxy
+
+classification of the Proxy pattern
+Structural
+
+A class of which only a single instance can exist 
+Singleton
+
+classification of the Singleton pattern
+Creational
+
+State
+Alter an object's behavior when its state changes 
+
+classification of the State pattern
+Behavioral
+
+Encapsulates an algorithm inside a class 
+Strategy
+
+classification of the Strategy pattern
+Behavioral
+
+Defer the exact steps of an algorithm to a subclass 
+Template method
+
+Base class defines the (sealed) template method, subclasses override steps
+Template Method pattern
+
+Pattern in which clients depend on base class
+Template Method
+
+When 2 or more classes follow the same workflow, use the ____ pattern.
+Template Method
+
+When the workflow is invariant, use the ____ pattern.
+Template Method
+
+When some workflow steps may be encapsulated in the base class, use the ____ pattern.
+Template Method
+
+Everyday usage of the Template Method pattern
+ASP.NET
+
+classification of the Template Method pattern
+Behavioral
+
+classification of the Utility pattern
+Creational
+
+Defines a new operation to a class without change 
+Visitor
+
+classification of the Visitor pattern
+Behavioral
+
+When looping over a collection of unrelated objects and performing an operation on each, use the ____ pattern.
+Visitor
+
+The ____ puts all the logic for all of the classes in a single class
+Visitor

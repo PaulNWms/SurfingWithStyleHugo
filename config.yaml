@@ -27,6 +27,14 @@ menu:
     parent: Tools
     weight: 400
     
+  - name: Study
+    url: /usage/
+    weight: 150
+  - name: Flashcards
+    parent: Study
+    url: /Study/Flashcards/
+    weight: 100
+
   - name: Practice
     url: /usage/
     weight: 200
@@ -46,20 +54,25 @@ menu:
   - name: Notes
     url: /index/
     weight: 300
+  - name: Data Science
+    parent: Notes
+    url: /Notes/Data-Science/
+    weight: 100
   - name: MS
     parent: Notes
-    weight: 100
+    url: /Notes/MS/
+    weight: 150
   - name: Python
     parent: Notes
+    url: /Notes/Python/
     weight: 200
-  - name: Web
-    parent: Notes
-    weight: 300
   - name: Design Patterns
     parent: Notes
+    url: /Notes/DesignPatterns/
     weight: 400
   - name: Git
     parent: Notes
+    url: /Notes/Git/
     weight: 500
   - name: SOLID
     parent: Notes

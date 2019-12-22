@@ -8,7 +8,8 @@ Links:
 [DevIQ SOLID Principles of Object Oriented Design](https://deviq.com/solid/)
 
 [Atomiq - Code Similarity Finder](http://www.getatomiq.com/)
-```
+
+```lang-none
 Single Responsibility Principle
 - Every object should have a single responsibility, and that responsibility should be entirely
   encapsulated by the class. 

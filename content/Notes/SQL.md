@@ -3,7 +3,7 @@ title: "SQL"
 date: 2019-12-15T05:37:00-08:00
 ---
 
-```
+```lang-none
 Query steps:
 1. FROM: Cartesian product (cross join)
 2. ON: apply the ON filter (inner join)

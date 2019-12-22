@@ -1,0 +1,345 @@
+---
+title: "Flashcards"
+date: 2019-12-26
+---
+
+<nav class="navbar navbar-default">
+    <div class="col-sm-offset-2 col-sm-8">
+        <div class="col-xs-6">
+            <span class="navbar-brand">Total: <span id="total">0</span></span>
+        </div>
+        <div class="col-xs-6">
+            <span class="navbar-brand">Remaining: <span id="remaining">0</span></span>
+        </div>
+    </div>
+</nav>
+
+<div id="selectDeckDiv" style="display:block">
+    <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
+        <select id="select-deck" class="form-control" placeholder="Select Deck" aria-label="Select Deck"></select>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="selectDeck()">Select</button>
+        </div>
+    </div>
+</div>
+
+<div id="fromToDiv" style="display:none">
+    <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
+        <input type="number" id="from" class="form-control" placeholder="From" aria-label="From">
+        <div class="input-group-append">
+            <input type="number" id="to" class="form-control" placeholder="To" aria-label="To">
+        </div>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="selectRange()">Select</button>
+        </div>
+    </div>
+</div>
+
+<div id="countDiv" style="display:none">
+    <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
+        <input type="number" id="count" class="form-control" placeholder="Count" aria-label="Count">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="start()">Start</button>
+        </div>
+    </div>
+</div>
+
+<div id="mainDiv" style="display:none">
+    <div class="row col-sm-offset-1 col-sm-10 card">
+        <div id="question" class="col-xs-12 card-body" style="background:yellow;">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+
+    <div class="row col-sm-offset-1 col-sm-10">
+        <div id="answer" class="col-xs-12 card-body" style="background:lightblue;">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+
+    <div class="row col-sm-offset-3 col-sm-6">
+        <button type="button" class="col-xs-12 btn btn-primary btn-lg btn-block" id="flip" onclick="flipCard()">Flip</button>
+    </div>
+    <div class="row col-sm-offset-3 col-sm-6">
+        <div class="btn-group" role="group" aria-label="Right/Wrong">
+            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="right" onclick="setRight()" disabled>Right</button>
+            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="wrong" onclick="setWrong()" disabled>Wrong</button>
+        </div>
+    </div>
+</div>
+
+<!-- add script tags here -->
+<script>
+var Binding = /** @class */ (function () {
+    function Binding(b) {
+        var _this = this;
+        this.elementBindings = [];
+        this.value = b.object[b.property];
+        this.valueGetter = function () {
+            return _this.value;
+        };
+        this.valueSetter = function (val) {
+            _this.value = val;
+            for (var i = 0; i < _this.elementBindings.length; i++) {
+                var binding = _this.elementBindings[i];
+                binding.element[binding.attribute] = val;
+            }
+        };
+        // For 1-way binding, omit 'event'
+        this.addBinding = function (element, attribute, event) {
+            var binding = {
+                element: element,
+                attribute: attribute,
+                event: null
+            };
+            if (event) {
+                element.addEventListener(event, function (event) {
+                    _this.valueSetter(element[attribute]);
+                });
+                binding.event = event;
+            }
+            this.elementBindings.push(binding);
+            element[attribute] = _this.value;
+            return _this;
+        };
+        Object.defineProperty(b.object, b.property, {
+            get: this.valueGetter,
+            set: this.valueSetter
+        });
+        b.object[b.property] = this.value;
+    }
+    return Binding;
+}());
+var Card = /** @class */ (function () {
+    function Card() {
+        this.front = '';
+        this.back = [];
+    }
+    return Card;
+}());
+function loadFile(file) {
+    var rawFile = new XMLHttpRequest();
+    var text = 'Failed to get file contents.';
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                text = rawFile.responseText;
+            }
+        }
+    };
+    rawFile.send(null);
+    var lines = text.split("\n");
+    var trimmed = lines.map(function (line) { return line.trim(); });
+    return trimmed;
+}
+function range(start, stop) {
+    var array = [];
+    var length = stop - start;
+    for (var i = 0; i <= length; i++) {
+        array[i] = start;
+        start++;
+    }
+    return array;
+}
+function lineConcat(lines) {
+    var result = "";
+    for (var _i = 0, lines_1 = lines; _i < lines_1.length; _i++) {
+        var line = lines_1[_i];
+        if (result.length > 0) {
+            result = result.concat("\n");
+        }
+        result = result.concat(line);
+    }
+    return result;
+}
+function showQuestion(card, reverse) {
+    if (reverse) {
+        ui.question = lineConcat(card.back);
+    }
+    else {
+        if (card.back.length > 1) {
+            ui.question = card.front + " (" + card.back.length + ")";
+        }
+        else {
+            ui.question = card.front;
+        }
+    }
+    ui.answer = "\n";
+}
+function showAnswer(card, reverse) {
+    if (reverse) {
+        if (card.back.length > 1) {
+            ui.answer = card.front + " (" + card.back.length + ")";
+        }
+        else {
+            ui.answer = card.front;
+        }
+    }
+    else {
+        ui.answer = lineConcat(card.back);
+    }
+}
+function getCards(lines) {
+    var cards = [];
+    var card = new Card();
+    for (var _i = 0, lines_2 = lines; _i < lines_2.length; _i++) {
+        var line = lines_2[_i];
+        if (line.trim().length === 0) {
+            cards.push(card);
+            card = new Card();
+            continue;
+        }
+        else {
+            if (!card.front) {
+                card.front = line;
+            }
+            else {
+                card.back.push(line);
+            }
+        }
+    }
+    if (card.front) {
+        cards.push(card);
+    }
+    return cards;
+}
+function shuffleCards(cards) {
+    var _a;
+    var array = cards.slice();
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        _a = [array[j], array[i]], array[i] = _a[0], array[j] = _a[1];
+    }
+    return array;
+}
+var dirUrl = window.location.protocol + "//" + window.location.host + "/flashcards/";
+var ui = {
+    total: 0,
+    remaining: 0,
+    question: "",
+    answer: "",
+    from: 0,
+    to: 0,
+    count: 0
+};
+var selectDeckDiv = document.getElementById("selectDeckDiv");
+var fromToDiv = document.getElementById("fromToDiv");
+var countDiv = document.getElementById("countDiv");
+var mainDiv = document.getElementById("mainDiv");
+var totalElement = document.getElementById("total");
+new Binding({ object: ui, property: "total" }).addBinding(totalElement, "innerText");
+var remainingElement = document.getElementById("remaining");
+new Binding({ object: ui, property: "remaining" }).addBinding(remainingElement, "innerText");
+var deckElement = document.getElementById("select-deck");
+var fromElement = document.getElementById("from");
+new Binding({ object: ui, property: "from" }).addBinding(fromElement, "value", "change");
+var toElement = document.getElementById("to");
+new Binding({ object: ui, property: "to" }).addBinding(toElement, "value", "change");
+var countElement = document.getElementById("count");
+new Binding({ object: ui, property: "count" }).addBinding(countElement, "value", "change");
+var questionElement = document.getElementById("question");
+new Binding({ object: ui, property: "question" }).addBinding(questionElement, "innerText");
+var answerElement = document.getElementById("answer");
+new Binding({ object: ui, property: "answer" }).addBinding(answerElement, "innerText");
+var flipElement = document.getElementById("flip");
+var rightElement = document.getElementById("right");
+var wrongElement = document.getElementById("wrong");
+var lines = [];
+var fullDeck = [];
+var partialDeck = [];
+var cards = [];
+var current;
+var selected = 0;
+var correct = 0;
+var wrongPile = [];
+function populateDecks() {
+    var subjects = loadFile(dirUrl + "subjects.txt");
+    for (var _i = 0, subjects_1 = subjects; _i < subjects_1.length; _i++) {
+        var subject = subjects_1[_i];
+        deckElement[deckElement.length] = new Option(subject, subject);
+    }
+}
+function updateStats() {
+    selected = 0;
+    correct = 0;
+    ui.total = ui.count;
+    ui.remaining = cards.length + wrongPile.length;
+}
+function selectDeck() {
+    var selectedDeck = deckElement.options[deckElement.selectedIndex].value;
+    var fileUrl = dirUrl + selectedDeck + ".txt";
+    lines = loadFile(fileUrl);
+    fullDeck = getCards(lines);
+    selectDeckDiv.style.display = "block";
+    fromToDiv.style.display = "block";
+    countDiv.style.display = "none";
+    mainDiv.style.display = "none";
+    ui.total = ui.remaining = ui.to = ui.count = selected = fullDeck.length;
+    ui.from = 1;
+}
+function selectRange() {
+    partialDeck = fullDeck.slice(ui.from - 1, ui.to);
+    selectDeckDiv.style.display = "block";
+    fromToDiv.style.display = "block";
+    countDiv.style.display = "block";
+    mainDiv.style.display = "none";
+    ui.total = ui.remaining = ui.count = selected = partialDeck.length;
+}
+function start() {
+    cards = shuffleCards(partialDeck);
+    cards = cards.slice(0, ui.count);
+    selectDeckDiv.style.display = "none";
+    fromToDiv.style.display = "none";
+    countDiv.style.display = "none";
+    mainDiv.style.display = "block";
+    drawCard();
+}
+function drawCard() {
+    if (cards.length) {
+        current = cards.pop();
+    }
+    else if (wrongPile.length) {
+        alert("" + ui.remaining + " cards remaining.");
+        cards = wrongPile;
+        wrongPile = [];
+        current = cards.pop();
+    }
+    else {
+        alert("Congratulations!");
+        selectDeckDiv.style.display = "block";
+        fromToDiv.style.display = "none";
+        countDiv.style.display = "none";
+        mainDiv.style.display = "none";
+    }
+    showQuestion(current, false);
+}
+function flipCard() {
+    flipElement.setAttribute("disabled", "true");
+    rightElement.removeAttribute("disabled");
+    wrongElement.removeAttribute("disabled");
+    showAnswer(current, false);
+}
+function setRight() {
+    flipElement.removeAttribute("disabled");
+    rightElement.setAttribute("disabled", "true");
+    wrongElement.setAttribute("disabled", "true");
+    updateStats();
+    drawCard();
+}
+function setWrong() {
+    flipElement.removeAttribute("disabled");
+    rightElement.setAttribute("disabled", "true");
+    wrongElement.setAttribute("disabled", "true");
+    wrongPile.push(current);
+    updateStats();
+    drawCard();
+}
+(function () {
+    populateDecks();
+    selectDeckDiv.style.display = "block";
+    fromToDiv.style.display = "none";
+    countDiv.style.display = "none";
+    mainDiv.style.display = "none";
+})();
+</script>

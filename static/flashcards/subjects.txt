@@ -1,0 +1,5 @@
+AntiPatterns
+DesignPatterns
+DiscreteMath
+Git
+SOLID
