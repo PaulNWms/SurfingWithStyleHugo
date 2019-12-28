@@ -93,6 +93,9 @@ function showQuestion(card, reverse) {
             ui.question = card.front;
         }
     }
+    if (ui.question.match("^\\$\\$.*\\$\\$$")) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, questionElement]);
+    }
     ui.answer = "\n";
 }
 function showAnswer(card, reverse) {
@@ -106,6 +109,9 @@ function showAnswer(card, reverse) {
     }
     else {
         ui.answer = lineConcat(card.back);
+    }
+    if (ui.answer.match("^\\$\\$.*\\$\\$$")) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, answerElement]);
     }
 }
 function getCards(lines) {
@@ -151,6 +157,7 @@ var ui = {
     to: 0,
     count: 0
 };
+var hiddenJaxDiv = document.getElementById("hidden-jax");
 var selectDeckDiv = document.getElementById("selectDeckDiv");
 var fromToDiv = document.getElementById("fromToDiv");
 var countDiv = document.getElementById("countDiv");

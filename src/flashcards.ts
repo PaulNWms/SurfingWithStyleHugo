@@ -99,6 +99,11 @@ function showQuestion(card: Card, reverse: boolean) {
             ui.question = card.front
         }
     }
+
+    if (ui.question.match("^\\$\\$.*\\$\\$$")) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, questionElement]);
+    }
+
     ui.answer = "\n"
 }
 
@@ -113,6 +118,10 @@ function showAnswer(card: Card, reverse: boolean) {
     }
     else {
         ui.answer = lineConcat(card.back)
+    }
+
+    if (ui.answer.match("^\\$\\$.*\\$\\$$")) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, answerElement]);
     }
 }
 
@@ -163,6 +172,7 @@ let ui = {
     count: 0
 }
 
+let hiddenJaxDiv: HTMLDivElement = document.getElementById("hidden-jax") as HTMLDivElement
 let selectDeckDiv: HTMLDivElement = document.getElementById("selectDeckDiv") as HTMLDivElement
 let fromToDiv: HTMLDivElement = document.getElementById("fromToDiv") as HTMLDivElement
 let countDiv: HTMLDivElement = document.getElementById("countDiv") as HTMLDivElement

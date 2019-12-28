@@ -46,24 +46,27 @@ date: 2019-12-26
 
 <div id="mainDiv" style="display:none">
     <div class="row col-sm-offset-1 col-sm-10 card">
-        <div id="question" class="col-xs-12 card-body" style="background:yellow;">
+        <div id="question" class="col-xs-12" style="background:yellow;">
             <span>&nbsp;</span>
         </div>
     </div>
 
     <div class="row col-sm-offset-1 col-sm-10">
-        <div id="answer" class="col-xs-12 card-body" style="background:lightblue;">
+        <div id="answer" class="col-xs-12" style="background:lightblue;">
             <span>&nbsp;</span>
         </div>
     </div>
 
     <div class="row col-sm-offset-3 col-sm-6">
-        <button type="button" class="col-xs-12 btn btn-primary btn-lg btn-block" id="flip" onclick="flipCard()">Flip</button>
+        <button type="button" class="col-xs-12 btn btn-primary btn-lg btn-block" id="flip"
+            onclick="flipCard()">Flip</button>
     </div>
     <div class="row col-sm-offset-3 col-sm-6">
         <div class="btn-group" role="group" aria-label="Right/Wrong">
-            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="right" onclick="setRight()" disabled>Right</button>
-            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="wrong" onclick="setWrong()" disabled>Wrong</button>
+            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="right" onclick="setRight()"
+                disabled>Right</button>
+            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="wrong" onclick="setWrong()"
+                disabled>Wrong</button>
         </div>
     </div>
 </div>
@@ -165,6 +168,9 @@ function showQuestion(card, reverse) {
             ui.question = card.front;
         }
     }
+    if (ui.question.match("^\\$\\$.*\\$\\$$")) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, questionElement]);
+    }
     ui.answer = "\n";
 }
 function showAnswer(card, reverse) {
@@ -178,6 +184,9 @@ function showAnswer(card, reverse) {
     }
     else {
         ui.answer = lineConcat(card.back);
+    }
+    if (ui.answer.match("^\\$\\$.*\\$\\$$")) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, answerElement]);
     }
 }
 function getCards(lines) {
@@ -223,6 +232,7 @@ var ui = {
     to: 0,
     count: 0
 };
+var hiddenJaxDiv = document.getElementById("hidden-jax");
 var selectDeckDiv = document.getElementById("selectDeckDiv");
 var fromToDiv = document.getElementById("fromToDiv");
 var countDiv = document.getElementById("countDiv");
