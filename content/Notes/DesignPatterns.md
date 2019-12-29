@@ -87,6 +87,12 @@ Flyweight
 Identity Map
 - Everyday usage: Database table has a unique primary key
 
+IIFE (Immediately-Invoked Function Expression) (JavaScript ES5)
+- Anonymous function that's invoked at the time it's declared
+- Provides encapsulation
+- Reduces global scope pollution
+- (function() { ... })();
+
 Interpreter
 - The interpreter builds objects based on a grammar expressed in EBNF
 - Related to composite pattern
@@ -173,6 +179,10 @@ Publish/Subscribe
 - Asynchronous, generally uses a message queue
 
 Repository
+
+Revealing Module (JavaScript ES5)
+- Function scoping provides encapsulation
+- 2 flavors: Singleton or Constructor Function
 
 Rules
 - Separate the logic of each individual rule and its effects into its own class

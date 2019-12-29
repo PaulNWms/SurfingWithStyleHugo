@@ -161,61 +161,6 @@ function shuffleCards(cards: Card[]): Card[] {
     return array
 }
 
-const dirUrl: string = window.location.protocol + "//" + window.location.host + "/flashcards/"
-let ui = {
-    total: 0,
-    remaining: 0,
-    question: "",
-    answer: "",
-    from: 0,
-    to: 0,
-    count: 0
-}
-
-let hiddenJaxDiv: HTMLDivElement = document.getElementById("hidden-jax") as HTMLDivElement
-let selectDeckDiv: HTMLDivElement = document.getElementById("selectDeckDiv") as HTMLDivElement
-let fromToDiv: HTMLDivElement = document.getElementById("fromToDiv") as HTMLDivElement
-let countDiv: HTMLDivElement = document.getElementById("countDiv") as HTMLDivElement
-let mainDiv: HTMLDivElement = document.getElementById("mainDiv") as HTMLDivElement
-
-let totalElement: HTMLSpanElement = document.getElementById("total") as HTMLSpanElement
-new (Binding as any)({ object: ui, property: "total" }).addBinding(totalElement, "innerText");
-
-let remainingElement: HTMLSpanElement = document.getElementById("remaining") as HTMLSpanElement
-new (Binding as any)({ object: ui, property: "remaining" }).addBinding(remainingElement, "innerText");
-
-let deckElement: HTMLSelectElement = document.getElementById("select-deck") as HTMLSelectElement
-
-let fromElement: HTMLInputElement = document.getElementById("from") as HTMLInputElement
-new (Binding as any)({ object: ui, property: "from" }).addBinding(fromElement, "value", "change");
-
-let toElement: HTMLInputElement = document.getElementById("to") as HTMLInputElement
-new (Binding as any)({ object: ui, property: "to" }).addBinding(toElement, "value", "change");
-
-let countElement: HTMLInputElement = document.getElementById("count") as HTMLInputElement
-new (Binding as any)({ object: ui, property: "count" }).addBinding(countElement, "value", "change");
-
-let questionElement: HTMLDivElement = document.getElementById("question") as HTMLDivElement
-new (Binding as any)({ object: ui, property: "question" }).addBinding(questionElement, "innerText");
-
-let answerElement: HTMLDivElement = document.getElementById("answer") as HTMLDivElement
-new (Binding as any)({ object: ui, property: "answer" }).addBinding(answerElement, "innerText");
-
-let flipElement: HTMLButtonElement = document.getElementById("flip") as HTMLButtonElement
-
-let rightElement: HTMLButtonElement = document.getElementById("right") as HTMLButtonElement
-
-let wrongElement: HTMLButtonElement = document.getElementById("wrong") as HTMLButtonElement
-
-let lines: string[] = []
-let fullDeck: Card[] = []
-let partialDeck: Card[] = []
-let cards: Card[] = []
-let current: Card
-let selected: number = 0
-let correct: number = 0
-let wrongPile: Card[] = []
-
 function populateDecks() {
     let subjects: string[] = loadFile(dirUrl + "subjects.txt")
     for (let subject of subjects) {
@@ -305,6 +250,64 @@ function setWrong() {
     updateStats()
     drawCard()
 }
+
+const dirUrl: string = window.location.protocol + "//" + window.location.host + "/flashcards/"
+
+let MathJax: any;
+
+let ui = {
+    total: 0,
+    remaining: 0,
+    question: "",
+    answer: "",
+    from: 0,
+    to: 0,
+    count: 0
+}
+
+let hiddenJaxDiv: HTMLDivElement = document.getElementById("hidden-jax") as HTMLDivElement
+let selectDeckDiv: HTMLDivElement = document.getElementById("selectDeckDiv") as HTMLDivElement
+let fromToDiv: HTMLDivElement = document.getElementById("fromToDiv") as HTMLDivElement
+let countDiv: HTMLDivElement = document.getElementById("countDiv") as HTMLDivElement
+let mainDiv: HTMLDivElement = document.getElementById("mainDiv") as HTMLDivElement
+
+let totalElement: HTMLSpanElement = document.getElementById("total") as HTMLSpanElement
+new (Binding as any)({ object: ui, property: "total" }).addBinding(totalElement, "innerText");
+
+let remainingElement: HTMLSpanElement = document.getElementById("remaining") as HTMLSpanElement
+new (Binding as any)({ object: ui, property: "remaining" }).addBinding(remainingElement, "innerText");
+
+let deckElement: HTMLSelectElement = document.getElementById("select-deck") as HTMLSelectElement
+
+let fromElement: HTMLInputElement = document.getElementById("from") as HTMLInputElement
+new (Binding as any)({ object: ui, property: "from" }).addBinding(fromElement, "value", "change");
+
+let toElement: HTMLInputElement = document.getElementById("to") as HTMLInputElement
+new (Binding as any)({ object: ui, property: "to" }).addBinding(toElement, "value", "change");
+
+let countElement: HTMLInputElement = document.getElementById("count") as HTMLInputElement
+new (Binding as any)({ object: ui, property: "count" }).addBinding(countElement, "value", "change");
+
+let questionElement: HTMLDivElement = document.getElementById("question") as HTMLDivElement
+new (Binding as any)({ object: ui, property: "question" }).addBinding(questionElement, "innerText");
+
+let answerElement: HTMLDivElement = document.getElementById("answer") as HTMLDivElement
+new (Binding as any)({ object: ui, property: "answer" }).addBinding(answerElement, "innerText");
+
+let flipElement: HTMLButtonElement = document.getElementById("flip") as HTMLButtonElement
+
+let rightElement: HTMLButtonElement = document.getElementById("right") as HTMLButtonElement
+
+let wrongElement: HTMLButtonElement = document.getElementById("wrong") as HTMLButtonElement
+
+let lines: string[] = []
+let fullDeck: Card[] = []
+let partialDeck: Card[] = []
+let cards: Card[] = []
+let current: Card
+let selected: number = 0
+let correct: number = 0
+let wrongPile: Card[] = [];
 
 (function () {
     populateDecks()

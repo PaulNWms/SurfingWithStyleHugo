@@ -1,4 +1,5 @@
 *~
+node_modules/
 public/
 public/categories/index.html
 public/index.html
@@ -10,3 +11,4 @@ public/notes/solid/index.html
 public/notes/sql/index.html
 public/sitemap.xml
 public/tags/index.html
+static/js/

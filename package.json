@@ -1,0 +1,30 @@
+{
+  "name": "surfingwithstylehugo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "hugo": "0.0.3",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build": "tsc && hugo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulNWms/SurfingWithStyleHugo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulNWms/SurfingWithStyleHugo/issues"
+  },
+  "homepage": "https://github.com/PaulNWms/SurfingWithStyleHugo#readme"
+}
