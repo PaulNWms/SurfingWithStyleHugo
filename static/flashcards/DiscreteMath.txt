@@ -113,7 +113,7 @@ A ⊆ B
 The set of all subsets
 power set
 
-A ⊆ B = {(a,b)|a ∈ A ∧ b ∈ B}
+A × B = {(a,b)|a ∈ A ∧ b ∈ B}
 Cartesion product
 
 A ∪ B = {x|x ∈ A ∨ x ∈ B}
