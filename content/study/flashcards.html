@@ -26,9 +26,7 @@ date: 2019-12-31
 <div id="fromToDiv" style="display:none">
     <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
         <input type="number" id="from" class="form-control" placeholder="From" aria-label="From">
-        <div class="input-group-append">
-            <input type="number" id="to" class="form-control" placeholder="To" aria-label="To">
-        </div>
+        <input type="number" id="to" class="form-control" placeholder="To" aria-label="To">
         <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button" onclick="window.selectRange()">Select</button>
         </div>
@@ -46,27 +44,30 @@ date: 2019-12-31
 
 <div id="mainDiv" style="display:none">
     <div class="row col-sm-offset-1 col-sm-10 card">
-        <div id="question" class="col-xs-12" style="background:yellow;">
+        <div id="question" style="height:1in; display:flex; justify-content:center; align-items: center;">
             <span>&nbsp;</span>
         </div>
     </div>
 
-    <div class="row col-sm-offset-1 col-sm-10">
-        <div id="answer" class="col-xs-12" style="background:lightblue;">
+    <div class="row col-sm-offset-1 col-sm-10 card">
+        <div id="answer" style="height:1in; display:flex; justify-content:center; align-items: center;">
             <span>&nbsp;</span>
         </div>
     </div>
 
-    <div class="row col-sm-offset-3 col-sm-6">
-        <button type="button" class="col-xs-12 btn btn-primary btn-lg btn-block" id="flip"
+    <div class="row col-sm-offset-3 col-sm-10">
+        <button type="button" class="btn btn-primary btn-block" id="flip"
             onclick="window.flipCard()">Flip</button>
     </div>
-    <div class="row col-sm-offset-3 col-sm-6">
-        <div class="btn-group" role="group" aria-label="Right/Wrong">
-            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="right" onclick="window.setRight()"
-                disabled>Right</button>
-            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="wrong" onclick="window.setWrong()"
-                disabled>Wrong</button>
+
+    <div class="row col-sm-offset-3 col-sm-10">
+        <div class="btn-group btn-group-toggle btn-block" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options"  id="right" onclick="window.setRight()"> Right
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="wrong" onclick="window.setWrong()"> Wrong
+            </label>
         </div>
     </div>
 </div>

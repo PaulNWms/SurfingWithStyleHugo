@@ -10,7 +10,7 @@ module.exports = {
         //  on the global var jQuery
         "jquery": "jQuery"
     },
-    devtool: 'inline-source-map',
+    //devtool: 'inline-source-map',
     module: {
         rules: [{
             test: /\.tsx?$/,
