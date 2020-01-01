@@ -1,0 +1,51 @@
+---
+title: "Timer"
+date: 2019-12-30T19:11:51-08:00
+---
+
+<article class="narrow-article timer" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebApplication">
+    <!-- @*@{Html.RenderPartial("~/Views/Shared/_StructuredData.cshtml", ViewBag as object);}*@ -->
+    <meta itemprop="applicationCategory" content="Tool, Multimedia" />
+    <meta itemprop="applicationSubCategory" content="Time Management" />
+    <meta itemprop="operatingSystem" content="IIS/ASP.NET MVC" />
+    <div class="offset-sm-2 col-8 jumbotron text-center">
+        <div class="row">
+            <button class="offset-sm-2 btn btn-primary btn-lg start" type="button" onclick="onStartPause()"><span class="oi @buttonFace"></span></button>
+            <h1 class="offset-1 display"><span id="timerDisplay"></span></h1>
+        </div>
+    </div>
+    <div class="offset-md-3">
+        <div class="form-group row">
+            <label class="col-md-2 col-form-label" for="FormattedDuration">Duration</label>
+            <div class="col-md-2">
+                <input class="form-control duration-minutes" id="FormattedDuration" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <span class="field-validation-valid" data-valmsg-for="FormattedDuration" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <p class="offset-md-3 col-md-6 hidden-xs">Enter the timer duration, or choose one of the presets.</p>
+    <div class="row btn-group btn-group-toggle" data-toggle="buttons">
+        <div class="col-sm-12">
+            <button class="btn btn-secondary" onclick="min1()">1 min.</button>
+            <button class="btn btn-secondary" onclick="min2()">2 min.</button>
+            <button class="btn btn-secondary" onclick="min3()">3 min.</button>
+            <button class="btn btn-secondary" onclick="min5()">5 min.</button>
+            <button class="btn btn-secondary" onclick="min10()">10 min.</button>
+            <button class="btn btn-secondary" onclick="min15()">15 min.</button>
+            <button class="btn btn-secondary" onclick="min20()">20 min.</button>
+            <button class="btn btn-secondary active" onclick="min25()">25 min.</button>
+            <button class="btn btn-secondary" onclick="min30()">30 min.</button>
+            <button class="btn btn-secondary" onclick="min45()">45 min.</button>
+            <button class="btn btn-secondary" onclick="min60()">1 hour</button>
+        </div>
+    </div>
+</article>
+
+<audio class="audio-bell" preload="auto">
+    <source src="audio/EndRoutine.wav" type="audio/wav">
+    <source src="audio/EndRoutine.mp3" type="audio/mp3">
+</audio>
+
+<script src="/js/timer.bundle.js"></script>

@@ -1,50 +1,4 @@
-class Binding {
-    elementBindings: any[];
-    value: any;
-    valueGetter: () => any;
-    valueSetter: (val: any) => void;
-    addBinding: (element: any, attribute: any, event: any) => this;
-
-    constructor(b: any) {
-        let _this = this
-        this.elementBindings = []
-        this.value = b.object[b.property]
-        this.valueGetter = function () {
-            return _this.value;
-        }
-        this.valueSetter = function (val: any) {
-            _this.value = val
-            for (var i = 0; i < _this.elementBindings.length; i++) {
-                var binding = _this.elementBindings[i]
-                binding.element[binding.attribute] = val
-            }
-        }
-        // For 1-way binding, omit 'event'
-        this.addBinding = function (element: any, attribute: any, event: any) {
-            let binding = {
-                element: element,
-                attribute: attribute,
-                event: null
-            }
-            if (event) {
-                element.addEventListener(event, function (event: any) {
-                    _this.valueSetter(element[attribute]);
-                })
-                binding.event = event
-            }
-            this.elementBindings.push(binding)
-            element[attribute] = _this.value
-            return _this
-        }
-
-        Object.defineProperty(b.object, b.property, {
-            get: this.valueGetter,
-            set: this.valueSetter
-        })
-
-        b.object[b.property] = this.value;
-    }
-}
+import { Binding } from './lib/binding'
 
 class Card {
     public front: string = ''
@@ -100,7 +54,7 @@ function showQuestion(card: Card, reverse: boolean) {
         }
     }
 
-    if (ui.question.match("^\\$\\$.*\\$\\$$")) {
+    if (ui.question.match(/^\$\$.*\$\$$/)) {
         MathJax.Hub.Queue(["Typeset", MathJax.Hub, questionElement]);
     }
 
@@ -120,7 +74,7 @@ function showAnswer(card: Card, reverse: boolean) {
         ui.answer = lineConcat(card.back)
     }
 
-    if (ui.answer.match("^\\$\\$.*\\$\\$$")) {
+    if (ui.answer.match(/^\$\$.*\$\$$/)) {
         MathJax.Hub.Queue(["Typeset", MathJax.Hub, answerElement]);
     }
 }
@@ -265,7 +219,7 @@ let ui = {
     count: 0
 }
 
-let hiddenJaxDiv: HTMLDivElement = document.getElementById("hidden-jax") as HTMLDivElement
+// let hiddenJaxDiv: HTMLDivElement = document.getElementById("hidden-jax") as HTMLDivElement
 let selectDeckDiv: HTMLDivElement = document.getElementById("selectDeckDiv") as HTMLDivElement
 let fromToDiv: HTMLDivElement = document.getElementById("fromToDiv") as HTMLDivElement
 let countDiv: HTMLDivElement = document.getElementById("countDiv") as HTMLDivElement
@@ -311,8 +265,15 @@ let wrongPile: Card[] = [];
 
 (function () {
     populateDecks()
-    selectDeckDiv.style.display = "block"
-    fromToDiv.style.display = "none"
-    countDiv.style.display = "none"
-    mainDiv.style.display = "none"
-})()
+    selectDeckDiv.style.display = "block";
+    fromToDiv.style.display = "none";
+    countDiv.style.display = "none";
+    mainDiv.style.display = "none";
+    let w = window as any;
+    w.selectDeck = selectDeck;
+    w.selectRange = selectRange;
+    w.start = start;
+    w.flipCard = flipCard;
+    w.setRight = setRight;
+    w.setWrong = setWrong;
+})();

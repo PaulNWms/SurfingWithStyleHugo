@@ -1,6 +1,6 @@
 ---
 title: "Flashcards"
-date: 2019-12-29
+date: 2019-12-31
 ---
 
 <nav class="navbar navbar-default">
@@ -18,7 +18,7 @@ date: 2019-12-29
     <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
         <select id="select-deck" class="form-control" placeholder="Select Deck" aria-label="Select Deck"></select>
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" onclick="selectDeck()">Select</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="window.selectDeck()">Select</button>
         </div>
     </div>
 </div>
@@ -30,7 +30,7 @@ date: 2019-12-29
             <input type="number" id="to" class="form-control" placeholder="To" aria-label="To">
         </div>
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" onclick="selectRange()">Select</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="window.selectRange()">Select</button>
         </div>
     </div>
 </div>
@@ -39,7 +39,7 @@ date: 2019-12-29
     <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
         <input type="number" id="count" class="form-control" placeholder="Count" aria-label="Count">
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" onclick="start()">Start</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="window.start()">Start</button>
         </div>
     </div>
 </div>
@@ -59,16 +59,16 @@ date: 2019-12-29
 
     <div class="row col-sm-offset-3 col-sm-6">
         <button type="button" class="col-xs-12 btn btn-primary btn-lg btn-block" id="flip"
-            onclick="flipCard()">Flip</button>
+            onclick="window.flipCard()">Flip</button>
     </div>
     <div class="row col-sm-offset-3 col-sm-6">
         <div class="btn-group" role="group" aria-label="Right/Wrong">
-            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="right" onclick="setRight()"
+            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="right" onclick="window.setRight()"
                 disabled>Right</button>
-            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="wrong" onclick="setWrong()"
+            <button type="button" class="col-xs-6 btn btn-secondary btn-lg btn-block" id="wrong" onclick="window.setWrong()"
                 disabled>Wrong</button>
         </div>
     </div>
 </div>
 
-<script src="/js/flashcards.js"></script>
+<script src="/js/flashcards.bundle.js"></script>

@@ -5,6 +5,9 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@types/jquery": "^3.3.31",
+    "exports-loader": "^0.7.0",
+    "expose-loader": "^0.7.5",
     "hugo": "0.0.3",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.4",
@@ -14,8 +17,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
-    "build": "tsc && hugo"
+    "develop": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",

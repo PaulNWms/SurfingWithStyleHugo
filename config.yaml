@@ -16,6 +16,7 @@ menu:
     weight: 100
   - name: Timer
     parent: Tools
+    url: /tools/timer/
     weight: 100
   - name: What's My IP?
     parent: Tools
@@ -32,7 +33,7 @@ menu:
     weight: 150
   - name: Flashcards
     parent: Study
-    url: /Study/Flashcards/
+    url: /study/flashcards/
     weight: 100
 
   - name: Practice
