@@ -207,8 +207,6 @@ function setWrong() {
 
 const dirUrl: string = window.location.protocol + "//" + window.location.host + "/flashcards/"
 
-let MathJax: any;
-
 let ui = {
     total: 0,
     remaining: 0,
