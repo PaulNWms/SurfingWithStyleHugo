@@ -22,16 +22,6 @@ function loadFile(file: string): string[] {
     return trimmed
 }
 
-function range(start: number, stop: number) {
-    let array: number[] = []
-    let length: number = stop - start
-    for (let i = 0; i <= length; i++) {
-        array[i] = start
-        start++
-    }
-    return array
-}
-
 function lineConcat(lines: string[]) {
     let result: string = ""
     for (let line of lines) {
@@ -123,8 +113,6 @@ function populateDecks() {
 }
 
 function updateStats() {
-    selected = 0
-    correct = 0
     ui.total = ui.count
     ui.remaining = cards.length + wrongPile.length
 }
@@ -138,7 +126,7 @@ function selectDeck() {
     fromToDiv.style.display = "block"
     countDiv.style.display = "none"
     mainDiv.style.display = "none"
-    ui.total = ui.remaining = ui.to = ui.count = selected = fullDeck.length
+    ui.total = ui.remaining = ui.to = ui.count = fullDeck.length
     ui.from = 1
 }
 
@@ -148,7 +136,7 @@ function selectRange() {
     fromToDiv.style.display = "block"
     countDiv.style.display = "block"
     mainDiv.style.display = "none"
-    ui.total = ui.remaining = ui.count = selected = partialDeck.length
+    ui.total = ui.remaining = ui.count = partialDeck.length
 }
 
 function start() {
@@ -167,7 +155,7 @@ function drawCard() {
     }
     else if (wrongPile.length) {
         alert("" + ui.remaining + " cards remaining.")
-        cards = wrongPile
+        cards = shuffleCards(wrongPile)
         wrongPile = []
         current = cards.pop() as Card
     }
@@ -217,34 +205,33 @@ let ui = {
     count: 0
 }
 
-// let hiddenJaxDiv: HTMLDivElement = document.getElementById("hidden-jax") as HTMLDivElement
 let selectDeckDiv: HTMLDivElement = document.getElementById("selectDeckDiv") as HTMLDivElement
 let fromToDiv: HTMLDivElement = document.getElementById("fromToDiv") as HTMLDivElement
 let countDiv: HTMLDivElement = document.getElementById("countDiv") as HTMLDivElement
 let mainDiv: HTMLDivElement = document.getElementById("mainDiv") as HTMLDivElement
 
 let totalElement: HTMLSpanElement = document.getElementById("total") as HTMLSpanElement
-new (Binding as any)({ object: ui, property: "total" }).addBinding(totalElement, "innerText");
+new Binding({ object: ui, property: "total" }).addBinding(totalElement, "innerText");
 
 let remainingElement: HTMLSpanElement = document.getElementById("remaining") as HTMLSpanElement
-new (Binding as any)({ object: ui, property: "remaining" }).addBinding(remainingElement, "innerText");
+new Binding({ object: ui, property: "remaining" }).addBinding(remainingElement, "innerText");
 
 let deckElement: HTMLSelectElement = document.getElementById("select-deck") as HTMLSelectElement
 
 let fromElement: HTMLInputElement = document.getElementById("from") as HTMLInputElement
-new (Binding as any)({ object: ui, property: "from" }).addBinding(fromElement, "value", "change");
+new Binding({ object: ui, property: "from" }).addBinding(fromElement, "value", "change");
 
 let toElement: HTMLInputElement = document.getElementById("to") as HTMLInputElement
-new (Binding as any)({ object: ui, property: "to" }).addBinding(toElement, "value", "change");
+new Binding({ object: ui, property: "to" }).addBinding(toElement, "value", "change");
 
 let countElement: HTMLInputElement = document.getElementById("count") as HTMLInputElement
-new (Binding as any)({ object: ui, property: "count" }).addBinding(countElement, "value", "change");
+new Binding({ object: ui, property: "count" }).addBinding(countElement, "value", "change");
 
 let questionElement: HTMLDivElement = document.getElementById("question") as HTMLDivElement
-new (Binding as any)({ object: ui, property: "question" }).addBinding(questionElement, "innerText");
+new Binding({ object: ui, property: "question" }).addBinding(questionElement, "innerText");
 
 let answerElement: HTMLDivElement = document.getElementById("answer") as HTMLDivElement
-new (Binding as any)({ object: ui, property: "answer" }).addBinding(answerElement, "innerText");
+new Binding({ object: ui, property: "answer" }).addBinding(answerElement, "innerText");
 
 let flipElement: HTMLButtonElement = document.getElementById("flip") as HTMLButtonElement
 
@@ -257,8 +244,6 @@ let fullDeck: Card[] = []
 let partialDeck: Card[] = []
 let cards: Card[] = []
 let current: Card
-let selected: number = 0
-let correct: number = 0
 let wrongPile: Card[] = [];
 
 (function () {

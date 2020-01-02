@@ -3,7 +3,7 @@ class Binding {
     value: any;
     valueGetter: () => any;
     valueSetter: (val: any) => void;
-    addBinding: (element: any, attribute: any, event: any) => this;
+    addBinding: (element: HTMLElement, attribute: string, event?: string) => this;
 
     constructor(b: any) {
         let _this = this
@@ -19,12 +19,12 @@ class Binding {
                 binding.element[binding.attribute] = val
             }
         }
-        // For 1-way binding, omit 'event'
-        this.addBinding = function (element: any, attribute: any, event: any) {
+        // For 1-way binding, set 'event' to null
+        this.addBinding = function (element: HTMLElement, attribute: string, event?: string) {
             let binding = {
                 element: element,
                 attribute: attribute,
-                event: null
+                event: event
             }
             if (event) {
                 element.addEventListener(event, function (event: any) {

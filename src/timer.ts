@@ -4,13 +4,19 @@ import { DateTime, TimeSpan } from './lib/datetime';
 
 enum TimerState { Stopped, Running, Paused };
 
+let ui = {
+    buttonFace: "",
+}
+
 let timerStatus: TimerState = TimerState.Stopped;
 let timeRemaining: TimeSpan = new TimeSpan(0, 25, 0);
 let targetTime: DateTime = DateTime.Now;
 let timerDisplay: string = "25:00";
 let formattedDuration: string = "25";
-let timer: any = createTimer(1000);
-let buttonFace: string = "oi-media-play";
+let timer: any;
+
+let buttonFaceElement = $("button-face");
+new (Binding as any)({ object: ui, property: "buttonFace" }).addBinding(buttonFaceElement, "innerText");
 
 function min1() { usePreset("1-minute-timer", 1); }
 function min2() { usePreset("2-minute-timer", 2); }
@@ -29,11 +35,11 @@ function updateButton(state: TimerState) {
     switch (timerStatus) {
         case TimerState.Stopped:
         case TimerState.Paused:
-            buttonFace = "oi-media-play";
+            ui.buttonFace = "oi-media-play";
             break;
 
         case TimerState.Running:
-            buttonFace = "oi-media-pause";
+            ui.buttonFace = "oi-media-pause";
             break;
     }
 }
@@ -145,9 +151,34 @@ function playAudio(selector) { $(selector)[0].play(); }
 function setTitle(title) { document.title = title; }
 
 function createTimer(callback) {
-    var timer = ($ as any).timer(function () {
-        callback();
-    });
-    timer.set({ time: 1000, autostart: false });
-    return timer;
+    // let t = $.timers;
+    // var timer = $.timers[0](function () {
+    //     callback();
+    // });
+    // timer.set({ time: 1000, autostart: false });
+    // return timer;
 }
+
+function myTimer() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    $("#timerDisplay").html(t);
+}
+
+$(document).ready(function() {
+    let w = window as any;
+    w.onStartPause = onStartPause;
+    w.min1 = min1;
+    w.min2 = min2;
+    w.min3 = min3;
+    w.min5 = min5;
+    w.min10 = min10;
+    w.min15 = min15;
+    w.min20 = min20;
+    w.min25 = min25;
+    w.min30 = min30;
+    w.min45 = min45;
+    w.min60 = min60;
+    //timer = createTimer(1000);
+    var myVar = setInterval(myTimer, 1000);
+});
