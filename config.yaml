@@ -9,6 +9,7 @@ params:
   repositoryUrl: 'http://your-repository-url'
   highlightStyle: github
   noCategoryLink: true
+enableGitInfo: true
 menu:
   main:
   - name: Tools

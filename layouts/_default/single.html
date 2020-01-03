@@ -7,7 +7,7 @@
 				<a id="title"></a>
 				<h1 class="doc-entry-title">{{ .Title }}</h1>
 				<div class="doc-entry-meta">
-					<span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
+					<span><time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 02, 2006" }}</time></span>
 				</div>
 				<section>
 					{{ .Content }}
