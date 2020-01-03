@@ -223,14 +223,6 @@ Theorem 1.2
 $$Let f(x) = a_nx^n + a_{(n-1)}x^{(n-1)} + ... + a_1x + a_0.$$ $$Then f(x) = O(x^n).$$
 Theorem 1.3
 
-Properties of an algorithm
-Input
-Output
-Definiteness
-Finiteness
-Effectiveness
-Generality
-
 if a|b and a|c, then a|b + c
 Theorem 2.1.1
 
@@ -360,3 +352,51 @@ conditional rule
 
 [(p ∧ condition){S}p] → p{while condition S}(¬condition ∧ p)
 loop invariant
+
+the study of the arrangement of objects
+combinatorics
+
+the counting of the arrangement of objects
+enumeration
+
+an ordered arrangement of the elements of a set
+permutation
+
+an ordered arrangement of r elements of a set
+r-permutation
+
+an unordered arrangement of r elements of a set
+r-combination
+
+the number of r-combinations of a set of n elements
+$${n \choose r}$$
+
+time complexity of consecutive loops
+Sum Rule
+
+time complexity of nested loops
+Product Rule
+
+when more than k objects are placed in k boxes
+Pigeonhole Principle
+
+when N objects are placed in k boxes there must be a box containing ____ objects
+$$\lceil N/k \rceil$$
+
+permutation formula
+$$P(n,r) = \frac{n!}{(n - r)!}$$
+
+combination formula
+$$C(n,r) = \frac{n!}{r!(n - r)!}$$
+
+$$C(n,0) + C(n,1) + \cdots + C(n,n) = 2^n$$
+Pascal's Identity
+
+$$(x + y)^n = \sum_{k=0}^{n} C(n,k)x^{n-k}y^k$$
+Binomial Theorem
+
+There are ____ r-permutations of a set with n elements when repetition is allowed.
+$$n^r$$
+
+There are ____ r-combinations of a set with n elements when repetition is allowed.
+$$C(n + r - 1, r)$$
