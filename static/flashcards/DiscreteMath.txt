@@ -214,19 +214,19 @@ composition
 |a + b| ≤ |a| + |b|
 triangle inequality
 
-$$(f_1 + f_2)(x) = O(max(g_1(x), g_2(x)))$$
+(f₁ + f₂)(x) = O(max(g₁(x), g₂(x)))
 Theorem 1.1
 
-$$(f_1f_2)(x) = O(g_1(x)g_2(x))$$
+(f₁f₂)(x) = O(g₁(x)g₂(x))
 Theorem 1.2
 
-$$Let f(x) = a_nx^n + a_{(n-1)}x^{(n-1)} + ... + a_1x + a_0.$$ $$Then f(x) = O(x^n).$$
+Let $f(x) = a_nx^n + a_{(n-1)}x^{(n-1)} + ... + a_1x + a_0.$ Then $f(x) = O(x^n).$
 Theorem 1.3
 
 if a|b and a|c, then a|b + c
 Theorem 2.1.1
 
-if a|b and a|bc for all integers c
+if a|b then a|bc for all integers c
 Theorem 2.1.2
 
 if a|b and b|c, then a|c
@@ -383,13 +383,13 @@ Pigeonhole Principle
 when N objects are placed in k boxes there must be a box containing ____ objects
 $$\lceil N/k \rceil$$
 
-permutation formula
+permutation formula (Theorem 4.3.1)
 $$P(n,r) = \frac{n!}{(n - r)!}$$
 
-combination formula
+combination formula (Theorem 4.3.2)
 $$C(n,r) = \frac{n!}{r!(n - r)!}$$
 
-$$C(n,0) + C(n,1) + \cdots + C(n,n) = 2^n$$
+C(n + 1,k) + C(n,k - 1) + C(n,k)
 Pascal's Identity
 
 $$(x + y)^n = \sum_{k=0}^{n} C(n,k)x^{n-k}y^k$$
@@ -399,4 +399,19 @@ There are ____ r-permutations of a set with n elements when repetition is allowe
 $$n^r$$
 
 There are ____ r-combinations of a set with n elements when repetition is allowed.
-$$C(n + r - 1, r)$$
+C(n + r - 1, r)
+
+$$\sum_{k=0}^{n} C(n,k) = 2^n$$
+Theorem 4.3.4
+
+$$C(m + n,r) = \sum_{k=0}^{n} C(m,r - k)C(n,k)$$
+Vandermonde's Identity
+
+$$\sum_{k=0}^{n} (-1)^k C(n,k) = 0$$
+Theorem 4.3.7
+
+p(E̅) = 1 - p(E)
+Theorem 4.4.1
+
+p(E₁ ⋃ E₂) = p(E₁) + p(E₂) - p(E₁ ⋂ E₂)
+Theorem 4.4.2
