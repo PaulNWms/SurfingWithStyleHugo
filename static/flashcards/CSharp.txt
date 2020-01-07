@@ -1,0 +1,36 @@
+delegate int BinOp(int a, int b);
+delegate type
+
+BinOp add = new Add();
+delegate instance
+
+BinOp add = Add;
+delegate instance, using method group conversion
+
+BinOp add = delegate(int a, int b) { return a + b; }
+delegate instance, using anonymous function expression
+
+A delegate type extends
+MulticastDelegate
+
+A single delegate instance can be used to refer to
+many methods.
+
+Pre-packaged delegates
+Func
+Action
+
+Captured variables are hoisted into a ____.
+closure object
+
+Closures in C# implement ____.
+LVAL capturing
+
+Closures are implemented using _____ display classes.
+heap allocated
+
+i => i % 2 == 0
+lambda expression
+
+The technique of applying functions partially, one argument at a time.
+currying

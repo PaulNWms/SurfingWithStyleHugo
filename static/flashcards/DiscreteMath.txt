@@ -404,7 +404,7 @@ $$\sum_{k=0}^{n} C(n,k) = 2^n$$
 $$C(m + n,r) = \textrm{____ (Vandermonde's Identity)}$$
 $$C(m + n,r) = \sum_{k=0}^{n} C(m,r - k)C(n,k)$$
 
-$$\sum_{k=0}^{n} (-1)^k C(n,k) = \textrm{____}$$
+$$\sum_{k=0}^{n} (-1)^k C(n,k) = \textrm{____ (Theorem 4.3.7)}$$
 $$\sum_{k=0}^{n} (-1)^k C(n,k) = 0$$
 
 p(E̅) = ____ (Theorem 4.4.1)
@@ -412,3 +412,7 @@ p(E̅) = 1 - p(E)
 
 p(E₁ ⋃ E₂) = ____ (Theorem 4.4.2)
 p(E₁ ⋃ E₂) = p(E₁) + p(E₂) - p(E₁ ⋂ E₂)
+
+A sequence is uniquely determined by a ____ and ____.
+recurrence relation
+initial conditions
