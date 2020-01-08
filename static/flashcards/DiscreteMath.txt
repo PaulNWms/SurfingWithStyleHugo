@@ -241,8 +241,8 @@ a = dq + r
 The integers a and b are ____ if their gcd is 1.
 relatively prime
 
-Let a and b be positive integers.  Then ab = gcd(a,b)lcm(a,b)
-Theorm 2.5
+____ = gcd(a,b)lcm(a,b) (Theorm 2.5)
+ab = gcd(a,b)lcm(a,b), where a & b are positive integers
 
 a ≡ b (mod m) IFF
 a mod m = b mod m
@@ -305,7 +305,7 @@ direct proof
 p → q can be proved by showing that its contrapositive ¬q → ¬p is true.
 indirect proof
 
-If q can be found s.th. ¬p → q is true, then ¬p must be false.
+If a contradiction q can be found s.th. ¬p → q is true, then p must be true.
 proof by contradiction
 
 If p ⇔ (p1 ∨ p2) and (p1 ∨ p2) → q, then p → q.
