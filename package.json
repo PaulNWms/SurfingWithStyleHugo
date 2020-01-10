@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@types/mathjax": "0.0.36"
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@types/jquery": "^3.3.31",
+    "@types/mathjax": "0.0.36",
     "exports-loader": "^0.7.0",
     "expose-loader": "^0.7.5",
     "hugo": "0.0.3",
