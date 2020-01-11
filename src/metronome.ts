@@ -66,6 +66,18 @@ let status_: TimerState = TimerState.Paused;
 let initialized: boolean = false;
 let prop: Properties = new Properties();
 
+function registerListener(selector) {
+    var element = $(".pendulum-parent");
+    var audio = $(selector)[0];
+    element.on("animationstart", function () { audio.play(); });
+    element.on("animationiteration", function () {
+        audio.play();
+        if (element.css("animation-name") === "starting") {
+            prop.animation = "running";
+        }
+    });
+}
+
 function decrementTempo() { onSliderChanged(Math.max(prop.tempo - 1, MIN_TEMPO)); }
 function incrementTempo() { onSliderChanged(Math.min(+prop.tempo + 1, MAX_TEMPO)); }
 function onSliderChanged(value: number) { prop.tempo = value; }
@@ -101,13 +113,5 @@ $(document).ready(function () {
     w.onPlayPause = onPlayPause;
     w.onSliderChanged = onSliderChanged;
 
-    // if (!initialized) {
-    //     initialized = true;
-    //     let setAnimationName = function (name: string) {
-    //         Metronome.animation = "running";
-    //     };
-
-    //     DotNetObjectRef dotNetHelper = new DotNetObjectRef(new AnimationHelper(setAnimationName));
-    //     await JSRuntime.Current.InvokeAsync<object>("registerListener", ".audio-click", dotNetHelper);
-    // }
+    registerListener(".audio-click");
 });

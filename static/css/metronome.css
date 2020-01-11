@@ -46,7 +46,7 @@
     .metronome .pendulum-child {
         width: 71px;
         height: 420px;
-        background-image: url('../images/pendulum.png');
+        background-image: url('/img/pendulum.png');
         position: absolute;
         left: -25px;
         top: -320px;
