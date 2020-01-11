@@ -1,11 +1,11 @@
 import $ from "jquery";
-import * as moment from 'moment';
+import moment from 'moment';
 import { Binding } from './lib/binding'
 
 enum TimerState { Stopped, Running, Paused };
 
 let ui = {
-    buttonFace: "▶",
+    buttonFace: "▶️",
     timerDisplay: "25:00",
     formattedDuration: "25",
 }
@@ -41,7 +41,7 @@ function updateButton(state: TimerState) {
     switch (timerStatus) {
         case TimerState.Stopped:
         case TimerState.Paused:
-            ui.buttonFace = "▶";
+            ui.buttonFace = "▶️";
             break;
 
         case TimerState.Running:

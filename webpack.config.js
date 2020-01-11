@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
     entry: {
         flashcards: './src/flashcards.ts',
+        metronome: './src/metronome.ts',
         timer: './src/timer.ts',
     },
     externals: {

@@ -42,6 +42,7 @@ menu:
     weight: 200
   - name: Metronome
     parent: Practice
+    url: /practice/metronome/
     weight: 100
   - name: Scheduled Metronome
     parent: Practice
