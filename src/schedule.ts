@@ -327,6 +327,16 @@ class Schedule {
             .replace("{2}", "");
     }
 
+    public insertRow(index: number) {
+        this.exercises.splice(index, 0, new Exercise(120, moment.duration(2, "minutes"), ""));
+    }
+
+    public deleteRow(index: number) {
+        if (this.exercises.length > 1) {
+            this.exercises.splice(index, 1);
+        }
+    }
+
     private colorBody() { $("body").css({ "background-color": "#001912", "color": "#009871" }); }
 
     private uncolorBody() { $("body").css({ "background-color": "", "color": "" }); }

@@ -82,15 +82,24 @@ function registerFormRowListener(html) {
     $(".add-schedule-row").off("click");
     $(".delete-schedule-row").off("click");
     $(".add-schedule-row").click(function () {
-        $(this).parent().parent().after(html);
+        let index: number = $(".add-schedule-row").index(this);
+        alert("add-schedule-row " + index);
+        schedule.insertRow(index);
+        ui.exerciseMarkup = schedule.toHtml();
+//        $(this).parent().parent().after(html);
         registerFormRowListener(html);
-        $(this).parent().parent().next().children().children(".tempo").focus();
+//        $(this).parent().parent().next().children().children(".tempo").focus();
     });
     $(".delete-schedule-row").click(function () {
-        var row = $(this).parent().parent();
-        if (row.siblings().length > 0) {
-            row.remove();
-        }
+        let index: number = $(".delete-schedule-row").index(this);
+        alert("delete-schedule-row " + index);
+        schedule.deleteRow(index);
+        ui.exerciseMarkup = schedule.toHtml();
+        registerFormRowListener(html);
+//        var row = $(this).parent().parent();
+//        if (row.siblings().length > 0) {
+//            row.remove();
+//        }
     });
 }
 
@@ -103,8 +112,8 @@ $(document).ready(function() {
     let w = window as any;
     w.onPlayPause = schedule.onPlayPause;
     w.createLink = schedule.createLink;
-    registerScheduled(metronome, ".audio-click");
-    registerFormRowListener(schedule.getNewRow())
-
     ui.exerciseMarkup = schedule.toHtml();
+
+    registerScheduled(metronome, ".audio-click");
+    registerFormRowListener(exerciseMarkupElement);
 });
