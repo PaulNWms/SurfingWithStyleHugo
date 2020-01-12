@@ -3,7 +3,8 @@ title: "Scheduled Metronome"
 date: 2020-01-11T07:08:10-08:00
 ---
 
-<article class="narrow-article mini-metronome" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebApplication">
+<article class="narrow-article mini-metronome" itemprop="mainContentOfPage" itemscope
+    itemtype="http://schema.org/WebApplication">
     <meta itemprop="applicationCategory" content="Tool, Multimedia" />
     <meta itemprop="applicationSubCategory" content="Music Rehearsal" />
     <meta itemprop="operatingSystem" content="IIS/ASP.NET MVC" />
@@ -11,7 +12,8 @@ date: 2020-01-11T07:08:10-08:00
     <div class="row">
         <div class="col-9 jumbotron text-center">
             <div class="row">
-                <button class="offset-3 btn btn-primary btn-lg start" type="button" onclick="schedule.onPlayPause()"><span class="button-face">▶️</span></button>
+                <button class="offset-3 btn btn-primary btn-lg start" type="button" onclick="window.onPlayPause()"><span
+                        class="button-face">▶️</span></button>
                 <h1 class="offset-1 display"><span class="display">120</span></h1>
             </div>
             <br />
@@ -42,9 +44,15 @@ date: 2020-01-11T07:08:10-08:00
     <div class="row">
         <table class="table offset-2 col-7">
             <thead>
-                <tr><th></th><th>Tempo</th><th>Time</th><th>Exercise</th><th></th></tr>
+                <tr>
+                    <th></th>
+                    <th>Tempo</th>
+                    <th>Time</th>
+                    <th>Exercise</th>
+                    <th></th>
+                </tr>
             </thead>
-            <tbody class="schedule">
+            <tbody class="exerciseMarkup">
             </tbody>
         </table>
         <div class="row form-group offset-2 col-7">
@@ -69,7 +77,7 @@ date: 2020-01-11T07:08:10-08:00
             <br />
         </div>
         <div class="row offset-2 col-7">
-            <button class="btn btn-primary btn-lg active" onclick="schedule.createLink()">Create Link</button>
+            <button class="btn btn-primary btn-lg active" onclick="window.createLink()">Create Link</button>
         </div>
     </div>
     <div class="row">

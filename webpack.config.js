@@ -4,7 +4,7 @@ module.exports = {
     entry: {
         flashcards: './src/flashcards.ts',
         metronome: './src/metronome.ts',
-        scheduledMetronome: './src/schedule.ts',
+        scheduledMetronome: './src/scheduled-metronome.ts',
         timer: './src/timer.ts',
     },
     externals: {

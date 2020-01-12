@@ -6,29 +6,12 @@ import { MiniMetronome } from "./mini-metronome";
 
 enum TimerState { Stopped, Running, Paused, StartNext, Settling };
 
-let ui = {
-    //    buttonFace: "▶️",
-    //    timerDisplay: "25:00",
-    display: "",
-    formattedDuration: "25",
-    schedule: "",
-    style: "",
-}
-
-let formattedDurationElement: HTMLInputElement = $("#formatted-duration")[0] as HTMLInputElement
-new Binding({ object: ui, property: "formattedDuration" }).addBinding(formattedDurationElement, "value");
-
-let scheduleElement: HTMLElement = $(".schedule")[0] as HTMLElement
-new Binding({ object: ui, property: "schedule" }).addBinding(scheduleElement, "innerHTML");
-
-
 class Schedule {
     protected regex: RegExp = /(\d+):(\d\d)/;
     protected match: RegExpMatchArray | null = null;
 
     public startWithRest: boolean;
     public endWithBell: boolean;
-    public exerciseMarkup: string = "";
     public timeline: Array<Exercise> = [];
     public currentStep: Exercise | undefined;
     public lastStep: Exercise | undefined;
@@ -37,26 +20,23 @@ class Schedule {
     protected stateHasChanged: Action;
     protected status: TimerState = TimerState.Stopped;
     protected url: URL;
-    protected eggTimer: EggTimer = new EggTimer(this.stateHasChanged);
-    protected metronome: MiniMetronome = new MiniMetronome(ui);
+    protected eggTimer: EggTimer;
+    protected metronome: MiniMetronome;
     protected exercises: Array<Exercise> = [];
 
     protected rest: moment.Duration;
     public get restDisplay(): string { return this.rest.asSeconds().toString(); }
     public set restDisplay(value: string) { this.rest = this.parseDuration(value); }
 
-    constructor(stateHasChanged: Action, url: URL) {
+    constructor(stateHasChanged: Action, eggTimer: EggTimer, metronome: MiniMetronome) {
+        this.eggTimer = eggTimer;
+        this.metronome = metronome;
         this.stateHasChanged = stateHasChanged;
-        this.url = url;
+        this.url = new URL(window.location.href);
         this.rest = moment.duration(3, "seconds");
         this.startWithRest = true;
         this.endWithBell = true;
         this.parseUrl();
-    }
-
-    public initialize(eggTimer: EggTimer, metronome: MiniMetronome) {
-        this.eggTimer = eggTimer;
-        this.metronome = metronome;
     }
 
     public onPlayPause() {
@@ -195,7 +175,7 @@ class Schedule {
         let tempos: Array<number> = [];
         let durations: Array<moment.Duration> = [];
         let exes: Array<string> = [];
-        let exercises: Array<Exercise> = [];
+        this.exercises = [];
 
         if (params.has("r")) {
             params.forEach((value, key) => {
@@ -249,15 +229,38 @@ class Schedule {
                 }
 
                 for (let i: number = 0; i < tempos.length; i++) {
-                    exercises.push(new Exercise(tempos[i], durations[i], exes[i]));
+                    this.exercises.push(new Exercise(tempos[i], durations[i], exes[i]));
                 }
             });
         }
         else {
-            exercises.push(new Exercise(120, moment.duration(2, "minutes"), ""));
+            this.exercises.push(new Exercise(120, moment.duration(2, "minutes"), ""));
+        }
+    }
+
+    private parseDuration(value: string): moment.Duration {
+        let duration: moment.Duration = moment.duration(0, "seconds");
+        let minutes: number;
+        let seconds: number;
+        this.match = value.match(this.regex);
+
+        if (this.match != null) {
+            minutes = parseInt(this.match[1]);
+            seconds = parseInt(this.match[2]);
+            duration = moment.duration(60 * minutes + seconds, "seconds");
+        }
+        else if (Number(value) !== NaN) {
+            duration = moment.duration(Number(value), "seconds");
+        }
+        else {
+            alert("what?  " + value);
         }
 
-        ui.schedule = this.toHtml();
+        if (duration.asSeconds() === 0) {
+            throw `Invalid time format: ${value}`;
+        }
+
+        return duration;
     }
 
     public toTimeline(): Array<Exercise> {
@@ -308,7 +311,7 @@ class Schedule {
         let result = "";
 
         for (let exercise of this.exercises) {
-            result.concat(this.HTML_TEMPLATE
+            result = result.concat(this.HTML_TEMPLATE
                 .replace("{0}", exercise.tempo.toString())
                 .replace("{1}", exercise.duration.toISOString())
                 .replace("{2}", exercise.description));
@@ -317,7 +320,7 @@ class Schedule {
         return result;
     }
 
-    public GetNewRow(): string {
+    public getNewRow(): string {
         return this.HTML_TEMPLATE
             .replace("{0}", "120")
             .replace("{1}", "2:00")
@@ -338,36 +341,12 @@ class Schedule {
         return [tempos, durations, exercises];
     }
 
-    private parseDuration(value: string): moment.Duration {
-        let duration: moment.Duration = moment.duration(0, "seconds");
-        let minutes: number;
-        let seconds: number;
-        this.match = value.match(this.regex);
-
-        if (this.match != null) {
-            minutes = parseInt(this.match[1]);
-            seconds = parseInt(this.match[2]);
-            duration = moment.duration(60 * minutes + seconds, "seconds");
-        }
-        else if (Number(value) !== NaN) {
-            duration = moment.duration(Number(value), "seconds");
-        }
-        else {
-            alert("what?  " + value);
-        }
-
-        if (duration.asSeconds() === 0) {
-            throw `Invalid time format: ${value}`;
-        }
-
-        return duration;
-    }
-
     private URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&t={4}&d={5}&e={6}";
 
-    private HTML_TEMPLATE: string = `        <tr>
+    private HTML_TEMPLATE: string = `\
+        <tr>
             <td>
-                <button type='button' class='btn btn-primary delete-schedule-row' onclick='deleteRow()'>␡</button>
+                <button type='button' class='btn btn-primary delete-schedule-row'>␡</button>
             </td>
             <td>
                 <input type='text' class='form-control digit-filter tempo tempo-0' placeholder='Tempo' autocomplete='off' value='{0}' />
@@ -379,7 +358,9 @@ class Schedule {
                 <input type='text' class='form-control exercise' placeholder='Exercise' value='{2}' />
             </td>
             <td>
-                <button type='button' class='btn btn-primary add-schedule-row' onclick='addRow()'>⎀</button>
+                <button type='button' class='btn btn-primary add-schedule-row'>⎀</button>
             </td>
         </tr>`;
 }
+
+export { Schedule };
