@@ -38,7 +38,7 @@ class Properties {
         this.setStyle();
     }
 
-    public setStyle() { 
+    private setStyle() {
         ui.style = `animation-name: ${this.animation}; animation-duration: ${this.duration}; animation-play-state: ${this.playState}; animation-direction: alternate;`;
     }
 }
@@ -62,17 +62,16 @@ new Binding({ object: ui, property: "style" }).addBinding(pendulumElement, "styl
 let tempoSliderElement: HTMLInputElement = $(".tempo-slider")[0] as HTMLInputElement;
 new Binding({ object: ui, property: "tempoSlider" }).addBinding(tempoSliderElement, "value");
 
-let status_: TimerState = TimerState.Paused;
-let initialized: boolean = false;
+let status: TimerState = TimerState.Paused;
 let prop: Properties = new Properties();
 
 function registerListener(selector) {
-    var element = $(".pendulum-parent");
-    var audio = $(selector)[0];
-    element.on("animationstart", function () { audio.play(); });
-    element.on("animationiteration", function () {
+    let pendulum: JQuery = $(".pendulum-parent");
+    let audio: HTMLAudioElement = $(selector)[0];
+    pendulum.on("animationstart", function () { audio.play(); });
+    pendulum.on("animationiteration", function () {
         audio.play();
-        if (element.css("animation-name") === "starting") {
+        if (pendulum.css("animation-name") === "starting") {
             prop.animation = "running";
         }
     });
@@ -83,9 +82,9 @@ function incrementTempo() { onSliderChanged(Math.min(+prop.tempo + 1, MAX_TEMPO)
 function onSliderChanged(value: number) { prop.tempo = value; }
 
 function onPlayPause() {
-    switch (status_) {
+    switch (status) {
         case TimerState.Paused:
-            status_ = TimerState.Running;
+            status = TimerState.Running;
 
             if (prop.animation === "none") {
                 prop.animation = "starting";
@@ -96,7 +95,7 @@ function onPlayPause() {
             break;
 
         case TimerState.Running:
-            status_ = TimerState.Paused;
+            status = TimerState.Paused;
             ui.buttonFace = "▶️";
             prop.playState = "paused";
             break;

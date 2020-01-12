@@ -22,7 +22,7 @@ new Binding({ object: ui, property: "formattedDuration" }).addBinding(formattedD
 let timerStatus: TimerState = TimerState.Stopped;
 let timeRemaining: moment.Duration = moment.duration(25, "minutes");
 let targetTime: number = moment.now();
-let timer: NodeJS.Timeout;
+let timer: ReturnType<typeof setTimeout>;
 
 function min1() { usePreset("1-minute-timer", 1); }
 function min2() { usePreset("2-minute-timer", 2); }
@@ -50,7 +50,7 @@ function updateButton(state: TimerState) {
     }
 }
 
-function RoundAndTrimDuration(span: moment.Duration): string {
+function roundAndTrimDuration(span: moment.Duration): string {
     const factor: number = 1000;
     let boundedTicks: number = Math.max(span.asMilliseconds(), 0);
     let roundedTicks: number = Math.round(boundedTicks / factor) * factor;
@@ -69,14 +69,14 @@ function RoundAndTrimDuration(span: moment.Duration): string {
 function usePreset(url: string, minutes: number) {
     timeRemaining = moment.duration(minutes, "minutes");
     ui.formattedDuration = minutes.toString();
-    ui.timerDisplay = RoundAndTrimDuration(timeRemaining);
+    ui.timerDisplay = roundAndTrimDuration(timeRemaining);
     updateButton(TimerState.Stopped);
-    clearInterval(timer);
+    clearTimeout(timer);
 }
 
 function onTimer() {
     timeRemaining = moment.duration(targetTime - moment.now(), "ms");
-    ui.timerDisplay = RoundAndTrimDuration(timeRemaining);
+    ui.timerDisplay = roundAndTrimDuration(timeRemaining);
     setTitle(ui.timerDisplay);
 
     if (timeRemaining.asMilliseconds() <= 0) {
@@ -90,7 +90,7 @@ function timerExpired() {
     colorBody();
     playAudio(".audio-bell");
     updateButton(TimerState.Stopped);
-    clearInterval(timer);
+    clearTimeout(timer);
 }
 
 function onStartPause() {
@@ -112,15 +112,15 @@ function onStartPause() {
 
                 targetTime = (moment as any)(moment.now()).add(timeRemaining.asMilliseconds(), "ms") as number;
                 uncolorBody();
-                ui.timerDisplay = RoundAndTrimDuration(timeRemaining);
+                ui.timerDisplay = roundAndTrimDuration(timeRemaining);
                 updateButton(TimerState.Running);
-                timer = setInterval(onTimer, 1000);
+                timer = setTimeout(onTimer, 1000);
             }
             break;
 
         case TimerState.Running:
             updateButton(TimerState.Paused);
-            clearInterval(timer);
+            clearTimeout(timer);
             onTimer();
             break;
 
@@ -128,7 +128,7 @@ function onStartPause() {
             if (timeRemaining.asMilliseconds() > 0) {
                 targetTime = moment.now() + timeRemaining.asMilliseconds();
                 updateButton(TimerState.Running);
-                timer = setInterval(onTimer, 1000);
+                timer = setTimeout(onTimer, 1000);
             }
             else {
                 timerStatus = TimerState.Stopped;

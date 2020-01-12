@@ -46,6 +46,7 @@ menu:
     weight: 100
   - name: Scheduled Metronome
     parent: Practice
+    url: /practice/scheduled-metronome/
     weight: 200
   - name: Accelerating Metronome
     parent: Practice

@@ -1,3 +1,5 @@
+type Action = () => void;
+
 class Binding {
     elementBindings: any[];
     value: any;
@@ -46,4 +48,4 @@ class Binding {
     }
 }
 
-export { Binding }
+export { Action, Binding }
