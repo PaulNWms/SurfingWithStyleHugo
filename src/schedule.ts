@@ -7,9 +7,6 @@ import { MiniMetronome } from "./mini-metronome";
 enum TimerState { Stopped, Running, Paused, StartNext, Settling };
 
 class Schedule {
-    protected regex: RegExp = /(\d+):(\d\d)/;
-    protected match: RegExpMatchArray | null = null;
-
     public startWithRest: boolean;
     public endWithBell: boolean;
     public timeline: Array<Exercise> = [];
@@ -155,7 +152,7 @@ class Schedule {
     }
 
     public parseControls() {
-        let exercises: Array<Exercise> = [];
+        this.exercises = [];
         let raw: Array<Array<string>> = this.getExerciseValues();
 
         if (raw[0].length != raw[1].length || raw[1].length != raw[2].length) {
@@ -166,8 +163,29 @@ class Schedule {
             let tempo: number = parseInt(raw[0][i]);
             let duration: moment.Duration = this.parseDuration(raw[1][i]);
 
-            exercises.push(new Exercise(tempo, duration, raw[2][i]));
+            this.exercises.push(new Exercise(tempo, duration, raw[2][i]));
         }
+    }
+
+    public parseControl(index: number) {
+        let raw: Array<Array<string>> = this.getExerciseValues();
+        let row: number = Math.floor(index / 3);
+        let col: number = index % 3;
+
+        // parse and transpose at the same time
+        switch (col) {
+            case 0:
+                this.exercises[row][col] = this.myParseInt(raw[col][row]);
+                break;
+            case 1:
+                this.exercises[row][col] = this.parseDuration(raw[col][row]);
+                break;
+            case 2:
+                this.exercises[row][col] = raw[col][row];
+                break;
+        }
+
+        console.log(`${raw[0].length} ${row} ${col} ${raw[col][row]} ${this.exercises[row][col]}`);
     }
 
     protected parseUrl() {
@@ -238,22 +256,25 @@ class Schedule {
         }
     }
 
+    private myParseInt(value: string): number {
+        if (value) { return parseInt(value); }
+        else { return 0; }
+    }
+
     private parseDuration(value: string): moment.Duration {
-        let duration: moment.Duration = moment.duration(0, "seconds");
+        let duration: moment.Duration = moment.duration(value);
+        let regex: RegExp = /(\d+):(\d\d)/;
+        let match: RegExpMatchArray | null = value.match(regex);
         let minutes: number;
         let seconds: number;
-        this.match = value.match(this.regex);
 
-        if (this.match != null) {
-            minutes = parseInt(this.match[1]);
-            seconds = parseInt(this.match[2]);
+        if (match != null) {
+            minutes = parseInt(match[1]);
+            seconds = parseInt(match[2]);
             duration = moment.duration(60 * minutes + seconds, "seconds");
         }
         else if (Number(value) !== NaN) {
             duration = moment.duration(Number(value), "seconds");
-        }
-        else {
-            alert("what?  " + value);
         }
 
         if (duration.asSeconds() === 0) {
@@ -345,9 +366,13 @@ class Schedule {
         var tempos: Array<string> = [];
         var durations: Array<string> = [];
         var exercises: Array<string> = [];
-        $(".tempo-0").each(() => { tempos.push(<string>$(this).val()); });
-        $(".midpoint-0").each(() => { durations.push(<string>$(this).val()); });
-        $(".exercise").each(() => { exercises.push(<string>$(this).val()); });
+        $(".tempo-0").each(function () { tempos.push("" + $(this).val()); });
+        $(".midpoint-0").each(function () { durations.push("" + $(this).val()); });
+        $(".exercise").each(function () { exercises.push("" + $(this).val()); });
+        console.log(tempos);
+        console.log(durations);
+        console.log(exercises);
+        // CAREFUL: values are returned in column-major order
         return [tempos, durations, exercises];
     }
 

@@ -79,31 +79,39 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
 }
 
 function registerFormRowListener(html) {
+    $(".form-control").off("onblur");
     $(".add-schedule-row").off("click");
     $(".delete-schedule-row").off("click");
+    $(".form-control").blur(function () {
+        let index: number = $(".form-control").index(this);
+        console.log("blur form-control " + index);
+        schedule.parseControl(index);
+        ui.exerciseMarkup = schedule.toHtml();
+        registerFormRowListener(html);
+    });
     $(".add-schedule-row").click(function () {
         let index: number = $(".add-schedule-row").index(this);
-        alert("add-schedule-row " + index);
+        console.log("add form-control " + index);
         schedule.insertRow(index);
         ui.exerciseMarkup = schedule.toHtml();
-//        $(this).parent().parent().after(html);
+        //        $(this).parent().parent().after(html);
         registerFormRowListener(html);
-//        $(this).parent().parent().next().children().children(".tempo").focus();
+        //        $(this).parent().parent().next().children().children(".tempo").focus();
     });
     $(".delete-schedule-row").click(function () {
         let index: number = $(".delete-schedule-row").index(this);
-        alert("delete-schedule-row " + index);
+        console.log("delete form-control " + index);
         schedule.deleteRow(index);
         ui.exerciseMarkup = schedule.toHtml();
         registerFormRowListener(html);
-//        var row = $(this).parent().parent();
-//        if (row.siblings().length > 0) {
-//            row.remove();
-//        }
+        //        var row = $(this).parent().parent();
+        //        if (row.siblings().length > 0) {
+        //            row.remove();
+        //        }
     });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     eggTimer = new EggTimer(() => { alert("eggTimer: stateHasChanged"); })
     metronome = new MiniMetronome(ui);
     schedule = new Schedule(() => { alert("schedule: stateHasChanged"); }, eggTimer, metronome);
