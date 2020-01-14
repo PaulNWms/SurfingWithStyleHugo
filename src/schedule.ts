@@ -21,16 +21,16 @@ class Schedule {
     protected metronome: MiniMetronome;
     protected exercises: Array<Exercise> = [];
 
-    protected rest: moment.Duration;
-    public get restDisplay(): string { return this.rest.asSeconds().toString(); }
-    public set restDisplay(value: string) { this.rest = this.parseDuration(value); }
+    protected rest: number;
+    public get restDisplay(): string { return this.rest.toString(); }
+    public set restDisplay(value: string) { this.rest = this.myParseInt(value); }
 
     constructor(stateHasChanged: Action, eggTimer: EggTimer, metronome: MiniMetronome) {
         this.eggTimer = eggTimer;
         this.metronome = metronome;
         this.stateHasChanged = stateHasChanged;
         this.url = new URL(window.location.href);
-        this.rest = moment.duration(3, "seconds");
+        this.rest = 3;
         this.startWithRest = true;
         this.endWithBell = true;
         this.parseUrl();
@@ -97,7 +97,7 @@ class Schedule {
                 this.exerciseDisplay = this.currentStep.description;
                 this.metronome.tempo = this.currentStep.tempo;
                 this.metronome.isRunning = this.metronome.tempo >= MiniMetronome.MIN_TEMPO;
-                this.eggTimer.timeRemaining = this.currentStep.duration;
+                this.eggTimer.timeRemaining = moment.duration(this.currentStep.duration, "seconds");
                 this.eggTimer.isRunning = true;
                 this.status = TimerState.Running;
 
@@ -161,9 +161,7 @@ class Schedule {
 
         for (let i: number = 0; i < raw[0].length; i++) {
             let tempo: number = parseInt(raw[0][i]);
-            let duration: moment.Duration = this.parseDuration(raw[1][i]);
-
-            this.exercises.push(new Exercise(tempo, duration, raw[2][i]));
+            this.exercises.push(new Exercise(tempo, raw[1][i], raw[2][i]));
         }
     }
 
@@ -175,13 +173,13 @@ class Schedule {
         // parse and transpose at the same time
         switch (col) {
             case 0:
-                this.exercises[row][col] = this.myParseInt(raw[col][row]);
+                this.exercises[row].tempo = this.myParseInt(raw[col][row]);
                 break;
             case 1:
-                this.exercises[row][col] = this.parseDuration(raw[col][row]);
+                this.exercises[row].duration = raw[col][row];
                 break;
             case 2:
-                this.exercises[row][col] = raw[col][row];
+                this.exercises[row].description = raw[col][row];
                 break;
         }
 
@@ -191,7 +189,7 @@ class Schedule {
     protected parseUrl() {
         let params: URLSearchParams = new URL(document.URL).searchParams;
         let tempos: Array<number> = [];
-        let durations: Array<moment.Duration> = [];
+        let durations: Array<string> = [];
         let exes: Array<string> = [];
         this.exercises = [];
 
@@ -222,15 +220,7 @@ class Schedule {
                         break;
 
                     case "d":
-                        {
-                            let strs: Array<string> = value.split('-');
-
-                            for (let str of strs) {
-                                let sec: number = parseInt(str);
-                                let dur: moment.Duration = moment.duration(sec, "seconds");
-                                durations.push(dur);
-                            }
-                        }
+                        durations = value.split('-');
                         break;
 
                     case "e":
@@ -252,7 +242,7 @@ class Schedule {
             });
         }
         else {
-            this.exercises.push(new Exercise(120, moment.duration(2, "minutes"), ""));
+            this.exercises.push(new Exercise(120, "2:00", ""));
         }
     }
 
@@ -261,41 +251,18 @@ class Schedule {
         else { return 0; }
     }
 
-    private parseDuration(value: string): moment.Duration {
-        let duration: moment.Duration = moment.duration(value);
-        let regex: RegExp = /(\d+):(\d\d)/;
-        let match: RegExpMatchArray | null = value.match(regex);
-        let minutes: number;
-        let seconds: number;
-
-        if (match != null) {
-            minutes = parseInt(match[1]);
-            seconds = parseInt(match[2]);
-            duration = moment.duration(60 * minutes + seconds, "seconds");
-        }
-        else if (Number(value) !== NaN) {
-            duration = moment.duration(Number(value), "seconds");
-        }
-
-        if (duration.asSeconds() === 0) {
-            throw `Invalid time format: ${value}`;
-        }
-
-        return duration;
-    }
-
     public toTimeline(): Array<Exercise> {
         let timeline: Array<Exercise> = [];
-        let restStep: Exercise = new Exercise(-1, this.rest, "Resting...");
+        let restStep: Exercise = new Exercise(-1, this.rest.toString(), "Resting...");
 
-        if (this.exercises.length > 0 && this.rest.asSeconds() > 0 && this.startWithRest) {
+        if (this.exercises.length > 0 && this.rest > 0 && this.startWithRest) {
             timeline.push(restStep);
         }
 
         for (let i: number = 0; i < this.exercises.length; i++) {
             timeline.push(this.exercises[i]);
 
-            if (i < this.exercises.length - 1 && this.rest.asSeconds() > 0) {
+            if (i < this.exercises.length - 1 && this.rest > 0) {
                 timeline.push(restStep);
             }
         }
@@ -305,7 +272,7 @@ class Schedule {
 
     public toUrl(): string {
         let tempos: Array<number> = [];
-        let durations: Array<moment.Duration> = [];
+        let durations: Array<string> = [];
         let descriptions: Array<string> = [];
 
         for (let exercise of this.exercises) {
@@ -315,12 +282,12 @@ class Schedule {
         }
 
         let ts: string = tempos.join('-');
-        let ds: string = durations.map(d => d.asSeconds()).join('-');
+        let ds: string = durations.map(d => d.toString()).join('-');
         let es: string = descriptions.map(e => encodeURI(e)).join('-');
 
         return this.URL_TEMPLATE
             .replace("{0}", this.url.origin)
-            .replace("{1}", this.rest.asSeconds().toString())
+            .replace("{1}", this.rest.toString())
             .replace("{2}", this.startWithRest.toString())
             .replace("{3}", this.endWithBell.toString())
             .replace("{4}", ts)
@@ -332,9 +299,11 @@ class Schedule {
         let result = "";
 
         for (let exercise of this.exercises) {
+            console.log(exercise);
+
             result = result.concat(this.HTML_TEMPLATE
                 .replace("{0}", exercise.tempo.toString())
-                .replace("{1}", exercise.duration.toISOString())
+                .replace("{1}", exercise.duration)
                 .replace("{2}", exercise.description));
         }
 
@@ -348,8 +317,8 @@ class Schedule {
             .replace("{2}", "");
     }
 
-    public insertRow(index: number) {
-        this.exercises.splice(index, 0, new Exercise(120, moment.duration(2, "minutes"), ""));
+    public appendRow(index: number) {
+        this.exercises.splice(index + 1, 0, new Exercise(120, "2:00", ""));
     }
 
     public deleteRow(index: number) {
@@ -372,7 +341,7 @@ class Schedule {
         console.log(tempos);
         console.log(durations);
         console.log(exercises);
-        // CAREFUL: values are returned in column-major order
+        // CAREFUL: columns are returned as rows
         return [tempos, durations, exercises];
     }
 

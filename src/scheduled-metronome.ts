@@ -84,30 +84,21 @@ function registerFormRowListener(html) {
     $(".delete-schedule-row").off("click");
     $(".form-control").blur(function () {
         let index: number = $(".form-control").index(this);
-        console.log("blur form-control " + index);
         schedule.parseControl(index);
         ui.exerciseMarkup = schedule.toHtml();
         registerFormRowListener(html);
     });
     $(".add-schedule-row").click(function () {
         let index: number = $(".add-schedule-row").index(this);
-        console.log("add form-control " + index);
-        schedule.insertRow(index);
+        schedule.appendRow(index);
         ui.exerciseMarkup = schedule.toHtml();
-        //        $(this).parent().parent().after(html);
         registerFormRowListener(html);
-        //        $(this).parent().parent().next().children().children(".tempo").focus();
     });
     $(".delete-schedule-row").click(function () {
         let index: number = $(".delete-schedule-row").index(this);
-        console.log("delete form-control " + index);
         schedule.deleteRow(index);
         ui.exerciseMarkup = schedule.toHtml();
         registerFormRowListener(html);
-        //        var row = $(this).parent().parent();
-        //        if (row.siblings().length > 0) {
-        //            row.remove();
-        //        }
     });
 }
 
