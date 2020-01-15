@@ -61,7 +61,7 @@ class EggTimer {
         this.timer = setTimeout(this.onTimer, this.targetTime);
     }
 
-    private colorBody() { $("body").css({ "background-color": "#001912", "color": "#009871" }); }
+    public colorBody() { $("body").css({ "background-color": "#001912", "color": "#009871" }); }
 
     private uncolorBody() { $("body").css({ "background-color": "", "color": "" }); }
 

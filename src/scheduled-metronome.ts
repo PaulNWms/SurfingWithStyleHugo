@@ -8,24 +8,28 @@ let ui = {
     //    buttonFace: "▶️",
     //    timerDisplay: "25:00",
     display: "",
-    formattedDuration: "25",
+    endWithBell: true,
     exerciseMarkup: "",
+    rest: 3,
+    startWithRest: true,
     style: "",
 }
-
-// let formattedDurationElement: HTMLInputElement = $("#formatted-duration")[0] as HTMLInputElement
-// new Binding({ object: ui, property: "formattedDuration" }).addBinding(formattedDurationElement, "value");
 
 let exerciseMarkupElement: HTMLElement = $(".exerciseMarkup")[0] as HTMLElement
 new Binding({ object: ui, property: "exerciseMarkup" }).addBinding(exerciseMarkupElement, "innerHTML");
 
+let restElement: HTMLInputElement = $(".rest")[0] as HTMLInputElement
+new Binding({ object: ui, property: "rest" }).addBinding(restElement, "value");
+
+let startWithRestElement: HTMLInputElement = $(".start-with-rest")[0] as HTMLInputElement
+new Binding({ object: ui, property: "startWithRest" }).addBinding(startWithRestElement, "checked");
+
+let endWithBellElement: HTMLInputElement = $(".end-with-bell")[0] as HTMLInputElement
+new Binding({ object: ui, property: "endWithBell" }).addBinding(endWithBellElement, "checked");
+
 let schedule: Schedule;
 let metronome: MiniMetronome;
 let eggTimer: EggTimer;
-
-function colorBody() { $("body").css({ "background-color": "#001912", "color": "#009871" }); }
-
-function uncolorBody() { $("body").css({ "background-color": "", "color": "" }); }
 
 function playAudio(selector) { $(selector)[0].play(); }
 
@@ -105,13 +109,12 @@ function registerFormRowListener(html) {
 $(document).ready(function () {
     eggTimer = new EggTimer(() => { alert("eggTimer: stateHasChanged"); })
     metronome = new MiniMetronome(ui);
-    schedule = new Schedule(() => { alert("schedule: stateHasChanged"); }, eggTimer, metronome);
+    schedule = new Schedule(ui, () => { alert("schedule: stateHasChanged"); }, eggTimer, metronome);
     eggTimer.initialize(schedule.update, schedule.lineCompleted);
 
     let w = window as any;
-    w.onPlayPause = schedule.onPlayPause;
-    w.createLink = schedule.createLink;
-    ui.exerciseMarkup = schedule.toHtml();
+    w.onPlayPause = function() { schedule.onPlayPause(); }
+    w.createLink = function() { schedule.createLink(); }
 
     registerScheduled(metronome, ".audio-click");
     registerFormRowListener(exerciseMarkupElement);

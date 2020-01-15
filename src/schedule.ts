@@ -7,8 +7,6 @@ import { MiniMetronome } from "./mini-metronome";
 enum TimerState { Stopped, Running, Paused, StartNext, Settling };
 
 class Schedule {
-    public startWithRest: boolean;
-    public endWithBell: boolean;
     public timeline: Array<Exercise> = [];
     public currentStep: Exercise | undefined;
     public lastStep: Exercise | undefined;
@@ -20,20 +18,24 @@ class Schedule {
     protected eggTimer: EggTimer;
     protected metronome: MiniMetronome;
     protected exercises: Array<Exercise> = [];
+    private ui;
 
-    protected rest: number;
-    public get restDisplay(): string { return this.rest.toString(); }
-    public set restDisplay(value: string) { this.rest = this.myParseInt(value); }
+    // protected rest: number;
+    // public get restDisplay(): string { return this.rest.toString(); }
+    // public set restDisplay(value: string) { this.rest = this.myParseInt(value); }
 
-    constructor(stateHasChanged: Action, eggTimer: EggTimer, metronome: MiniMetronome) {
+    constructor(ui, stateHasChanged: Action, eggTimer: EggTimer, metronome: MiniMetronome) {
+        this.ui = ui;
         this.eggTimer = eggTimer;
         this.metronome = metronome;
         this.stateHasChanged = stateHasChanged;
         this.url = new URL(window.location.href);
-        this.rest = 3;
-        this.startWithRest = true;
-        this.endWithBell = true;
+        ui.rest = "3";
+        ui.startWithRest = true;
+        ui.endWithBell = true;
         this.parseUrl();
+        this.ui.exerciseMarkup = this.toHtml();
+
     }
 
     public onPlayPause() {
@@ -106,8 +108,6 @@ class Schedule {
                 }
 
                 this.stateHasChanged();
-                //            JSRuntime.Current.InvokeAsync<object>("alert", "lineCompleted " + metronome.State);
-                //            JSRuntime.Current.InvokeAsync<object>("showState");
                 break;
 
             case TimerState.Settling:
@@ -127,7 +127,7 @@ class Schedule {
         }
 
         if (this.timeline.length > 0) {
-            if (this.endWithBell &&
+            if (this.ui.endWithBell &&
                 (this.currentStep.tempo != -1 || this.timeline[0].tempo < MiniMetronome.MIN_TEMPO)) {
                 let audio: HTMLAudioElement = $(".audio-end-exercise")[0] as HTMLAudioElement;
                 audio.play();
@@ -137,7 +137,7 @@ class Schedule {
             this.update();
         }
         else {
-            if (this.endWithBell) {
+            if (this.ui.endWithBell) {
                 let audio: HTMLAudioElement = $(".audio-end-routine")[0] as HTMLAudioElement;
                 audio.play();
             }
@@ -146,7 +146,7 @@ class Schedule {
             this.metronome.isRunning = false;
             this.eggTimer.isRunning = false;
             this.status = TimerState.Stopped;
-            this.colorBody();
+            this.eggTimer.colorBody();
             this.exerciseDisplay = "Done!";
         }
     }
@@ -182,14 +182,12 @@ class Schedule {
                 this.exercises[row].description = raw[col][row];
                 break;
         }
-
-        console.log(`${raw[0].length} ${row} ${col} ${raw[col][row]} ${this.exercises[row][col]}`);
     }
 
     protected parseUrl() {
         let params: URLSearchParams = new URL(document.URL).searchParams;
         let tempos: Array<number> = [];
-        let durations: Array<string> = [];
+        let durations: Array<number> = [];
         let exes: Array<string> = [];
         this.exercises = [];
 
@@ -197,15 +195,15 @@ class Schedule {
             params.forEach((value, key) => {
                 switch (key) {
                     case "r":
-                        this.restDisplay = value;
+                        this.ui.rest = value;
                         break;
 
                     case "s":
-                        this.startWithRest = (value === "true");
+                        this.ui.startWithRest = (value === "true");
                         break;
 
                     case "b":
-                        this.endWithBell = (value === "true");
+                        this.ui.endWithBell = (value === "true");
                         break;
 
                     case "t":
@@ -220,7 +218,14 @@ class Schedule {
                         break;
 
                     case "d":
-                        durations = value.split('-');
+                        {
+                            let strs: Array<string> = value.split('-');
+
+                            for (let str of strs) {
+                                let dur: number = parseInt(str);
+                                durations.push(dur);
+                            }
+                        }
                         break;
 
                     case "e":
@@ -235,11 +240,13 @@ class Schedule {
                         }
                         break;
                 }
-
-                for (let i: number = 0; i < tempos.length; i++) {
-                    this.exercises.push(new Exercise(tempos[i], durations[i], exes[i]));
-                }
             });
+
+            for (let i: number = 0; i < tempos.length; i++) {
+                let ex: Exercise = new Exercise(tempos[i], "2:00", exes[i]);
+                ex.durationSec = durations[i];
+                this.exercises.push(ex);
+            }
         }
         else {
             this.exercises.push(new Exercise(120, "2:00", ""));
@@ -253,16 +260,16 @@ class Schedule {
 
     public toTimeline(): Array<Exercise> {
         let timeline: Array<Exercise> = [];
-        let restStep: Exercise = new Exercise(-1, this.rest.toString(), "Resting...");
+        let restStep: Exercise = new Exercise(-1, this.ui.rest.toString(), "Resting...");
 
-        if (this.exercises.length > 0 && this.rest > 0 && this.startWithRest) {
+        if (this.exercises.length > 0 && this.ui.rest > 0 && this.ui.startWithRest) {
             timeline.push(restStep);
         }
 
         for (let i: number = 0; i < this.exercises.length; i++) {
             timeline.push(this.exercises[i]);
 
-            if (i < this.exercises.length - 1 && this.rest > 0) {
+            if (i < this.exercises.length - 1 && this.ui.rest > 0) {
                 timeline.push(restStep);
             }
         }
@@ -272,12 +279,12 @@ class Schedule {
 
     public toUrl(): string {
         let tempos: Array<number> = [];
-        let durations: Array<string> = [];
+        let durations: Array<number> = [];
         let descriptions: Array<string> = [];
 
         for (let exercise of this.exercises) {
             tempos.push(exercise.tempo);
-            durations.push(exercise.duration);
+            durations.push(exercise.durationSec);
             descriptions.push(exercise.description);
         }
 
@@ -286,10 +293,10 @@ class Schedule {
         let es: string = descriptions.map(e => encodeURI(e)).join('-');
 
         return this.URL_TEMPLATE
-            .replace("{0}", this.url.origin)
-            .replace("{1}", this.rest.toString())
-            .replace("{2}", this.startWithRest.toString())
-            .replace("{3}", this.endWithBell.toString())
+            .replace("{0}", this.url.origin + this.url.pathname)
+            .replace("{1}", this.ui.rest.toString())
+            .replace("{2}", this.ui.startWithRest.toString())
+            .replace("{3}", this.ui.endWithBell.toString())
             .replace("{4}", ts)
             .replace("{5}", ds)
             .replace("{6}", es);
@@ -299,8 +306,6 @@ class Schedule {
         let result = "";
 
         for (let exercise of this.exercises) {
-            console.log(exercise);
-
             result = result.concat(this.HTML_TEMPLATE
                 .replace("{0}", exercise.tempo.toString())
                 .replace("{1}", exercise.duration)
@@ -327,10 +332,6 @@ class Schedule {
         }
     }
 
-    private colorBody() { $("body").css({ "background-color": "#001912", "color": "#009871" }); }
-
-    private uncolorBody() { $("body").css({ "background-color": "", "color": "" }); }
-
     private getExerciseValues() {
         var tempos: Array<string> = [];
         var durations: Array<string> = [];
@@ -338,9 +339,6 @@ class Schedule {
         $(".tempo-0").each(function () { tempos.push("" + $(this).val()); });
         $(".midpoint-0").each(function () { durations.push("" + $(this).val()); });
         $(".exercise").each(function () { exercises.push("" + $(this).val()); });
-        console.log(tempos);
-        console.log(durations);
-        console.log(exercises);
         // CAREFUL: columns are returned as rows
         return [tempos, durations, exercises];
     }
@@ -350,19 +348,19 @@ class Schedule {
     private HTML_TEMPLATE: string = `\
         <tr>
             <td>
-                <button type='button' class='btn btn-primary delete-schedule-row'>␡</button>
+                <button type="button" class="btn btn-primary delete-schedule-row">␡</button>
             </td>
             <td>
-                <input type='text' class='form-control digit-filter tempo tempo-0' placeholder='Tempo' autocomplete='off' value='{0}' />
+                <input type="text" class="form-control digit-filter tempo tempo-0" placeholder="Tempo" autocomplete="off" value="{0}" />
             </td>
             <td>
-                <input type='text' class='form-control time-filter midpoint midpoint-0' placeholder='Duration' autocomplete='off' value='{1}' />
+                <input type="text" class="form-control time-filter midpoint midpoint-0" placeholder="Duration" autocomplete="off" value="{1}" />
             </td>
             <td>
-                <input type='text' class='form-control exercise' placeholder='Exercise' value='{2}' />
+                <input type="text" class="form-control exercise" placeholder="Exercise" value="{2}" />
             </td>
             <td>
-                <button type='button' class='btn btn-primary add-schedule-row'>⎀</button>
+                <button type="button" class="btn btn-primary add-schedule-row">⎀</button>
             </td>
         </tr>`;
 }
