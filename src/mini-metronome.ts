@@ -1,13 +1,11 @@
 ﻿import moment from "moment";
+import { ui } from "./scheduled-metronome-globals";
 
 class MiniMetronome {
     public static MIN_TEMPO: number = 20;
     public static MAX_TEMPO: number = 240;
 
-    private ui;
-
-    constructor(ui) {
-        this.ui = ui;
+    constructor() {
     }
 
     private _tempo: number = 120;
@@ -17,7 +15,7 @@ class MiniMetronome {
         this.duration = (Math.round(60000 / this._tempo)).toString() + "ms";
         // Need to change the animation for the duration change to take effect
         this.animation = "starting";
-        this.ui.display = this._tempo;
+        ui.display = this._tempo.toString();
     }
 
     private _animation: string = "none";
@@ -55,7 +53,7 @@ class MiniMetronome {
     }
 
     private setStyle() {
-        this.ui.style = `animation-name: ${this.animation}; animation-duration: ${this.duration}; animation-play-state: ${this.playState}; animation-direction: alternate;`;
+        ui.style = `animation-name: ${this.animation}; animation-duration: ${this.duration}; animation-play-state: ${this.playState}; animation-direction: alternate;`;
     }
 }
 

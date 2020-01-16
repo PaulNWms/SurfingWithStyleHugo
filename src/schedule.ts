@@ -1,5 +1,6 @@
 ﻿import moment from "moment";
 import { Action, Binding } from "./lib/binding";
+import { ui, onTimer } from "./scheduled-metronome-globals";
 import { Exercise } from "./exercise";
 import { EggTimer } from "./egg-timer";
 import { MiniMetronome } from "./mini-metronome";
@@ -12,30 +13,23 @@ class Schedule {
     public lastStep: Exercise | undefined;
     public exerciseDisplay: string = "";
 
-    protected stateHasChanged: Action;
+    protected stateHasChanged: Action = () => { console.log("schedule: stateHasChanged uninitialized") };
     protected status: TimerState = TimerState.Stopped;
     protected url: URL;
     protected eggTimer: EggTimer;
     protected metronome: MiniMetronome;
     protected exercises: Array<Exercise> = [];
-    private ui;
 
-    // protected rest: number;
-    // public get restDisplay(): string { return this.rest.toString(); }
-    // public set restDisplay(value: string) { this.rest = this.myParseInt(value); }
-
-    constructor(ui, stateHasChanged: Action, eggTimer: EggTimer, metronome: MiniMetronome) {
-        this.ui = ui;
+    constructor(stateHasChanged: Action, eggTimer: EggTimer, metronome: MiniMetronome) {
         this.eggTimer = eggTimer;
         this.metronome = metronome;
         this.stateHasChanged = stateHasChanged;
         this.url = new URL(window.location.href);
-        ui.rest = "3";
+        ui.rest = 3;
         ui.startWithRest = true;
         ui.endWithBell = true;
         this.parseUrl();
-        this.ui.exerciseMarkup = this.toHtml();
-
+        ui.exerciseMarkup = this.toHtml();
     }
 
     public onPlayPause() {
@@ -43,8 +37,11 @@ class Schedule {
             case TimerState.Stopped:
                 try {
                     if (this.timeline == null || this.timeline.length === 0) {
+//                        console.log("schedule.onPlayPause.Stopped 1")
                         this.parseControls();
+//                        console.log("schedule.onPlayPause.Stopped 2")
                         this.timeline = this.toTimeline();
+//                        console.log("schedule.onPlayPause.Stopped 3")
 
                         if (this.timeline.length === 0) {
                             return;
@@ -53,7 +50,9 @@ class Schedule {
 
                     this.status = TimerState.StartNext;
                     this.update();
+//                    console.log("schedule.onPlayPause.Stopped 4")
                     this.stateHasChanged();
+//                    console.log("schedule.onPlayPause.Stopped 5")
                 }
                 catch (e) {
                     alert(e.Message + e.StackTrace);
@@ -61,16 +60,18 @@ class Schedule {
                 break;
 
             case TimerState.Paused:
+//                console.log("schedule.onPlayPause.Paused")
                 this.status = TimerState.Running;
                 this.eggTimer.isRunning = true;
                 this.metronome.playState = "running";
                 break;
 
             case TimerState.Running:
+//                console.log("schedule.onPlayPause.Running")
                 this.status = TimerState.Paused;
                 this.eggTimer.isRunning = false;
                 this.metronome.playState = "paused";
-                this.eggTimer.onTimer();
+                onTimer();
                 break;
 
             default:
@@ -93,13 +94,16 @@ class Schedule {
     public update() {
         switch (this.status) {
             case TimerState.StartNext:
+                console.log("schedule.update.StartNext");
                 this.lastStep = this.currentStep;
                 this.currentStep = this.timeline.shift();
                 if (this.currentStep === undefined) { throw "currentStep is undefined"; }
+                console.log(`currentStep ${this.currentStep.tempo} ${this.currentStep.duration} ${this.currentStep.description}`);
                 this.exerciseDisplay = this.currentStep.description;
                 this.metronome.tempo = this.currentStep.tempo;
                 this.metronome.isRunning = this.metronome.tempo >= MiniMetronome.MIN_TEMPO;
-                this.eggTimer.timeRemaining = moment.duration(this.currentStep.duration, "seconds");
+                ui.timeRemaining = moment.duration(this.currentStep.durationSec, "seconds");
+                console.log(`schedule.update.StartNext ${ui.timeRemaining.toISOString()}`)
                 this.eggTimer.isRunning = true;
                 this.status = TimerState.Running;
 
@@ -107,14 +111,18 @@ class Schedule {
                     this.metronome.playState = "starting";
                 }
 
+//                console.log("schedule.update.StartNext 2" );
                 this.stateHasChanged();
+                this.lineCompleted();
                 break;
 
             case TimerState.Settling:
+//                console.log("schedule.update.Settling");
                 this.status = TimerState.Running;
                 break;
 
             default:
+//                console.log("schedule.update.default");
                 break;
         }
     }
@@ -127,7 +135,7 @@ class Schedule {
         }
 
         if (this.timeline.length > 0) {
-            if (this.ui.endWithBell &&
+            if (ui.endWithBell &&
                 (this.currentStep.tempo != -1 || this.timeline[0].tempo < MiniMetronome.MIN_TEMPO)) {
                 let audio: HTMLAudioElement = $(".audio-end-exercise")[0] as HTMLAudioElement;
                 audio.play();
@@ -137,7 +145,7 @@ class Schedule {
             this.update();
         }
         else {
-            if (this.ui.endWithBell) {
+            if (ui.endWithBell) {
                 let audio: HTMLAudioElement = $(".audio-end-routine")[0] as HTMLAudioElement;
                 audio.play();
             }
@@ -195,15 +203,15 @@ class Schedule {
             params.forEach((value, key) => {
                 switch (key) {
                     case "r":
-                        this.ui.rest = value;
+                        ui.rest = parseInt(value);
                         break;
 
                     case "s":
-                        this.ui.startWithRest = (value === "true");
+                        ui.startWithRest = (value === "true");
                         break;
 
                     case "b":
-                        this.ui.endWithBell = (value === "true");
+                        ui.endWithBell = (value === "true");
                         break;
 
                     case "t":
@@ -260,16 +268,16 @@ class Schedule {
 
     public toTimeline(): Array<Exercise> {
         let timeline: Array<Exercise> = [];
-        let restStep: Exercise = new Exercise(-1, this.ui.rest.toString(), "Resting...");
+        let restStep: Exercise = new Exercise(-1, ui.rest.toString(), "Resting...");
 
-        if (this.exercises.length > 0 && this.ui.rest > 0 && this.ui.startWithRest) {
+        if (this.exercises.length > 0 && ui.rest > 0 && ui.startWithRest) {
             timeline.push(restStep);
         }
 
         for (let i: number = 0; i < this.exercises.length; i++) {
             timeline.push(this.exercises[i]);
 
-            if (i < this.exercises.length - 1 && this.ui.rest > 0) {
+            if (i < this.exercises.length - 1 && ui.rest > 0) {
                 timeline.push(restStep);
             }
         }
@@ -294,9 +302,9 @@ class Schedule {
 
         return this.URL_TEMPLATE
             .replace("{0}", this.url.origin + this.url.pathname)
-            .replace("{1}", this.ui.rest.toString())
-            .replace("{2}", this.ui.startWithRest.toString())
-            .replace("{3}", this.ui.endWithBell.toString())
+            .replace("{1}", ui.rest.toString())
+            .replace("{2}", ui.startWithRest.toString())
+            .replace("{3}", ui.endWithBell.toString())
             .replace("{4}", ts)
             .replace("{5}", ds)
             .replace("{6}", es);

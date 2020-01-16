@@ -1,31 +1,9 @@
 import $ from "jquery";
-import { Action, Binding } from "./lib/binding";
+//import { Action, Binding } from "./lib/binding";
+import { ui, exerciseMarkupElement } from "./scheduled-metronome-globals";
 import { MiniMetronome } from "./mini-metronome";
 import { Schedule } from "./schedule";
 import { EggTimer } from "./egg-timer";
-
-let ui = {
-    //    buttonFace: "▶️",
-    //    timerDisplay: "25:00",
-    display: "",
-    endWithBell: true,
-    exerciseMarkup: "",
-    rest: 3,
-    startWithRest: true,
-    style: "",
-}
-
-let exerciseMarkupElement: HTMLElement = $(".exerciseMarkup")[0] as HTMLElement
-new Binding({ object: ui, property: "exerciseMarkup" }).addBinding(exerciseMarkupElement, "innerHTML");
-
-let restElement: HTMLInputElement = $(".rest")[0] as HTMLInputElement
-new Binding({ object: ui, property: "rest" }).addBinding(restElement, "value");
-
-let startWithRestElement: HTMLInputElement = $(".start-with-rest")[0] as HTMLInputElement
-new Binding({ object: ui, property: "startWithRest" }).addBinding(startWithRestElement, "checked");
-
-let endWithBellElement: HTMLInputElement = $(".end-with-bell")[0] as HTMLInputElement
-new Binding({ object: ui, property: "endWithBell" }).addBinding(endWithBellElement, "checked");
 
 let schedule: Schedule;
 let metronome: MiniMetronome;
@@ -107,10 +85,10 @@ function registerFormRowListener(html) {
 }
 
 $(document).ready(function () {
-    eggTimer = new EggTimer(() => { alert("eggTimer: stateHasChanged"); })
-    metronome = new MiniMetronome(ui);
-    schedule = new Schedule(ui, () => { alert("schedule: stateHasChanged"); }, eggTimer, metronome);
-    eggTimer.initialize(schedule.update, schedule.lineCompleted);
+    eggTimer = new EggTimer(ui, function() { console.log("eggTimer: stateHasChanged"); })
+    metronome = new MiniMetronome();
+    schedule = new Schedule(function() { console.log("schedule: stateHasChanged"); }, eggTimer, metronome);
+    eggTimer.initialize(function() { schedule.update(); }, function() { schedule.lineCompleted(); });
 
     let w = window as any;
     w.onPlayPause = function() { schedule.onPlayPause(); }

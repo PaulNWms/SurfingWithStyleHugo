@@ -22,7 +22,7 @@ new Binding({ object: ui, property: "formattedDuration" }).addBinding(formattedD
 let timerStatus: TimerState = TimerState.Stopped;
 let timeRemaining: moment.Duration = moment.duration(25, "minutes");
 let targetTime: number = moment.now();
-let timer: ReturnType<typeof setTimeout>;
+let timer: ReturnType<typeof setInterval>;
 
 function min1() { usePreset("1-minute-timer", 1); }
 function min2() { usePreset("2-minute-timer", 2); }
@@ -71,7 +71,7 @@ function usePreset(url: string, minutes: number) {
     ui.formattedDuration = minutes.toString();
     ui.timerDisplay = roundAndTrimDuration(timeRemaining);
     updateButton(TimerState.Stopped);
-    clearTimeout(timer);
+    clearInterval(timer);
 }
 
 function onTimer() {
@@ -90,7 +90,7 @@ function timerExpired() {
     colorBody();
     playAudio(".audio-bell");
     updateButton(TimerState.Stopped);
-    clearTimeout(timer);
+    clearInterval(timer);
 }
 
 function onStartPause() {
@@ -114,13 +114,13 @@ function onStartPause() {
                 uncolorBody();
                 ui.timerDisplay = roundAndTrimDuration(timeRemaining);
                 updateButton(TimerState.Running);
-                timer = setTimeout(onTimer, 1000);
+                timer = setInterval(onTimer, 1000);
             }
             break;
 
         case TimerState.Running:
             updateButton(TimerState.Paused);
-            clearTimeout(timer);
+            clearInterval(timer);
             onTimer();
             break;
 
@@ -128,7 +128,7 @@ function onStartPause() {
             if (timeRemaining.asMilliseconds() > 0) {
                 targetTime = moment.now() + timeRemaining.asMilliseconds();
                 updateButton(TimerState.Running);
-                timer = setTimeout(onTimer, 1000);
+                timer = setInterval(onTimer, 1000);
             }
             else {
                 timerStatus = TimerState.Stopped;
