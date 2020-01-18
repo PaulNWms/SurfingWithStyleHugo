@@ -1,6 +1,5 @@
 ﻿import moment from "moment";
-import { Action, Binding } from "./lib/binding";
-import { ui, onTimer } from "./scheduled-metronome-globals";
+import { ui } from "./scheduled-metronome-globals";
 import { Exercise } from "./exercise";
 import { EggTimer } from "./egg-timer";
 import { MiniMetronome } from "./mini-metronome";
@@ -13,17 +12,17 @@ class Schedule {
     public lastStep: Exercise | undefined;
     public exerciseDisplay: string = "";
 
-    protected stateHasChanged: Action = () => { console.log("schedule: stateHasChanged uninitialized") };
+    // protected stateHasChanged: Action = () => { console.log("schedule: stateHasChanged uninitialized") };
     protected status: TimerState = TimerState.Stopped;
     protected url: URL;
     protected eggTimer: EggTimer;
     protected metronome: MiniMetronome;
     protected exercises: Array<Exercise> = [];
 
-    constructor(stateHasChanged: Action, eggTimer: EggTimer, metronome: MiniMetronome) {
+    constructor(eggTimer: EggTimer, metronome: MiniMetronome) {
         this.eggTimer = eggTimer;
         this.metronome = metronome;
-        this.stateHasChanged = stateHasChanged;
+        // this.stateHasChanged = stateHasChanged;
         this.url = new URL(window.location.href);
         ui.rest = 3;
         ui.startWithRest = true;
@@ -51,7 +50,7 @@ class Schedule {
                     this.status = TimerState.StartNext;
                     this.update();
 //                    console.log("schedule.onPlayPause.Stopped 4")
-                    this.stateHasChanged();
+                    // this.stateHasChanged();
 //                    console.log("schedule.onPlayPause.Stopped 5")
                 }
                 catch (e) {
@@ -71,7 +70,7 @@ class Schedule {
                 this.status = TimerState.Paused;
                 this.eggTimer.isRunning = false;
                 this.metronome.playState = "paused";
-                onTimer();
+                // onTimer();
                 break;
 
             default:
@@ -102,8 +101,8 @@ class Schedule {
                 this.exerciseDisplay = this.currentStep.description;
                 this.metronome.tempo = this.currentStep.tempo;
                 this.metronome.isRunning = this.metronome.tempo >= MiniMetronome.MIN_TEMPO;
-                ui.timeRemaining = moment.duration(this.currentStep.durationSec, "seconds");
-                console.log(`schedule.update.StartNext ${ui.timeRemaining.toISOString()}`)
+                this.eggTimer.timeRemaining = moment.duration(this.currentStep.durationSec, "seconds");
+                console.log(`schedule.update.StartNext ${this.eggTimer.timeRemaining.toISOString()}`)
                 this.eggTimer.isRunning = true;
                 this.status = TimerState.Running;
 
@@ -112,8 +111,7 @@ class Schedule {
                 }
 
 //                console.log("schedule.update.StartNext 2" );
-                this.stateHasChanged();
-                this.lineCompleted();
+                // this.stateHasChanged();
                 break;
 
             case TimerState.Settling:
@@ -128,6 +126,7 @@ class Schedule {
     }
 
     public lineCompleted() {
+        console.log("schedule.lineCompleted");
         if (this.currentStep === undefined) { throw "currentStep is undefined"; }
 
         if (this.currentStep.tempo != -1) {

@@ -1,5 +1,4 @@
 import $ from "jquery";
-//import { Action, Binding } from "./lib/binding";
 import { ui, exerciseMarkupElement } from "./scheduled-metronome-globals";
 import { MiniMetronome } from "./mini-metronome";
 import { Schedule } from "./schedule";
@@ -85,14 +84,14 @@ function registerFormRowListener(html) {
 }
 
 $(document).ready(function () {
-    eggTimer = new EggTimer(ui, function() { console.log("eggTimer: stateHasChanged"); })
+    eggTimer = new EggTimer();
     metronome = new MiniMetronome();
-    schedule = new Schedule(function() { console.log("schedule: stateHasChanged"); }, eggTimer, metronome);
-    eggTimer.initialize(function() { schedule.update(); }, function() { schedule.lineCompleted(); });
+    schedule = new Schedule(eggTimer, metronome);
+    eggTimer.initialize(() => { schedule.update(); }, () => { schedule.lineCompleted(); });
 
     let w = window as any;
-    w.onPlayPause = function() { schedule.onPlayPause(); }
-    w.createLink = function() { schedule.createLink(); }
+    w.onPlayPause = () => { schedule.onPlayPause(); };
+    w.createLink = () => { schedule.createLink(); };
 
     registerScheduled(metronome, ".audio-click");
     registerFormRowListener(exerciseMarkupElement);
