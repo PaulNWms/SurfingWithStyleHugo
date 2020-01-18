@@ -18,7 +18,10 @@ new Binding({ object: ui, property: "buttonFace" }).addBinding(buttonFaceElement
 let endWithBellElement: HTMLInputElement = $(".end-with-bell")[0] as HTMLInputElement
 new Binding({ object: ui, property: "endWithBell" }).addBinding(endWithBellElement, "checked");
 
-let exerciseMarkupElement: HTMLElement = $(".exerciseMarkup")[0] as HTMLElement
+let exerciseDisplayElement: HTMLElement = $(".exercise-display")[0] as HTMLElement
+new Binding({ object: ui, property: "exerciseDisplay" }).addBinding(exerciseDisplayElement, "innerHTML");
+
+let exerciseMarkupElement: HTMLElement = $(".exercise-markup")[0] as HTMLElement
 new Binding({ object: ui, property: "exerciseMarkup" }).addBinding(exerciseMarkupElement, "innerHTML");
 
 let restElement: HTMLInputElement = $(".rest")[0] as HTMLInputElement
