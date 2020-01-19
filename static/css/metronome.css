@@ -82,7 +82,7 @@
     }
 }
 
-@keyframes running-rl {
+@keyframes running_rl {
     0% {
         transform: rotate(40deg);
     }
@@ -92,7 +92,7 @@
     }
 }
 
-@keyframes stopping-lr {
+@keyframes stopping_lr {
     0% {
         transform: rotate(-40deg);
     }
@@ -102,7 +102,7 @@
     }
 }
 
-@keyframes stopping-rl {
+@keyframes stopping_rl {
     0% {
         transform: rotate(40deg);
     }

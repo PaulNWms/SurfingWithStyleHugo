@@ -1,42 +1,26 @@
-﻿import moment from "moment";
-import { ui } from "./scheduled-metronome-globals";
+﻿import { AnimationName, AnimationPlayState, ui, MetronomeState } from "./scheduled-metronome-globals";
 
 class MiniMetronome {
     public static MIN_TEMPO: number = 20;
     public static MAX_TEMPO: number = 240;
 
-    constructor() {
-    }
-
     private _tempo: number = 120;
     public get tempo(): number { return this._tempo; }
     public set tempo(value: number) {
         this._tempo = value;
-        this.duration = (Math.round(60000 / this._tempo)).toString() + "ms";
-        // Need to change the animation for the duration change to take effect
-        this.animation = "starting";
-        ui.display = this._tempo.toString();
+
+        if (this._tempo < MiniMetronome.MIN_TEMPO) {
+            this.isRunning = false;
+        }
+        else {
+            this.duration = (Math.round(60000 / this._tempo)).toString() + "ms";
+        }
+
+        this.setAnimation();
     }
 
-    private _animation: string = "none";
-    public get animation(): string { return this._animation; }
-    public set animation(value: string) {
-        this._animation = value;
-        this.setStyle();
-    }
-
-    private _duration: string = "500ms";
-    public get duration(): string { return this._duration; }
-    public set duration(value: string) {
-        this._duration = value;
-        this.setStyle();
-    }
-
-    private _playState: string = "paused";
-    public get playState(): string { return this._playState; }
-    public set playState(value: string) {
-        this._playState = value;
-        this.setStyle();
+    public get tempoDisplay() {
+        return (this._tempo >= 0) ? this._tempo.toString() : "";
     }
 
     private _isRunning: boolean = false
@@ -48,12 +32,33 @@ class MiniMetronome {
     }
 
     private setAnimation() {
-        if (this.isRunning) { this.animation = "starting"; }
+        if (this.isRunning) { this._animation = AnimationName.starting; }
+        this.setStyle();
+    }
+
+    private _animation: AnimationName = AnimationName.starting;
+    public get animation(): AnimationName { return this._animation; }
+    public set animation(value: AnimationName) {
+        this._animation = value;
+        this.setStyle();
+    }
+
+    private _duration: string = "0s";
+    public get duration(): string { return this._duration; }
+    public set duration(value: string) {
+        this._duration = value;
+        this.setStyle();
+    }
+
+    private _animationPlayState: AnimationPlayState = AnimationPlayState.paused;
+    public get animationPlayState(): AnimationPlayState { return this._animationPlayState; }
+    public set animationPlayState(value: AnimationPlayState) {
+        this._animationPlayState = value;
         this.setStyle();
     }
 
     private setStyle() {
-        ui.style = `animation-name: ${this.animation}; animation-duration: ${this.duration}; animation-play-state: ${this.playState}; animation-direction: alternate;`;
+        ui.metronomeStyle = `animation-name: ${AnimationName[this.animation]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: alternate;`;
     }
 }
 

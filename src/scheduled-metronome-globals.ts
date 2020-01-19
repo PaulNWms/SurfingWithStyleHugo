@@ -1,14 +1,24 @@
 import { Binding } from "./lib/binding";
 
+enum AnimationPlayState { running, paused }
+
+enum MetronomeState { Starting, Running, MakeItStop, StoppingLR, StoppingRL, Stopped }
+
+enum ScheduleState { Stopped, Running, Paused, StartNext, Settling };
+
+enum AnimationName { stopped, starting, running, stopping_lr, stopping_rl };
+
 let ui = {
     buttonFace: "▶️",
     display: "",
     endWithBell: true,
     exerciseDisplay: "",
     exerciseMarkup: "",
+    pendulumParent: "",
     rest: 3,
     startWithRest: true,
-    style: "",
+    metronomeState: MetronomeState[MetronomeState.Stopped],
+    metronomeStyle: "",
     timerDisplay: "2:00",
 }
 
@@ -24,6 +34,10 @@ new Binding({ object: ui, property: "exerciseDisplay" }).addBinding(exerciseDisp
 let exerciseMarkupElement: HTMLElement = $(".exercise-markup")[0] as HTMLElement
 new Binding({ object: ui, property: "exerciseMarkup" }).addBinding(exerciseMarkupElement, "innerHTML");
 
+let pendulumElement: HTMLDivElement = $(".pendulum-parent")[0] as HTMLDivElement;
+new Binding({ object: ui, property: "metronomeStyle" }).addBinding(pendulumElement, "style");
+new Binding({ object: ui, property: "metronomeState" }).addBinding(pendulumElement, "data-metronome-state");
+
 let restElement: HTMLInputElement = $(".rest")[0] as HTMLInputElement
 new Binding({ object: ui, property: "rest" }).addBinding(restElement, "value");
 
@@ -33,4 +47,4 @@ new Binding({ object: ui, property: "startWithRest" }).addBinding(startWithRestE
 let timerDisplayElement: HTMLSpanElement = $(".timer-display")[0] as HTMLSpanElement
 new Binding({ object: ui, property: "timerDisplay" }).addBinding(timerDisplayElement, "innerText");
 
-export { ui, exerciseMarkupElement }
+export { AnimationPlayState, MetronomeState, ScheduleState, AnimationName, ui, exerciseMarkupElement }

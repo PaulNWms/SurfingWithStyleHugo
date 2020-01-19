@@ -59,7 +59,6 @@ class EggTimer {
     public onTimer() {
         this.timeRemaining = moment.duration(this.targetTime - moment.now(), "ms");
         ui.timerDisplay = this.roundAndTrimDuration(this.timeRemaining);
-        console.log(`onTimer 3 ${ui.timerDisplay}`)
         document.title = ui.timerDisplay;
 
         if (ui.timerDisplay == "0:00") {
@@ -72,7 +71,6 @@ class EggTimer {
     private uncolorBody() { $("body").css({ "background-color": "", "color": "" }); }
 
     public timerExpired() {
-        console.log("timerExpired")
         this.targetTime = moment.now();
         clearInterval(this.timer);
         this.onTimerExpired();

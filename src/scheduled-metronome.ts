@@ -1,5 +1,6 @@
 import $ from "jquery";
-import { ui, exerciseMarkupElement } from "./scheduled-metronome-globals";
+import { Action1 } from "./lib/binding";
+import { ui, exerciseMarkupElement, MetronomeState, AnimationName, AnimationPlayState } from "./scheduled-metronome-globals";
 import { MiniMetronome } from "./mini-metronome";
 import { Schedule } from "./schedule";
 import { EggTimer } from "./egg-timer";
@@ -29,31 +30,37 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
     let element = $(".pendulum-parent");
     let audio: HTMLAudioElement = $(selector)[0] as HTMLAudioElement;
     element.on("animationstart", function () { audio.play(); });
-    element.on("animationiteration", function () {
-        switch (element[0].getAttribute("data-metronome-state")) {
-            case "starting":
+    element.on("animationiteration", () => {
+        var x = ui.metronomeState;
+        switch (ui.metronomeState) {
+            case MetronomeState[MetronomeState.Starting]:
                 audio.play();
                 direction = 1;
-                metronome.animation = "running";
+                metronome.animation = AnimationName.running;
+                ui.metronomeState = MetronomeState[MetronomeState.Running];
                 break;
-            case "running":
+            case MetronomeState[MetronomeState.Running]:
                 audio.play();
                 direction = (direction + 1) % 2;
                 break;
-            case "makeitstop":
+            case MetronomeState[MetronomeState.MakeItStop]:
                 if (direction) {
-                    metronome.animation = "stopping-rl";
+                    metronome.animation = AnimationName.stopping_rl;
+                    ui.metronomeState = MetronomeState[MetronomeState.StoppingRL];
                 } else {
-                    metronome.animation = "stopping-lr";
+                    metronome.animation = AnimationName.stopping_lr
+                    ui.metronomeState = MetronomeState[MetronomeState.StoppingLR];
                 }
                 break;
-            case "stopping-lr":
-            case "stopping-rl":
-            case "stopped":
-                metronome.animation = "stopped";
+            case MetronomeState[MetronomeState.StoppingLR]:
+            case MetronomeState[MetronomeState.StoppingRL]:
+            case MetronomeState[MetronomeState.Stopped]:
+                metronome.animation = AnimationName.stopped;
+                metronome.animationPlayState = AnimationPlayState.paused;
+                ui.metronomeState = MetronomeState[MetronomeState.Stopped];
                 break;
             default:
-                alert("metronome-state invalid");
+                console.log("data-metronome-state invalid");
                 break;
         }
     });
