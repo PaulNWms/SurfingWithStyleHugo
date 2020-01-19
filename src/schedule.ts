@@ -84,6 +84,7 @@ class Schedule {
                 if (this.currentStep === undefined) { throw "currentStep is undefined"; }
                 ui.exerciseDisplay = this.currentStep.description;
                 this.metronome.tempo = this.currentStep.tempo;
+                ui.tempoDisplay = this.metronome.tempoDisplay;
                 this.metronome.isRunning = this.metronome.tempo >= MiniMetronome.MIN_TEMPO;
                 this.eggTimer.timeRemaining = moment.duration(this.currentStep.durationSec, "seconds");
                 this.eggTimer.isRunning = true;

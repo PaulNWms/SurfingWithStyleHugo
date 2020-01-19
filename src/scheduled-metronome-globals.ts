@@ -19,6 +19,7 @@ let ui = {
     startWithRest: true,
     metronomeState: MetronomeState[MetronomeState.Stopped],
     metronomeStyle: "",
+    tempoDisplay: "120",
     timerDisplay: "2:00",
 }
 
@@ -30,6 +31,12 @@ new Binding({ object: ui, property: "endWithBell" }).addBinding(endWithBellEleme
 
 let exerciseDisplayElement: HTMLElement = $(".exercise-display")[0] as HTMLElement
 new Binding({ object: ui, property: "exerciseDisplay" }).addBinding(exerciseDisplayElement, "innerHTML");
+
+let tempoDisplayElement: HTMLElement = $(".display")[0] as HTMLElement
+new Binding({ object: ui, property: "tempoDisplay" }).addBinding(tempoDisplayElement, "innerHTML");
+
+let timerDisplayElement: HTMLSpanElement = $(".timer-display")[0] as HTMLSpanElement
+new Binding({ object: ui, property: "timerDisplay" }).addBinding(timerDisplayElement, "innerText");
 
 let exerciseMarkupElement: HTMLElement = $(".exercise-markup")[0] as HTMLElement
 new Binding({ object: ui, property: "exerciseMarkup" }).addBinding(exerciseMarkupElement, "innerHTML");
@@ -43,8 +50,5 @@ new Binding({ object: ui, property: "rest" }).addBinding(restElement, "value");
 
 let startWithRestElement: HTMLInputElement = $(".start-with-rest")[0] as HTMLInputElement
 new Binding({ object: ui, property: "startWithRest" }).addBinding(startWithRestElement, "checked");
-
-let timerDisplayElement: HTMLSpanElement = $(".timer-display")[0] as HTMLSpanElement
-new Binding({ object: ui, property: "timerDisplay" }).addBinding(timerDisplayElement, "innerText");
 
 export { AnimationPlayState, MetronomeState, ScheduleState, AnimationName, ui, exerciseMarkupElement }

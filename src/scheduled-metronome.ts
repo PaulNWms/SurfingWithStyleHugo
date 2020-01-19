@@ -1,5 +1,4 @@
 import $ from "jquery";
-import { Action1 } from "./lib/binding";
 import { ui, exerciseMarkupElement, MetronomeState, AnimationName, AnimationPlayState } from "./scheduled-metronome-globals";
 import { MiniMetronome } from "./mini-metronome";
 import { Schedule } from "./schedule";
@@ -30,8 +29,7 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
     let element = $(".pendulum-parent");
     let audio: HTMLAudioElement = $(selector)[0] as HTMLAudioElement;
     element.on("animationstart", function () { audio.play(); });
-    element.on("animationiteration", () => {
-        var x = ui.metronomeState;
+    element.on("animationiteration", function () {
         switch (ui.metronomeState) {
             case MetronomeState[MetronomeState.Starting]:
                 audio.play();
