@@ -1,7 +1,7 @@
 ﻿class Exercise {
-    constructor(tempo: number, duration: string, description: string) {
+    constructor(tempo: number, duration: string, description: string, tempo2: number = 120) {
         this.tempo = tempo;
-        this.tempo2 = 120;
+        this.tempo2 = tempo2;
         this.duration = duration;
         this.description = description;
     }

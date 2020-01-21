@@ -50,6 +50,7 @@ menu:
     weight: 200
   - name: Accelerating Metronome
     parent: Practice
+    url: /practice/accelerating-metronome/
     weight: 300
   - name: Presets
     parent: Practice

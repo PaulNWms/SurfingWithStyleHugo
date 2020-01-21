@@ -2,9 +2,10 @@ import $ from "jquery";
 import { ui, exerciseMarkupElement, MetronomeState, AnimationName, AnimationPlayState } from "./scheduled-metronome-globals";
 import { MiniMetronome } from "./mini-metronome";
 import { Schedule } from "./schedule";
+import { AcceleratingSchedule } from "./accelerating-schedule";
 import { EggTimer } from "./egg-timer";
 
-let schedule: Schedule;
+let schedule: Schedule | AcceleratingSchedule;
 let metronome: MiniMetronome;
 let eggTimer: EggTimer;
 
@@ -89,12 +90,17 @@ function registerFormRowListener(html) {
 }
 
 $(document).ready(function () {
+    let w = window as any;
     eggTimer = new EggTimer();
     metronome = new MiniMetronome();
-    schedule = new Schedule(eggTimer, metronome);
+    if (w.accelerating) {
+        schedule = new AcceleratingSchedule(eggTimer, metronome);
+    }
+    else {
+        schedule = new Schedule(eggTimer, metronome);
+    }
     eggTimer.initialize(() => { schedule.update(); }, () => { schedule.lineCompleted(); });
 
-    let w = window as any;
     w.onPlayPause = () => { schedule.onPlayPause(); };
     w.createLink = () => { schedule.createLink(); };
 

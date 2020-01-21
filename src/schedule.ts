@@ -242,7 +242,7 @@ class Schedule {
         }
     }
 
-    private myParseInt(value: string): number {
+    protected myParseInt(value: string): number {
         if (value) { return parseInt(value); }
         else { return 0; }
     }
@@ -321,7 +321,7 @@ class Schedule {
         }
     }
 
-    private getExerciseValues() {
+    protected getExerciseValues() {
         var tempos: Array<string> = [];
         var durations: Array<string> = [];
         var exercises: Array<string> = [];
@@ -332,9 +332,9 @@ class Schedule {
         return [tempos, durations, exercises];
     }
 
-    private URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&t={4}&d={5}&e={6}";
+    protected URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&t={4}&d={5}&e={6}";
 
-    private HTML_TEMPLATE: string = `\
+    protected HTML_TEMPLATE: string = `\
         <tr>
             <td>
                 <button type="button" class="btn btn-primary delete-schedule-row">␡</button>
