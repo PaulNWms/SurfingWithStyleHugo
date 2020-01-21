@@ -7,15 +7,13 @@ class MiniMetronome {
     private _tempo: number = 120;
     public get tempo(): number { return this._tempo; }
     public set tempo(value: number) {
-        if (value !== this._tempo) {
-            this._tempo = value;
+        this._tempo = value;
 
-            if (this._tempo < MiniMetronome.MIN_TEMPO) {
-                this.isRunning = false;
-            }
-            else {
-                this.duration = (Math.round(60000 / this._tempo)).toString() + "ms";
-            }
+        if (this._tempo < MiniMetronome.MIN_TEMPO) {
+            this.isRunning = false;
+        }
+        else {
+            this.duration = (Math.round(60000 / this._tempo)).toString() + "ms";
         }
     }
 
