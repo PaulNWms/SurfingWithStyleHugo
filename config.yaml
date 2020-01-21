@@ -53,6 +53,7 @@ menu:
     weight: 300
   - name: Presets
     parent: Practice
+    url: /practice/scheduled-metronome-presets/
     weight: 400
 
   - name: Notes
