@@ -26,6 +26,10 @@ class Schedule {
         ui.exerciseMarkup = this.toHtml();
     }
 
+    public CalculateTempo(): number {
+        return (this.currentStep as Exercise).tempo;
+    }
+
     public onPlayPause() {
         switch (this.status) {
             case ScheduleState.Stopped:

@@ -15,6 +15,8 @@ class MiniMetronome {
         else {
             this.duration = (Math.round(60000 / this._tempo)).toString() + "ms";
         }
+
+        ui.tempoDisplay = this.tempoDisplay;
     }
 
     public get tempoDisplay() {
@@ -63,8 +65,17 @@ class MiniMetronome {
         }
     }
 
+    private _animationDirection: string = "alternating";
+    public get animationDirection(): string { return this._animationDirection; }
+    public set animationDirection(value: string) {
+        if (value !== this._animationDirection) {
+            this._animationDirection = value;
+            this.setStyle();
+        }
+    }
+
     private setStyle() {
-        ui.metronomeStyle = `animation-name: ${AnimationName[this.animation]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: alternate;`;
+        ui.metronomeStyle = `animation-name: ${AnimationName[this.animation]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: ${this.animationDirection};`;
     }
 }
 

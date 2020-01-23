@@ -10,7 +10,7 @@ class AcceleratingSchedule extends Schedule {
         // EggTimer.TimeRemaining is updated on timer callback, more accurate to recalculate
         let timeRemainingMs: number = this.eggTimer.targetTime - moment.now();
         let cs: Exercise = this.currentStep as Exercise;
-        let durationMs: number = 1000*parseInt(cs.duration);
+        let durationMs: number = 1000*cs.durationSec;
 
         if (durationMs - timeRemainingMs < plateauMs) {
             return cs.tempo;
@@ -22,16 +22,16 @@ class AcceleratingSchedule extends Schedule {
             return cs.tempo2;
         }
         else if (timeRemainingMs > durationMs / 2) {
-            let duration: number = durationMs / 2.0 - 2.0 * plateauMs;
+            let duration: number = durationMs / 2 - 2 * plateauMs;
             let tempoChange: number = cs.tempo2 - cs.tempo;
             let progress: number = durationMs - plateauMs - timeRemainingMs;
             let tempo: number = cs.tempo + progress * tempoChange / duration;
             return Math.floor(tempo);
         }
         else {
-            let duration: number = durationMs / 2.0 - 2.0 * plateauMs;
+            let duration: number = durationMs / 2 - 2 * plateauMs;
             let tempoChange: number = cs.tempo2 - cs.tempo;
-            let progress: number = durationMs / 2.0 - plateauMs - timeRemainingMs;
+            let progress: number = durationMs / 2 - plateauMs - timeRemainingMs;
             let tempo: number = cs.tempo2 - progress * tempoChange / duration;
             return Math.floor(tempo);
         }
