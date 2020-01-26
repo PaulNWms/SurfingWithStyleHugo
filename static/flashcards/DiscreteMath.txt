@@ -420,6 +420,25 @@ initial conditions
 A linear homogeneous recurrence relation of degree k has the form
 $$a_n = c_1a_{n-1} + c_2a_{n-2} + \cdots + c_k a_{n-k}$$
 
+Compound interest is an LHRR of degree ____.
+1
+
+Fibonnacci numbers are an LHRR of degree ____.
+2
+
+$$a_n = a_{n-1} + a_{n-2}^2 \textrm{ is not an LHRR because}$$
+it is not linear.
+
+$$H_n = 2H_{n-1} + 1 \textrm{ is not an LHRR because}$$
+it is not homogeneous.
+
+$$B_n = nB_{n-1} \textrm{ is not an LHRR because}$$
+it does not have constant coefficients.
+
+Linear homogeneous recurrence relations are studied because ____ and ____.
+they occur frequently
+they can be systematically solved
+
 To solve linear homogeneous recurrence relations, look for solutions of the form
 $$a_n = r^n$$
 
