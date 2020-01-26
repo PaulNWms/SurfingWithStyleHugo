@@ -65,7 +65,7 @@ class MiniMetronome {
         }
     }
 
-    private _animationDirection: string = "alternating";
+    private _animationDirection: string = "normal";
     public get animationDirection(): string { return this._animationDirection; }
     public set animationDirection(value: string) {
         if (value !== this._animationDirection) {
@@ -75,7 +75,7 @@ class MiniMetronome {
     }
 
     public setStyle() {
-        ui.metronomeStyle = `animation-name: ${AnimationName[this.animationName]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: ${this.animationDirection}; animation-iteration-count: 1`;
+        ui.metronomeStyle = `animation-name: ${AnimationName[this.animationName]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: ${this.animationDirection};`;
     }
 }
 

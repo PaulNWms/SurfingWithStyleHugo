@@ -40,10 +40,9 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
                 break;
             case MetronomeState[MetronomeState.Running]:
                 audio.play();
-                direction = (direction + 1) % 2;
-                metronome.animationDirection = direction ? "normal" : "reverse";
-                metronome.animationName = AnimationName.running;
                 metronome.tempo = schedule.CalculateTempo();
+                direction = (direction + 1) % 2;
+                metronome.animationName = direction ? AnimationName.running : AnimationName.running_rl;
                 break;
             case MetronomeState[MetronomeState.MakeItStop]:
                 if (direction) {

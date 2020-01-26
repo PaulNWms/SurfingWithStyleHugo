@@ -6,7 +6,7 @@ enum MetronomeState { Starting, Running, MakeItStop, StoppingLR, StoppingRL, Sto
 
 enum ScheduleState { Stopped, Running, Paused, StartNext, Settling };
 
-enum AnimationName { stopped, starting, running, stopping_lr, stopping_rl };
+enum AnimationName { stopped, starting, running, running_rl, stopping_lr, stopping_rl };
 
 let ui = {
     buttonFace: "▶️",
