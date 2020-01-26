@@ -3,14 +3,15 @@ title: "Timer"
 date: 2019-12-30T19:11:51-08:00
 ---
 
-<article class="narrow-article timer" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebApplication">
-    <!-- @*@{Html.RenderPartial("~/Views/Shared/_StructuredData.cshtml", ViewBag as object);}*@ -->
+<article class="narrow-article timer" itemprop="mainContentOfPage" itemscope
+    itemtype="http://schema.org/WebApplication">
     <meta itemprop="applicationCategory" content="Tool, Multimedia" />
     <meta itemprop="applicationSubCategory" content="Time Management" />
     <meta itemprop="operatingSystem" content="IIS/ASP.NET MVC" />
     <div class="offset-sm-2 col-8 jumbotron text-center">
         <div class="row">
-            <button class="offset-sm-2 btn btn-primary btn-lg start" type="button" onclick="window.onStartPause()"><span id="button-face"></span></button>
+            <button class="offset-sm-2 btn btn-primary btn-lg start" type="button" onclick="window.onStartPause()"><span
+                    id="button-face"></span></button>
             <h1 class="offset-1 display"><span id="timer-display"></span></h1>
         </div>
     </div>
@@ -20,9 +21,6 @@ date: 2019-12-30T19:11:51-08:00
             <div class="col-md-2">
                 <input class="form-control duration-minutes" id="formatted-duration" type="text" />
             </div>
-        </div>
-        <div class="row">
-            <span class="field-validation-valid" data-valmsg-for="FormattedDuration" data-valmsg-replace="true"></span>
         </div>
     </div>
     <p class="offset-md-3 col-md-6 hidden-xs">Enter the timer duration, or choose one of the presets.</p>
@@ -48,5 +46,6 @@ date: 2019-12-30T19:11:51-08:00
     <source src="/audio/EndRoutine.mp3" type="audio/mp3">
 </audio>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 <script src="/js/timer.bundle.js"></script>

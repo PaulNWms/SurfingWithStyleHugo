@@ -33,7 +33,7 @@ class Binding {
                 event: event
             }
             if (event) {
-                element.addEventListener(event, function (event: any) {
+                element.addEventListener(event, function (_event) {
                     _this.valueSetter(element[attribute]);
                 })
                 binding.event = event;

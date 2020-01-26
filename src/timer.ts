@@ -17,7 +17,7 @@ let timerDisplayElement: HTMLSpanElement = $("#timer-display")[0] as HTMLSpanEle
 new Binding({ object: ui, property: "timerDisplay" }).addBinding(timerDisplayElement, "innerText");
 
 let formattedDurationElement: HTMLInputElement = $("#formatted-duration")[0] as HTMLInputElement
-new Binding({ object: ui, property: "formattedDuration" }).addBinding(formattedDurationElement, "value");
+new Binding({ object: ui, property: "formattedDuration" }).addBinding(formattedDurationElement, "value", "blur");
 
 let timerStatus: TimerState = TimerState.Stopped;
 let timeRemaining: moment.Duration = moment.duration(25, "minutes");
