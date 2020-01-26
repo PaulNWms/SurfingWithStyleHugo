@@ -173,7 +173,7 @@ class AcceleratingSchedule extends Schedule {
         let ds: string = durations.map(d => d.toString()).join('-');
         let es: string = descriptions.map(e => encodeURI(e)).join('-');
 
-        return this.URL_TEMPLATE
+        return URL_TEMPLATE
             .replace("{0}", this.url.origin + this.url.pathname)
             .replace("{1}", ui.rest.toString())
             .replace("{2}", ui.startWithRest.toString())
@@ -188,7 +188,7 @@ class AcceleratingSchedule extends Schedule {
         let result = "";
 
         for (let exercise of this.exercises) {
-            result = result.concat(this.HTML_TEMPLATE
+            result = result.concat(HTML_TEMPLATE
                 .replace("{0}", exercise.tempo.toString())
                 .replace("{1}", exercise.tempo2.toString())
                 .replace("{2}", exercise.duration)
@@ -199,7 +199,7 @@ class AcceleratingSchedule extends Schedule {
     }
 
     public getNewRow(): string {
-        return this.HTML_TEMPLATE
+        return HTML_TEMPLATE
             .replace("{0}", "60")
             .replace("{1}", "120")
             .replace("{2}", "2:00")
@@ -228,30 +228,30 @@ class AcceleratingSchedule extends Schedule {
         // CAREFUL: columns are returned as rows
         return [tempo1s, tempo2s, durations, exercises];
     }
-
-    protected URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&l={4}&h={5}&d={6}&e={7}";
-
-    protected HTML_TEMPLATE: string = `\
-        <tr>
-            <td>
-                <button type="button" class="btn btn-primary delete-schedule-row">␡</button>
-            </td>
-            <td>
-                <input type='text' class='form-control digit-filter tempo tempo-0' placeholder='Tempo 1' autocomplete='off' value='{0}' />
-            </td>
-            <td>
-                <input type='text' class='form-control digit-filter tempo tempo-1' placeholder='Tempo 2' autocomplete='off' value='{1}' />
-            </td>
-            <td>
-                <input type='text' class='form-control time-filter midpoint midpoint-0' placeholder='Duration' autocomplete='off' value='{2}' />
-            </td>
-            <td>
-                <input type='text' class='form-control exercise' placeholder='Exercise' value='{3}' />
-            </td>
-            <td>
-                <button type="button" class="btn btn-primary add-schedule-row">⎀</button>
-            </td>
-        </tr>`;
 }
+
+const URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&l={4}&h={5}&d={6}&e={7}";
+
+const HTML_TEMPLATE: string = `\
+    <tr>
+        <td>
+            <button type="button" class="btn btn-primary delete-schedule-row">␡</button>
+        </td>
+        <td>
+            <input type='text' class='form-control digit-filter tempo tempo-0' placeholder='Tempo 1' autocomplete='off' value='{0}' />
+        </td>
+        <td>
+            <input type='text' class='form-control digit-filter tempo tempo-1' placeholder='Tempo 2' autocomplete='off' value='{1}' />
+        </td>
+        <td>
+            <input type='text' class='form-control time-filter midpoint midpoint-0' placeholder='Duration' autocomplete='off' value='{2}' />
+        </td>
+        <td>
+            <input type='text' class='form-control exercise' placeholder='Exercise' value='{3}' />
+        </td>
+        <td>
+            <button type="button" class="btn btn-primary add-schedule-row">⎀</button>
+        </td>
+    </tr>`;
 
 export { AcceleratingSchedule };
