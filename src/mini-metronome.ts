@@ -34,15 +34,15 @@ class MiniMetronome {
     }
 
     private setAnimation() {
-        if (this.isRunning) { this._animation = AnimationName.starting; }
+        if (this.isRunning) { this._animationName = AnimationName.starting; }
         this.setStyle();
     }
 
-    private _animation: AnimationName = AnimationName.starting;
-    public get animation(): AnimationName { return this._animation; }
-    public set animation(value: AnimationName) {
-        if (value !== this._animation) {
-            this._animation = value;
+    private _animationName: AnimationName = AnimationName.starting;
+    public get animationName(): AnimationName { return this._animationName; }
+    public set animationName(value: AnimationName) {
+        if (value !== this._animationName) {
+            this._animationName = value;
             this.setStyle();
         }
     }
@@ -74,8 +74,8 @@ class MiniMetronome {
         }
     }
 
-    private setStyle() {
-        ui.metronomeStyle = `animation-name: ${AnimationName[this.animation]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: ${this.animationDirection};`;
+    public setStyle() {
+        ui.metronomeStyle = `animation-name: ${AnimationName[this.animationName]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: ${this.animationDirection}; animation-iteration-count: 1`;
     }
 }
 

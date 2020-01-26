@@ -96,7 +96,7 @@ class Schedule {
 
                 if (this.metronome.isRunning) {
                     ui.metronomeState = MetronomeState[MetronomeState.Starting];
-                    this.metronome.animation = AnimationName.starting;
+                    this.metronome.animationName = AnimationName.starting;
                     this.metronome.animationPlayState = AnimationPlayState.running;
                 }
 

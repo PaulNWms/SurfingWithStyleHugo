@@ -35,29 +35,29 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
             case MetronomeState[MetronomeState.Starting]:
                 audio.play();
                 direction = 1;
-                metronome.animation = AnimationName.running;
+                metronome.animationName = AnimationName.running;
                 ui.metronomeState = MetronomeState[MetronomeState.Running];
                 break;
             case MetronomeState[MetronomeState.Running]:
                 audio.play();
                 direction = (direction + 1) % 2;
                 metronome.animationDirection = direction ? "normal" : "reverse";
+                metronome.animationName = AnimationName.running;
                 metronome.tempo = schedule.CalculateTempo();
-                console.log(metronome.tempo)
                 break;
             case MetronomeState[MetronomeState.MakeItStop]:
                 if (direction) {
-                    metronome.animation = AnimationName.stopping_rl;
+                    metronome.animationName = AnimationName.stopping_rl;
                     ui.metronomeState = MetronomeState[MetronomeState.StoppingRL];
                 } else {
-                    metronome.animation = AnimationName.stopping_lr
+                    metronome.animationName = AnimationName.stopping_lr
                     ui.metronomeState = MetronomeState[MetronomeState.StoppingLR];
                 }
                 break;
             case MetronomeState[MetronomeState.StoppingLR]:
             case MetronomeState[MetronomeState.StoppingRL]:
             case MetronomeState[MetronomeState.Stopped]:
-                metronome.animation = AnimationName.stopped;
+                metronome.animationName = AnimationName.stopped;
                 metronome.animationPlayState = AnimationPlayState.paused;
                 ui.metronomeState = MetronomeState[MetronomeState.Stopped];
                 break;
