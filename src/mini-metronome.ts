@@ -35,7 +35,6 @@ class MiniMetronome {
 
     private setAnimation() {
         if (this.isRunning) { this._animationName = AnimationName.starting; }
-        this.setStyle();
     }
 
     private _animationName: AnimationName = AnimationName.starting;
@@ -43,7 +42,6 @@ class MiniMetronome {
     public set animationName(value: AnimationName) {
         if (value !== this._animationName) {
             this._animationName = value;
-            this.setStyle();
         }
     }
 
@@ -52,7 +50,6 @@ class MiniMetronome {
     public set duration(value: string) {
         if (value !== this._duration) {
             this._duration = value;
-            this.setStyle();
         }
     }
 
@@ -61,7 +58,6 @@ class MiniMetronome {
     public set animationPlayState(value: AnimationPlayState) {
         if (value !== this._animationPlayState) {
             this._animationPlayState = value;
-            this.setStyle();
         }
     }
 
@@ -70,7 +66,6 @@ class MiniMetronome {
     public set animationDirection(value: string) {
         if (value !== this._animationDirection) {
             this._animationDirection = value;
-            this.setStyle();
         }
     }
 

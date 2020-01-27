@@ -29,17 +29,17 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
     let direction = 1;
     let element = $(".pendulum-parent");
     let audio: HTMLAudioElement = $(selector)[0] as HTMLAudioElement;
-    element.on("animationstart", function () { audio.play(); });
+    element.on("animationstart", function () {
+        if (metronome.isRunning) { audio.play(); }
+    });
     element.on("animationiteration", function () {
         switch (ui.metronomeState) {
             case MetronomeState[MetronomeState.Starting]:
-                audio.play();
                 direction = 1;
                 metronome.animationName = AnimationName.running;
                 ui.metronomeState = MetronomeState[MetronomeState.Running];
                 break;
             case MetronomeState[MetronomeState.Running]:
-                audio.play();
                 metronome.tempo = schedule.CalculateTempo();
                 direction = (direction + 1) % 2;
                 metronome.animationName = direction ? AnimationName.running : AnimationName.running_rl;
@@ -64,6 +64,7 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
                 console.log("data-metronome-state invalid");
                 break;
         }
+        metronome.setStyle();
     });
 }
 

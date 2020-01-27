@@ -44,7 +44,6 @@ class Schedule {
                     }
 
                     this.status = ScheduleState.StartNext;
-                    this.update();
                 }
                 catch (e) {
                     alert(e.Message + e.StackTrace);
@@ -64,9 +63,9 @@ class Schedule {
                 break;
 
             default:
-                this.update();
                 break;
         }
+        this.update();
     }
 
     public createLink() {
@@ -98,6 +97,7 @@ class Schedule {
                     ui.metronomeState = MetronomeState[MetronomeState.Starting];
                     this.metronome.animationName = AnimationName.starting;
                     this.metronome.animationPlayState = AnimationPlayState.running;
+                    this.metronome.setStyle();
                 }
 
                 break;
@@ -109,6 +109,7 @@ class Schedule {
             default:
                 break;
         }
+        this.metronome.setStyle();
     }
 
     public lineCompleted() {
