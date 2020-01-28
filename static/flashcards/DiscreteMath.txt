@@ -450,3 +450,27 @@ $$r^k - c_1r^{k-1} - c_2r^{k-2} - \cdots - c_{k-1}r - c_k = 0$$
 
 The solutions of a characteristic equation are the ____ of a recurrence relation.
 characteristic roots
+
+$$\{a_n\} \textrm{ is a solution to an LHRR of degree } 2$$
+$$a_n = c_1 a_{n-1} + c_2 a_{n-2}$$
+
+LHRR of degree 2 with 2 roots: characteristic equation
+$$r^2 - c_1r - c_2 = 0$$
+
+LHRR of degree 2 with 2 roots: closed form
+$$a_n = \alpha_1 r_1^n + \alpha_2 r_2^2$$
+
+LHRR of degree 2 with 1 root: characteristic equation
+$$r^2 - c_1r - c_2 = 0$$
+
+LHRR of degree 2 with 1 root: closed form
+$$a_n = \alpha_1 r_0^n + \alpha_2 nr_0^2$$
+
+$$\{a_n\} \textrm{ is a solution to an LHRR of degree } k$$
+$$a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}$$
+
+LHRR of degree k with k roots: characteristic equation
+$$r^k - c_1r^{k-1} - \cdots - c_k = 0$$
+
+LHRR of degree k with k roots: closed form
+$$a_n = \alpha_1 r_1^n + \alpha_2 r_2^2 + \cdots + \alpha_k r_k^n$$
