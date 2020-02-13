@@ -1,9 +1,17 @@
-﻿connectives
-∧ conjunction 
-∨ disjunction
-⊕ exclusive or 
-→ implication
-↔ biconditional
+﻿∧ connective
+conjunction
+
+∨ connective
+disjunction
+
+⊕ connective
+exclusive or
+
+→ connective
+implication
+
+↔ connective
+biconditional
 
 converse of p → q
 q → p
@@ -214,10 +222,10 @@ composition
 |a + b| ≤ |a| + |b|
 triangle inequality
 
-(f₁ + f₂)(x) = ____ (Theorem 1.1)
+complexity of (f₁ + f₂)(x) = ____ (Theorem 1.1)
 O(max(g₁(x), g₂(x)))
 
-(f₁f₂)(x) = ____ (Theorem 1.2)
+complexity of (f₁f₂)(x) = ____ (Theorem 1.2)
 O(g₁(x)g₂(x))
 
 if a|b and a|c, then a|____ (Theorem 2.1.1)
@@ -399,13 +407,13 @@ There are ____ r-combinations of a set with n elements when repetition is allowe
 $$C(n + r - 1, r) = \frac{(n + r - 1)!}{r!(n - r)!}$$
 
 $$\sum_{k=0}^{n} C(n,k) = \textrm{____ (Theorem 4.3.4)}$$
-$$\sum_{k=0}^{n} C(n,k) = 2^n$$
+$$2^n$$
 
-$$C(m + n,r) = \textrm{____ (Vandermonde's Identity)}$$
 $$C(m + n,r) = \sum_{k=0}^{n} C(m,r - k)C(n,k)$$
+Vandermonde's Identity
 
 $$\sum_{k=0}^{n} (-1)^k C(n,k) = \textrm{____ (Theorem 4.3.7)}$$
-$$\sum_{k=0}^{n} (-1)^k C(n,k) = 0$$
+0
 
 p(E̅) = ____ (Theorem 4.4.1)
 p(E̅) = 1 - p(E)
@@ -417,8 +425,8 @@ A sequence is uniquely determined by a ____ and ____.
 recurrence relation
 initial conditions
 
-A linear homogeneous recurrence relation of degree k has the form
 $$a_n = c_1a_{n-1} + c_2a_{n-2} + \cdots + c_k a_{n-k}$$
+A linear homogeneous recurrence relation of degree k
 
 Compound interest is an LHRR of degree ____.
 1
@@ -451,28 +459,28 @@ $$r^k - c_1r^{k-1} - c_2r^{k-2} - \cdots - c_{k-1}r - c_k = 0$$
 The solutions of a characteristic equation are the ____ of a recurrence relation.
 characteristic roots
 
-$$a_n = c_1 a_{n-1} + c_2 a_{n-2}$$
+$$\textrm{LHRR: } a_n = c_1 a_{n-1} + c_2 a_{n-2}$$
 $$\{a_n\} \textrm{ is a solution to an LHRR of degree } 2$$
 
-$$r^2 - c_1r - c_2 = 0$$
+$$\textrm{LHRR: } r^2 - c_1r - c_2 = 0$$
 LHRR of degree 2 with 2 roots: characteristic equation
 
-$$a_n = \alpha_1 r_1^n + \alpha_2 r_2^2$$
+$$\textrm{LHRR: } a_n = \alpha_1 r_1^n + \alpha_2 r_2^2$$
 LHRR of degree 2 with 2 roots: closed form
 
-$$r^2 - c_1r - c_2 = 0$$
+$$\textrm{LHRR: } r^2 - c_1r - c_2 = 0$$
 LHRR of degree 2 with 1 root: characteristic equation
 
-$$a_n = \alpha_1 r_0^n + \alpha_2 nr_0^2$$
+$$\textrm{LHRR: } a_n = \alpha_1 r_0^n + \alpha_2 nr_0^2$$
 LHRR of degree 2 with 1 root: closed form
 
-$$a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}$$
+$$\textrm{LHRR: } a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}$$
 $$\{a_n\} \textrm{ is a solution to an LHRR of degree } k$$
 
-$$r^k - c_1r^{k-1} - \cdots - c_k = 0$$
+$$\textrm{LHRR: } r^k - c_1r^{k-1} - \cdots - c_k = 0$$
 LHRR of degree k with k roots: characteristic equation
 
-$$a_n = \alpha_1 r_1^n + \alpha_2 r_2^2 + \cdots + \alpha_k r_k^n$$
+$$\textrm{LHRR: } a_n = \alpha_1 r_1^n + \alpha_2 r_2^2 + \cdots + \alpha_k r_k^n$$
 LHRR of degree k with k roots: closed form
 
 $$n^m - C(n,1)(n - 1)^m + C(n,2)(n - 2)^m - \cdots + (-1)^{n-1}C(n,n - 1)^m$$
