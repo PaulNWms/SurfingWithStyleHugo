@@ -464,12 +464,10 @@ $$\{a_n\} \textrm{ is a solution to an LHRR of degree } 2$$
 
 $$\textrm{LHRR: } r^2 - c_1r - c_2 = 0$$
 LHRR of degree 2 with 2 roots: characteristic equation
+LHRR of degree 2 with 1 root: characteristic equation
 
 $$\textrm{LHRR: } a_n = \alpha_1 r_1^n + \alpha_2 r_2^2$$
 LHRR of degree 2 with 2 roots: closed form
-
-$$\textrm{LHRR: } r^2 - c_1r - c_2 = 0$$
-LHRR of degree 2 with 1 root: characteristic equation
 
 $$\textrm{LHRR: } a_n = \alpha_1 r_0^n + \alpha_2 nr_0^2$$
 LHRR of degree 2 with 1 root: closed form
@@ -491,3 +489,25 @@ derangement
 
 $$D_n = n!\left[1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \cdots + (-1)^n\frac{1}{n!}\right]$$
 the number of derangements of a set with n elements
+
+A binary relation from A to B is a subset of ____.
+A × B
+
+aRb denotes
+(a,b) ∈ R
+
+a̸Rb denotes
+(a,b) ∉ R
+
+A relation on the set A is a relation from ____ to ____.
+A
+A
+
+R is ____ if (a,a) ∈ R for every element a ∈ A.
+reflexive
+
+R is ____ if (b,a) ∈ R whenever (a,b) ∈ R, for a, b ∈ A.
+symmetric
+
+R is ____ if (a,b) ∈ R and (b,a) ∈ R only if a = b, for a, b ∈ A.
+antisymmetric

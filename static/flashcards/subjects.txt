@@ -1,4 +1,3 @@
-AntiPatterns
 CSharp
 DesignPatterns
 DiscreteMath
