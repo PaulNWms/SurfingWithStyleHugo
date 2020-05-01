@@ -42,7 +42,7 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
             case MetronomeState[MetronomeState.Running]:
                 metronome.tempo = schedule.CalculateTempo();
                 direction = (direction + 1) % 2;
-                metronome.animationName = direction ? AnimationName.running : AnimationName.running_rl;
+                audio.play();
                 break;
             case MetronomeState[MetronomeState.MakeItStop]:
                 if (direction) {
