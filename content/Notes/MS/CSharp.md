@@ -43,23 +43,25 @@ The CLR is located under %windir%\Microsoft.NET\Framework
 
 To look at array initialization data, find the array's address using ildasm.exe and look at the module with dumpbin.exe.
 
-`// jagged array`  
-`int[][] vectors = new int[3][];`
+```csharp
+// jagged array  
+int[][] vectors = new int[3][];
 
-`// multidimensional array`  
-`byte[,] sudoku = new byte[9,9];`
+// multidimensional array  
+byte[,] sudoku = new byte[9,9];
 
-`// nullable`  
-`int? d = null;`
+// nullable  
+int? d = null;
 
-`// null coalescing operator`  
-`return d ?? 0;`
+// null coalescing operator  
+return d ?? 0;
 
-`// Test for overflow, which is unchecked by default`  
-`int res = checked(max +1);`
+// Test for overflow, which is unchecked by default  
+int res = checked(max +1);
 
-`// "soft" type check operator (IL: isinst)`  
-`bool isInt = d is int;`
+// "soft" type check operator (IL: isinst)  
+bool isInt = d is int;
 
-`// "soft" type cast operator (IL: isinst)`  
-`string s = o as string;`
+// "soft" type cast operator (IL: isinst)  
+string s = o as string;
+```

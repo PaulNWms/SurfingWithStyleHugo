@@ -74,7 +74,7 @@ $$Error = \frac{1}{m}\sum_{i=1}^m{|y - \hat y|}$$
 Mean Squared Error:
 $$Error = \frac{1}{2m}\sum_{i=1}^m{(y - \hat y)^2}$$
 
-```lang-none 
+```python
 # Example: calculate MSE explicitly to update line (don't actually use this)
 def MSEStep(X, y, W, b, learn_rate = 0.005):
     y_pred = np.matmul(X, W) + b
@@ -457,7 +457,7 @@ mostly in terms of internal validity.
 - Experimenter bias is where the presence or knowledge of the experimenter can affect participants' behaviors or performance.
   - The double-blind design hides condition information from both the administrator and participant
     in order to have a strong rein on experimenter-based biases.
-```
+```python
 # Find p-value (two-sided test) - analytic approach
 n_obs = data.shape[0]
 n_control = data.groupby('condition').size()[0]

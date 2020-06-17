@@ -3,7 +3,7 @@ title: "Powershell"
 date: 2020-06-17
 ---
 
-{{< highlight powershell >}}
+```powershell
 # show version
 $PSVersionTable
 
@@ -49,4 +49,4 @@ Get-Member
 Import-Module PSWorkflow
 
 Format-Table, Format-List, Format-Wide
-{{< /highlight >}}
+```

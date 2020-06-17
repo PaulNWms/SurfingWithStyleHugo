@@ -19,7 +19,7 @@ Links:
 [magic keywords](https://ipython.readthedocs.io/en/stable/interactive/magics.html)  
 [pdb — The Python Debugger](https://docs.python.org/3/library/pdb.html)
 
-```lang-none
+```python
 # convert .ipynb to .html
 jupyter nbconvert --to html notebook.ipynb
 
@@ -204,7 +204,7 @@ The sampling distribution for the mean is also equal to σ/√n.
 
 With a sample size of 150, the mean should follow a normal distribution by the central limit theorem.
 
-```
+```python
 # Simulating from the Null
 diffs = np.zeros(10000)
 for i in range(len(diffs)):
@@ -236,7 +236,7 @@ By comparing our p-value to our type I error threshold (α), we can make our dec
 p ≤ α ⇒ Reject H₀
 p > α ⇒ Fail to Reject H₀
 
-```
+```python
 # Find p-value with numpy (two-sided test)
 n_obs = data.shape[0]
 n_control = data.groupby('condition').size()[0]

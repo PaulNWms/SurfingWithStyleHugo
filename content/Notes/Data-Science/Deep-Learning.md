@@ -153,7 +153,7 @@ Links:
 
 Deep learning is a class of parametric model.
 
-```
+```python
 # stare at this
 weight = 0.5
 goal_pred = 0.8
@@ -168,7 +168,7 @@ for iteration in range(20):
 ```
 Stochastic Gradient Descent updates the weights after each input.
 Batch Gradient Descent updates the weights after each batch of input.
-```
+```python
 # start at this
 import numpy as np
 np.random.seed(1)
@@ -276,7 +276,7 @@ Backpropagation:
 $$\forall W_{ij}^{(k)}\text{ in }\nabla E: \quad W_{ij}^{'(k)} \leftarrow W_{ij}^{(k)} - \alpha\frac{\delta E}{\delta W_{ij}^{(k)}}$$
 
 If you can't find the right size of pants, it's better to go for the slightly larger pair and use a belt.
-```
+```python
 # Putting together a 
 [Keras](https://keras.io/getting-started/sequential-model-guide/) network is straightforward:
 model = Sequential()

@@ -12,7 +12,7 @@ Links:
 [MSBuild Extension Pack](https://github.com/mikefourie/MSBuildExtensionPack")
 
 Minimal project template:  
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <PropertyGroup>  
@@ -31,7 +31,7 @@ Minimal project template:
   </Target>  
   <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
 </Project>  
-{{< /highlight >}}
+```
 
 Targets can be called explicitly (uncommon) with the CallTarget task  
 `<CallTarget Target="TargetA;TargetB" />`
@@ -46,12 +46,12 @@ Invoking TargetC will then be preceded by TargetA
 `<Target Name="TargetA" BeforeTargets="TargetC" />`
 
 Conditional invocation  
-{{< highlight xml >}}
+```xml
 <PropertyGroup>
   <DoIt>true</DoIt>
 </PropertyGroup>
 <Target Name="TargetC" Condition="$(DoIt)" />
-{{< /highlight >}}
+```
 
 Typically .proj imports .targets, and .targets imports .props  
 Import .tasks where needed  
@@ -65,7 +65,7 @@ Special targets defined in Microsoft.CSharp.targets
 `<Target Name="AfterBuild" />`
 
 Generate locale folders (cross join):  
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="CrossJoin" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
@@ -82,7 +82,7 @@ Generate locale folders (cross join):
     <Message Text="%(OutputFiles.Locale)\%(OutputFiles.Identity)" />
   </Target>
 </Project>
-{{< /highlight >}}
+```
 
 Bring in custom task  
 `<UsingTask AssemblyFile="file name" TaskName="task name" />`
@@ -92,8 +92,8 @@ Custom tasks extend Task (recommended) or at implement ITask.
 Consider using inline tasks.
 
 Recursive list of files
-{{< highlight xml >}}
+```xml
 <ItemGroup>
   <Compile Include=".\**\*.cs" />
 </ItemGroup>
-{{< /highlight >}}
+```
