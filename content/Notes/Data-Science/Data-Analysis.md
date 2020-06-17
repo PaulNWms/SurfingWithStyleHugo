@@ -1,38 +1,22 @@
 ---
 title: "Data Analysis"
-date: 2019-12-15T16:28:35-08:00
+date: 2020-06-17
 ---
 
-Links:
-
-[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-[A Review and Comparison of Methods for Detecting Outliers in Univariate Data Sets](http://d-scholarship.pitt.edu/7948/1/Seo.pdf)
-
-[Understanding Q-Q Plots](https://data.library.virginia.edu/understanding-q-q-plots/)
-
-[Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)
-
-[Generalized Linear Models](http://www.statsmodels.org/stable/glm.html)
-
-[Sampling Distribution of the Mean](http://onlinestatbook.com/2/sampling_distributions/samp_dist_mean.html)
-
-[What is a p-value and how do you calculate it?](https://rebeccaebarnes.github.io/2018/05/01/what-is-a-p-value)
-
-[An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf)
-
-[Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
-
-[Hide the input cells from your IPython slides](http://www.damian.oquanta.info/posts/hide-the-input-cells-from-your-ipython-slides.html)
-
-[Conda Cheatsheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
-
-[Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
-
-[Conda docs](https://docs.conda.io/projects/conda/en/latest/)
-
-[magic keywords](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
-
+Links:  
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)  
+[A Review and Comparison of Methods for Detecting Outliers in Univariate Data Sets](http://d-scholarship.pitt.edu/7948/1/Seo.pdf)  [Understanding Q-Q Plots](https://data.library.virginia.edu/understanding-q-q-plots/)  
+[Kolmogorov–Smirnov test](https://en.wikipedia.org/wiki/Kolmogorov–Smirnov_test)  
+[Generalized Linear Models](http://www.statsmodels.org/stable/glm.html)  
+[Sampling Distribution of the Mean](http://onlinestatbook.com/2/sampling_distributions/samp_dist_mean.html)  
+[What is a p-value and how do you calculate it?](https://rebeccaebarnes.github.io/2018/05/01/what-is-a-p-value)  
+[An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf)  
+[Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)  
+[Hide the input cells from your IPython slides](http://www.damian.oquanta.info/posts/hide-the-input-cells-from-your-ipython-slides.html)  
+[Conda Cheatsheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)  
+[Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)  
+[Conda docs](https://docs.conda.io/projects/conda/en/latest/)  
+[magic keywords](https://ipython.readthedocs.io/en/stable/interactive/magics.html)  
 [pdb — The Python Debugger](https://docs.python.org/3/library/pdb.html)
 
 ```lang-none

@@ -1,100 +1,54 @@
 ---
 title: "Data Science"
-date: 2019-12-15T16:28:43-08:00
+date: 2020-06-17
 ---
 
-Links:
-
-[A Kaggle Master Explains Gradient Boosting](http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/)
-
-[Density-Based Clustering Validation](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=83C3BD5E078B1444CB26E243975507E1?doi=10.1.1.707.9034&rep=rep1&type=pdf)
-
-[Speaker Verification Using Adapted Gaussian Mixture Models](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.117.338&rep=rep1&type=pdf)
-
-[Independent component analysis: algorithms and applications](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.322.679&rep=rep1&type=pdf)
-
-[Nonparametric discovery of human routines from sensor data](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.681.3152&rep=rep1&type=pdf)
-
-[Random projection in dimensionality reduction: Applications to image and text data](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.76.8124&rep=rep1&type=pdf)
-
-[Dynamic Principal Component Analysis  in Multivariate Time-Series Segmentation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.853.2380&rep=rep1&type=pdf)
-
-[SVMs - Stanford's CS229 Lecture notes](http://cs229.stanford.edu/notes/cs229-notes3.pdf)
-
-[TDD for Data Science](http://engineering.pivotal.io/post/test-driven-development-for-data-science/)
-
-[Using Hierarchical Clustering of Secreted Protein Families to Classify and Rank Candidate Effectors of Rust Fungi](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0029847)
-
-[Independent Component Analysis of Electroencephalographic Data](http://papers.nips.cc/paper/1091-independent-component-analysis-of-electroencephalographic-data.pdf)
-
-[Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf)
-
-[Adaptive background mixture models for real-time tracking](http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf)
-
-[A tutorial on Principal Components Analysis](http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf)
-
-[Application of the Gaussian mixture model in pulsar astronomy](https://arxiv.org/abs/1205.6221)
-
-[Robust PCA for Anomaly Detection in Cyber Networks](https://arxiv.org/pdf/1801.01571.pdf)
-
-[Technical Notes On Using Data Science & Artificial Intelligence](https://chrisalbon.com/)
-
-[A Short Introduction to Boosting](https://cseweb.ucsd.edu/~yfreund/papers/IntroToBoosting.pdf)
-
-[DB-Engines Ranking](https://db-engines.com/en/ranking)
-
-[Bias and Variance](https://en.wikipedia.org/wiki/Bias–variance_tradeoff)
-
-[Support Vector Machines](https://en.wikipedia.org/wiki/Support_vector_machine)
-
-[Code Review](https://github.com/lyst/MakingLyst/tree/master/code-reviews)
-
-[The AI Hierarchy of Needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007)
-
-[Anomaly detection in temperature data using dbscan algorithm](https://ieeexplore.ieee.org/abstract/document/5946052/)
-
-[TDD is Essential for Good Data Science Here's Why](https://medium.com/%40karijdempsey/test-driven-development-is-essential-for-good-data-science-heres-why-db7975a03a44)
-
-[Yes, you should understand backprop](https://medium.com/@@karpathy/yes-you-should-understand-backprop-e2f06eab496b)
-
-[K-Means Clustering in Python](https://mubaris.com/posts/kmeans-clustering/)
-
-[Traffic Classification Using Clustering Algorithms](https://pages.cpsc.ucalgary.ca/~mahanti/papers/clustering.pdf)
-
-[Random Projections for k-means Clustering](https://papers.nips.cc/paper/3901-random-projections-for-k-means-clustering.pdf)
-
-[Applying Independent Component Analysis to Factor Model in Finance](https://pdfs.semanticscholar.org/a34b/e08a20eba7523600203a32abb026a8dd85a3.pdf)
-
-[Experiments with a New Boosting Algorithm](https://people.cs.pitt.edu/~milos/courses/cs2750/Readings/boosting.pdf)
-
-[Faces recognition example using eigenfaces and SVMs](https://scikit-learn.org/stable/auto_examples/applications/plot_face_recognition.html#sphx-glr-auto-examples-applications-plot-face-recognition-py)
-
-[https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html](https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html)
-
-[Code Review Best Practices](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html)
-
-[Data Science TDD](https://www.linkedin.com/pulse/data-science-test-driven-development-sam-savage/)
-
-[Visualizing DBSCAN Clustering](https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/)
-
-[Visualizing K-Means Clustering](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
-
-[PRINCIPAL COMPONENTS ANALYSIS TO SUMMARIZE MICROARRAY EXPERIMENTS: APPLICATION TO SPORULATION TIME SERIES](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2669932/)
-
-[Association between composition of the human gastrointestinal microbiome and development of fatty liver with choline deficiency.](https://www.ncbi.nlm.nih.gov/pubmed/21129376)
-
-[Four Ways Data Science Goes Wrong and How Test Driven Data Analysis Can Help](https://www.predictiveanalyticsworld.com/patimes/four-ways-data-science-goes-wrong-and-how-test-driven-data-analysis-can-help/6947/)
-
-[Four Ways Data Science Goes Wrong and How Test-Driven Data Analysis Can Help](https://www.predictiveanalyticsworld.com/patimes/four-ways-data-science-goes-wrong-and-how-test-driven-data-analysis-can-help/6947/)
-
-[What is an intuitive explanation of Gradient Boosting?](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting)
-
-[A lecture from Stanford's CS231n course](https://www.youtube.com/watch?v=59Hbtz7XgjM)
-
-[Eigenvectors and eigenvalues (YouTube)](https://www.youtube.com/watch?v=PFDu9oVAE-g)
-
-[how @app.route works](https://ains.co/blog/things-which-arent-magic-flask-part-1.html)
-
+Links:  
+[A Kaggle Master Explains Gradient Boosting](http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/)  
+[Density-Based Clustering Validation](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=83C3BD5E078B1444CB26E243975507E1?doi=10.1.1.707.9034&rep=rep1&type=pdf)  
+[Speaker Verification Using Adapted Gaussian Mixture Models](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.117.338&rep=rep1&type=pdf)  
+[Independent component analysis: algorithms and applications](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.322.679&rep=rep1&type=pdf)  
+[Nonparametric discovery of human routines from sensor data](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.681.3152&rep=rep1&type=pdf)  
+[Random projection in dimensionality reduction: Applications to image and text data](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.76.8124&rep=rep1&type=pdf)  
+[Dynamic Principal Component Analysis  in Multivariate Time-Series Segmentation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.853.2380&rep=rep1&type=pdf)  
+[SVMs - Stanford's CS229 Lecture notes](http://cs229.stanford.edu/notes/cs229-notes3.pdf)  
+[TDD for Data Science](http://engineering.pivotal.io/post/test-driven-development-for-data-science/)  
+[Using Hierarchical Clustering of Secreted Protein Families to Classify and Rank Candidate Effectors of Rust Fungi](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0029847)  
+[Independent Component Analysis of Electroencephalographic Data](http://papers.nips.cc/paper/1091-independent-component-analysis-of-electroencephalographic-data.pdf)  
+[Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf)  
+[Adaptive background mixture models for real-time tracking](http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf)  
+[A tutorial on Principal Components Analysis](http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf)  
+[Application of the Gaussian mixture model in pulsar astronomy](https://arxiv.org/abs/1205.6221)  
+[Robust PCA for Anomaly Detection in Cyber Networks](https://arxiv.org/pdf/1801.01571.pdf)  
+[Technical Notes On Using Data Science & Artificial Intelligence](https://chrisalbon.com/)  
+[A Short Introduction to Boosting](https://cseweb.ucsd.edu/~yfreund/papers/IntroToBoosting.pdf)  
+[DB-Engines Ranking](https://db-engines.com/en/ranking)  
+[Bias and Variance](https://en.wikipedia.org/wiki/Bias–variance_tradeoff)  
+[Support Vector Machines](https://en.wikipedia.org/wiki/Support_vector_machine)  
+[Code Review](https://github.com/lyst/MakingLyst/tree/master/code-reviews)  
+[The AI Hierarchy of Needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007)  
+[Anomaly detection in temperature data using dbscan algorithm](https://ieeexplore.ieee.org/abstract/document/5946052/)  
+[TDD is Essential for Good Data Science Here's Why](https://medium.com/%40karijdempsey/test-driven-development-is-essential-for-good-data-science-heres-why-db7975a03a44)  
+[Yes, you should understand backprop](https://medium.com/@@karpathy/yes-you-should-understand-backprop-e2f06eab496b)  
+[K-Means Clustering in Python](https://mubaris.com/posts/kmeans-clustering/)  
+[Traffic Classification Using Clustering Algorithms](https://pages.cpsc.ucalgary.ca/~mahanti/papers/clustering.pdf)  
+[Random Projections for k-means Clustering](https://papers.nips.cc/paper/3901-random-projections-for-k-means-clustering.pdf)  
+[Applying Independent Component Analysis to Factor Model in Finance](https://pdfs.semanticscholar.org/a34b/e08a20eba7523600203a32abb026a8dd85a3.pdf)  
+[Experiments with a New Boosting Algorithm](https://people.cs.pitt.edu/~milos/courses/cs2750/Readings/boosting.pdf)  
+[Faces recognition example using eigenfaces and SVMs](https://scikit-learn.org/stable/auto_examples/applications/plot_face_recognition.html#sphx-glr-auto-examples-applications-plot-face-recognition-py)  
+[https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html](https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html)  
+[Code Review Best Practices](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html)  
+[Data Science TDD](https://www.linkedin.com/pulse/data-science-test-driven-development-sam-savage/)  
+[Visualizing DBSCAN Clustering](https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/)  
+[Visualizing K-Means Clustering](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)  
+[PRINCIPAL COMPONENTS ANALYSIS TO SUMMARIZE MICROARRAY EXPERIMENTS: APPLICATION TO SPORULATION TIME SERIES](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2669932/)  
+[Association between composition of the human gastrointestinal microbiome and development of fatty liver with choline deficiency.](https://www.ncbi.nlm.nih.gov/pubmed/21129376)  
+[Four Ways Data Science Goes Wrong and How Test Driven Data Analysis Can Help](https://www.predictiveanalyticsworld.com/patimes/four-ways-data-science-goes-wrong-and-how-test-driven-data-analysis-can-help/6947/)  
+[Four Ways Data Science Goes Wrong and How Test-Driven Data Analysis Can Help](https://www.predictiveanalyticsworld.com/patimes/four-ways-data-science-goes-wrong-and-how-test-driven-data-analysis-can-help/6947/)  
+[What is an intuitive explanation of Gradient Boosting?](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting)  
+[A lecture from Stanford's CS231n course](https://www.youtube.com/watch?v=59Hbtz7XgjM)  
+[Eigenvectors and eigenvalues (YouTube)](https://www.youtube.com/watch?v=PFDu9oVAE-g)  
+[how @app.route works](https://ains.co/blog/things-which-arent-magic-flask-part-1.html)  
 [general decorators tutorial](https://realpython.com/primer-on-python-decorators/)
 
 Classification -> categorical outcomes

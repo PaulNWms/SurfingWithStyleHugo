@@ -1,293 +1,151 @@
 ---
 title: "Deep Learning"
-date: 2019-12-15T16:28:53-08:00
+date: 2020-06-17
 ---
 
-Links:
-
+Links:  
 [German Traffic Sign dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) and 
-[project](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project)
-
-[Exploring LSTMs](http://blog.echen.me/2017/05/30/exploring-lstms/)
-
-[CIFAR-10 Competition Winners](http://blog.kaggle.com/2015/01/02/cifar-10-competition-winners-interviews-with-dr-ben-graham-phil-culliton-zygmunt-zajac/)
-
-[A Theoretical and Empirical Analysis of Expected Sarsa](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.4144&rep=rep1&type=pdf)
-
-[Issues in Using Function Approximation for Reinforcement Learning (1993) ](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.73.3097)
-
-[Learning Deep Features for Discriminative Localization](http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf)
-
-[Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
-
-[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/)
-
-[Commonly used activation functions](http://cs231n.github.io/neural-networks-1/#actfun)
-
-[Visualizing what ConvNets learn)](http://cs231n.github.io/understanding-cnn/)
-
-[Deep Reinforcement Learning: Pong from Pixels](http://karpathy.github.io/2016/05/31/rl/)
-
-[Linear Combinations](http://linear.ups.edu/html/section-LC.html)
-
-[Neural Networks and Deep Learning (book)](http://neuralnetworksanddeeplearning.com/)
-
-[Why are deep neural networks hard to train?](http://neuralnetworksanddeeplearning.com/chap5.html)
-
-[ImageNet Classiﬁcation with Deep Convolutional NeuralNetworks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
-
-[An Empirical Explorationof Recurrent Network Architectures](http://proceedings.mlr.press/v37/jozefowicz15.pdf)
-
-[Understanding the difﬁculty of training deep feedforward neural networks](http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf)
-
-[Inventory management in supply chains: a reinforcement learning approach](http://read.pudn.com/downloads142/sourcecode/others/617477/inventory%20supply%20chain/04051310570412465(1).pdf)
-
-[Image Kernels Explained Visually](http://setosa.io/ev/image-kernels/)
-
-[common derivatives](http://tutorial.math.lamar.edu/pdf/Common_Derivatives_Integrals.pdf)
-
+[project](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project)  
+[Exploring LSTMs](http://blog.echen.me/2017/05/30/exploring-lstms/)  
+[CIFAR-10 Competition Winners](http://blog.kaggle.com/2015/01/02/cifar-10-competition-winners-interviews-with-dr-ben-graham-phil-culliton-zygmunt-zajac/)  
+[A Theoretical and Empirical Analysis of Expected Sarsa](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.216.4144&rep=rep1&type=pdf)  
+[Issues in Using Function Approximation for Reinforcement Learning (1993) ](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.73.3097)  
+[Learning Deep Features for Discriminative Localization](http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf)  
+[Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)  
+[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/)  
+[Commonly used activation functions](http://cs231n.github.io/neural-networks-1/#actfun)  
+[Visualizing what ConvNets learn)](http://cs231n.github.io/understanding-cnn/)  
+[Deep Reinforcement Learning: Pong from Pixels](http://karpathy.github.io/2016/05/31/rl/)  
+[Linear Combinations](http://linear.ups.edu/html/section-LC.html)  
+[Neural Networks and Deep Learning (book)](http://neuralnetworksanddeeplearning.com/)  
+[Why are deep neural networks hard to train?](http://neuralnetworksanddeeplearning.com/chap5.html)  
+[ImageNet Classiﬁcation with Deep Convolutional NeuralNetworks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)  
+[An Empirical Explorationof Recurrent Network Architectures](http://proceedings.mlr.press/v37/jozefowicz15.pdf)  
+[Understanding the difﬁculty of training deep feedforward neural networks](http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf)  
+[Inventory management in supply chains: a reinforcement learning approach](http://read.pudn.com/downloads142/sourcecode/others/617477/inventory%20supply%20chain/04051310570412465(1).pdf)  
+[Image Kernels Explained Visually](http://setosa.io/ev/image-kernels/)  
+[common derivatives](http://tutorial.math.lamar.edu/pdf/Common_Derivatives_Integrals.pdf)  
 [The Street View House Numbers (SVHN) Dataset](http://ufldl.stanford.edu/housenumbers/) and 
-[project](https://github.com/udacity/machine-learning/tree/master/projects/digit_recognition)
-
-[Reinforcement Learning with Replacing Eligibility Traces](http://www-anw.cs.umass.edu/legacy/pubs/1995_96/singh_s_ML96.pdf)
-
-[LSTM](http://www.bioinf.jku.at/publications/older/2604.pdf)
-
-[WaveNet model that generates songs](http://www.creativeai.net/posts/W2C3baXvf2yJSLbY6/a-neural-parametric-singing-synthesizer)
-
-[automatic handwriting generation](http://www.cs.toronto.edu/~graves/handwriting.cgi?text=My+name+is+Luka&style=&bias=0.15&samples=3)
-
-[Learning Long-Term Dependencies with RNN](http://www.cs.toronto.edu/~guerzhoy/321/lec/W09/rnn_gated.pdf)
-
-[Deep Learning (book)](http://www.deeplearningbook.org/)
-
-[IMAGENET Large Scale Visual Recognition Challenge (ILSVRC)](http://www.image-net.org/challenges/LSVRC/)
-
-[](http://www.leemon.com/papers/1993wb2.pdf)
-
-[CNNs for text classification](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/)
-
-[Introduction to Learning to Trade with Reinforcement Learning](http://www.wildml.com/2018/02/introduction-to-learning-to-trade-with-reinforcement-learning/)
-
-[THE MNIST DATABASE of handwritten digits](http://yann.lecun.com/exdb/mnist/)
-
-[Efficient BackProp](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf)
-
-[Assisting Pathologists in Detecting Cancer with Deep Learning ](https://ai.googleblog.com/2017/03/assisting-pathologists-in-detecting.html)
-
-[A.I. Experiments website](https://aiexperiments.withgoogle.com/)
-
-[Practical recommendations for gradient-based training of deep architectures](https://arxiv.org/abs/1206.5533)
-
-[On the difficulty of training Recurrent Neural Networks](https://arxiv.org/abs/1211.5063)
-
-[Speech Recognition with Deep Recurrent Neural Networks](https://arxiv.org/abs/1303.5778)
-
-[Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215)
-
-[Show and Tell: A Neural Image Caption Generator](https://arxiv.org/abs/1411.4555)
-
-[Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/abs/1412.3555)
-
-[Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/abs/1502.01852)
-
-[Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)
-
-[DRAW: A Recurrent Neural Network For Image Generation](https://arxiv.org/abs/1502.04623)
-
-[Visualizing and Understanding Recurrent Networks](https://arxiv.org/abs/1506.02078)
-
-[How to Generate a Good Word Embedding?](https://arxiv.org/abs/1507.05523)
-
-[Deep Recurrent Q-Learning for Partially Observable MDPs](https://arxiv.org/abs/1507.06527)
-
-[Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/abs/1509.06461)
-
-[Prioritized Experience Replay](https://arxiv.org/abs/1511.05952)
-
-[Dueling Network Architectures for Deep Reinforcement Learning](https://arxiv.org/abs/1511.06581)
-
-[Systematic evaluation of CNN advances on the ImageNet](https://arxiv.org/abs/1606.02228)
-
-[Neural Speech Recognizer: Acoustic-to-Word LSTM Model for Large Vocabulary Speech Recognition](https://arxiv.org/abs/1610.09975)
-
-[Understanding deep learning requires rethinking generalization](https://arxiv.org/abs/1611.03530)
-
-[Massive Exploration of Neural Machine Translation Architectures](https://arxiv.org/abs/1703.03906v2)
-
-[Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf)
-
-[VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITIO](https://arxiv.org/pdf/1409.1556.pdf)
-
-[How transferable are features in deep neural networks?](https://arxiv.org/pdf/1411.1792.pdf)
-
-[Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/pdf/1502.01852v1.pdf)
-
-[Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167v2.pdf)
-
-[LSTM: A Search Space Odyssey](https://arxiv.org/pdf/1503.04069.pdf)
-
-[SESSION-BASED RECOMMENDATIONS WITH RECURRENT NEURAL NETWORKS](https://arxiv.org/pdf/1511.06939.pdf)
-
-[Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385v1.pdf)
-
-[Improved Techniques for Training GANs](https://arxiv.org/pdf/1606.03498.pdf)
-
-[EmergenceofLocomotionBehaviours inRichEnvironments](https://arxiv.org/pdf/1707.02286.pdf)
-
-[Amazon Lex FAQs](https://aws.amazon.com/lex/faqs/)
-
-[Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
-
-[How convolutional neural networks see the world](https://blog.keras.io/how-convolutional-neural-networks-see-the-world.html)
-
-[DotA 2 bot by Open AI](https://blog.openai.com/dota-2/)
-
-[Reading Barcodes on Hooves: How Deep Learning Is Helping Save Endangered Zebras](https://blogs.nvidia.com/blog/2016/11/04/saving-endangered-species/?adbsc=social_20170303_70517416)
-
-[Facebook's CNN approach for language translation](https://code.facebook.com/posts/1978007565818999/a-novel-approach-to-neural-machine-translation/)
-
-[Building an efficient neural language model over a billion words](https://code.fb.com/ml-applications/building-an-efficient-neural-language-model-over-a-billion-words/)
-
-[Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
-
-[Depth Map Prediction from a Single Image using a Multi-Scale Deep Network](https://cs.nyu.edu/~deigen/depth/)
-
-[Deep Dream Generator](https://deepdreamgenerator.com/)
-
-[DeepMind](https://deepmind.com/)
-
-[AlphaGo Zero: Learning from scratch](https://deepmind.com/blog/alphago-zero-learning-scratch/)
-
-[Producing flexible behaviours in simulated environments](https://deepmind.com/blog/producing-flexible-behaviours-simulated-environments/)
-
-[WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/)
-
-[AlphaGo](https://deepmind.com/research/alphago/)
-
-[Human-level control through Deep Reinforcement Learning](https://deepmind.com/research/dqn/)
-
-[Play Atari games with a CNN and reinforcement learning](https://deepmind.com/research/dqn/) and its 
-[source code](https://sites.google.com/a/deepmind.com/dqn/)
-
-[Bias of an estimator](https://en.wikipedia.org/wiki/Bias_of_an_estimator)
-
-[Conditional probability distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)
-
-[Convergent series](https://en.wikipedia.org/wiki/Convergent_series)
-
-[Divergent series](https://en.wikipedia.org/wiki/Divergent_series)
-
-[Expected value](https://en.wikipedia.org/wiki/Expected_value)
-
-[Geometric series](https://en.wikipedia.org/wiki/Geometric_series)
-
-[Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers)
-
-[Markov reward model](https://en.wikipedia.org/wiki/Markov_reward_model)
-
-[Mean Squared Error (MSE) (usually used in regression problems)](https://en.wikipedia.org/wiki/Mean_squared_error)
-
-[Mean squared error](https://en.wikipedia.org/wiki/Mean_squared_error)
-
-[Negative binomial distribution](https://en.wikipedia.org/wiki/Negative_binomial_distribution)
-
-[Elman and Jordan networks](https://en.wikipedia.org/wiki/Recurrent_neural_network#Elman_networks_and_Jordan_networks)
-
-[Time delay neural network](https://en.wikipedia.org/wiki/Time_delay_neural_network)
-
-[Vanishing gradient problem](https://en.wikipedia.org/wiki/Vanishing_gradient_problem)
-
-[Word2vec](https://en.wikipedia.org/wiki/Word2vec)
-
-[What Neural Networks See](https://experiments.withgoogle.com/what-neural-nets-see)
-
-[ResNetCAM-keras](https://github.com/alexisbcook/ResNetCAM-keras)
-
-[Keras Transfer Learning on CIFAR-10](https://github.com/alexisbcook/keras_transfer_cifar10)
-
-[Benchmarks for popular CNN models](https://github.com/jcjohnson/cnn-benchmarks)
-
-[OpenAI Gym GitHub](https://github.com/openai/gym)
-
-[Learning to trade under the reinforcement learning framework ](https://github.com/ucaiado/QLearning_Trading)
-
-[Reinforcement Learning Cheat Sheet](https://github.com/udacity/rl-cheatsheet/blob/master/cheatsheet.pdf)
-
-[Getting Started with OpenAI Gym](https://gym.openai.com/docs/)
-
-[Deep Q-Learning with Keras and Gym](https://keon.io/deep-q-learning/)
-
-[How to Check-Point Deep Learning Models in Keras](https://machinelearningmastery.com/check-point-deep-learning-models-keras/)
-
-[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
-
-[Image Augmentation for Deep Learning With Keras](https://machinelearningmastery.com/image-augmentation-deep-learning-keras/)
-
-[NeurIPS](https://nips.cc/)
-
-[Elman network](https://onlinelibrary.wiley.com/doi/abs/10.1207/s15516709cog1402_1)
-
-[Attacking Machine Learning with Adversarial Examples](https://openai.com/blog/adversarial-example-research/)
-
-[OpenFrameworks ](https://openframeworks.cc/)
-
-[Low Power Wireless Communication via Reinforcement Learning](https://papers.nips.cc/paper/1740-low-power-wireless-communication-via-reinforcement-learning.pdf)
-
-[SEQUENCE-TO-SEQUENCE RNNS FOR TEXT SUMMARIZATION](https://pdfs.semanticscholar.org/3fbc/45152f20403266b02c4c2adab26fb367522d.pdf)
-
-[Reinforcement Learning for Robots Using Neural Networks](https://pdfs.semanticscholar.org/54c4/cf3a8168c1b70f91cf78a3dc98b671935492.pdf)
-
-[Reading game frames in Python with OpenCV - Python Plays GTA V](https://pythonprogramming.net/game-frames-open-cv-python-plays-gta-v/)
-
-[Reinforcement Learning (DQN) Tutorial](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
-
-[Play pictionary with a CNN](https://quickdraw.withgoogle.com/#)
-
-[Reinforcement Learning (book)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/bookdraft2018.pdf) and 
-[Python implementation](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction)
-
-[Keras Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet_Python.pdf)
-
-[MIT 6.S094: Deep Learning for Self-Driving Cars](https://selfdrivingcars.mit.edu/)
-
-[Deep Traffic](https://selfdrivingcars.mit.edu/deeptraffic/)
-
-[A Beginner's Guide to LSTMs and Recurrent Neural Networks](https://skymind.ai/wiki/lstm)
-
-[Geometric Sequences and Exponential Functions](https://socratic.org/algebra/exponents-and-exponential-functions/geometric-sequences-and-exponential-functions)
-
-[Human-level control through deep reinforcement learning](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
-
-[A Long Short-Term Memory Model for Answer Sentence Selection in Question Answering](https://www.aclweb.org/anthology/P15-2116)
-
-[AutoDraw](https://www.autodraw.com/)
-
-[Dropout: A Simple Way to Prevent Neural Networks from Overﬁtting](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)
-
-[FaceApp uses neural networks to change your look, now available on Android](https://www.digitaltrends.com/photography/faceapp-neural-net-image-editing/)
-
-[How GPS Drone Navigation Works](https://www.droneomega.com/gps-drone-navigation-works/)
-
-[Deep Learning Newsletter](https://www.getrevue.co/profile/wildml)
-
-[cross entropy (usually used in classification problems)](https://www.ics.uci.edu/~pjsadows/notes.pdf)
-
-[Popular Datasets Over Time](https://www.kaggle.com/benhamner/popular-datasets-over-time/code)
-
-[Grokking Deep Learning](https://www.manning.com/books/grokking-deep-learning)
-
-[Nature publication detailing cancer-detecting CNN](https://www.nature.com/articles/nature21056.epdf)
-
-[The Dark Secret at the Heart of AI](https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/)
-
-[Finding Solace in Defeat by Artificial Intelligence](https://www.technologyreview.com/s/604273/finding-solace-in-defeat-by-artificial-intelligence/?set=604287)
-
-[Visually-Indicated Sounds](https://www.youtube.com/watch?time_continue=1&v=0FW99AQmMc8)
-
-[Intelligent Flying Machines (IFM)](https://www.youtube.com/watch?v=AMDiR61f86Y)
-
-[Visualizing and Understanding Deep Neural Networks by Matt Zeiler](https://youtu.be/ghEmQSxT6tw)
+[project](https://github.com/udacity/machine-learning/tree/master/projects/digit_recognition)  
+[Reinforcement Learning with Replacing Eligibility Traces](http://www-anw.cs.umass.edu/legacy/pubs/1995_96/singh_s_ML96.pdf)  
+[LSTM](http://www.bioinf.jku.at/publications/older/2604.pdf)  
+[WaveNet model that generates songs](http://www.creativeai.net/posts/W2C3baXvf2yJSLbY6/a-neural-parametric-singing-synthesizer)  
+[automatic handwriting generation](http://www.cs.toronto.edu/~graves/handwriting.cgi?text=My+name+is+Luka&style=&bias=0.15&samples=3)  
+[Learning Long-Term Dependencies with RNN](http://www.cs.toronto.edu/~guerzhoy/321/lec/W09/rnn_gated.pdf)  
+[Deep Learning (book)](http://www.deeplearningbook.org/)  
+[IMAGENET Large Scale Visual Recognition Challenge (ILSVRC)](http://www.image-net.org/challenges/LSVRC/)  
+[](http://www.leemon.com/papers/1993wb2.pdf)  
+[CNNs for text classification](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/)  
+[Introduction to Learning to Trade with Reinforcement Learning](http://www.wildml.com/2018/02/introduction-to-learning-to-trade-with-reinforcement-learning/)  
+[THE MNIST DATABASE of handwritten digits](http://yann.lecun.com/exdb/mnist/)  
+[Efficient BackProp](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf)  
+[Assisting Pathologists in Detecting Cancer with Deep Learning ](https://ai.googleblog.com/2017/03/assisting-pathologists-in-detecting.html)  
+[A.I. Experiments website](https://aiexperiments.withgoogle.com/)  
+[Practical recommendations for gradient-based training of deep architectures](https://arxiv.org/abs/1206.5533)  
+[On the difficulty of training Recurrent Neural Networks](https://arxiv.org/abs/1211.5063)  
+[Speech Recognition with Deep Recurrent Neural Networks](https://arxiv.org/abs/1303.5778)  
+[Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215)  
+[Show and Tell: A Neural Image Caption Generator](https://arxiv.org/abs/1411.4555)  
+[Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/abs/1412.3555)  
+[Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/abs/1502.01852)  
+[Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)  
+[DRAW: A Recurrent Neural Network For Image Generation](https://arxiv.org/abs/1502.04623)  
+[Visualizing and Understanding Recurrent Networks](https://arxiv.org/abs/1506.02078)  
+[How to Generate a Good Word Embedding?](https://arxiv.org/abs/1507.05523)  
+[Deep Recurrent Q-Learning for Partially Observable MDPs](https://arxiv.org/abs/1507.06527)  
+[Deep Reinforcement Learning with Double Q-learning](https://arxiv.org/abs/1509.06461)  
+[Prioritized Experience Replay](https://arxiv.org/abs/1511.05952)  
+[Dueling Network Architectures for Deep Reinforcement Learning](https://arxiv.org/abs/1511.06581)  
+[Systematic evaluation of CNN advances on the ImageNet](https://arxiv.org/abs/1606.02228)  
+[Neural Speech Recognizer: Acoustic-to-Word LSTM Model for Large Vocabulary Speech Recognition](https://arxiv.org/abs/1610.09975)  
+[Understanding deep learning requires rethinking generalization](https://arxiv.org/abs/1611.03530)  
+[Massive Exploration of Neural Machine Translation Architectures](https://arxiv.org/abs/1703.03906v2)  
+[Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf)  
+[VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITIO](https://arxiv.org/pdf/1409.1556.pdf)  
+[How transferable are features in deep neural networks?](https://arxiv.org/pdf/1411.1792.pdf)  
+[Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/pdf/1502.01852v1.pdf)  
+[Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167v2.pdf)  
+[LSTM: A Search Space Odyssey](https://arxiv.org/pdf/1503.04069.pdf)  
+[SESSION-BASED RECOMMENDATIONS WITH RECURRENT NEURAL NETWORKS](https://arxiv.org/pdf/1511.06939.pdf)  
+[Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385v1.pdf)  
+[Improved Techniques for Training GANs](https://arxiv.org/pdf/1606.03498.pdf)  
+[EmergenceofLocomotionBehaviours inRichEnvironments](https://arxiv.org/pdf/1707.02286.pdf)  
+[Amazon Lex FAQs](https://aws.amazon.com/lex/faqs/)  
+[Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)  
+[How convolutional neural networks see the world](https://blog.keras.io/how-convolutional-neural-networks-see-the-world.html)  
+[DotA 2 bot by Open AI](https://blog.openai.com/dota-2/)  
+[Reading Barcodes on Hooves: How Deep Learning Is Helping Save Endangered Zebras](https://blogs.nvidia.com/blog/2016/11/04/saving-endangered-species/?adbsc=social_20170303_70517416)  
+[Facebook's CNN approach for language translation](https://code.facebook.com/posts/1978007565818999/a-novel-approach-to-neural-machine-translation/)  
+[Building an efficient neural language model over a billion words](https://code.fb.com/ml-applications/building-an-efficient-neural-language-model-over-a-billion-words/)  
+[Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)  
+[Depth Map Prediction from a Single Image using a Multi-Scale Deep Network](https://cs.nyu.edu/~deigen/depth/)  
+[Deep Dream Generator](https://deepdreamgenerator.com/)  
+[DeepMind](https://deepmind.com/)  
+[AlphaGo Zero: Learning from scratch](https://deepmind.com/blog/alphago-zero-learning-scratch/)  
+[Producing flexible behaviours in simulated environments](https://deepmind.com/blog/producing-flexible-behaviours-simulated-environments/)  
+[WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/)  
+[AlphaGo](https://deepmind.com/research/alphago/)  
+[Human-level control through Deep Reinforcement Learning](https://deepmind.com/research/dqn/)  
+[Play Atari games with a CNN and reinforcement learning](https://deepmind.com/research/dqn/) and its [source code](https://sites.google.com/a/deepmind.com/dqn/)  
+[Bias of an estimator](https://en.wikipedia.org/wiki/Bias_of_an_estimator)  
+[Conditional probability distribution](https://en.wikipedia.org/wiki/Conditional_probability_distribution)  
+[Convergent series](https://en.wikipedia.org/wiki/Convergent_series)  
+[Divergent series](https://en.wikipedia.org/wiki/Divergent_series)  
+[Expected value](https://en.wikipedia.org/wiki/Expected_value)  
+[Geometric series](https://en.wikipedia.org/wiki/Geometric_series)  
+[Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers)  
+[Markov reward model](https://en.wikipedia.org/wiki/Markov_reward_model)  
+[Mean Squared Error (MSE) (usually used in regression problems)](https://en.wikipedia.org/wiki/Mean_squared_error)  
+[Mean squared error](https://en.wikipedia.org/wiki/Mean_squared_error)  
+[Negative binomial distribution](https://en.wikipedia.org/wiki/Negative_binomial_distribution)  
+[Elman and Jordan networks](https://en.wikipedia.org/wiki/Recurrent_neural_network#Elman_networks_and_Jordan_networks)  
+[Time delay neural network](https://en.wikipedia.org/wiki/Time_delay_neural_network)  
+[Vanishing gradient problem](https://en.wikipedia.org/wiki/Vanishing_gradient_problem)  
+[Word2vec](https://en.wikipedia.org/wiki/Word2vec)  
+[What Neural Networks See](https://experiments.withgoogle.com/what-neural-nets-see)  
+[ResNetCAM-keras](https://github.com/alexisbcook/ResNetCAM-keras)  
+[Keras Transfer Learning on CIFAR-10](https://github.com/alexisbcook/keras_transfer_cifar10)  
+[Benchmarks for popular CNN models](https://github.com/jcjohnson/cnn-benchmarks)  
+[OpenAI Gym GitHub](https://github.com/openai/gym)  
+[Learning to trade under the reinforcement learning framework ](https://github.com/ucaiado/QLearning_Trading)  
+[Reinforcement Learning Cheat Sheet](https://github.com/udacity/rl-cheatsheet/blob/master/cheatsheet.pdf)  
+[Getting Started with OpenAI Gym](https://gym.openai.com/docs/)  
+[Deep Q-Learning with Keras and Gym](https://keon.io/deep-q-learning/)  
+[How to Check-Point Deep Learning Models in Keras](https://machinelearningmastery.com/check-point-deep-learning-models-keras/)  
+[How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)  
+[Image Augmentation for Deep Learning With Keras](https://machinelearningmastery.com/image-augmentation-deep-learning-keras/)  
+[NeurIPS](https://nips.cc/)  
+[Elman network](https://onlinelibrary.wiley.com/doi/abs/10.1207/s15516709cog1402_1)  
+[Attacking Machine Learning with Adversarial Examples](https://openai.com/blog/adversarial-example-research/)  
+[OpenFrameworks ](https://openframeworks.cc/)  
+[Low Power Wireless Communication via Reinforcement Learning](https://papers.nips.cc/paper/1740-low-power-wireless-communication-via-reinforcement-learning.pdf)  
+[SEQUENCE-TO-SEQUENCE RNNS FOR TEXT SUMMARIZATION](https://pdfs.semanticscholar.org/3fbc/45152f20403266b02c4c2adab26fb367522d.pdf)  
+[Reinforcement Learning for Robots Using Neural Networks](https://pdfs.semanticscholar.org/54c4/cf3a8168c1b70f91cf78a3dc98b671935492.pdf)  
+[Reading game frames in Python with OpenCV - Python Plays GTA V](https://pythonprogramming.net/game-frames-open-cv-python-plays-gta-v/)  
+[Reinforcement Learning (DQN) Tutorial](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)  
+[Play pictionary with a CNN](https://quickdraw.withgoogle.com/#)  
+[Reinforcement Learning (book)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/bookdraft2018.pdf) and [Python implementation](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction)  
+[Keras Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet_Python.pdf)  
+[MIT 6.S094: Deep Learning for Self-Driving Cars](https://selfdrivingcars.mit.edu/)  
+[Deep Traffic](https://selfdrivingcars.mit.edu/deeptraffic/)  
+[A Beginner's Guide to LSTMs and Recurrent Neural Networks](https://skymind.ai/wiki/lstm)  
+[Geometric Sequences and Exponential Functions](https://socratic.org/algebra/exponents-and-exponential-functions/geometric-sequences-and-exponential-functions)  
+[Human-level control through deep reinforcement learning](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)  
+[A Long Short-Term Memory Model for Answer Sentence Selection in Question Answering](https://www.aclweb.org/anthology/P15-2116)  
+[AutoDraw](https://www.autodraw.com/)  
+[Dropout: A Simple Way to Prevent Neural Networks from Overﬁtting](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)  
+[FaceApp uses neural networks to change your look, now available on Android](https://www.digitaltrends.com/photography/faceapp-neural-net-image-editing/)  
+[How GPS Drone Navigation Works](https://www.droneomega.com/gps-drone-navigation-works/)  
+[Deep Learning Newsletter](https://www.getrevue.co/profile/wildml)  
+[cross entropy (usually used in classification problems)](https://www.ics.uci.edu/~pjsadows/notes.pdf)  
+[Popular Datasets Over Time](https://www.kaggle.com/benhamner/popular-datasets-over-time/code)  
+[Grokking Deep Learning](https://www.manning.com/books/grokking-deep-learning)  
+[Nature publication detailing cancer-detecting CNN](https://www.nature.com/articles/nature21056.epdf)  
+[The Dark Secret at the Heart of AI](https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/)  
+[Finding Solace in Defeat by Artificial Intelligence](https://www.technologyreview.com/s/604273/finding-solace-in-defeat-by-artificial-intelligence/?set=604287)  
+[Visually-Indicated Sounds](https://www.youtube.com/watch?time_continue=1&v=0FW99AQmMc8)  
+[Intelligent Flying Machines (IFM)](https://www.youtube.com/watch?v=AMDiR61f86Y)  
+[Visualizing and Understanding Deep Neural Networks by Matt Zeiler](https://youtu.be/ghEmQSxT6tw)  
 
 <em>Type</em> of machine learning: supervised vs. unsupervised
 

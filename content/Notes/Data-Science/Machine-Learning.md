@@ -3,29 +3,19 @@ title: "Machine Learning"
 date: 2019-12-15T16:29:05-08:00
 ---
 
-Links:
-
+Links:  
 [Sample code](https://github.com/ageron/handson-ml)
 
-Data sets:
-
-[UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php)
-
-[Kaggle](https://www.kaggle.com/datasets)
-
-[Open Data on AWS](https://registry.opendata.aws/)
-
-[http://dataportals.org/](http://dataportals.org/)
-
-[OPENDATAMONITOR](https://opendatamonitor.eu/)
-
-[Quandl](https://www.quandl.com/)
-
-[Wikipedia's list of datasets](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research)
-
-[Quora](https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public)
-
-[Datasets' Discord server](https://www.reddit.com/r/datasets/)
+Data sets:  
+[UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php)  
+[Kaggle](https://www.kaggle.com/datasets)  
+[Open Data on AWS](https://registry.opendata.aws/)  
+[http://dataportals.org/](http://dataportals.org/)  
+[OPENDATAMONITOR](https://opendatamonitor.eu/)  
+[Quandl](https://www.quandl.com/)  
+[Wikipedia's list of datasets](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research)  
+[Quora](https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public)  
+[Datasets' Discord server](https://www.reddit.com/r/datasets/)  
 
 In supervised learning, the training data is labelled.
 
