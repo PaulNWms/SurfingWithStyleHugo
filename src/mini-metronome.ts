@@ -69,10 +69,18 @@ class MiniMetronome {
         }
     }
 
-    public setStyle() {
-        let newStyle = `animation-name: ${AnimationName[this.animationName]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: ${this.animationDirection};`;
-        if (newStyle !== ui.metronomeStyle) {
-            ui.metronomeStyle = newStyle;
+    public setStyle(isAccelerating: boolean) {
+        if (isAccelerating) {
+            let newStyle = `animation-name: ${AnimationName[this.animationName]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: ${this.animationDirection}`;
+            if (newStyle !== ui.metronomeStyle) {
+                ui.metronomeStyle = newStyle;
+            }
+        }
+        else {
+            let element = $(".pendulum-parent")[0];
+            element.style.animationDuration = this.duration;
+            element.style.animationName = AnimationName[this.animationName];
+            element.style.animationPlayState = AnimationPlayState[this.animationPlayState];
         }
     }
 }

@@ -64,7 +64,7 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
                 console.log("data-metronome-state invalid");
                 break;
         }
-        metronome.setStyle();
+        metronome.setStyle(false);
     });
 }
 

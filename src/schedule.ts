@@ -97,7 +97,7 @@ class Schedule {
                     ui.metronomeState = MetronomeState[MetronomeState.Starting];
                     this.metronome.animationName = AnimationName.starting;
                     this.metronome.animationPlayState = AnimationPlayState.running;
-                    this.metronome.setStyle();
+                    this.metronome.setStyle(false);
                 }
 
                 break;
@@ -109,7 +109,7 @@ class Schedule {
             default:
                 break;
         }
-        this.metronome.setStyle();
+        this.metronome.setStyle(false);
     }
 
     public lineCompleted() {
