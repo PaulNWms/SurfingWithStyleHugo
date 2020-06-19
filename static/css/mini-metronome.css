@@ -53,7 +53,14 @@
         transform: rotate(0deg) scale(1);
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
-        animation: none 0s ease-in-out alternate infinite;
+        animation-name: none;
+        animation-duration: 0s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
     }
 
     .mini-metronome .delete-schedule-row {

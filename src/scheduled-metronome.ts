@@ -40,9 +40,10 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
                 ui.metronomeState = MetronomeState[MetronomeState.Running];
                 break;
             case MetronomeState[MetronomeState.Running]:
+                audio.play();
                 metronome.tempo = schedule.CalculateTempo();
                 direction = (direction + 1) % 2;
-                audio.play();
+                metronome.animationDirection = direction ? "normal" : "reverse";
                 break;
             case MetronomeState[MetronomeState.MakeItStop]:
                 if (direction) {
@@ -64,7 +65,7 @@ function registerScheduled(metronome: MiniMetronome, selector: string) {
                 console.log("data-metronome-state invalid");
                 break;
         }
-        metronome.setStyle(false);
+        metronome.setStyle();
     });
 }
 

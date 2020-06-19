@@ -3,33 +3,20 @@ title: "Git"
 date: 2019-12-15T06:23:43-08:00
 ---
 
-Links:
-
-[Git](https://git-scm.com/)
-
-[Git Cheat Sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
-
-[Udacity Git Commit Message Style Guide](http://udacity.github.io/git-styleguide/)
-
-[UP-FOR-GRABS.net](http://up-for-grabs.net/)
-
-[First Timers Only](http://www.firsttimersonly.com/)
-
-[first-timers-only label on GitHub](https://github.com/search?utf8=%E2%9C%93&q=label%3Afirst-timers-only+is%3Aopen&type=Issues&ref=searchresults)
-
-["first timers only" blog post](https://blog.kentcdodds.com/first-timers-only-78281ea47455)
-
-[try tackling some Git and GitHub challenges with the Git-it app](https://github.com/jlord/git-it-electron)
-
-[First Pull Request](http://firstpr.me/)
-
-[A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
-
-[About merge conflicts](https://help.github.com/en/articles/about-merge-conflicts)
-
-[How to Version Control Your Production Machine Learning Models](https://blog.algorithmia.com/how-to-version-control-your-production-machine-learning-models/)
-
-[Versioning Data Science](https://shuaiw.github.io/2017/07/30/versioning-data-science.html)
+Links:  
+[Git](https://git-scm.com/)  
+[Git Cheat Sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)  
+[Udacity Git Commit Message Style Guide](http://udacity.github.io/git-styleguide/)  
+[UP-FOR-GRABS.net](http://up-for-grabs.net/)  
+[First Timers Only](http://www.firsttimersonly.com/)  
+[first-timers-only label on GitHub](https://github.com/search?utf8=%E2%9C%93&q=label%3Afirst-timers-only+is%3Aopen&type=Issues&ref=searchresults)  
+["first timers only" blog post](https://blog.kentcdodds.com/first-timers-only-78281ea47455)  
+[try tackling some Git and GitHub challenges with the Git-it app](https://github.com/jlord/git-it-electron)  
+[First Pull Request](http://firstpr.me/)  
+[A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)  
+[About merge conflicts](https://help.github.com/en/articles/about-merge-conflicts)  
+[How to Version Control Your Production Machine Learning Models](https://blog.algorithmia.com/how-to-version-control-your-production-machine-learning-models/)  
+[Versioning Data Science](https://shuaiw.github.io/2017/07/30/versioning-data-science.html)  
 
 ```lang-none
 git init

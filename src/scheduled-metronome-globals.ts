@@ -18,7 +18,6 @@ let ui = {
     rest: 3,
     startWithRest: true,
     metronomeState: MetronomeState[MetronomeState.Stopped],
-    metronomeStyle: "",
     tempoDisplay: "120",
     timerDisplay: "2:00",
 }
@@ -42,7 +41,6 @@ let exerciseMarkupElement: HTMLElement = $(".exercise-markup")[0] as HTMLElement
 new Binding({ object: ui, property: "exerciseMarkup" }).addBinding(exerciseMarkupElement, "innerHTML");
 
 let pendulumElement: HTMLDivElement = $(".pendulum-parent")[0] as HTMLDivElement;
-new Binding({ object: ui, property: "metronomeStyle" }).addBinding(pendulumElement, "style");
 new Binding({ object: ui, property: "metronomeState" }).addBinding(pendulumElement, "data-metronome-state");
 
 let restElement: HTMLInputElement = $(".rest")[0] as HTMLInputElement

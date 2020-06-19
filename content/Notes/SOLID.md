@@ -3,11 +3,9 @@ title: "SOLID and DRY Principles"
 date: 2019-12-15T05:26:37-08:00
 ---
 
-Links:
-
-[DevIQ SOLID Principles of Object Oriented Design](https://deviq.com/solid/)
-
-[Atomiq - Code Similarity Finder](http://www.getatomiq.com/)
+Links:  
+[DevIQ SOLID Principles of Object Oriented Design](https://deviq.com/solid/)  
+[Atomiq - Code Similarity Finder](http://www.getatomiq.com/)  
 
 ```lang-none
 Single Responsibility Principle

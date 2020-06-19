@@ -3,11 +3,9 @@ title: "DesignPatterns"
 date: 2019-12-15T06:33:39-08:00
 ---
 
-Links:
-
-[Design patterns (and anti-patterns) site](https://sourcemaking.com/design_patterns)
-
-[Design patterns in Java tutorial](http://www.tutorialspoint.com/design_pattern)
+Links:  
+[Design patterns (and anti-patterns) site](https://sourcemaking.com/design_patterns)  
+[Design patterns in Java tutorial](http://www.tutorialspoint.com/design_pattern)  
 
 ```lang-none
 Abstract Factory

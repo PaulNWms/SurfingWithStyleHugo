@@ -1,8 +1,7 @@
 ﻿import moment from "moment";
-import { AnimationPlayState, MetronomeState, ScheduleState, ui, AnimationName } from "./scheduled-metronome-globals";
+import { ui } from "./scheduled-metronome-globals";
 import { Exercise } from "./exercise";
 import { Schedule } from "./schedule";
-import { MiniMetronome } from "./mini-metronome";
 
 class AcceleratingSchedule extends Schedule {
     public CalculateTempo(): number {

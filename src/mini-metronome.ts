@@ -1,10 +1,12 @@
-﻿import { AnimationName, AnimationPlayState, ui, MetronomeState } from "./scheduled-metronome-globals";
+﻿import { AnimationName, AnimationPlayState } from "./scheduled-metronome-globals";
 
 class MiniMetronome {
     public static MIN_TEMPO: number = 20;
     public static MAX_TEMPO: number = 240;
 
     private _tempo: number = 120;
+    private pendulumElement: HTMLDivElement = $(".pendulum-parent")[0] as HTMLDivElement;
+    private tempoDisplayElement: HTMLElement = $(".display")[0] as HTMLElement
     public get tempo(): number { return this._tempo; }
     public set tempo(value: number) {
         this._tempo = value;
@@ -16,7 +18,7 @@ class MiniMetronome {
             this.duration = (Math.round(60000 / this._tempo)).toString() + "ms";
         }
 
-        ui.tempoDisplay = this.tempoDisplay;
+        this.tempoDisplayElement.innerHTML = this.tempoDisplay;
     }
 
     public get tempoDisplay() {
@@ -69,19 +71,12 @@ class MiniMetronome {
         }
     }
 
-    public setStyle(isAccelerating: boolean) {
-        if (isAccelerating) {
-            let newStyle = `animation-name: ${AnimationName[this.animationName]}; animation-duration: ${this.duration}; animation-play-state: ${AnimationPlayState[this.animationPlayState]}; animation-direction: ${this.animationDirection}`;
-            if (newStyle !== ui.metronomeStyle) {
-                ui.metronomeStyle = newStyle;
-            }
-        }
-        else {
-            let element = $(".pendulum-parent")[0];
-            element.style.animationDuration = this.duration;
-            element.style.animationName = AnimationName[this.animationName];
-            element.style.animationPlayState = AnimationPlayState[this.animationPlayState];
-        }
+    public setStyle() {
+        this.pendulumElement.style.animationDuration = this.duration;
+        this.pendulumElement.style.animationDirection = this.animationDirection;
+        this.pendulumElement.style.animationName = AnimationName[this.animationName];
+        this.pendulumElement.style.animationPlayState = AnimationPlayState[this.animationPlayState];
+        console.log(this.pendulumElement.style);
     }
 }
 
