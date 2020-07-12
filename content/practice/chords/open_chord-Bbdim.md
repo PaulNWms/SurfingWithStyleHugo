@@ -1,11 +1,11 @@
 ---
-title: "open_chord:Bbdim"
-date: "2020-06-24T03:36:21.504Z"
+title: Bb??
+date: "2020-07-12T02:29:09.856Z"
 ---
 
-# Bb??
-Bb?? | open_chord
---- | ---
-Root string | 5
-V of | undefined
-Fingering | X12020
+|Bb??|open_chord|
+|---|---|
+|Type|open_chord|
+|Root string|5|
+|Fingering|X12020|
+

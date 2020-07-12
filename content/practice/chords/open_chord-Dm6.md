@@ -1,11 +1,11 @@
 ---
-title: "open_chord:Dm6"
-date: "2020-06-24T03:36:21.452Z"
+title: Dm6
+date: "2020-07-12T02:29:09.856Z"
 ---
 
-# Dm6
-Dm6 | open_chord
---- | ---
-Root string | 4
-V of | undefined
-Fingering | XX0201
+|Dm6|open_chord|
+|---|---|
+|Type|open_chord|
+|Root string|4|
+|Fingering|XX0201|
+

@@ -1,11 +1,11 @@
 ---
-title: "open_chord:Ddim"
-date: "2020-06-24T03:36:21.503Z"
+title: D??
+date: "2020-07-12T02:29:09.855Z"
 ---
 
-# D??
-D?? | open_chord
---- | ---
-Root string | 4
-V of | undefined
-Fingering | XX0101
+|D??|open_chord|
+|---|---|
+|Type|open_chord|
+|Root string|4|
+|Fingering|XX0101|
+

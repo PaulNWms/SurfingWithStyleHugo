@@ -1,11 +1,11 @@
 ---
-title: "open_chord:Dsus"
-date: "2020-06-24T03:36:21.503Z"
+title: Dsus
+date: "2020-07-12T02:29:09.855Z"
 ---
 
-# Dsus
-Dsus | open_chord
---- | ---
-Root string | 4
-V of | undefined
-Fingering | XX0233
+|Dsus|open_chord|
+|---|---|
+|Type|open_chord|
+|Root string|4|
+|Fingering|XX0233|
+

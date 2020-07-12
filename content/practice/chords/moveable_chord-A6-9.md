@@ -1,11 +1,11 @@
 ---
-title: "moveable_chord:A6/9"
-date: "2020-06-24T03:36:21.449Z"
+title: A6/9
+date: "2020-07-12T02:29:09.853Z"
 ---
 
-# A6/9
-A6/9 | moveable_chord
---- | ---
-Root string | 6
-V of | undefined
-Fingering | 5X445X
+|A6/9|moveable_chord|
+|---|---|
+|Type|moveable_chord|
+|Root string|6|
+|Fingering|5X445X|
+

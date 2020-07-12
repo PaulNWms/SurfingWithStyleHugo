@@ -1,11 +1,12 @@
 ---
-title: "open_chord:A"
-date: "2020-06-24T03:36:21.504Z"
+title: A
+date: "2020-07-12T02:29:09.852Z"
 ---
 
-# A
-A | open_chord
---- | ---
-Root string | 5
-V of | D
-Fingering | X02220
+|A|open_chord|
+|---|---|
+|Type|open_chord|
+|Root string|5|
+|V of|[D](../open_chord-d)|
+|Fingering|X02220|
+

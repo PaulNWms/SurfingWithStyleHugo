@@ -1,11 +1,11 @@
 ---
-title: "open_chord:CMaj7"
-date: "2020-06-24T03:36:21.504Z"
+title: Cmaj7
+date: "2020-07-12T02:29:09.856Z"
 ---
 
-# Cmaj7
-Cmaj7 | open_chord
---- | ---
-Root string | 5
-V of | undefined
-Fingering | X32000
+|Cmaj7|open_chord|
+|---|---|
+|Type|open_chord|
+|Root string|5|
+|Fingering|X32000|
+

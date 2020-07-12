@@ -1,11 +1,11 @@
 ---
-title: "open_chord:Esus"
-date: "2020-06-24T03:36:21.450Z"
+title: Esus
+date: "2020-07-12T02:29:09.854Z"
 ---
 
-# Esus
-Esus | open_chord
---- | ---
-Root string | 6
-V of | undefined
-Fingering | 022200
+|Esus|open_chord|
+|---|---|
+|Type|open_chord|
+|Root string|6|
+|Fingering|022200|
+

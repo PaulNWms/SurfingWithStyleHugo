@@ -1,11 +1,11 @@
 ---
-title: "moveable_chord:Ddim7"
-date: "2020-06-24T03:36:21.447Z"
+title: Ddim7
+date: "2020-07-12T02:29:09.852Z"
 ---
 
-# Ddim7
-Ddim7 | moveable_chord
---- | ---
-Root string | 5
-V of | undefined
-Fingering | X5646X
+|Ddim7|moveable_chord|
+|---|---|
+|Type|moveable_chord|
+|Root string|5|
+|Fingering|X5646X|
+

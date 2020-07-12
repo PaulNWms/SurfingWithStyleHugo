@@ -1,11 +1,11 @@
 ---
-title: "moveable_chord:Adim7"
-date: "2020-06-24T03:36:21.502Z"
+title: Adim7
+date: "2020-07-12T02:29:09.853Z"
 ---
 
-# Adim7
-Adim7 | moveable_chord
---- | ---
-Root string | 6
-V of | undefined
-Fingering | 5X454X
+|Adim7|moveable_chord|
+|---|---|
+|Type|moveable_chord|
+|Root string|6|
+|Fingering|5X454X|
+

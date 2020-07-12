@@ -19,9 +19,6 @@ menu:
     parent: Tools
     url: /tools/timer/
     weight: 100
-  - name: What's My IP?
-    parent: Tools
-    weight: 200
   - name: Calculator
     parent: Tools
     weight: 300

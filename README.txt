@@ -1,2 +1,2 @@
-In one window, run 'hugo server'
+In one window, run 'hugo server --disableFastRender'
 In a second window, run 'npm run build'
