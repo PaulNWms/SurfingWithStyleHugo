@@ -10,7 +10,8 @@ module.exports = {
     externals: {
         // require("jquery") is external and available
         //  on the global var jQuery
-        "jquery": "jQuery"
+        "jquery": "jQuery",
+        "moment": "moment"
     },
     //devtool: 'inline-source-map',
     module: {
@@ -37,8 +38,14 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
+        // chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'static/js'),
         library: 'MyLibrary',
         libraryTarget: 'var'
     },
+    // optimization: {
+    //     splitChunks: {
+    //         chunks: 'all',
+    //     },
+    // },
 };
