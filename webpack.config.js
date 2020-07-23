@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
+        calculator: './src/calculator.ts',
         flashcards: './src/flashcards.ts',
         metronome: './src/metronome.ts',
         oldEnglishLetters: './src/old-english-letters.ts',

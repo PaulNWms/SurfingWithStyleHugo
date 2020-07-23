@@ -21,6 +21,7 @@ menu:
     weight: 100
   - name: Calculator
     parent: Tools
+    url: /tools/calculator/
     weight: 300
   - name: Old English Letters
     parent: Tools
