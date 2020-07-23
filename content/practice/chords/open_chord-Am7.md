@@ -1,6 +1,7 @@
 ---
 title: Am7
-date: "2020-07-12T02:29:09.857Z"
+date: "2020-07-23T02:37:57.785Z"
+tags: [open_chord]
 ---
 
 |Am7|open_chord|

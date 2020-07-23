@@ -1,6 +1,7 @@
 ---
 title: C6
-date: "2020-07-12T02:29:09.856Z"
+date: "2020-07-23T02:37:57.743Z"
+tags: [open_chord]
 ---
 
 |C6|open_chord|

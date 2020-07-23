@@ -1,6 +1,7 @@
 ---
 title: Gadd9
-date: "2020-07-12T02:29:09.853Z"
+date: "2020-07-23T02:37:57.742Z"
+tags: [open_chord]
 ---
 
 |Gadd9|open_chord|

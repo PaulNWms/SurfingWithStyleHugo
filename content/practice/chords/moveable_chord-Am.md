@@ -1,6 +1,7 @@
 ---
 title: Am
-date: "2020-07-12T02:29:09.853Z"
+date: "2020-07-23T02:37:57.741Z"
+tags: [moveable_chord]
 ---
 
 |Am|moveable_chord|

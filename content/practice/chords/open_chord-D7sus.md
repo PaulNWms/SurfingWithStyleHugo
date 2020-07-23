@@ -1,6 +1,7 @@
 ---
 title: D7sus
-date: "2020-07-12T02:29:09.855Z"
+date: "2020-07-23T02:37:57.743Z"
+tags: [open_chord]
 ---
 
 |D7sus|open_chord|

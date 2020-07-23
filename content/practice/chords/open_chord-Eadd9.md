@@ -1,6 +1,7 @@
 ---
 title: Eadd9
-date: "2020-07-12T02:29:09.854Z"
+date: "2020-07-23T02:37:57.742Z"
+tags: [open_chord]
 ---
 
 |Eadd9|open_chord|

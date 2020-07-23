@@ -1,6 +1,7 @@
 ---
 title: G9
-date: "2020-07-12T02:30:09.872Z"
+date: "2020-07-23T02:37:57.780Z"
+tags: [open_chord]
 ---
 
 |G9|open_chord|

@@ -17,8 +17,7 @@ function convert() {
 
     substitutes.forEach((value: string, key: string) => {
         let regex: RegExp = new RegExp(key, "g");
-        let res = result.replace(regex, value);
-        result = res
+        result = result.replace(regex, value);
     });
 
     let q: HTMLTextAreaElement = document.getElementById("converted") as HTMLTextAreaElement;

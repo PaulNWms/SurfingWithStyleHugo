@@ -1,6 +1,7 @@
 ---
 title: Esus
-date: "2020-07-12T02:29:09.854Z"
+date: "2020-07-23T02:37:57.783Z"
+tags: [open_chord]
 ---
 
 |Esus|open_chord|

@@ -1,6 +1,7 @@
 ---
 title: B7
-date: "2020-07-12T02:29:09.856Z"
+date: "2020-07-23T02:37:57.744Z"
+tags: [open_chord]
 ---
 
 |B7|open_chord|

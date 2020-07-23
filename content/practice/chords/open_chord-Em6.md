@@ -1,6 +1,7 @@
 ---
 title: Em6
-date: "2020-07-12T02:29:09.855Z"
+date: "2020-07-23T02:37:57.784Z"
+tags: [open_chord]
 ---
 
 |Em6|open_chord|

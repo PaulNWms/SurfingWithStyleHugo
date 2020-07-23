@@ -1,6 +1,7 @@
 ---
 title: DMaj7
-date: "2020-07-12T02:29:09.852Z"
+date: "2020-07-23T02:37:57.741Z"
+tags: [moveable_chord]
 ---
 
 |DMaj7|moveable_chord|
