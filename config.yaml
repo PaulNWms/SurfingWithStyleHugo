@@ -24,6 +24,7 @@ menu:
     weight: 300
   - name: Old English Letters
     parent: Tools
+    url: /tools/old-english-letters/
     weight: 400
     
   - name: Study
