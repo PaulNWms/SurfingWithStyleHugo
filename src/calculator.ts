@@ -86,7 +86,7 @@ function parseAndFormat(c: string) {
         display.value += c;
     }
 
-    value = parseInt(display.value);
+    value = parseFloat(display.value);
     display.value = value.toString();
 
     if (c === '.') {

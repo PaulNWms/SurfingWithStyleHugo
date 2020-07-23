@@ -9,7 +9,7 @@ date: 2020-07-22T21:09:40-07:00
     <meta itemprop="operatingSystem" content="IIS/ASP.NET MVC" />
     <h1 class="text" itemprop="name">Desktop Calculator</h1>
     <table class="device">
-        <tr><td colspan="5"><input id="display" style="text-align: right;" /></td></tr>
+        <tr><td colspan="5"><input id="display" class="display" style="text-align: right;" /></td></tr>
         <tr>
             <td><button type="button" class="btn btn-default digit" onclick="window.digit('\b')">←</button></td>
             <td><button type="button" class="btn btn-default correctError" onclick="window.correctError()">CE</button></td>
@@ -44,7 +44,7 @@ date: 2020-07-22T21:09:40-07:00
             <td><button type="button" class="btn btn-default binaryOp" onclick="window.binaryOperator('+')">+</button></td>
         </tr>
     </table>
-    <p class="text" itemprop="description"><b>Disclaimer:</b> This calculator is for demonstration purposes only.</p>
+    <p class="text" itemprop="description">For demonstration only</p>
 </article>
 
 <script src="/js/calculator.bundle.js"></script>
