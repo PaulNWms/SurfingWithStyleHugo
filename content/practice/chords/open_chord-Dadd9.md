@@ -1,6 +1,6 @@
 ---
-title: Dadd9
-date: "2020-07-23T02:37:57.743Z"
+title: "open_chord:Dadd9"
+date: "2020-07-24T12:42:21.662Z"
 tags: [open_chord]
 ---
 

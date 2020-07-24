@@ -1,6 +1,6 @@
 ---
-title: C9
-date: "2020-07-23T02:37:57.784Z"
+title: "open_chord:C9"
+date: "2020-07-24T12:42:21.661Z"
 tags: [open_chord]
 ---
 

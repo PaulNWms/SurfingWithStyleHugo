@@ -1,6 +1,6 @@
 ---
-title: Dsus
-date: "2020-07-23T02:37:57.742Z"
+title: "open_chord:Dsus"
+date: "2020-07-24T12:42:21.663Z"
 tags: [open_chord]
 ---
 

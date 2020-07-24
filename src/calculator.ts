@@ -11,10 +11,7 @@ function negate() { setValue(-value); }
 function squareRoot() { setValue(Math.sqrt(value)); }
 function invert() { setValue(1.0 / value); }
 function percent() { setValue(oldValue * value / 100.0); }
-
-function correctError() {
-    display.value = "0";
-}
+function correctError() { display.value = "0"; }
 
 function clear() {
     oldValue = newValue = 0;

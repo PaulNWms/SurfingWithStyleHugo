@@ -1,6 +1,6 @@
 ---
-title: Asus
-date: "2020-07-23T02:37:57.744Z"
+title: "open_chord:Asus"
+date: "2020-07-24T12:42:21.661Z"
 tags: [open_chord]
 ---
 

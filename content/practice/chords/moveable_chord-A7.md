@@ -1,6 +1,6 @@
 ---
-title: A7
-date: "2020-07-23T02:37:57.782Z"
+title: "moveable_chord:A7"
+date: "2020-07-24T12:42:21.657Z"
 tags: [moveable_chord]
 ---
 

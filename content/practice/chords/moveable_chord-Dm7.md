@@ -1,6 +1,6 @@
 ---
-title: Dm7
-date: "2020-07-23T02:37:57.781Z"
+title: "moveable_chord:Dm7"
+date: "2020-07-24T12:42:21.660Z"
 tags: [moveable_chord]
 ---
 

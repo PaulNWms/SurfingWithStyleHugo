@@ -5,8 +5,8 @@ $bytes = [System.Text.Encoding]::ASCII.GetBytes($pair)
 $base64 = [System.Convert]::ToBase64String($bytes)
 $basicAuthValue = "Basic $base64"
 $headers = @{ Authorization = $basicAuthValue }
-# $response = Invoke-WebRequest -Headers $headers -uri "http://localhost:5984/chords/_design/md/_view/full?key=%22open_chord:E%22"
-$response = Invoke-WebRequest -Headers $headers -uri "http://localhost:5984/chords/_design/md/_view/full"
+# $response = Invoke-WebRequest -Headers $headers -uri "http://localhost:5984/guitar/_design/md/_view/full?key=%22open_chord:E%22"
+$response = Invoke-WebRequest -Headers $headers -uri "http://localhost:5984/guitar/_design/md/_view/full"
 
 if ($response.StatusCode -eq '200') {
   $json = ConvertFrom-Json $response.Content
