@@ -1,6 +1,5 @@
 ---
 title: "open_chord:Cadd9"
-date: "2020-07-24T12:42:21.662Z"
 tags: [open_chord]
 ---
 
@@ -8,5 +7,11 @@ tags: [open_chord]
 |---|---|
 |Type|open_chord|
 |Root string|5|
-|Fingering|X32030|
-
+{{< rawhtml >}}
+<div class="container"></div>
+<script>
+const selector = '#container';
+const chord = new ChordBox(selector);
+chord.draw((new String("X32030")));
+</script>
+{{< /rawhtml >}}

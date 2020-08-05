@@ -1,6 +1,5 @@
 ---
 title: "open_chord_prog:C_Fmaj7_Em_A7_D"
-date: "2020-07-24T13:55:42.113Z"
 tags: [open_chord_prog]
 ---
 

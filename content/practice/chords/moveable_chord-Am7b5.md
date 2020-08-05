@@ -1,6 +1,5 @@
 ---
 title: "moveable_chord:Am7b5"
-date: "2020-07-24T12:42:21.659Z"
 tags: [moveable_chord]
 ---
 
@@ -8,5 +7,11 @@ tags: [moveable_chord]
 |---|---|
 |Type|moveable_chord|
 |Root string|6|
-|Fingering|5X554X|
-
+{{< rawhtml >}}
+<div class="container"></div>
+<script>
+const selector = '#container';
+const chord = new ChordBox(selector);
+chord.draw((new String("5X554X")));
+</script>
+{{< /rawhtml >}}

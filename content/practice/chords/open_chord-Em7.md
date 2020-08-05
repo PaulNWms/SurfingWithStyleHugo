@@ -1,6 +1,5 @@
 ---
 title: "open_chord:Em7"
-date: "2020-07-24T12:42:21.664Z"
 tags: [open_chord]
 ---
 
@@ -8,5 +7,11 @@ tags: [open_chord]
 |---|---|
 |Type|open_chord|
 |Root string|6|
-|Fingering|020000|
-
+{{< rawhtml >}}
+<div class="container"></div>
+<script>
+const selector = '#container';
+const chord = new ChordBox(selector);
+chord.draw((new String("020000")));
+</script>
+{{< /rawhtml >}}

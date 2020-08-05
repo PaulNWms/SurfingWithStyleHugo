@@ -1,4 +1,4 @@
-﻿$user = 'Paul'
+﻿$user = 'paul'
 $password = 'EmmaDog12!'
 $pair = "$($user):$($password)"
 $bytes = [System.Text.Encoding]::ASCII.GetBytes($pair)
