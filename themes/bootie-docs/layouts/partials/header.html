@@ -9,7 +9,8 @@
 		<title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
 		<!--<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">-->
 		<link rel="stylesheet" href="{{ $baseUrl }}/css/highlight/{{ with .Site.Params.highlightStyle }}{{ . }}{{ else }}default{{ end }}.css">
-		<link rel="stylesheet" href="{{ $baseUrl }}/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="{{ $baseUrl }}/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 		<link rel="stylesheet" href="{{ $baseUrl }}/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="{{ $baseUrl }}/css/theme.css">
 		<link rel="stylesheet" href="{{ $baseUrl }}/css/bootie-docs.css">

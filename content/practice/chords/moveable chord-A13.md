@@ -1,11 +1,11 @@
 ---
-title: "moveable_chord:A13"
-tags: [moveable_chord]
+title: "moveable chord:A13"
+tags: [moveable chord]
 ---
 
-|A13|moveable_chord|
+|A13|moveable chord|
 |---|---|
-|Type|moveable_chord|
+|Type|moveable chord|
 |Root string|6|
 {{< rawhtml >}}
 <div class="container"></div>

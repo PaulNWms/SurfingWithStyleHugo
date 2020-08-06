@@ -1,17 +1,17 @@
 ---
-title: "moveable_chord:D9"
-tags: [moveable_chord]
+title: "moveable chord:A6/9"
+tags: [moveable chord]
 ---
 
-|D9|moveable_chord|
+|A6/9|moveable chord|
 |---|---|
-|Type|moveable_chord|
-|Root string|5|
+|Type|moveable chord|
+|Root string|6|
 {{< rawhtml >}}
 <div class="container"></div>
 <script>
 const selector = '#container';
 const chord = new ChordBox(selector);
-chord.draw((new String("X5455X")));
+chord.draw((new String("5X445X")));
 </script>
 {{< /rawhtml >}}
