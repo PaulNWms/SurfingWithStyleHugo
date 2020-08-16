@@ -1,11 +1,11 @@
 ---
-title: "open_chord:Asus"
-tags: [open_chord]
+title: "open chord:Asus"
+tags: [open chord]
 ---
 
-|Asus|open_chord|
+|Asus|open chord|
 |---|---|
-|Type|open_chord|
+|Type|open chord|
 |Root string|5|
 {{< rawhtml >}}
 <div class="container"></div>

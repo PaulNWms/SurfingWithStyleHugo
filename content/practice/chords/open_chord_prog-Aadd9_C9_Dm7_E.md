@@ -1,10 +1,10 @@
 ---
-title: "open_chord_prog:Aadd9_C9_Dm7_E"
-tags: [open_chord_prog]
+title: "open chord prog:Aadd9 C9 Dm7 E"
+tags: [open chord prog]
 ---
 
-|Aadd9_C9_Dm7_E|open_chord_prog|
+|Aadd9 C9 Dm7 E|open chord prog|
 |---|---|
-|Type|open_chord_prog|
+|Type|open chord prog|
 |Root string|undefined|
 

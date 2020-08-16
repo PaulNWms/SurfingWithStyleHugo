@@ -1,10 +1,10 @@
 ---
-title: "open_chord_prog:A_A+_D_Dm6"
-tags: [open_chord_prog]
+title: "open chord prog:A A+ D Dm6"
+tags: [open chord prog]
 ---
 
-|A_A+_D_Dm6|open_chord_prog|
+|A A+ D Dm6|open chord prog|
 |---|---|
-|Type|open_chord_prog|
+|Type|open chord prog|
 |Root string|undefined|
 

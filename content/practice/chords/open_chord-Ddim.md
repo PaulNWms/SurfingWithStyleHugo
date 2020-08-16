@@ -1,11 +1,11 @@
 ---
-title: "open_chord:D??"
-tags: [open_chord]
+title: "open chord:Ddim"
+tags: [open chord]
 ---
 
-|D??|open_chord|
+|Ddim|open chord|
 |---|---|
-|Type|open_chord|
+|Type|open chord|
 |Root string|4|
 {{< rawhtml >}}
 <div class="container"></div>

@@ -1,11 +1,11 @@
 ---
-title: "open_chord:G7sus"
-tags: [open_chord]
+title: "open chord:G7sus"
+tags: [open chord]
 ---
 
-|G7sus|open_chord|
+|G7sus|open chord|
 |---|---|
-|Type|open_chord|
+|Type|open chord|
 |Root string|6|
 {{< rawhtml >}}
 <div class="container"></div>

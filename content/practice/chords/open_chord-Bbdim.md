@@ -1,11 +1,11 @@
 ---
-title: "open_chord:Bb??"
-tags: [open_chord]
+title: "open chord:Bbdim"
+tags: [open chord]
 ---
 
-|Bb??|open_chord|
+|Bbdim|open chord|
 |---|---|
-|Type|open_chord|
+|Type|open chord|
 |Root string|5|
 {{< rawhtml >}}
 <div class="container"></div>

@@ -1,11 +1,11 @@
 ---
-title: "open_chord:Dadd9"
-tags: [open_chord]
+title: "open chord:Dadd9"
+tags: [open chord]
 ---
 
-|Dadd9|open_chord|
+|Dadd9|open chord|
 |---|---|
-|Type|open_chord|
+|Type|open chord|
 |Root string|4|
 {{< rawhtml >}}
 <div class="container"></div>

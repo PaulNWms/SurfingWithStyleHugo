@@ -1,11 +1,11 @@
 ---
-title: "open_chord:A6"
-tags: [open_chord]
+title: "open chord:A6"
+tags: [open chord]
 ---
 
-|A6|open_chord|
+|A6|open chord|
 |---|---|
-|Type|open_chord|
+|Type|open chord|
 |Root string|5|
 {{< rawhtml >}}
 <div class="container"></div>

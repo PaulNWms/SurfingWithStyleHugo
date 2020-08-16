@@ -11,7 +11,7 @@ $response = Invoke-WebRequest -Headers $headers -uri "http://localhost:5984/guit
 if ($response.StatusCode -eq '200') {
   $json = ConvertFrom-Json $response.Content
   foreach ($row in $json.rows) {
-    $file = $($row.id).Replace(":", "-").Replace("/", "-")
+    $file = $($row.id).Replace(" ", "_").Replace(":", "-").Replace("/", "-")
     $filename = Join-Path '.\content\practice\chords' "$file.md"
     $row.value | out-file -Encoding ascii $filename
   }

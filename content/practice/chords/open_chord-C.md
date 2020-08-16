@@ -1,11 +1,11 @@
 ---
-title: "open_chord:C"
-tags: [open_chord]
+title: "open chord:C"
+tags: [open chord]
 ---
 
-|C|open_chord|
+|C|open chord|
 |---|---|
-|Type|open_chord|
+|Type|open chord|
 |Root string|5|
 |V of|F|
 {{< rawhtml >}}

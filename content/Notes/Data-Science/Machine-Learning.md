@@ -90,6 +90,8 @@ In cross-validation, a validation set is randomly held out from the training set
 
 The No Free Lunch Theorem states that there is no model that is guaranteed to work best on a given dataset.  The only way to know for sure is to evaluate them all.
 
+Project flow:
+
 1. Look at the big picture.
   - Frame the problem
   -- How will the model benefit the company?
@@ -120,3 +122,46 @@ The No Free Lunch Theorem states that there is no model that is guaranteed to wo
   - RandomizedSearchCV
 7. Present your solution.
 8. Launch, monitor and maintain your system.
+
+A binary classifier distinguishes between 2 classes.
+
+`cross_val_score()` splits the dataset into K-folds, then evaluates predictions made on each using a model trained on the remaining folds.
+
+`cross_val_predict()` gets the actual predictions of the K-folds.
+
+`confusion_matrix()` creates a matrix of true and false predictions, with true values on the diagonal.
+
+precision = TP / (TP + FP)
+
+recall (a.k.a sensitivity, true positive rate) = TP / (TP + FN)
+
+F₁ = TP / (TP + (FN + FP)/2)
+
+`precision_recall_curve()` computes precision and recall for all possible threasholds.
+
+Another way to select a good precision/recall tradeoff is to plot precision vs. recall.
+
+ROC = receiver operating characteristic
+
+TPR = true positive rate (= recall)
+
+TNR = true negative rate (= specificity)
+
+FPR, FNR = false positive rate, false negative rate
+
+An ROC curve plots sensitivity (recall) vs. 1 - specificity.
+
+`roc_curve()` computes the ROC curve.
+
+A good ROC AUC (area under curve) has a value close to 1, whereas a random classifier has a value of 0.5
+
+`roc_auc_score()` computes the ROC AUC.
+
+OvO = one vs. one
+
+OvA = one vs. all, one vs. rest
+
+Multilabel classification outputs multiple binary labels.
+
+Multioutput classification output multiple multiclass labels.
+

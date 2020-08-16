@@ -1,10 +1,10 @@
 ---
-title: "open_chord_prog:A_E+_A_E7"
-tags: [open_chord_prog]
+title: "open chord prog:A E+ A E7"
+tags: [open chord prog]
 ---
 
-|A_E+_A_E7|open_chord_prog|
+|A E+ A E7|open chord prog|
 |---|---|
-|Type|open_chord_prog|
+|Type|open chord prog|
 |Root string|undefined|
 

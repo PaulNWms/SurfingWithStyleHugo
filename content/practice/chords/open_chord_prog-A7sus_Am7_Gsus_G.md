@@ -1,10 +1,10 @@
 ---
-title: "open_chord_prog:A7sus_Am7_Gsus_G"
-tags: [open_chord_prog]
+title: "open chord prog:A7sus Am7 Gsus G"
+tags: [open chord prog]
 ---
 
-|A7sus_Am7_Gsus_G|open_chord_prog|
+|A7sus Am7 Gsus G|open chord prog|
 |---|---|
-|Type|open_chord_prog|
+|Type|open chord prog|
 |Root string|undefined|
 

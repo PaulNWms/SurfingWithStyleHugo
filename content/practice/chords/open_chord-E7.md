@@ -1,13 +1,13 @@
 ---
-title: "open_chord:E7"
-tags: [open_chord]
+title: "open chord:E7"
+tags: [open chord]
 ---
 
-|E7|open_chord|
+|E7|open chord|
 |---|---|
-|Type|open_chord|
+|Type|open chord|
 |Root string|6|
-|V of|[A](../open_chord-a)|
+|V of|open chord:A|
 {{< rawhtml >}}
 <div class="container"></div>
 <script>
