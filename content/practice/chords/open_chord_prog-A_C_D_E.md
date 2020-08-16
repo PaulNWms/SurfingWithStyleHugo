@@ -7,4 +7,5 @@ tags: [open chord prog]
 |---|---|
 |Type|open chord prog|
 |Root string|undefined|
+|Fingering|undefined|
 

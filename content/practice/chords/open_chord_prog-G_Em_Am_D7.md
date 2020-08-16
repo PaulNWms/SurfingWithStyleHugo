@@ -7,4 +7,5 @@ tags: [open_chord_prog]
 |---|---|
 |Type|open_chord_prog|
 |Root string|undefined|
+|Fingering|undefined|
 

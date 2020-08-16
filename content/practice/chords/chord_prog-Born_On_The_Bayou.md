@@ -7,4 +7,5 @@ tags: [chord prog]
 |---|---|
 |Type|chord prog|
 |Root string|undefined|
+|Fingering|undefined|
 

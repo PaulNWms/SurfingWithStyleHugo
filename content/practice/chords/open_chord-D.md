@@ -7,12 +7,6 @@ tags: [open chord]
 |---|---|
 |Type|open chord|
 |Root string|4|
-|V of|open chord:G|
-{{< rawhtml >}}
-<div class="container"></div>
-<script>
-const selector = '#container';
-const chord = new ChordBox(selector);
-chord.draw((new String("XX0232")));
-</script>
-{{< /rawhtml >}}
+|V of|[G](../open_chord-g)|
+|Fingering|XX0232|
+

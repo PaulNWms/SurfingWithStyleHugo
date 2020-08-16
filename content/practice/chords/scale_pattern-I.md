@@ -7,4 +7,5 @@ tags: [scale pattern]
 |---|---|
 |Type|scale pattern|
 |Root string|undefined|
+|Fingering|undefined|
 

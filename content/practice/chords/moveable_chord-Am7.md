@@ -7,4 +7,5 @@ tags: [moveable chord]
 |---|---|
 |Type|moveable chord|
 |Root string|6|
+|Fingering|undefined|
 

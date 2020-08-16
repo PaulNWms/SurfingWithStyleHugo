@@ -7,4 +7,5 @@ tags: [open scale]
 |---|---|
 |Type|open scale|
 |Root string|undefined|
+|Fingering|undefined|
 
