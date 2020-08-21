@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:C_Cmaj7_C9_Fmaj7"
-tags: [open_chord_prog]
+title: "open chord prog:C Cmaj7 C9 Fmaj7"
+tags: [open chord prog]
 ---
 
-|C_Cmaj7_C9_Fmaj7|open_chord_prog|
+|C Cmaj7 C9 Fmaj7|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|C Cmaj7 C9 Fmaj7|
+|nashville|V,V??,V9,I??|
+|tonic|F|
+|chords|C,Cmaj7,C9,Fmaj7|
+
 

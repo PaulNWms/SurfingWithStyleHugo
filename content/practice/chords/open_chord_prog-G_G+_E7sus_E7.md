@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:G_G+_E7sus_E7"
-tags: [open_chord_prog]
+title: "open chord prog:G G+ E7sus E7"
+tags: [open chord prog]
 ---
 
-|G_G+_E7sus_E7|open_chord_prog|
+|G G+ E7sus E7|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|G G+ E7sus E7|
+|nashville|I,I+,VI7sus,VI7|
+|tonic|G|
+|chords|G,G+,E7sus,E7|
+
 

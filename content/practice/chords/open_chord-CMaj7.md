@@ -5,7 +5,9 @@ tags: [open chord]
 
 |CMaj7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|Fingering|X32000|
+|type|open chord|
+|root_string|5|
+|name|CMaj7|
+|fingering|X32000|
+
 

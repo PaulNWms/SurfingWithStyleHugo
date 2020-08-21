@@ -5,8 +5,10 @@ tags: [open chord]
 
 |B7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|V of|E|
-|Fingering|X21202|
+|type|open chord|
+|root_string|5|
+|name|B7|
+|V_of|E|
+|fingering|X21202|
+
 

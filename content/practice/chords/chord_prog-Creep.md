@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Creep|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Creep|
+|nashville|I,III,IV,iv|
+|tonic|G|
+|chords|G,Bb,C,Cm|
+|artist|Radiohead|
+
 

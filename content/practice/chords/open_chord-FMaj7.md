@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Fmaj7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|4|
-|Fingering|XX3210|
+|type|open chord|
+|root_string|4|
+|name|Fmaj7|
+|fingering|XX3210|
+
 

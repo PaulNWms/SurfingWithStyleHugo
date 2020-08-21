@@ -5,7 +5,10 @@ tags: [open chord prog]
 
 |Aadd9 C9 Dm7 E|open chord prog|
 |---|---|
-|Type|open chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|Aadd9 C9 Dm7 E|
+|nashville|Iadd9,III9,iv7,V|
+|tonic|A|
+|chords|Aadd9,C9,Dm7,E|
+
 

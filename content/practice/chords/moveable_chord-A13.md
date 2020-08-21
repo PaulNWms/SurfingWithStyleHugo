@@ -5,7 +5,10 @@ tags: [moveable chord]
 
 |A13|moveable chord|
 |---|---|
-|Type|moveable chord|
-|Root string|6|
-|Fingering|5X567X|
+|type|moveable chord|
+|root_string|6|
+|name|A13|
+|fingering|5X567X|
+|scale_pattern|II|
+
 

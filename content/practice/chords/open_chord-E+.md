@@ -5,7 +5,9 @@ tags: [open chord]
 
 |E+|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|032110|
+|type|open chord|
+|root_string|6|
+|name|E+|
+|fingering|032110|
+
 

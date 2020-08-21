@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Losing My Religion|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Losing My Religion|
+|nashville|i,v|
+|tonic|A|
+|chords|Am,Em|
+|artist|R.E.M.|
+
 

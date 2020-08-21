@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Dmaj7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|4|
-|Fingering|XX0222|
+|type|open chord|
+|root_string|4|
+|name|Dmaj7|
+|fingering|XX0222|
+
 

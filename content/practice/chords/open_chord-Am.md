@@ -5,7 +5,10 @@ tags: [open chord]
 
 |Am|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|Fingering|X02210|
+|type|open chord|
+|root_string|5|
+|name|Am|
+|fingering|X02210|
+|related_scales|open_scale:Am pentatonic,open_scale:Am|
+
 

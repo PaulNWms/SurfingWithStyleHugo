@@ -5,8 +5,10 @@ tags: [open chord]
 
 |G9|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|V of|[C](../open_chord-c)|
-|Fingering|3X0201|
+|type|open chord|
+|root_string|6|
+|name|G9|
+|V_of|open chord:C|
+|fingering|3X0201|
+
 

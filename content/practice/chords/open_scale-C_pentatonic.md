@@ -5,7 +5,9 @@ tags: [open scale]
 
 |C pentatonic|open scale|
 |---|---|
-|Type|open scale|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open scale|
+|name|C pentatonic|
+|related_chord|open chord:C|
+|scale_pattern|IV|
+
 

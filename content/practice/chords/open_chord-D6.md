@@ -5,7 +5,9 @@ tags: [open chord]
 
 |D6|open chord|
 |---|---|
-|Type|open chord|
-|Root string|4|
-|Fingering|XX0202|
+|type|open chord|
+|root_string|4|
+|name|D6|
+|fingering|XX0202|
+
 

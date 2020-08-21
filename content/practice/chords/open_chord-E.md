@@ -5,8 +5,10 @@ tags: [open chord]
 
 |E|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|V of|[A](../open_chord-a)|
-|Fingering|022100|
+|type|open chord|
+|root_string|6|
+|name|E|
+|V_of|open chord:A|
+|fingering|022100|
+
 

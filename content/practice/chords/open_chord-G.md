@@ -5,8 +5,11 @@ tags: [open chord]
 
 |G|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|V of|[C](../open_chord-c)|
-|Fingering|320003|
+|type|open chord|
+|root_string|6|
+|name|G|
+|V_of|open chord:C|
+|fingering|320003|
+|related_scales|open scale:G pentatonic,open scale:G|
+
 

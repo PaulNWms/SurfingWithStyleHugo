@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Esus|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|022200|
+|type|open chord|
+|root_string|6|
+|name|Esus|
+|fingering|022200|
+
 

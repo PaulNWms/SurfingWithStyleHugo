@@ -5,7 +5,10 @@ tags: [open chord prog]
 
 |A A+ D Dm6|open chord prog|
 |---|---|
-|Type|open chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|A A+ D Dm6|
+|nashville|I,I+,IV,iv6|
+|tonic|A|
+|chords|A,A+,D,Dm6|
+
 

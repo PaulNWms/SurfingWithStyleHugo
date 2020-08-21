@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Every Breath You Take|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Every Breath You Take|
+|nashville|I,vi,IV,V|
+|tonic|Ab|
+|chords|Ab,F,Db,Eb|
+|artist|Police|
+
 

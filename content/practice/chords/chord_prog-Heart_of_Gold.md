@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Heart of Gold|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Heart of Gold|
+|nashville|i,bVI,bVII,bIII|
+|tonic|C|
+|chords|Cm,Ab,Bb,Eb|
+|artist|Neil Young|
+
 

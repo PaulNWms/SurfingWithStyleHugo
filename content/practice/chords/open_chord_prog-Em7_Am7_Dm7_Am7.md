@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:Em7_Am7_Dm7_Am7"
-tags: [open_chord_prog]
+title: "open chord prog:Em7 Am7 Dm7 Am7"
+tags: [open chord prog]
 ---
 
-|Em7_Am7_Dm7_Am7|open_chord_prog|
+|Em7 Am7 Dm7 Am7|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|Em7 Am7 Dm7 Am7|
+|nashville|v7,i7,iv7,i7|
+|tonic|A|
+|chords|Em7,Am7,Dm7,Am7|
+
 

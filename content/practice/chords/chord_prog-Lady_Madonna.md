@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Lady Madonna|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Lady Madonna|
+|nashville|bVI,bVII,I|
+|tonic|A|
+|chords|F,G,A|
+|artist|The Beatles|
+
 

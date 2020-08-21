@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:Em_G_Am_C"
-tags: [open_chord_prog]
+title: "open chord prog:Em G Am C"
+tags: [open chord prog]
 ---
 
-|Em_G_Am_C|open_chord_prog|
+|Em G Am C|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|Em G Am C|
+|nashville|i,III,iv,VII|
+|tonic|E|
+|chords|Em,G,Am,C|
+
 

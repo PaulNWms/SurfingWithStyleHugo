@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Dsus|open chord|
 |---|---|
-|Type|open chord|
-|Root string|4|
-|Fingering|XX0233|
+|type|open chord|
+|root_string|4|
+|name|Dsus|
+|fingering|XX0233|
+
 

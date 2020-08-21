@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Emaj7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|021100|
+|type|open chord|
+|root_string|6|
+|name|Emaj7|
+|fingering|021100|
+
 

@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |My Girl|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|My Girl|
+|nashville|I,IV|
+|tonic|C|
+|chords|C,G|
+|artist|The Temptations|
+
 

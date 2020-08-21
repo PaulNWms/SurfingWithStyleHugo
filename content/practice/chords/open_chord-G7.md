@@ -5,8 +5,10 @@ tags: [open chord]
 
 |G7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|V of|[C](../open_chord-c)|
-|Fingering|320001|
+|type|open chord|
+|root_string|6|
+|name|G7|
+|V_of|open chord:C|
+|fingering|320001|
+
 

@@ -5,7 +5,10 @@ tags: [open chord prog]
 
 |A E+ A E7|open chord prog|
 |---|---|
-|Type|open chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|A E+ A E7|
+|nashville|I,V+,I,V7|
+|tonic|A|
+|chords|A,E+,A,E7|
+
 

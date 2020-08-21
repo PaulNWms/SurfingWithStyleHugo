@@ -1,11 +1,12 @@
 ---
-title: "open_chord_prog:D_Dmaj7_D7_D6"
-tags: [open_chord_prog]
+title: "open chord prog:D DMaj7 D7 D6"
+tags: [open chord prog]
 ---
 
-|D_Dmaj7_D7_D6|open_chord_prog|
+|D DMaj7 D7 D6|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|D DMaj7 D7 D6|
+|chords|D,Dmaj7,D7,D6|
+
 

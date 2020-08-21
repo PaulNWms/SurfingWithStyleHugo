@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:Em_C_Em6_C"
-tags: [open_chord_prog]
+title: "open chord prog:Em C Em6 C"
+tags: [open chord prog]
 ---
 
-|Em_C_Em6_C|open_chord_prog|
+|Em C Em6 C|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|Em C Em6 C|
+|nashville|iii,I,iii6,I|
+|tonic|C|
+|chords|Em,C,Em6,C|
+
 

@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Spirits In The Material World|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Spirits In The Material World|
+|nashville|i,bVII,v|
+|tonic|A|
+|chords|Am,G,Em|
+|artist|Police|
+
 

@@ -5,7 +5,10 @@ tags: [open chord prog]
 
 |A C D E|open chord prog|
 |---|---|
-|Type|open chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|A C D E|
+|nashville|I,bIII,IV,V|
+|tonic|A|
+|chords|A,C,D,E|
+
 

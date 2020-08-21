@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |High and Dry|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|High and Dry|
+|nashville|ii,IV,I|
+|tonic|E|
+|chords|F#m,A,E|
+|artist|Radiohead|
+
 

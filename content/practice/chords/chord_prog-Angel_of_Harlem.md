@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Angel of Harlem|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Angel of Harlem|
+|nashville|I,IV|
+|tonic|C|
+|chords|C,F|
+|artist|U2|
+
 

@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Asus|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|Fingering|X02230|
+|type|open chord|
+|root_string|5|
+|name|Asus|
+|fingering|X02230|
+
 

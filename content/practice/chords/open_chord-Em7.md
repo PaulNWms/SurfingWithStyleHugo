@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Em7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|020000|
+|type|open chord|
+|root_string|6|
+|name|Em7|
+|fingering|020000|
+
 

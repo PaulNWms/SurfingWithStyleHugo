@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Whole Lotta Love|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Whole Lotta Love|
+|nashville|I,bVII|
+|tonic|E|
+|chords|E,D|
+|artist|Led Zeppelin|
+
 

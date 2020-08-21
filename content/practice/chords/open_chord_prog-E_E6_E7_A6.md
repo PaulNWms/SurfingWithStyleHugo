@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:E_E6_E7_A6"
-tags: [open_chord_prog]
+title: "open chord prog:E E6 E7 A6"
+tags: [open chord prog]
 ---
 
-|E_E6_E7_A6|open_chord_prog|
+|E E6 E7 A6|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|E E6 E7 A6|
+|nashville|V,V6,V7,I6|
+|tonic|A|
+|chords|E,E6,E7,A6|
+
 

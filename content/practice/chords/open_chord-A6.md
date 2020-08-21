@@ -5,7 +5,9 @@ tags: [open chord]
 
 |A6|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|Fingering|X02222|
+|type|open chord|
+|root_string|5|
+|name|A6|
+|fingering|X02222|
+
 

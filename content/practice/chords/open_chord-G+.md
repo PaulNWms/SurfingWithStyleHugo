@@ -5,7 +5,9 @@ tags: [open chord]
 
 |G+|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|321003|
+|type|open chord|
+|root_string|6|
+|name|G+|
+|fingering|321003|
+
 

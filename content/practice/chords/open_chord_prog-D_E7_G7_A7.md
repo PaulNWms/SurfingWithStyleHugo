@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:D_E7_G7_A7"
-tags: [open_chord_prog]
+title: "open chord prog:D E7 G7 A7"
+tags: [open chord prog]
 ---
 
-|D_E7_G7_A7|open_chord_prog|
+|D E7 G7 A7|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|D E7 G7 A7|
+|nashville|I,II7,IV7,V7|
+|tonic|D|
+|chords|D,E7,G7,A7|
+
 

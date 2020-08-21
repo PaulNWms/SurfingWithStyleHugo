@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Am7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|Fingering|X02010|
+|type|open chord|
+|root_string|5|
+|name|Am7|
+|fingering|X02010|
+
 

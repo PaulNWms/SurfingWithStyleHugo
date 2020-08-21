@@ -5,7 +5,9 @@ tags: [open chord]
 
 |C9|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|Fingering|X32330|
+|type|open chord|
+|root_string|5|
+|name|C9|
+|fingering|X32330|
+
 

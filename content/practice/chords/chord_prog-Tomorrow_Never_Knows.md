@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Tomorrow Never Knows|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Tomorrow Never Knows|
+|nashville|I,bVII|
+|tonic|C|
+|chords|C,Bb|
+|artist|The Beatles|
+
 

@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Back In The USSR|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Back In The USSR|
+|nashville|I,bIII,IV|
+|tonic|A|
+|chords|A,C,D|
+|artist|The Beatles|
+
 

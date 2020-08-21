@@ -5,7 +5,8 @@ tags: [scale pattern]
 
 |II|scale pattern|
 |---|---|
-|Type|scale pattern|
-|Root string|undefined|
-|Fingering|undefined|
+|type|scale pattern|
+|name|II|
+|scale_pattern|II|
+
 

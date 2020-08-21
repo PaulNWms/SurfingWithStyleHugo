@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Oye Como Va|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Oye Como Va|
+|nashville|i,IV|
+|tonic|A|
+|chords|Am,D|
+|artist|Santana|
+
 

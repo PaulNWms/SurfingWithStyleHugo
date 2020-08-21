@@ -5,7 +5,9 @@ tags: [open scale]
 
 |Am|open scale|
 |---|---|
-|Type|open scale|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open scale|
+|name|Am|
+|related_chord|open chord:Am|
+|scale_pattern|IV|
+
 

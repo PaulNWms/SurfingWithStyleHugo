@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Another Girl|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Another Girl|
+|nashville|I,bVII,I,IV|
+|tonic|Ab|
+|chords|Ab,Gb,Ab,Db|
+|artist|The Beatles|
+
 

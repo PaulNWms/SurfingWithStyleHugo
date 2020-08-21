@@ -165,3 +165,37 @@ Multilabel classification outputs multiple binary labels.
 
 Multioutput classification output multiple multiclass labels.
 
+Linear regression model prediction
+
+$$\hat{y}=\theta_0+\theta_1x_1+\theta_2x_2+\cdots +\theta_nx_n$$
+
+Vectorized form
+
+$$\hat{y}=h_\theta(\textbf{x})=\theta^T\cdot \textbf{x}$$
+
+Cost function of the linear regression model
+
+$$MSE(\textbf{X},h_\theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}\right)^2$$
+
+Normal equation
+
+$$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}\right)^{-1}\cdot\textbf{X}^T\cdot\textbf{y}$$
+
+Partial derivatives of the cost function
+
+$$\frac{\delta}{\delta\theta_j}=\frac{2}{m}\sum_{i=1}^{m}\left(\theta^T\cdot\textbf{x}^{(i)}-y^{(i)}\right)x_j^{(i)}$$
+
+Gradient vector of the cost function
+
+$$\nabla_\theta MSE(\theta)=\begin{pmatrix}
+\frac{\delta}{\delta\theta_0}MSE(\theta) \\
+\frac{\delta}{\delta\theta_1}MSE(\theta) \\
+\vdots  \\
+\frac{\delta}{\delta\theta_n}MSE(\theta)
+\end{pmatrix}
+=\frac{2}{m}\textbf{X}^T\cdot(\textbf{X}\cdot\theta-\textbf{y})$$
+
+Gradient descent step
+
+$$\theta^{(\text{next step})}=\theta-\eta\nabla_\theta MSE(\theta)$$
+

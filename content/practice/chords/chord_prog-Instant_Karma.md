@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Instant Karma|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Instant Karma|
+|nashville|I,vi|
+|tonic|C|
+|chords|C,Am|
+|artist|John Lennon|
+
 

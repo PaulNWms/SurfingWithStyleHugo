@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Imagine|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Imagine|
+|nashville|I,IV|
+|tonic|C|
+|chords|C,F|
+|artist|John Lennon|
+
 

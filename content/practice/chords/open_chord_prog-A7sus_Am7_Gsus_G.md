@@ -5,7 +5,10 @@ tags: [open chord prog]
 
 |A7sus Am7 Gsus G|open chord prog|
 |---|---|
-|Type|open chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|A7sus Am7 Gsus G|
+|nashville|II7sus,ii7,Isus,I|
+|tonic|G|
+|chords|A7sus,Am7,Gsus,G|
+
 

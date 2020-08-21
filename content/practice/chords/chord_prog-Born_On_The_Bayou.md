@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Born On The Bayou|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Born On The Bayou|
+|nashville|bVII,IV,I|
+|tonic|E|
+|chords|D,A,E7|
+|artist|Creedence Clearwater Revival|
+
 

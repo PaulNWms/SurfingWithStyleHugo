@@ -5,8 +5,10 @@ tags: [open chord]
 
 |A7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|V of|[D](../open_chord-d)|
-|Fingering|X02020|
+|type|open chord|
+|root_string|5|
+|name|A7|
+|V_of|open chord:D|
+|fingering|X02020|
+
 

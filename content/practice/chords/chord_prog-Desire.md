@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Desire|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Desire|
+|nashville|bVII,IV,I|
+|tonic|E|
+|chords|D,A,E|
+|artist|U2|
+
 

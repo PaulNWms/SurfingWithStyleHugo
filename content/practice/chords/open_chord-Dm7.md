@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Dm7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|4|
-|Fingering|XX0211|
+|type|open chord|
+|root_string|4|
+|name|Dm7|
+|fingering|XX0211|
+
 

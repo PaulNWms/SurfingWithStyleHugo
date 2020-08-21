@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Aadd9|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|Fingering|X02200|
+|type|open chord|
+|root_string|5|
+|name|Aadd9|
+|fingering|X02200|
+
 

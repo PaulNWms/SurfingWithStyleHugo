@@ -5,8 +5,10 @@ tags: [open chord]
 
 |C7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|V of|F|
-|Fingering|X32310|
+|type|open chord|
+|root_string|5|
+|name|C7|
+|V_of|F|
+|fingering|X32310|
+
 

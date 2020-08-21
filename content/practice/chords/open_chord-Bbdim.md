@@ -5,7 +5,10 @@ tags: [open chord]
 
 |Bbdim|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|Fingering|X12020|
+|type|open chord|
+|root_string|5|
+|name|Bbdim|
+|fingering|X12020|
+|vii??_of|B,D,F,Gb|
+
 

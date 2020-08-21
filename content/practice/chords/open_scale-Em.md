@@ -5,7 +5,9 @@ tags: [open scale]
 
 |Em|open scale|
 |---|---|
-|Type|open scale|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open scale|
+|name|Em|
+|related_chord|open chord:Em|
+|scale_pattern|I|
+
 

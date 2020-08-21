@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Magical Mystery Tour|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Magical Mystery Tour|
+|nashville|I,bIII,IV|
+|tonic|E|
+|chords|E,G,A|
+|artist|The Beatles|
+
 

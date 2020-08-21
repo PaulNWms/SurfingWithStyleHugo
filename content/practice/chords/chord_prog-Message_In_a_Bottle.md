@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Message In a Bottle|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Message In a Bottle|
+|nashville|i,bVI,bVII,iv|
+|tonic|C#|
+|chords|C#m,A,B,F#m|
+|artist|Police|
+
 

@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:D_Dsus_A7sus_A7"
-tags: [open_chord_prog]
+title: "open chord prog:D Dsus A7sus A7"
+tags: [open chord prog]
 ---
 
-|D_Dsus_A7sus_A7|open_chord_prog|
+|D Dsus A7sus A7|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|D Dsus A7sus A7|
+|nashville|I,Isus,V7sus,V7|
+|tonic|D|
+|chords|D,Dsus,A7sus,A7|
+
 

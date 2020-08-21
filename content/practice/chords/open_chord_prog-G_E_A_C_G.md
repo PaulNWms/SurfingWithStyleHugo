@@ -1,11 +1,15 @@
 ---
-title: "open_chord_prog:G_E_A_C_G"
-tags: [open_chord_prog]
+title: "open chord prog:G E A C G"
+tags: [open chord prog]
 ---
 
-|G_E_A_C_G|open_chord_prog|
+|G E A C G|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|G E A C G|
+|nashville|I,VI,II,IV,I|
+|tonic|G|
+|chords|G,E,A,C,G|
+|rhythm|4,2,2,4,4|
+
 

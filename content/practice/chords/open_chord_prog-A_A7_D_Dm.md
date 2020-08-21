@@ -5,7 +5,10 @@ tags: [open chord prog]
 
 |A A7 D Dm|open chord prog|
 |---|---|
-|Type|open chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|A A7 D Dm|
+|nashville|I,V7/IV,IV,iv|
+|tonic|A|
+|chords|A,A7,D,Dm|
+
 

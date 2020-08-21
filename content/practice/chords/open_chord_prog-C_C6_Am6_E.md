@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:C_C6_Am6_E"
-tags: [open_chord_prog]
+title: "open chord prog:C C6 Am6 E"
+tags: [open chord prog]
 ---
 
-|C_C6_Am6_E|open_chord_prog|
+|C C6 Am6 E|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|C C6 Am6 E|
+|nashville|I,I6,vi6,III|
+|tonic|C|
+|chords|C,C6,Am6,E|
+
 

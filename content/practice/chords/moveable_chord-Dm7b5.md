@@ -5,7 +5,9 @@ tags: [moveable chord]
 
 |Dm7b5|moveable chord|
 |---|---|
-|Type|moveable chord|
-|Root string|5|
-|Fingering|X5656X|
+|type|moveable chord|
+|root_string|5|
+|name|Dm7b5|
+|fingering|X5656X|
+
 

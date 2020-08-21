@@ -5,8 +5,11 @@ tags: [open chord]
 
 |C|open chord|
 |---|---|
-|Type|open chord|
-|Root string|5|
-|V of|F|
-|Fingering|X32010|
+|type|open chord|
+|root_string|5|
+|name|C|
+|V_of|F|
+|fingering|X32010|
+|related_scales|open_scale:C pentatonic,open_scale:C|
+
 

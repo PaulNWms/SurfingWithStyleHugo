@@ -5,7 +5,10 @@ tags: [moveable chord]
 
 |Am7|moveable chord|
 |---|---|
-|Type|moveable chord|
-|Root string|6|
-|Fingering|undefined|
+|type|moveable chord|
+|root_string|6|
+|name|Am7|
+||5X555X|
+|scale_pattern|I|
+
 

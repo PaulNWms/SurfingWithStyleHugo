@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Gsus|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|3X0013|
+|type|open chord|
+|root_string|6|
+|name|Gsus|
+|fingering|3X0013|
+
 

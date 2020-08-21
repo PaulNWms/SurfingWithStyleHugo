@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:Asus_A_E7sus_E7"
-tags: [open_chord_prog]
+title: "open chord prog:Asus A E7sus E7"
+tags: [open chord prog]
 ---
 
-|Asus_A_E7sus_E7|open_chord_prog|
+|Asus A E7sus E7|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|Asus A E7sus E7|
+|nashville|Isus,I,V7sus,V7|
+|tonic|A|
+|chords|Asus,A,E7sus,E7|
+
 

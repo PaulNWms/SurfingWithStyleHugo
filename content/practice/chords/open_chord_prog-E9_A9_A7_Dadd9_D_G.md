@@ -1,11 +1,15 @@
 ---
-title: "open_chord_prog:E9_A9_A7_Dadd9_D_G"
-tags: [open_chord_prog]
+title: "open chord prog:E9 A9 A7 Dadd9 D G"
+tags: [open chord prog]
 ---
 
-|E9_A9_A7_Dadd9_D_G|open_chord_prog|
+|E9 A9 A7 Dadd9 D G|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|E9 A9 A7 Dadd9 D G|
+|nashville|VI9,II9,II7,Vadd9,V,I|
+|tonic|G|
+|chords|E9,A9,A7,Dadd9,D,G|
+|rhythm|4,2,2,4,2,2|
+
 

@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Hard Day's Night|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Hard Day's Night|
+|nashville|I,IV,I,bVII,I|
+|tonic|G|
+|chords|G,C,G,F,G|
+|artist|The Beatles|
+
 

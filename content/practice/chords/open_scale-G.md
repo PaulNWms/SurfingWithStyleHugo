@@ -5,7 +5,9 @@ tags: [open scale]
 
 |G|open scale|
 |---|---|
-|Type|open scale|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open scale|
+|name|G|
+|related_chord|open chord:G|
+|scale_pattern|I|
+
 

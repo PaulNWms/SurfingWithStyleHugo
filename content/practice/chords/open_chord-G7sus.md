@@ -5,7 +5,9 @@ tags: [open chord]
 
 |G7sus|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|330011|
+|type|open chord|
+|root_string|6|
+|name|G7sus|
+|fingering|330011|
+
 

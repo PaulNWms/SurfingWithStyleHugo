@@ -5,7 +5,11 @@ tags: [open chord prog]
 
 |A AMaj7 Am B7 E|open chord prog|
 |---|---|
-|Type|open chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|A AMaj7 Am B7 E|
+|nashville|IV,IV??,iV,V7,I|
+|tonic|E|
+|chords|A,Amaj7,Am,B7,E|
+|rhythm|4,4,2,2,4|
+
 

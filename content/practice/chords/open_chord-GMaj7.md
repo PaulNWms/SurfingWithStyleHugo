@@ -5,7 +5,9 @@ tags: [open chord]
 
 |Gmaj7|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|320002|
+|type|open chord|
+|root_string|6|
+|name|Gmaj7|
+|fingering|320002|
+
 

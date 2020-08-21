@@ -5,7 +5,10 @@ tags: [moveable chord]
 
 |Dm|moveable chord|
 |---|---|
-|Type|moveable chord|
-|Root string|5|
-|Fingering|X57765|
+|type|moveable chord|
+|root_string|5|
+|name|Dm|
+|fingering|X57765|
+|scale_pattern|IV|
+
 

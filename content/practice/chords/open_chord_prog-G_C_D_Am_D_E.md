@@ -1,11 +1,15 @@
 ---
-title: "open_chord_prog:G_C_D_Am_D_E"
-tags: [open_chord_prog]
+title: "open chord prog:G C D Am D E"
+tags: [open chord prog]
 ---
 
-|G_C_D_Am_D_E|open_chord_prog|
+|G C D Am D E|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|G C D Am D E|
+|nashville|I,IV,V,ii,V,VI|
+|tonic|G|
+|chords|G,C,D,Am,D,E|
+|rhythm|4,2,2,2,2,4|
+
 

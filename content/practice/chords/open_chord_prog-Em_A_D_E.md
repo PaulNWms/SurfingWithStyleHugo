@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:Em_A_D_E"
-tags: [open_chord_prog]
+title: "open chord prog:Em A D E"
+tags: [open chord prog]
 ---
 
-|Em_A_D_E|open_chord_prog|
+|Em A D E|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|Em A D E|
+|nashville|i,IV,???VII,I|
+|tonic|E|
+|chords|Em,A,D,E|
+
 

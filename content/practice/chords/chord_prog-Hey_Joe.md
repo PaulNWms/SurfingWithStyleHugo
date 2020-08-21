@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |Hey Joe|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|Hey Joe|
+|nashville|bVI,bIII,bVII,IV,I|
+|tonic|E|
+|chords|C,G,D,A,E|
+|artist|Jimi Hendrix|
+
 

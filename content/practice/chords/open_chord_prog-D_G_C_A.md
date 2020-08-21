@@ -1,11 +1,14 @@
 ---
-title: "open_chord_prog:D_G_C_A"
-tags: [open_chord_prog]
+title: "open chord prog:D G C A"
+tags: [open chord prog]
 ---
 
-|D_G_C_A|open_chord_prog|
+|D G C A|open chord prog|
 |---|---|
-|Type|open_chord_prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|open chord prog|
+|name|D G C A|
+|nashville|I,IV,???VII,V|
+|tonic|D|
+|chords|D,G,C,A|
+
 

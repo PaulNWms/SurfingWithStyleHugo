@@ -5,7 +5,10 @@ tags: [open chord]
 
 |Em|open chord|
 |---|---|
-|Type|open chord|
-|Root string|6|
-|Fingering|022000|
+|type|open chord|
+|root_string|6|
+|name|Em|
+|fingering|022000|
+|related_scales|open_scale:Em pentatonic,open_scale:Em|
+
 

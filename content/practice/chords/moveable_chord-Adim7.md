@@ -5,7 +5,10 @@ tags: [moveable chord]
 
 |Adim7|moveable chord|
 |---|---|
-|Type|moveable chord|
-|Root string|6|
-|Fingering|5X554X|
+|type|moveable chord|
+|root_string|6|
+|name|Adim7|
+|fingering|5X554X|
+|scale_pattern|I|
+
 

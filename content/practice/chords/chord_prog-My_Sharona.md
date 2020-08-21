@@ -5,7 +5,11 @@ tags: [chord prog]
 
 |My Sharona|chord prog|
 |---|---|
-|Type|chord prog|
-|Root string|undefined|
-|Fingering|undefined|
+|type|chord prog|
+|name|My Sharona|
+|nashville|I,IV,bIII|
+|tonic|G|
+|chords|G,C,Bb|
+|artist|The Knack|
+
 

@@ -35,3 +35,17 @@ $$r^k - c_1r^{k-1} - \cdots - c_k = 0$$
 $$a_n = \alpha_1 r_1^n + \alpha_2 r_2^2 + \cdots + \alpha_k r_k^n$$
 $$n^m - C(n,1)(n - 1)^m + C(n,2)(n - 2)^m - \cdots + (-1)^{n-1}C(n,n - 1)^m$$
 $$D_n = n!\left[1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \cdots + (-1)^n\frac{1}{n!}\right]$$
+$$\hat{y}=\theta_0+\theta_1x_1+\theta_2x_2+\cdots +\theta_nx_n$$
+$$\hat{y}=h_\theta(\textbf{x})=\theta^T\cdot \textbf{x}$$
+$$MSE(\textbf{X},h_\theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}\right)^2$$
+$$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}\right)^{-1}\cdot\textbf{X}^T\cdot\textbf{y}$$
+$$\frac{\delta}{\delta\theta_j}=\frac{2}{m}\sum_{i=1}^{m}\left(\theta^T\cdot\textbf{x}^{(i)}-y^{(i)}\right)x_j^{(i)}$$
+$$\nabla_\theta MSE(\theta)=\begin{pmatrix}
+\frac{\delta}{\delta\theta_0}MSE(\theta) \\
+\frac{\delta}{\delta\theta_1}MSE(\theta) \\
+\vdots  \\
+\frac{\delta}{\delta\theta_n}MSE(\theta)
+\end{pmatrix}
+=\frac{2}{m}\textbf{X}^T\cdot(\textbf{X}\cdot\theta-\textbf{y})$$
+$$\theta^{(\text{next step})}=\theta-\eta\nabla_\theta MSE(\theta)$$
+$$$$
