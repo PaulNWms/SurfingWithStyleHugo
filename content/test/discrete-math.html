@@ -48,4 +48,6 @@ $$\nabla_\theta MSE(\theta)=\begin{pmatrix}
 \end{pmatrix}
 =\frac{2}{m}\textbf{X}^T\cdot(\textbf{X}\cdot\theta-\textbf{y})$$
 $$\theta^{(\text{next step})}=\theta-\eta\nabla_\theta MSE(\theta)$$
-$$$$
+$$J(\theta)=MSE(\theta)+\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$
+$$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}+\alpha\textbf{A}\right)^{-1}\cdot\textbf{X}^T\cdot \textbf{y}$$
+$$J(\theta)=MSE(\theta)+r\alpha\sum_{i=1}^{n}\left|\theta_i\right|+\frac{1-r}{2}\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$

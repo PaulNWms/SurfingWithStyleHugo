@@ -181,6 +181,16 @@ Normal equation
 
 $$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}\right)^{-1}\cdot\textbf{X}^T\cdot\textbf{y}$$
 
+```
+X_b = np.c_[np.ones((100, 1)), X]
+theta_best = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
+```
+
+MSE for a linear regression model is a convex function, meaning that a line segment connecting any 2 points on the curve never crosses the curve.  This implies there are no local minima, just one global minimum.
+
+Preprocess the data with Scikit-Learn's `StandardScalar`
+
+### Batch Gradient Descent
 Partial derivatives of the cost function
 
 $$\frac{\delta}{\delta\theta_j}=\frac{2}{m}\sum_{i=1}^{m}\left(\theta^T\cdot\textbf{x}^{(i)}-y^{(i)}\right)x_j^{(i)}$$
@@ -199,3 +209,41 @@ Gradient descent step
 
 $$\theta^{(\text{next step})}=\theta-\eta\nabla_\theta MSE(\theta)$$
 
+### Stochastic Gradient Descent
+```
+from sklearn.linear_model import SGDRegressor
+sgd_reg = SGDRegressor(n_iter=50, penalty=None, eta0=0.1)
+sgd_reg.fit(X, y.ravel())
+```
+### Regularized Linear Models
+- Ridge regression adds a regularization term to the cost function, forcing the learning algorithm to keep the weights as small as possible.
+
+$$J(\theta)=MSE(\theta)+\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$
+$$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}+\alpha\textbf{A}\right)^{-1}\cdot\textbf{X}^T\cdot \textbf{y}$$
+```
+from sklearn.linear_model import Ridge
+ridge_reg = Ridge(alpha=1, solver="cholesky")
+ridge_reg.fit(X, y)
+ridge_reg.predict([[1.5]])
+```
+
+- Lasso regression tends to completely eliminate the weights of the least important features.
+
+$$J(\theta)=MSE(\theta)+\alpha\sum_{i=1}^{n}\left|\theta_i\right|$$
+```
+from sklearn.linear_model import Lasso
+lasso_reg = Lasso(alpha=0.1)
+lasso_reg.fit(X, y)
+lasso_reg.predict([[1.5]])
+```
+
+- Elastic Net is a combination of the two.
+
+$$J(\theta)=MSE(\theta)+r\alpha\sum_{i=1}^{n}\left|\theta_i\right|+\frac{1-r}{2}\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$
+```
+from sklearn.linear_model import ElasticNet
+elastic_net = ElasticNet(alpha=0.1, l1_ratio=0.5)
+elastic_net.fit(X, y)
+elastic_net.predict([[1.5]])
+```
+- Early stopping
