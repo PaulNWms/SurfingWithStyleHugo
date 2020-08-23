@@ -247,3 +247,23 @@ elastic_net.fit(X, y)
 elastic_net.predict([[1.5]])
 ```
 - Early stopping
+
+### Logistic regression
+estimates the probability that an instance belongs to a particular class.
+
+$$\hat{p}=h_\theta(\textbf{x})=\sigma\left(\theta^T\cdot\textbf{x}\right)$$
+
+The logistic regression loss function is convex
+
+$$J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}log\left(\hat{p}^{(I)}\right)+\left(1-y^{(i)}\right)log\left(1-\hat{p}^{(I)}\right)\right]$$
+
+and its derivative is
+
+$$\frac{\delta}{\delta\theta_j}=\frac{1}{m}\sum_{i=1}^{m}\left(\sigma\left( \theta^T\cdot \textbf{x}^{(i)}-y^{(I)} \right) \right)x_j^{(I)}$$
+
+To train a logistic regression model
+```
+from sklearn.linear_model import LogisticRegression
+log_reg = LogisticRegression
+log_reg.fit(X, y)
+```
