@@ -255,7 +255,7 @@ $$\hat{p}=h_\theta(\textbf{x})=\sigma\left(\theta^T\cdot\textbf{x}\right)$$
 
 The logistic regression loss function is convex
 
-$$J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}log\left(\hat{p}^{(I)}\right)+\left(1-y^{(i)}\right)log\left(1-\hat{p}^{(I)}\right)\right]$$
+$$J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\text{log}\left(\hat{p}^{(I)}\right)+\left(1-y^{(i)}\right)\text{log}\left(1-\hat{p}^{(I)}\right)\right]$$
 
 and its derivative is
 
@@ -267,3 +267,27 @@ from sklearn.linear_model import LogisticRegression
 log_reg = LogisticRegression
 log_reg.fit(X, y)
 ```
+
+### Softmax Regression / Multinomial Logistic Regression
+
+Softmax score for class _k_
+
+$$s_k(\textbf{x})=\left(\theta^{(k)}\right)^T\cdot\textbf{x}$$
+
+Softmax function
+
+{{< rawhtml >}}
+$$\hat{p}_k=\sigma(\textbf{s}(\textbf{x}))_k=\frac{exp(s_k(\textbf{x}))}{\sum_{j=1}^{K}exp(s_j(\textbf{x}))}$$
+{{</ rawhtml >}}
+
+Softmax prediction
+
+$$\hat{y}=\underset{k}{\text{argmax }}\sigma(\textbf{s}(\textbf{x}))_k=\underset{k}{\text{argmax }}s_k(\textbf{x})=\underset{k}{\text{argmax }}\left(\left(\theta^{(k)}\right)^T\cdot\textbf{x}\right)$$
+
+Cross entropy cost function
+
+$$J(\Theta)=-\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}y_k^{(i)}\text{log}\left(\hat{p}_k^{(i)}\right)$$
+
+Cross entropy gradient vector
+
+$$\nabla_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{p}_k^{(i)}-y_k^{(i)}\right)\textbf{x}^{(i)}$$
