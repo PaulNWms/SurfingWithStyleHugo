@@ -291,3 +291,9 @@ $$J(\Theta)=-\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}y_k^{(i)}\text{log}\left(\ha
 Cross entropy gradient vector
 
 $$\nabla_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{p}_k^{(i)}-y_k^{(i)}\right)\textbf{x}^{(i)}$$
+```
+softmax_reg = LogisticRegression(multi_class="multinomial", solver="lbfgs", C=10)
+softmax_reg.fit(X, y)
+softmax_reg.predict([[5, 2]])
+softmax_reg.predict_proba([[5, 2]])
+```
