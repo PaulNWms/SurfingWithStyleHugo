@@ -291,3 +291,85 @@ $$J(\Theta)=-\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}y_k^{(i)}\text{log}\left(\ha
 Cross entropy gradient vector
 
 $$\nabla_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{p}_k^{(i)}-y_k^{(i)}\right)\textbf{x}^{(i)}$$
+
+### Support Vector Machines
+
+Support vectors are data instances on the "fog lines" of the decision boundary "street".
+
+_Soft margin classification_ allows some margin violations, controlled by the `C` parameter.
+
+```
+import numpy as np
+from sklearn import datasets
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import LinearSVC
+
+iris = datasets.load_iris()
+X = iris["data"][:, (2, 3)]  # petal length, petal width
+y = (iris["target"] == 2).astype(np.float64)  # Iris-Virginica
+
+svm_clf = Pipeline([
+        ("scaler", StandardScaler()),
+        ("linear_svc", LinearSVC(C=1, loss="hinge", random_state=42)),
+    ])
+
+svm_clf.fit(X, y)
+```
+
+### Nonlinear SVM Classification
+
+```
+from sklearn.datasets import make_moons
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import PolynomialFeatures
+
+polynomial_svm_clf = Pipeline([
+        ("poly_features", PolynomialFeatures(degree=3)),
+        ("scaler", StandardScaler()),
+        ("svm_clf", LinearSVC(C=10, loss="hinge", random_state=42))
+    ])
+
+polynomial_svm_clf.fit(X, y)
+```
+
+The SVC class implements the _kernel trick,_ whatever that is, which runs higher degree polynomial efficiently.
+
+```
+from sklearn.svm import SVC
+
+poly_kernel_svm_clf = Pipeline([
+        ("scaler", StandardScaler()),
+        ("svm_clf", SVC(kernel="poly", degree=3, coef0=1, C=5))
+    ])
+poly_kernel_svm_clf.fit(X, y)
+```
+
+Gaussian radial bias function (RBF)
+
+$$\phi_\gamma(\textbf{x},l)=\text{exp}\left(-\gamma\left\|\textbf{x}-l\right\|^2\right)$$
+
+Increasing `gamma` makes the bell-shape curve narrower.
+
+```
+rbf_kernel_svm_clf = Pipeline([
+        ("scaler", StandardScaler()),
+        ("svm_clf", SVC(kernel="rbf", gamma=5, C=0.001))
+    ])
+rbf_kernel_svm_clf.fit(X, y)
+```
+
+### SVM Regression
+
+SVMs also support linear and nonlinear regression.
+
+```
+from sklearn.svm import LinearSVR
+svm_reg = LinearSVR(epsilon=1.5, random_state=42)
+svm_reg.fit(X, y)
+```
+```
+from sklearn.svm import SVR
+svm_poly_reg = SVR(kernel="poly", degree=2, C=100, epsilon=0.1, gamma="auto")
+svm_poly_reg.fit(X, y)
+```
