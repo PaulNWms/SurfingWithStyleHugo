@@ -373,3 +373,56 @@ from sklearn.svm import SVR
 svm_poly_reg = SVR(kernel="poly", degree=2, C=100, epsilon=0.1, gamma="auto")
 svm_poly_reg.fit(X, y)
 ```
+
+### Decision Trees
+
+```
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+iris = load_iris()
+X = iris.data[:, 2:] # petal length and width
+y = iris.target
+tree_clf = DecisionTreeClassifier(max_depth=2, random_state=42)
+tree_clf.fit(X, y)
+```
+
+A decision tree is a white box model that can be visualized.
+
+```
+from sklearn.tree import export_graphviz
+export_graphviz(
+        tree_clf,
+        out_file=image_path("iris_tree.dot"),
+        feature_names=iris.feature_names[2:],
+        class_names=iris.target_names,
+        rounded=True,
+        filled=True
+    )
+```
+
+Decision tree prediction
+
+```
+tree_clf.predict_proba([[5, 1.5]])
+tree_clf.predict([[5, 1.5]])
+```
+
+Regularization hyperparameters
+- `max_depth`
+- `min_samples_split`
+- `min_samples_leaf`
+- `min_weight_fraction_leaf`
+- `max_leaf_nodes`
+- `max_features`
+
+### Regression Trees
+
+```
+from sklearn.tree import DecisionTreeRegressor
+tree_reg = DecisionTreeRegressor(max_depth=2, random_state=42)
+tree_reg.fit(X, y)
+```
+
+Weaknesses of decision trees
+- Sensitive to orientation of training data.  PCA can help.
+- Sensitive to small variations of training data.
