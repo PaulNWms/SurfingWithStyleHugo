@@ -489,3 +489,58 @@ The final predictor is called a _blender_.
 
 The blender is typically trained on a hold-out data set.
 
+### Dimensionality Reduction
+
+_Principle Component Analysis_ (PCA) identifies the hyperplane that lies closest to the data, then projects the data onto it.
+
+```py
+pca = PCA(n_components = 2)
+X2D = pca.fit_transform(X)
+```
+
+The principle components can then be accessed with the  `components_` variable.  Also interesting is the `explained_variance_ratio_` variable.
+
+To find the minimum components to preserve a given variance, use
+
+```py
+pca = PCA(n_components=0.95)
+X_reduced = pca.fit_transform(X_train)
+```
+
+Reconstruct the original set with
+
+```py
+X_recovered = pca.inverse_transform(X_reduced)
+```
+
+PCA loads the entire dataset into memory.  For large datasets, use Incremental PCA.
+
+```py
+n_batches = 100
+inc_pca = IncrementalPCA(n_components=154)
+for X_batch in np.array_split(X_train, n_batches):
+    inc_pca.partial_fit(X_batch)
+X_reduced = inc_pca.transform(X_train)
+```
+When _d_ is much smaller than _n_, randomized PCA can give much faster results.
+
+```py
+rnd_pca = PCA(n_components=154, svd_solver="randomized", random_state=42)
+X_reduced = rnd_pca.fit_transform(X_train)
+```
+
+### Kernel PCA
+
+```py
+rbf_pca = KernelPCA(n_components = 2, kernel="rbf", gamma=0.04)
+X_reduced = rbf_pca.fit_transform(X)
+```
+
+### Other
+
+- _Locally Linear Embedding_ (LLE) is a manifold learning technique that looks at how each instance relates to its neighbors, then tries to preserve the relationship in lower dimensions.
+- _Multidimensional Scaling_ (MDS) attempts to preserve the distances between instances
+- _Isomap_ creates a graph between instances, then reduces dimensionality while trying to preserve geodesic distances between instances
+- _t-Distributed Stochastic Neighbor Embedding_ (t-SNE) reduces dimensionality while keeping similar instances together and dissimilar instances apart.  Used mostly for visualization.
+- _Linear discriminant analysis_ (LDA) is a classifier that learns the most discriminative axes between the classes. 
+
