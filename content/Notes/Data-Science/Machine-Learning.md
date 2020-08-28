@@ -181,7 +181,7 @@ Normal equation
 
 $$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}\right)^{-1}\cdot\textbf{X}^T\cdot\textbf{y}$$
 
-```
+```py
 X_b = np.c_[np.ones((100, 1)), X]
 theta_best = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
 ```
@@ -210,8 +210,7 @@ Gradient descent step
 $$\theta^{(\text{next step})}=\theta-\eta\nabla_\theta MSE(\theta)$$
 
 ### Stochastic Gradient Descent
-```
-from sklearn.linear_model import SGDRegressor
+```py
 sgd_reg = SGDRegressor(n_iter=50, penalty=None, eta0=0.1)
 sgd_reg.fit(X, y.ravel())
 ```
@@ -220,8 +219,7 @@ sgd_reg.fit(X, y.ravel())
 
 $$J(\theta)=MSE(\theta)+\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$
 $$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}+\alpha\textbf{A}\right)^{-1}\cdot\textbf{X}^T\cdot \textbf{y}$$
-```
-from sklearn.linear_model import Ridge
+```py
 ridge_reg = Ridge(alpha=1, solver="cholesky")
 ridge_reg.fit(X, y)
 ridge_reg.predict([[1.5]])
@@ -230,8 +228,7 @@ ridge_reg.predict([[1.5]])
 - Lasso regression tends to completely eliminate the weights of the least important features.
 
 $$J(\theta)=MSE(\theta)+\alpha\sum_{i=1}^{n}\left|\theta_i\right|$$
-```
-from sklearn.linear_model import Lasso
+```py
 lasso_reg = Lasso(alpha=0.1)
 lasso_reg.fit(X, y)
 lasso_reg.predict([[1.5]])
@@ -240,7 +237,7 @@ lasso_reg.predict([[1.5]])
 - Elastic Net is a combination of the two.
 
 $$J(\theta)=MSE(\theta)+r\alpha\sum_{i=1}^{n}\left|\theta_i\right|+\frac{1-r}{2}\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$
-```
+```py
 from sklearn.linear_model import ElasticNet
 elastic_net = ElasticNet(alpha=0.1, l1_ratio=0.5)
 elastic_net.fit(X, y)
@@ -262,7 +259,7 @@ and its derivative is
 $$\frac{\delta}{\delta\theta_j}=\frac{1}{m}\sum_{i=1}^{m}\left(\sigma\left( \theta^T\cdot \textbf{x}^{(i)}-y^{(I)} \right) \right)x_j^{(I)}$$
 
 To train a logistic regression model
-```
+```py
 from sklearn.linear_model import LogisticRegression
 log_reg = LogisticRegression
 log_reg.fit(X, y)
@@ -298,13 +295,7 @@ Support vectors are data instances on the "fog lines" of the decision boundary "
 
 _Soft margin classification_ allows some margin violations, controlled by the `C` parameter.
 
-```
-import numpy as np
-from sklearn import datasets
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import LinearSVC
-
+```py
 iris = datasets.load_iris()
 X = iris["data"][:, (2, 3)]  # petal length, petal width
 y = (iris["target"] == 2).astype(np.float64)  # Iris-Virginica
@@ -319,11 +310,7 @@ svm_clf.fit(X, y)
 
 ### Nonlinear SVM Classification
 
-```
-from sklearn.datasets import make_moons
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import PolynomialFeatures
-
+```py
 polynomial_svm_clf = Pipeline([
         ("poly_features", PolynomialFeatures(degree=3)),
         ("scaler", StandardScaler()),
@@ -335,9 +322,7 @@ polynomial_svm_clf.fit(X, y)
 
 The SVC class implements the _kernel trick,_ whatever that is, which runs higher degree polynomial efficiently.
 
-```
-from sklearn.svm import SVC
-
+```py
 poly_kernel_svm_clf = Pipeline([
         ("scaler", StandardScaler()),
         ("svm_clf", SVC(kernel="poly", degree=3, coef0=1, C=5))
@@ -351,7 +336,7 @@ $$\phi_\gamma(\textbf{x},l)=\text{exp}\left(-\gamma\left\|\textbf{x}-l\right\|^2
 
 Increasing `gamma` makes the bell-shape curve narrower.
 
-```
+```py
 rbf_kernel_svm_clf = Pipeline([
         ("scaler", StandardScaler()),
         ("svm_clf", SVC(kernel="rbf", gamma=5, C=0.001))
@@ -363,22 +348,18 @@ rbf_kernel_svm_clf.fit(X, y)
 
 SVMs also support linear and nonlinear regression.
 
-```
-from sklearn.svm import LinearSVR
+```py
 svm_reg = LinearSVR(epsilon=1.5, random_state=42)
 svm_reg.fit(X, y)
 ```
-```
-from sklearn.svm import SVR
+```py
 svm_poly_reg = SVR(kernel="poly", degree=2, C=100, epsilon=0.1, gamma="auto")
 svm_poly_reg.fit(X, y)
 ```
 
 ### Decision Trees
 
-```
-from sklearn.datasets import load_iris
-from sklearn.tree import DecisionTreeClassifier
+```py
 iris = load_iris()
 X = iris.data[:, 2:] # petal length and width
 y = iris.target
@@ -388,7 +369,7 @@ tree_clf.fit(X, y)
 
 A decision tree is a white box model that can be visualized.
 
-```
+```py
 from sklearn.tree import export_graphviz
 export_graphviz(
         tree_clf,
@@ -402,7 +383,7 @@ export_graphviz(
 
 Decision tree prediction
 
-```
+```py
 tree_clf.predict_proba([[5, 1.5]])
 tree_clf.predict([[5, 1.5]])
 ```
@@ -417,8 +398,7 @@ Regularization hyperparameters
 
 ### Regression Trees
 
-```
-from sklearn.tree import DecisionTreeRegressor
+```py
 tree_reg = DecisionTreeRegressor(max_depth=2, random_state=42)
 tree_reg.fit(X, y)
 ```
@@ -426,3 +406,79 @@ tree_reg.fit(X, y)
 Weaknesses of decision trees
 - Sensitive to orientation of training data.  PCA can help.
 - Sensitive to small variations of training data.
+
+### Ensemble Methods
+
+An ensemble can be a _strong learner_ even if each classifier is a _weak learner_, if there are enough of them and they are diverse enough.
+
+A _hard voting_ classifier predicts the class that gets the most votes.
+
+A _soft voting_ classifier makes predictions based on the averages of class probabilities.
+
+```py
+# set voting='soft' for soft voting
+log_clf = LogisticRegression(solver="liblinear", random_state=42)
+rnd_clf = RandomForestClassifier(n_estimators=10, random_state=42)
+svm_clf = SVC(gamma="auto", random_state=42)
+voting_clf = VotingClassifier(
+    estimators=[('lr', log_clf), ('rf', rnd_clf), ('svc', svm_clf)],
+    voting='hard')
+```
+
+_Bagging_ (bootstrap aggregating) is training classifiers on different subsets of data _with_ replacement.
+
+_Pasting_ is the same thing _without_ replacement.
+
+```py
+# set bootstrap=False for pasting
+# set oob_score=True for out-of-bag evaluation
+# set max_features and bootstrap_features to sample random subspaces
+bag_clf = BaggingClassifier(
+    DecisionTreeClassifier(random_state=42), n_estimators=500,
+    max_samples=100, bootstrap=True, n_jobs=-1, random_state=42)
+bag_clf.fit(X_train, y_train)
+y_pred = bag_clf.predict(X_test)
+```
+
+_Random patches_ sample both training instances and features.
+
+A _random forest_ is an ensemble of decision trees.
+
+```py
+iris = load_iris()
+rnd_clf = RandomForestClassifier(n_estimators=500, n_jobs=-1, random_state=42)
+rnd_clf.fit(iris["data"], iris["target"])
+```
+
+The `ExtraTreesClassifier` (extra = extremely randomized) uses random thresholds for each feature and has higher bias & lower variance than the `RandomForestClassifier`.
+
+The `RandomForestClassifier` has a `feature_importances_` variable which is handy for selecting features.
+
+### Boosting
+
+_Boosting_ (hypothesis boosting) combines weak learners into a strong learner by training learners sequentially.
+
+_AdaBoost_ (adaptive boosting) trains each learner on instances that its predecessor underfitted.
+
+```py
+ada_clf = AdaBoostClassifier(
+    DecisionTreeClassifier(max_depth=1), n_estimators=200,
+    algorithm="SAMME.R", learning_rate=0.5, random_state=42)
+ada_clf.fit(X_train, y_train)
+```
+
+_Gradient boosting_ tries to fit the new predictor to the residual errors made by the previous predictor.
+
+```py
+gbrt = GradientBoostingRegressor(max_depth=2, n_estimators=3, learning_rate=1.0, random_state=42)
+gbrt.fit(X, y)
+```
+
+### Stacking (stacked generalization)
+
+_Stacking_ trains a model to make a final prediction, instead of hard or soft voting.
+
+The final predictor is called a _blender_.
+
+The blender is typically trained on a hold-out data set.
+
