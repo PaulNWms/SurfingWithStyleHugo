@@ -1,22 +1,33 @@
-﻿print_chord_progs :- findall([Name, Key, Progression, Nashville, Artist], chord_prog(Name, Key, Progression, Nashville, Artist), CPs),
-                             maplist(format_chord_prog, CPs).
+﻿print_chord_progs :- generic_format(chord_prog, [_, _, _, _, _], format_chord_prog).
+print_moveable_chords :- generic_format(moveable_chord, [_, _, _, _], format_moveable_chord).
+print_open_chords :- generic_format(open_chord, [_, _, _], format_open_chord).
+print_open_chord_progs :- generic_format(open_chord_prog, [_, _, _, _], format_open_chord_prog).
 
-format_chord_prog(CP) :- format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~nArtist: ~w~n~n', CP).
-
-print_moveable_chords :- findall([Name, Root_String, Fingering, Scale_Pattern], moveable_chord(Name, Root_String, Fingering, Scale_Pattern), MCs),
-                                 maplist(format_moveable_chord, MCs).
-
+format_chord_prog(CP) :- get_filename('chord_prog', CP, FileName),
+                         format('FileName: ~w~n', FileName),
+                         format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~nArtist: ~w~n~n', CP).
 format_moveable_chord(MC) :- format('Name: ~w~nRoot String: ~w~nFingering: ~w~nScale Pattern: ~w~n~n', MC).
-
-print_open_chords :- findall([Name, Root_String, Fingering], open_chord(Name, Root_String, Fingering), OCs),
-                             maplist(format_open_chord, OCs).
-
 format_open_chord(OC) :- format('Name: ~w~nRoot String: ~w~nFingering: ~w~n~n', OC).
-
-print_open_chord_progs :- findall([Name, Key, Progression, Nashville], open_chord_prog(Name, Key, Progression, Nashville), OCPs),
-                          maplist(format_open_chord_prog, OCPs).
-
 format_open_chord_prog(OCP) :- format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~n~n', OCP).
+
+get_filename(Prefix, CP, FileName) :- head(CP, FN),
+                                      replace_char(" ", "_", FN, FN_),
+                                      format(atom(FileName), '~w-~w.md', [Prefix, FN_]).
+
+generic_format(Fact, Args, Formatter) :- findall(Args, apply(Fact, Args), Facts),
+                                         maplist(Formatter, Facts).
+head([H|_], H).
+
+replace_item(_, _, [], []).
+replace_item(O, R, [O|T], [R|T2]) :- replace_item(O, R, T, T2).
+replace_item(O, R, [H|T], [H|T2]) :- dif(H,O), replace_item(O, R, T, T2).
+
+replace_char(Original, Replacement, String, Result) :-
+    atom_codes(String, SCs),
+	atom_codes(Original,OCs), head(OCs, OC),
+	atom_codes(Replacement,RCs), head(RCs, RC),
+	replace_item(OC, RC, SCs, ResultCodes),
+	atom_codes(Result, ResultCodes).
 
 chord_prog('All Along The Watchtower','Bm','Bm,A,G,A','i,bVII,bVI,bVII','Jimi Hendrix').
 chord_prog('Angel of Harlem','C','C,F','I,IV','U2').
