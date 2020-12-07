@@ -1,4 +1,24 @@
-﻿chord_prog('All Along The Watchtower','Bm','Bm,A,G,A','i,bVII,bVI,bVII','Jimi Hendrix').
+﻿print_chord_progs :- findall([Name, Key, Progression, Nashville, Artist], chord_prog(Name, Key, Progression, Nashville, Artist), CPs),
+                             maplist(format_chord_prog, CPs).
+
+format_chord_prog(CP) :- format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~nArtist: ~w~n~n', CP).
+
+print_moveable_chords :- findall([Name, Root_String, Fingering, Scale_Pattern], moveable_chord(Name, Root_String, Fingering, Scale_Pattern), MCs),
+                                 maplist(format_moveable_chord, MCs).
+
+format_moveable_chord(MC) :- format('Name: ~w~nRoot String: ~w~nFingering: ~w~nScale Pattern: ~w~n~n', MC).
+
+print_open_chords :- findall([Name, Root_String, Fingering], open_chord(Name, Root_String, Fingering), OCs),
+                             maplist(format_open_chord, OCs).
+
+format_open_chord(OC) :- format('Name: ~w~nRoot String: ~w~nFingering: ~w~n~n', OC).
+
+print_open_chord_progs :- findall([Name, Key, Progression, Nashville], open_chord_prog(Name, Key, Progression, Nashville), OCPs),
+                          maplist(format_open_chord_prog, OCPs).
+
+format_open_chord_prog(OCP) :- format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~n~n', OCP).
+
+chord_prog('All Along The Watchtower','Bm','Bm,A,G,A','i,bVII,bVI,bVII','Jimi Hendrix').
 chord_prog('Angel of Harlem','C','C,F','I,IV','U2').
 chord_prog('Another Brick In The Wall','F','Fm,Bb','i,IV','Pink Floyd').
 chord_prog('Another Girl','Ab','Ab,Gb,Ab,Db','I,bVII,I,IV','The Beatles').
@@ -158,6 +178,3 @@ open_chord_prog('G Em Am D7','G','G,Em,Am,D7','I,vi,ii,V7').
 open_chord_prog('G G+ E7sus E7','G','G,G+,E7sus,E7','I,I+,VI7sus,VI7').
 open_chord_prog('Gadd9 Eadd9 Aadd9 Dadd9','G','Gadd9,Eadd9,Aadd9,Dadd9','Iadd9,Vadd9/ii,Vadd9/V,Vadd9').
 
-ocp :- open_chord_prog(Name, Key, Progression, Nashville),
-                       format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~n~n',
-					          [Name, Key, Progression, Nashville]).
