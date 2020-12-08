@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:C Cmaj7 C9 Fmaj7"
+title: "C Cmaj7 C9 Fmaj7"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|C Cmaj7 C9 Fmaj7|
-|nashville|V,V??,V9,I??|
-|tonic|F|
+|key|F|
 |chords|C,Cmaj7,C9,Fmaj7|
-
-
+|nashville|V,VMaj7,V9,IMaj7|

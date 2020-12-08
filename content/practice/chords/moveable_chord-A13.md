@@ -1,14 +1,12 @@
 ---
-title: "moveable chord:A13"
+title: "A13"
 tags: [moveable chord]
 ---
 
 |A13|moveable chord|
 |---|---|
 |type|moveable chord|
-|root_string|6|
 |name|A13|
+|root string|6|
 |fingering|5X567X|
-|scale_pattern|II|
-
-
+|scale pattern|II|

@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Knockin' On Heaven's Door"
+title: "Knockin' On Heaven's Door"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Knockin' On Heaven's Door|
-|nashville|I,V,ii|
-|tonic|C|
+|key|C|
 |chords|C,G,Dm|
+|nashville|I,V,ii|
 |artist|Bob Dylan|
-
-

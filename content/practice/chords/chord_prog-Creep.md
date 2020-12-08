@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Creep"
+title: "Creep"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Creep|
-|nashville|I,III,IV,iv|
-|tonic|G|
+|key|G|
 |chords|G,Bb,C,Cm|
+|nashville|I,III,IV,iv|
 |artist|Radiohead|
-
-

@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Lady Madonna"
+title: "Lady Madonna"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Lady Madonna|
-|nashville|bVI,bVII,I|
-|tonic|A|
+|key|A|
 |chords|F,G,A|
+|nashville|bVI,bVII,I|
 |artist|The Beatles|
-
-

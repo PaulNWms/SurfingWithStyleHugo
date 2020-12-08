@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Message In a Bottle"
+title: "Message In a Bottle"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Message In a Bottle|
-|nashville|i,bVI,bVII,iv|
-|tonic|C#|
+|key|C#|
 |chords|C#m,A,B,F#m|
+|nashville|i,bVI,bVII,iv|
 |artist|Police|
-
-

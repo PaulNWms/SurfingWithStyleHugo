@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:Aadd9 C9 Dm7 E"
+title: "Aadd9 C9 Dm7 E"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|Aadd9 C9 Dm7 E|
-|nashville|Iadd9,III9,iv7,V|
-|tonic|A|
+|key|A|
 |chords|Aadd9,C9,Dm7,E|
-
-
+|nashville|Iadd9,III9,iv7,V|

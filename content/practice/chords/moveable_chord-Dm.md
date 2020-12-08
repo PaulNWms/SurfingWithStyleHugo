@@ -1,14 +1,12 @@
 ---
-title: "moveable chord:Dm"
+title: "Dm"
 tags: [moveable chord]
 ---
 
 |Dm|moveable chord|
 |---|---|
 |type|moveable chord|
-|root_string|5|
 |name|Dm|
+|root string|5|
 |fingering|X57765|
-|scale_pattern|IV|
-
-
+|scale pattern|IV|

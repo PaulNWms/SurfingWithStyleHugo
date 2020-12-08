@@ -1,13 +1,11 @@
 ---
-title: "open chord:CMaj7"
+title: "Cmaj7"
 tags: [open chord]
 ---
 
-|CMaj7|open chord|
+|Cmaj7|open chord|
 |---|---|
 |type|open chord|
-|root_string|5|
-|name|CMaj7|
+|name|Cmaj7|
+|root string|5|
 |fingering|X32000|
-
-

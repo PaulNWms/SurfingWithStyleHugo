@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:A E+ A E7"
+title: "A E+ A E7"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|A E+ A E7|
-|nashville|I,V+,I,V7|
-|tonic|A|
+|key|A|
 |chords|A,E+,A,E7|
-
-
+|nashville|I,V+,I,V7|

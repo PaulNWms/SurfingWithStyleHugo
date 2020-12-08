@@ -1,13 +1,11 @@
 ---
-title: "open chord:D7sus"
+title: "D7sus"
 tags: [open chord]
 ---
 
 |D7sus|open chord|
 |---|---|
 |type|open chord|
-|root_string|4|
 |name|D7sus|
+|root string|4|
 |fingering|XX0213|
-
-

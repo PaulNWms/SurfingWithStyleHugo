@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Heart of Gold"
+title: "Heart of Gold"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Heart of Gold|
-|nashville|i,bVI,bVII,bIII|
-|tonic|C|
+|key|C|
 |chords|Cm,Ab,Bb,Eb|
+|nashville|i,bVI,bVII,bIII|
 |artist|Neil Young|
-
-

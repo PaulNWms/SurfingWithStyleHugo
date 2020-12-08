@@ -1,14 +1,12 @@
 ---
-title: "moveable chord:Am7b5"
+title: "Am7b5"
 tags: [moveable chord]
 ---
 
 |Am7b5|moveable chord|
 |---|---|
 |type|moveable chord|
-|root_string|6|
 |name|Am7b5|
+|root string|6|
 |fingering|5X554X|
-|scale_pattern|I|
-
-
+|scale pattern|I|

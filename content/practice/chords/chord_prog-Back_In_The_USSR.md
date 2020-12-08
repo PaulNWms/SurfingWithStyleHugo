@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Back In The USSR"
+title: "Back In The USSR"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Back In The USSR|
-|nashville|I,bIII,IV|
-|tonic|A|
+|key|A|
 |chords|A,C,D|
+|nashville|I,bIII,IV|
 |artist|The Beatles|
-
-

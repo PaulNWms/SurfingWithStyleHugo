@@ -1,13 +1,11 @@
 ---
-title: "open chord:A9"
+title: "A9"
 tags: [open chord]
 ---
 
 |A9|open chord|
 |---|---|
 |type|open chord|
-|root_string|5|
 |name|A9|
+|root string|5|
 |fingering|X02000|
-
-

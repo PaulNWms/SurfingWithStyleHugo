@@ -1,13 +1,11 @@
 ---
-title: "open chord:Dmaj7"
+title: "Dmaj7"
 tags: [open chord]
 ---
 
 |Dmaj7|open chord|
 |---|---|
 |type|open chord|
-|root_string|4|
 |name|Dmaj7|
+|root string|4|
 |fingering|XX0222|
-
-

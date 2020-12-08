@@ -1,14 +1,11 @@
 ---
-title: "open chord:D"
+title: "D"
 tags: [open chord]
 ---
 
 |D|open chord|
 |---|---|
 |type|open chord|
-|root_string|4|
 |name|D|
-|V_of|open chord:G|
+|root string|4|
 |fingering|XX0232|
-
-

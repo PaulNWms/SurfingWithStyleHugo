@@ -1,14 +1,12 @@
 ---
-title: "moveable chord:D6/9"
+title: "D6/9"
 tags: [moveable chord]
 ---
 
 |D6/9|moveable chord|
 |---|---|
 |type|moveable chord|
-|root_string|5|
 |name|D6/9|
+|root string|5|
 |fingering|X5445X|
-|scale_pattern|V|
-
-
+|scale pattern|V|

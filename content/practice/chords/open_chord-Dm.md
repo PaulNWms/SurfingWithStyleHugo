@@ -1,13 +1,11 @@
 ---
-title: "open chord:Dm"
+title: "Dm"
 tags: [open chord]
 ---
 
 |Dm|open chord|
 |---|---|
 |type|open chord|
-|root_string|4|
 |name|Dm|
+|root string|4|
 |fingering|XX0231|
-
-

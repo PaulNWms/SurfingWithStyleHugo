@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Instant Karma"
+title: "Instant Karma"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Instant Karma|
-|nashville|I,vi|
-|tonic|C|
+|key|C|
 |chords|C,Am|
+|nashville|I,vi|
 |artist|John Lennon|
-
-

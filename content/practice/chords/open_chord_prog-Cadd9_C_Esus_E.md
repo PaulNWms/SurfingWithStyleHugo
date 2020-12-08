@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:Cadd9 C Esus E"
+title: "Cadd9 C Esus E"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|Cadd9 C Esus E|
-|nashville|Iadd9,I,IIIsus,III|
-|tonic|C|
+|key|C|
 |chords|Cadd9,C,Esus,E|
-
-
+|nashville|Iadd9,I,IIIsus,III|

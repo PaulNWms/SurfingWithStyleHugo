@@ -1,5 +1,5 @@
 ---
-title: "chord prog:With Or Without You"
+title: "With Or Without You"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|With Or Without You|
-|nashville|I,V,vi,IV|
-|tonic|D|
+|key|D|
 |chords|D,A,Bm,G|
+|nashville|I,V,vi,IV|
 |artist|U2|
-
-

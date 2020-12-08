@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Desire"
+title: "Desire"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Desire|
-|nashville|bVII,IV,I|
-|tonic|E|
+|key|E|
 |chords|D,A,E|
+|nashville|bVII,IV,I|
 |artist|U2|
-
-

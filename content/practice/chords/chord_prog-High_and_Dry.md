@@ -1,5 +1,5 @@
 ---
-title: "chord prog:High and Dry"
+title: "High and Dry"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|High and Dry|
-|nashville|ii,IV,I|
-|tonic|E|
+|key|E|
 |chords|F#m,A,E|
+|nashville|ii,IV,I|
 |artist|Radiohead|
-
-

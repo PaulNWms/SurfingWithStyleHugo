@@ -1,14 +1,11 @@
 ---
-title: "open chord:Em"
+title: "Em"
 tags: [open chord]
 ---
 
 |Em|open chord|
 |---|---|
 |type|open chord|
-|root_string|6|
 |name|Em|
+|root string|6|
 |fingering|022000|
-|related_scales|open_scale:Em pentatonic,open_scale:Em|
-
-

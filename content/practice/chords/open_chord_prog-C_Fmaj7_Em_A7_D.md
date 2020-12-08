@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:C FMaj7 Em A7 D"
+title: "C FMaj7 Em A7 D"
 tags: [open chord prog]
 ---
 
@@ -7,9 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|C FMaj7 Em A7 D|
-|nashville|???VII,???III??,ii,V7,I|
-|tonic|D|
+|key|D|
 |chords|C,Fmaj7,Em,A7,D|
-|rhythm|4,4,2,2,4|
-
-
+|nashville|bVII,bIIIMaj7,ii,V7,I|

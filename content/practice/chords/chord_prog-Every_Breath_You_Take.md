@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Every Breath You Take"
+title: "Every Breath You Take"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Every Breath You Take|
-|nashville|I,vi,IV,V|
-|tonic|Ab|
+|key|Ab|
 |chords|Ab,F,Db,Eb|
+|nashville|I,vi,IV,V|
 |artist|Police|
-
-

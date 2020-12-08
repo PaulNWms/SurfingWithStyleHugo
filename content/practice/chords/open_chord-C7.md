@@ -1,14 +1,11 @@
 ---
-title: "open chord:C7"
+title: "C7"
 tags: [open chord]
 ---
 
 |C7|open chord|
 |---|---|
 |type|open chord|
-|root_string|5|
 |name|C7|
-|V_of|F|
+|root string|5|
 |fingering|X32310|
-
-

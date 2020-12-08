@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:D G C A"
+title: "D G C A"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|D G C A|
-|nashville|I,IV,???VII,V|
-|tonic|D|
+|key|D|
 |chords|D,G,C,A|
-
-
+|nashville|I,IV,bVII,V|

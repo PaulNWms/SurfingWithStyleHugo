@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:A AMaj7 Am B7 E"
+title: "A AMaj7 Am B7 E"
 tags: [open chord prog]
 ---
 
@@ -7,9 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|A AMaj7 Am B7 E|
-|nashville|IV,IV??,iV,V7,I|
-|tonic|E|
+|key|E|
 |chords|A,Amaj7,Am,B7,E|
-|rhythm|4,4,2,2,4|
-
-
+|nashville|IV,IVMaj7,iV,V7,I|

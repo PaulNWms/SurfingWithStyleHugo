@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Magical Mystery Tour"
+title: "Magical Mystery Tour"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Magical Mystery Tour|
-|nashville|I,bIII,IV|
-|tonic|E|
+|key|E|
 |chords|E,G,A|
+|nashville|I,bIII,IV|
 |artist|The Beatles|
-
-

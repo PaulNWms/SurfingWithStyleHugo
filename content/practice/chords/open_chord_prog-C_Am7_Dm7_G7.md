@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:C Am7 Dm7 G7"
+title: "C Am7 Dm7 G7"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|C Am7 Dm7 G7|
-|nashville|I,vi7,ii7,V7|
-|tonic|C|
+|key|C|
 |chords|C,Am7,Dm7,G7|
-
-
+|nashville|I,vi7,ii7,V7|

@@ -1,13 +1,11 @@
 ---
-title: "open chord:Em7"
+title: "Em7"
 tags: [open chord]
 ---
 
 |Em7|open chord|
 |---|---|
 |type|open chord|
-|root_string|6|
 |name|Em7|
+|root string|6|
 |fingering|020000|
-
-

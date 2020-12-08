@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Born On The Bayou"
+title: "Born On The Bayou"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Born On The Bayou|
-|nashville|bVII,IV,I|
-|tonic|E|
+|key|E|
 |chords|D,A,E7|
+|nashville|bVII,IV,I|
 |artist|Creedence Clearwater Revival|
-
-

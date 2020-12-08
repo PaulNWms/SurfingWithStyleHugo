@@ -1,13 +1,11 @@
 ---
-title: "open chord:Fmaj7"
+title: "Fmaj7"
 tags: [open chord]
 ---
 
 |Fmaj7|open chord|
 |---|---|
 |type|open chord|
-|root_string|4|
 |name|Fmaj7|
+|root string|4|
 |fingering|XX3210|
-
-

@@ -1,13 +1,11 @@
 ---
-title: "open chord:Gsus"
+title: "Gsus"
 tags: [open chord]
 ---
 
 |Gsus|open chord|
 |---|---|
 |type|open chord|
-|root_string|6|
 |name|Gsus|
+|root string|6|
 |fingering|3X0013|
-
-

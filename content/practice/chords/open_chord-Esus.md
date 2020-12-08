@@ -1,13 +1,11 @@
 ---
-title: "open chord:Esus"
+title: "Esus"
 tags: [open chord]
 ---
 
 |Esus|open chord|
 |---|---|
 |type|open chord|
-|root_string|6|
 |name|Esus|
+|root string|6|
 |fingering|022200|
-
-

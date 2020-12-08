@@ -1,14 +1,11 @@
 ---
-title: "open chord:Bbdim"
+title: "Bbdim"
 tags: [open chord]
 ---
 
 |Bbdim|open chord|
 |---|---|
 |type|open chord|
-|root_string|5|
 |name|Bbdim|
+|root string|5|
 |fingering|X12020|
-|vii??_of|B,D,F,Gb|
-
-

@@ -1,24 +1,89 @@
-﻿print_chord_progs :- generic_format(chord_prog, [_, _, _, _, _], format_chord_prog).
-print_moveable_chords :- generic_format(moveable_chord, [_, _, _, _], format_moveable_chord).
-print_open_chords :- generic_format(open_chord, [_, _, _], format_open_chord).
-print_open_chord_progs :- generic_format(open_chord_prog, [_, _, _, _], format_open_chord_prog).
+﻿:- set_prolog_flag(verbose, silent).
 
-format_chord_prog(CP) :- get_filename('chord_prog', CP, FileName),
-                         format('FileName: ~w~n', FileName),
-                         format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~nArtist: ~w~n~n', CP).
-format_moveable_chord(MC) :- get_filename('moveable_chord', MC, FileName),
-                             format('FileName: ~w~n', FileName),
-                             format('Name: ~w~nRoot String: ~w~nFingering: ~w~nScale Pattern: ~w~n~n', MC).
-format_open_chord(OC) :- get_filename('open_chord', OC, FileName),
-                         format('FileName: ~w~n', FileName),
-                         format('Name: ~w~nRoot String: ~w~nFingering: ~w~n~n', OC).
-format_open_chord_prog(OCP) :- get_filename('open_chord_prog', OCP, FileName),
-                               format('FileName: ~w~n', FileName),
-                               format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~n~n', OCP).
+:- initialization main.
 
-get_filename(Prefix, CP, FileName) :- head(CP, FN),
-                                      replace_char(" ", "_", FN, FN_),
-                                      format(atom(FileName), '~w-~w.md', [Prefix, FN_]).
+main :-
+    save_chord_progs,
+    save_moveable_chords,
+    save_open_chords,
+    save_open_chord_progs,
+    halt.
+main :-
+    halt(1).
+
+save_chord_progs :- generic_format(chord_prog, [_, _, _, _, _], save_chord_prog).
+save_moveable_chords :- generic_format(moveable_chord, [_, _, _, _], save_moveable_chord).
+save_open_chords :- generic_format(open_chord, [_, _, _], save_open_chord).
+save_open_chord_progs :- generic_format(open_chord_prog, [_, _, _, _], save_open_chord_prog).
+
+save_chord_prog(CP) :- [Name, Key, Chords, Nashville, Artist] = CP,
+                       get_filename('chord_prog', Name, FileName),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('tags: [chord prog]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|chord prog|~n', Name),
+  format('|---|---|~n'),
+  format('|type|chord prog|~n'),
+  format('|name|~w|~n', Name),
+  format('|key|~w|~n', Key),
+  format('|chords|~w|~n', Chords),
+  format('|nashville|~w|~n', Nashville),
+  format('|artist|~w|~n', Artist),
+  told.
+save_moveable_chord(MC) :- [Name, RootString, Fingering, ScalePattern] = MC,
+                           get_filename('moveable_chord', Name, FileName),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('tags: [moveable chord]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|moveable chord|~n', Name),
+  format('|---|---|~n'),
+  format('|type|moveable chord|~n'),
+  format('|name|~w|~n', Name),
+  format('|root string|~w|~n', RootString),
+  format('|fingering|~w|~n', Fingering),
+  format('|scale pattern|~w|~n', ScalePattern),
+  told.
+save_open_chord(OC) :- [Name, RootString, Fingering] = OC,
+                       get_filename('open_chord', Name, FileName),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('tags: [open chord]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|open chord|~n', Name),
+  format('|---|---|~n'),
+  format('|type|open chord|~n'),
+  format('|name|~w|~n', Name),
+  format('|root string|~w|~n', RootString),
+  format('|fingering|~w|~n', Fingering),
+  told.
+save_open_chord_prog(OCP) :- [Name, Key, Chords, Nashville] = OCP,
+                             get_filename('open_chord_prog', Name, FileName),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('tags: [open chord prog]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|open chord prog|~n', Name),
+  format('|---|---|~n'),
+  format('|type|open chord prog|~n'),
+  format('|name|~w|~n', Name),
+  format('|key|~w|~n', Key),
+  format('|chords|~w|~n', Chords),
+  format('|nashville|~w|~n', Nashville),
+  told.
+
+get_filename(Prefix, Name, FileName) :- replace_char(" ", "_", Name, FN_1),
+                                        replace_char("/", "_", FN_1, FN_2),
+                                        format(atom(FileName), '../../content/practice/chords/~w-~w.md', [Prefix, FN_2]).
 
 generic_format(Fact, Args, Formatter) :- findall(Args, apply(Fact, Args), Facts),
                                          maplist(Formatter, Facts).
@@ -96,7 +161,7 @@ open_chord('Am6','5','X02212').
 open_chord('Am7','5','X02010').
 open_chord('Asus','5','X02230').
 open_chord('B7','5','X21202').
-open_chord('Bb°','5','X12020').
+open_chord('Bbdim','5','X12020').
 open_chord('C','5','X32010').
 open_chord('C6','5','X32210').
 open_chord('C7','5','X32310').
@@ -115,7 +180,7 @@ open_chord('Dm6','4','XX0201').
 open_chord('Dm7','4','XX0211').
 open_chord('Dmaj7','4','XX0222').
 open_chord('Dsus','4','XX0233').
-open_chord('D°','4','XX0101').
+open_chord('Ddim','4','XX0101').
 open_chord('E','6','022100').
 open_chord('E+','6','032110').
 open_chord('E6','6','022120').
@@ -141,7 +206,7 @@ open_chord('Gsus','6','3X0013').
 open_chord_prog('A A+ D Dm6','A','A,A+,D,Dm6','I,I+,IV,iv6').
 open_chord_prog('A A7 D Dm','A','A,A7,D,Dm','I,V7/IV,IV,iv').
 open_chord_prog('A A7 D Dm6 E7sus E7 Em7 E7','A','A,A7,D,Dm6,E7sus,E7,Em7,E7','I,I7,IV,iv6,V7sus,V7,v7,V7').
-open_chord_prog('A AMaj7 Am B7 E','E','A,Amaj7,Am,B7,E','IV,IVΔ,iV,V7,I').
+open_chord_prog('A AMaj7 Am B7 E','E','A,Amaj7,Am,B7,E','IV,IVMaj7,iV,V7,I').
 open_chord_prog('A C D E','A','A,C,D,E','I,bIII,IV,V').
 open_chord_prog('A E+ A E7','A','A,E+,A,E7','I,V+,I,V7').
 open_chord_prog('A7sus Am7 Gsus G','G','A7sus,Am7,Gsus,G','II7sus,ii7,Isus,I').
@@ -150,18 +215,18 @@ open_chord_prog('Aadd9 A9 D9 D7 Dm7 G7 Cadd9 E7','A','Aadd9,A9,D9,D7,Dm7,G7,Cadd
 open_chord_prog('Aadd9 C9 Dm7 E','A','Aadd9,C9,Dm7,E','Iadd9,III9,iv7,V').
 open_chord_prog('Am C7 Dm E7','A','Am,C7,Dm,E7','i,III7,iv,V7').
 open_chord_prog('Am Dm6 E7 Am','A','Am,Dm6,E7,Am','i,iv6,V7,i').
-open_chord_prog('Am7 D9 D7 Gmaj7 E9','A','Am7,D9,D7,Gmaj7,E9','i7,IV9,IV7,bVIIΔ,V9').
+open_chord_prog('Am7 D9 D7 Gmaj7 E9','A','Am7,D9,D7,Gmaj7,E9','i7,IV9,IV7,bVIIMaj7,V9').
 open_chord_prog('Asus A E7sus E7','A','Asus,A,E7sus,E7','Isus,I,V7sus,V7').
 open_chord_prog('C Am Dm G','C','C,Am,Dm,G','I,vi,ii,V').
 open_chord_prog('C Am7 Dm7 G7','C','C,Am7,Dm7,G7','I,vi7,ii7,V7').
 open_chord_prog('C C6 Am6 E','C','C,C6,Am6,E','I,I6,vi6,III').
-open_chord_prog('C Cmaj7 C6 Em7','C','C,Cmaj7,C6,Em7','I,IΔ,I6,iii').
-open_chord_prog('C Cmaj7 C9 Fmaj7','F','C,Cmaj7,C9,Fmaj7','V,VΔ,V9,IΔ').
+open_chord_prog('C Cmaj7 C6 Em7','C','C,Cmaj7,C6,Em7','I,IMaj7,I6,iii').
+open_chord_prog('C Cmaj7 C9 Fmaj7','F','C,Cmaj7,C9,Fmaj7','V,VMaj7,V9,IMaj7').
 open_chord_prog('C Dm Em G A D','C','C,Dm,Em,G,A,D','I,ii,iii,V,VI,II').
 open_chord_prog('C Dm G7 C','C','C,Dm,G7,C','I,ii,V7,I').
-open_chord_prog('C Dm7 G7 CMaj7','C','C,Dm7,G7,Cmaj7','I,ii7,V7,IΔ').
+open_chord_prog('C Dm7 G7 CMaj7','C','C,Dm7,G7,Cmaj7','I,ii7,V7,IMaj7').
 open_chord_prog('C Dm7 G7sus G7','C','C,Dm7,G7sus,G7','I,ii7,G7sus,G7').
-open_chord_prog('C FMaj7 Em A7 D','D','C,Fmaj7,Em,A7,D','bVII,bIIIΔ,ii,V7,I').
+open_chord_prog('C FMaj7 Em A7 D','D','C,Fmaj7,Em,A7,D','bVII,bIIIMaj7,ii,V7,I').
 open_chord_prog('C G Am Em Dm E7 Am7 G7','C','C,G,Am,Em,Dm,E7,Am7,G7','I,V,vi,iii,ii,V7/vi,vi7,V7').
 open_chord_prog('C G D E G A','D','C,G,D,E,G,A','bVII,IV,I,II,IV,V').
 open_chord_prog('Cadd9 C Esus E','C','Cadd9,C,Esus,E','Iadd9,I,IIIsus,III').
@@ -173,9 +238,9 @@ open_chord_prog('D E7 G7 A7','D','D,E7,G7,A7','I,II7,IV7,V7').
 open_chord_prog('D G C A','D','D,G,C,A','I,IV,bVII,V').
 open_chord_prog('E A B7 E','E','E,A,B7,E','I,IV,V7,I').
 open_chord_prog('E A E D','E','E,A,E,D','I,IV,I,bVII').
-open_chord_prog('E AMaj7 EMaj7 A7 DMaj7 G6 CMaj7 B7','E','E,Amaj7,Emaj7,A7,Dmaj7,G6,Cmaj7,B7','I,IVΔ,IΔ,V7/ii,IIΔ,V6/bVI,bVIΔ,V7').
+open_chord_prog('E AMaj7 EMaj7 A7 DMaj7 G6 CMaj7 B7','E','E,Amaj7,Emaj7,A7,Dmaj7,G6,Cmaj7,B7','I,IVMaj7,IMaj7,V7/ii,IIMaj7,V6/bVI,bVIMaj7,V7').
 open_chord_prog('E E6 E7 A6','A','E,E6,E7,A6','V,V6,V7,I6').
-open_chord_prog('E EMaj7 E7 A','A','E,Emaj7,E7,A','V,VΔ,V7,I').
+open_chord_prog('E EMaj7 E7 A','A','E,Emaj7,E7,A','V,VMaj7,V7,I').
 open_chord_prog('E6 A6 D6 G6','undefined','E6,A6,D6,G6','undefined').
 open_chord_prog('E6 A6 Dm6 E6','E','E6,A6,Dm6,E6','I6,IV6,bvii6,I6').
 open_chord_prog('E6 G6 A7 B7','E','E6,G6,A7,B7','I6,III6,IV7,V7').
@@ -194,4 +259,3 @@ open_chord_prog('G E7 A7 D7','G','G,E7,A7,D7','I,V7/ii,V7/V,V7').
 open_chord_prog('G Em Am D7','G','G,Em,Am,D7','I,vi,ii,V7').
 open_chord_prog('G G+ E7sus E7','G','G,G+,E7sus,E7','I,I+,VI7sus,VI7').
 open_chord_prog('Gadd9 Eadd9 Aadd9 Dadd9','G','Gadd9,Eadd9,Aadd9,Dadd9','Iadd9,Vadd9/ii,Vadd9/V,Vadd9').
-

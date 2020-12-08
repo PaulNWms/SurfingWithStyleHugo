@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Losing My Religion"
+title: "Losing My Religion"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Losing My Religion|
-|nashville|i,v|
-|tonic|A|
+|key|A|
 |chords|Am,Em|
+|nashville|i,v|
 |artist|R.E.M.|
-
-

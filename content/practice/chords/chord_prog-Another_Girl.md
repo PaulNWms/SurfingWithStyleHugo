@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Another Girl"
+title: "Another Girl"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Another Girl|
-|nashville|I,bVII,I,IV|
-|tonic|Ab|
+|key|Ab|
 |chords|Ab,Gb,Ab,Db|
+|nashville|I,bVII,I,IV|
 |artist|The Beatles|
-
-

@@ -1,14 +1,11 @@
 ---
-title: "open chord:Am"
+title: "Am"
 tags: [open chord]
 ---
 
 |Am|open chord|
 |---|---|
 |type|open chord|
-|root_string|5|
 |name|Am|
+|root string|5|
 |fingering|X02210|
-|related_scales|open_scale:Am pentatonic,open_scale:Am|
-
-

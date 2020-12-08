@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:Em G Am C"
+title: "Em G Am C"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|Em G Am C|
-|nashville|i,III,iv,VII|
-|tonic|E|
+|key|E|
 |chords|Em,G,Am,C|
-
-
+|nashville|i,III,iv,VII|

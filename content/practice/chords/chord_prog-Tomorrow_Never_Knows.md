@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Tomorrow Never Knows"
+title: "Tomorrow Never Knows"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Tomorrow Never Knows|
-|nashville|I,bVII|
-|tonic|C|
+|key|C|
 |chords|C,Bb|
+|nashville|I,bVII|
 |artist|The Beatles|
-
-

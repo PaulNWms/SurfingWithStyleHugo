@@ -55,10 +55,10 @@ menu:
     parent: Practice
     url: /practice/scheduled-metronome-presets/
     weight: 400
-#  - name: Chords
-#    parent: Practice
-#    url: /practice/chords/
-#    weight: 500
+  - name: Chords
+    parent: Practice
+    url: /practice/chords/
+    weight: 500
 
   - name: Notes
     url: /index/

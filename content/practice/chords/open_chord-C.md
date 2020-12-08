@@ -1,15 +1,11 @@
 ---
-title: "open chord:C"
+title: "C"
 tags: [open chord]
 ---
 
 |C|open chord|
 |---|---|
 |type|open chord|
-|root_string|5|
 |name|C|
-|V_of|F|
+|root string|5|
 |fingering|X32010|
-|related_scales|open_scale:C pentatonic,open_scale:C|
-
-

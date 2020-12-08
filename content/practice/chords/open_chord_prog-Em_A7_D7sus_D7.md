@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:Em A7 D7sus D7"
+title: "Em A7 D7sus D7"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|Em A7 D7sus D7|
-|nashville|ii,V7,I7sus,I7|
-|tonic|D|
+|key|D|
 |chords|Em,A7,D7sus,D7|
-
-
+|nashville|ii,V7,I7sus,I7|

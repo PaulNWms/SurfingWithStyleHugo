@@ -1,13 +1,11 @@
 ---
-title: "open chord:G+"
+title: "G+"
 tags: [open chord]
 ---
 
 |G+|open chord|
 |---|---|
 |type|open chord|
-|root_string|6|
 |name|G+|
+|root string|6|
 |fingering|321003|
-
-

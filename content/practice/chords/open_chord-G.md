@@ -1,15 +1,11 @@
 ---
-title: "open chord:G"
+title: "G"
 tags: [open chord]
 ---
 
 |G|open chord|
 |---|---|
 |type|open chord|
-|root_string|6|
 |name|G|
-|V_of|open chord:C|
+|root string|6|
 |fingering|320003|
-|related_scales|open scale:G pentatonic,open scale:G|
-
-

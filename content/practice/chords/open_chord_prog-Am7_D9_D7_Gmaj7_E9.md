@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:Am7 D9 D7 Gmaj7 E9"
+title: "Am7 D9 D7 Gmaj7 E9"
 tags: [open chord prog]
 ---
 
@@ -7,9 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|Am7 D9 D7 Gmaj7 E9|
-|nashville|i7,IV9,IV7,???VII??,V9|
-|tonic|A|
+|key|A|
 |chords|Am7,D9,D7,Gmaj7,E9|
-|rhythm|4,2,2,4,4|
-
-
+|nashville|i7,IV9,IV7,bVIIMaj7,V9|

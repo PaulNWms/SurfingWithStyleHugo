@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Another Brick In The Wall"
+title: "Another Brick In The Wall"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Another Brick In The Wall|
-|nashville|i,IV|
-|tonic|F|
+|key|F|
 |chords|Fm,Bb|
+|nashville|i,IV|
 |artist|Pink Floyd|
-
-

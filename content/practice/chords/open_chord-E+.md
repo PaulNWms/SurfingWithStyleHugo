@@ -1,13 +1,11 @@
 ---
-title: "open chord:E+"
+title: "E+"
 tags: [open chord]
 ---
 
 |E+|open chord|
 |---|---|
 |type|open chord|
-|root_string|6|
 |name|E+|
+|root string|6|
 |fingering|032110|
-
-

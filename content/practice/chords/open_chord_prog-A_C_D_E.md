@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:A C D E"
+title: "A C D E"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|A C D E|
-|nashville|I,bIII,IV,V|
-|tonic|A|
+|key|A|
 |chords|A,C,D,E|
-
-
+|nashville|I,bIII,IV,V|

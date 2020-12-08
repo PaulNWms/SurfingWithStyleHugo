@@ -1,14 +1,12 @@
 ---
-title: "moveable chord:DMaj7"
+title: "DMaj7"
 tags: [moveable chord]
 ---
 
 |DMaj7|moveable chord|
 |---|---|
 |type|moveable chord|
-|root_string|5|
 |name|DMaj7|
+|root string|5|
 |fingering|X5767X|
-|scale_pattern|V|
-
-
+|scale pattern|V|

@@ -1,5 +1,5 @@
 ---
-title: "chord prog:My Sharona"
+title: "My Sharona"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|My Sharona|
-|nashville|I,IV,bIII|
-|tonic|G|
+|key|G|
 |chords|G,C,Bb|
+|nashville|I,IV,bIII|
 |artist|The Knack|
-
-

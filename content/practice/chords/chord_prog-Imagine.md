@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Imagine"
+title: "Imagine"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Imagine|
-|nashville|I,IV|
-|tonic|C|
+|key|C|
 |chords|C,F|
+|nashville|I,IV|
 |artist|John Lennon|
-
-

@@ -1,5 +1,5 @@
 ---
-title: "chord prog:My Girl"
+title: "My Girl"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|My Girl|
-|nashville|I,IV|
-|tonic|C|
+|key|C|
 |chords|C,G|
+|nashville|I,IV|
 |artist|The Temptations|
-
-

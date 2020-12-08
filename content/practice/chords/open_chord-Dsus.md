@@ -1,13 +1,11 @@
 ---
-title: "open chord:Dsus"
+title: "Dsus"
 tags: [open chord]
 ---
 
 |Dsus|open chord|
 |---|---|
 |type|open chord|
-|root_string|4|
 |name|Dsus|
+|root string|4|
 |fingering|XX0233|
-
-

@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Whole Lotta Love"
+title: "Whole Lotta Love"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Whole Lotta Love|
-|nashville|I,bVII|
-|tonic|E|
+|key|E|
 |chords|E,D|
+|nashville|I,bVII|
 |artist|Led Zeppelin|
-
-

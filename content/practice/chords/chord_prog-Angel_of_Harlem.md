@@ -1,5 +1,5 @@
 ---
-title: "chord prog:Angel of Harlem"
+title: "Angel of Harlem"
 tags: [chord prog]
 ---
 
@@ -7,9 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|Angel of Harlem|
-|nashville|I,IV|
-|tonic|C|
+|key|C|
 |chords|C,F|
+|nashville|I,IV|
 |artist|U2|
-
-

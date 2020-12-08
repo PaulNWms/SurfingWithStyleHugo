@@ -1,5 +1,5 @@
 ---
-title: "open chord prog:A A+ D Dm6"
+title: "A A+ D Dm6"
 tags: [open chord prog]
 ---
 
@@ -7,8 +7,6 @@ tags: [open chord prog]
 |---|---|
 |type|open chord prog|
 |name|A A+ D Dm6|
-|nashville|I,I+,IV,iv6|
-|tonic|A|
+|key|A|
 |chords|A,A+,D,Dm6|
-
-
+|nashville|I,I+,IV,iv6|

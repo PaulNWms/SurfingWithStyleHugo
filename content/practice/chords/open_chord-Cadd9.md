@@ -1,13 +1,11 @@
 ---
-title: "open chord:Cadd9"
+title: "Cadd9"
 tags: [open chord]
 ---
 
 |Cadd9|open chord|
 |---|---|
 |type|open chord|
-|root_string|5|
 |name|Cadd9|
+|root string|5|
 |fingering|X32030|
-
-
