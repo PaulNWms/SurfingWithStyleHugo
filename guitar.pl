@@ -6,9 +6,15 @@ print_open_chord_progs :- generic_format(open_chord_prog, [_, _, _, _], format_o
 format_chord_prog(CP) :- get_filename('chord_prog', CP, FileName),
                          format('FileName: ~w~n', FileName),
                          format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~nArtist: ~w~n~n', CP).
-format_moveable_chord(MC) :- format('Name: ~w~nRoot String: ~w~nFingering: ~w~nScale Pattern: ~w~n~n', MC).
-format_open_chord(OC) :- format('Name: ~w~nRoot String: ~w~nFingering: ~w~n~n', OC).
-format_open_chord_prog(OCP) :- format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~n~n', OCP).
+format_moveable_chord(MC) :- get_filename('moveable_chord', MC, FileName),
+                             format('FileName: ~w~n', FileName),
+                             format('Name: ~w~nRoot String: ~w~nFingering: ~w~nScale Pattern: ~w~n~n', MC).
+format_open_chord(OC) :- get_filename('open_chord', OC, FileName),
+                         format('FileName: ~w~n', FileName),
+                         format('Name: ~w~nRoot String: ~w~nFingering: ~w~n~n', OC).
+format_open_chord_prog(OCP) :- get_filename('open_chord_prog', OCP, FileName),
+                               format('FileName: ~w~n', FileName),
+                               format('Name: ~w~nKey: ~w~nProgression: ~w~nNashville: ~w~n~n', OCP).
 
 get_filename(Prefix, CP, FileName) :- head(CP, FN),
                                       replace_char(" ", "_", FN, FN_),
