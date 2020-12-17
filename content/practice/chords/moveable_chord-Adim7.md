@@ -8,5 +8,5 @@ tags: [moveable chord]
 |type|moveable chord|
 |name|Adim7|
 |root string|6|
-|fingering|5X554X|
+|fingering|5X454X|
 |scale pattern|I|

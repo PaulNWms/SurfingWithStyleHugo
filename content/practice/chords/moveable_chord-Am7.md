@@ -8,5 +8,5 @@ tags: [moveable chord]
 |type|moveable chord|
 |name|Am7|
 |root string|6|
-|fingering|undefined|
+|fingering|5X5555|
 |scale pattern|I|

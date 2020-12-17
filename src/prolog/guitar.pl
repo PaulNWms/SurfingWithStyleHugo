@@ -134,9 +134,9 @@ moveable_chord('A6/9','6','5X445X','II').
 moveable_chord('A7#5','6','5X566X','II').
 moveable_chord('A7','6','5X565X','II').
 moveable_chord('AMaj7','6','5X665X','II').
-moveable_chord('Adim7','6','5X554X','I').
+moveable_chord('Adim7','6','5X454X','I').
 moveable_chord('Am','6','5XX555','I').
-moveable_chord('Am7','6','undefined','I').
+moveable_chord('Am7','6','5X5555','I').
 moveable_chord('Am7b5','6','5X554X','I').
 moveable_chord('D','5','X5777X','V').
 moveable_chord('D6/9','5','X5445X','V').
