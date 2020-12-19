@@ -11,11 +11,26 @@ main :-
 main :-
     halt(1).
 
+save_chord_progs :- generic_format(chord_prog, [_, _], save_chord_prog).
 save_chord_progs :- generic_format(chord_prog, [_, _, _, _, _], save_chord_prog).
 save_moveable_chords :- generic_format(moveable_chord, [_, _, _, _], save_moveable_chord).
 save_open_chords :- generic_format(open_chord, [_, _, _], save_open_chord).
 save_open_chord_progs :- generic_format(open_chord_prog, [_, _, _, _], save_open_chord_prog).
 
+save_chord_prog(CP) :- [Name, Chords] = CP,
+                       get_filename('chord_prog', Name, FileName),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('tags: [chord prog]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|chord prog|~n', Name),
+  format('|---|---|~n'),
+  format('|type|chord prog|~n'),
+  format('|name|~w|~n', Name),
+  format('|chords|~w|~n', Chords),
+  told.
 save_chord_prog(CP) :- [Name, Key, Chords, Nashville, Artist] = CP,
                        get_filename('chord_prog', Name, FileName),
   tell(FileName),
@@ -100,6 +115,8 @@ replace_char(Original, Replacement, String, Result) :-
 	replace_item(OC, RC, SCs, ResultCodes),
 	atom_codes(Result, ResultCodes).
 
+chord_prog('5th string root chords', 'D,DMaj7,D7,D7#9,D9,D7b9,D6/9,Dm,Dm7,Dm7b5,Ddim7').
+chord_prog('6th string root chords', 'A,AMaj7,A7,A13,A7#5,A6,A6/9,Am,Am7,Am7b5,Adim7').
 chord_prog('All Along The Watchtower','Bm','Bm,A,G,A','i,bVII,bVI,bVII','Jimi Hendrix').
 chord_prog('Angel of Harlem','C','C,F','I,IV','U2').
 chord_prog('Another Brick In The Wall','F','Fm,Bb','i,IV','Pink Floyd').
@@ -140,6 +157,7 @@ moveable_chord('Am7','6','5X5555','I').
 moveable_chord('Am7b5','6','5X554X','I').
 moveable_chord('D','5','X5777X','V').
 moveable_chord('D6/9','5','X5445X','V').
+moveable_chord('D7#9','5','X5456X','undefined').
 moveable_chord('D7','5','X5757X','V').
 moveable_chord('D7b9','5','X5454X','undefined').
 moveable_chord('D9','5','X5455X','V').
@@ -161,6 +179,8 @@ open_chord('Am6','5','X02212').
 open_chord('Am7','5','X02010').
 open_chord('Asus','5','X02230').
 open_chord('B7','5','X21202').
+open_chord('Bm7','5','X20202').
+open_chord('Bm7b5','5','X20201').
 open_chord('Bbdim','5','X12020').
 open_chord('C','5','X32010').
 open_chord('C6','5','X32210').
@@ -175,12 +195,12 @@ open_chord('D7','4','XX0212').
 open_chord('D7sus','4','XX0213').
 open_chord('D9','4','XX0210').
 open_chord('Dadd9','4','XX0230').
+open_chord('Ddim','4','XX0101').
 open_chord('Dm','4','XX0231').
 open_chord('Dm6','4','XX0201').
 open_chord('Dm7','4','XX0211').
 open_chord('Dmaj7','4','XX0222').
 open_chord('Dsus','4','XX0233').
-open_chord('Ddim','4','XX0101').
 open_chord('E','6','022100').
 open_chord('E+','6','032110').
 open_chord('E6','6','022120').
