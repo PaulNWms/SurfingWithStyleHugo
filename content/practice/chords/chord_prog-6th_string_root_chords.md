@@ -7,4 +7,7 @@ tags: [chord prog]
 |---|---|
 |type|chord prog|
 |name|6th string root chords|
+|key|A|
 |chords|A,AMaj7,A7,A13,A7#5,A6,A6/9,Am,Am7,Am7b5,Adim7|
+|nashville|I|
+|artist||

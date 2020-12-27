@@ -11,26 +11,11 @@ main :-
 main :-
     halt(1).
 
-save_chord_progs :- generic_format(chord_prog, [_, _], save_chord_prog).
 save_chord_progs :- generic_format(chord_prog, [_, _, _, _, _], save_chord_prog).
 save_moveable_chords :- generic_format(moveable_chord, [_, _, _, _], save_moveable_chord).
 save_open_chords :- generic_format(open_chord, [_, _, _], save_open_chord).
 save_open_chord_progs :- generic_format(open_chord_prog, [_, _, _, _], save_open_chord_prog).
 
-save_chord_prog(CP) :- [Name, Chords] = CP,
-                       get_filename('chord_prog', Name, FileName),
-  tell(FileName),
-  format('---~n'),
-  format('title: "~w"~n', Name),
-  format('tags: [chord prog]~n'),
-  format('---~n'),
-  nl,
-  format('|~w|chord prog|~n', Name),
-  format('|---|---|~n'),
-  format('|type|chord prog|~n'),
-  format('|name|~w|~n', Name),
-  format('|chords|~w|~n', Chords),
-  told.
 save_chord_prog(CP) :- [Name, Key, Chords, Nashville, Artist] = CP,
                        get_filename('chord_prog', Name, FileName),
   tell(FileName),
@@ -115,13 +100,18 @@ replace_char(Original, Replacement, String, Result) :-
 	replace_item(OC, RC, SCs, ResultCodes),
 	atom_codes(Result, ResultCodes).
 
-chord_prog('5th string root chords', 'D,DMaj7,D7,D7#9,D9,D7b9,D6/9,Dm,Dm7,Dm7b5,Ddim7').
-chord_prog('6th string root chords', 'A,AMaj7,A7,A13,A7#5,A6,A6/9,Am,Am7,Am7b5,Adim7').
+chord_prog('5th string root chords','D','D,DMaj7,D7,D7#9,D9,D7b9,D6/9,Dm,Dm7,Dm7b5,Ddim7','I','').
+chord_prog('6th string root chords','A','A,AMaj7,A7,A13,A7#5,A6,A6/9,Am,Am7,Am7b5,Adim7','I','').
+
 chord_prog('All Along The Watchtower','Bm','Bm,A,G,A','i,bVII,bVI,bVII','Jimi Hendrix').
 chord_prog('Angel of Harlem','C','C,F','I,IV','U2').
 chord_prog('Another Brick In The Wall','F','Fm,Bb','i,IV','Pink Floyd').
 chord_prog('Another Girl','Ab','Ab,Gb,Ab,Db','I,bVII,I,IV','The Beatles').
+chord_prog('Apache pt. 1','Am','Am,D,Dm,G','i,IV,iv,VII','The Shadows').
+chord_prog('Apache pt. 2','Am','F,Am','VI,i','The Shadows').
+chord_prog('Apache pt. 3','C','F,G,C,Am,F,G,C,C7','IV,V,I,vi,IV,V,I,V7/IV','The Shadows').
 chord_prog('Back In The USSR','A','A,C,D','I,bIII,IV','The Beatles').
+chord_prog('Bansai Pipeline','Bbm','Bb,Db,C,Bb,F7','i,III,ii,i,V7','The Astronauts').
 chord_prog('Born On The Bayou','E','D,A,E7','bVII,IV,I','Creedence Clearwater Revival').
 chord_prog('Creep','G','G,Bb,C,Cm','I,III,IV,iv','Radiohead').
 chord_prog('Desire','E','D,A,E','bVII,IV,I','U2').
@@ -144,6 +134,7 @@ chord_prog('Spirits In The Material World','A','Am,G,Em','i,bVII,v','Police').
 chord_prog('Tomorrow Never Knows','C','C,Bb','I,bVII','The Beatles').
 chord_prog('Whole Lotta Love','E','E,D','I,bVII','Led Zeppelin').
 chord_prog('With Or Without You','D','D,A,Bm,G','I,V,vi,IV','U2').
+
 moveable_chord('A','6','5X765X','II').
 moveable_chord('A13','6','5X567X','II').
 moveable_chord('A6','6','5X465X','II').
@@ -166,6 +157,7 @@ moveable_chord('Ddim7','5','X5646X','IV').
 moveable_chord('Dm','5','X57765','IV').
 moveable_chord('Dm7','5','X57565','IV').
 moveable_chord('Dm7b5','5','X5656X','undefined').
+
 open_chord('A','5','X02220').
 open_chord('A+','5','X03221').
 open_chord('A6','5','X02222').
@@ -179,9 +171,9 @@ open_chord('Am6','5','X02212').
 open_chord('Am7','5','X02010').
 open_chord('Asus','5','X02230').
 open_chord('B7','5','X21202').
+open_chord('Bbdim','5','X12020').
 open_chord('Bm7','5','X20202').
 open_chord('Bm7b5','5','X20201').
-open_chord('Bbdim','5','X12020').
 open_chord('C','5','X32010').
 open_chord('C6','5','X32210').
 open_chord('C7','5','X32310').
@@ -223,6 +215,7 @@ open_chord('G9','6','3X0201').
 open_chord('Gadd9','6','320203').
 open_chord('Gmaj7','6','320002').
 open_chord('Gsus','6','3X0013').
+
 open_chord_prog('A A+ D Dm6','A','A,A+,D,Dm6','I,I+,IV,iv6').
 open_chord_prog('A A7 D Dm','A','A,A7,D,Dm','I,V7/IV,IV,iv').
 open_chord_prog('A A7 D Dm6 E7sus E7 Em7 E7','A','A,A7,D,Dm6,E7sus,E7,Em7,E7','I,I7,IV,iv6,V7sus,V7,v7,V7').
