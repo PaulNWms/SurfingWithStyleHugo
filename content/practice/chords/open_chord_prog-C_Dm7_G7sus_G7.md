@@ -1,5 +1,6 @@
 ---
 title: "C Dm7 G7sus G7"
+date: 2021-01-10T10:14:17-0800
 tags: [open chord prog]
 ---
 

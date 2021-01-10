@@ -1,5 +1,6 @@
 ---
 title: "C G Am Em Dm E7 Am7 G7"
+date: 2021-01-10T10:14:17-0800
 tags: [open chord prog]
 ---
 

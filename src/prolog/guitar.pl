@@ -1,106 +1,4 @@
-﻿:- set_prolog_flag(verbose, silent).
-
-:- initialization main.
-
-main :-
-    save_chord_progs,
-    save_moveable_chords,
-    save_open_chords,
-    save_open_chord_progs,
-    halt.
-main :-
-    halt(1).
-
-save_chord_progs :- generic_format(chord_prog, [_, _, _, _, _], save_chord_prog).
-save_moveable_chords :- generic_format(moveable_chord, [_, _, _, _], save_moveable_chord).
-save_open_chords :- generic_format(open_chord, [_, _, _], save_open_chord).
-save_open_chord_progs :- generic_format(open_chord_prog, [_, _, _, _], save_open_chord_prog).
-
-save_chord_prog(CP) :- [Name, Key, Chords, Nashville, Artist] = CP,
-                       get_filename('chord_prog', Name, FileName),
-  tell(FileName),
-  format('---~n'),
-  format('title: "~w"~n', Name),
-  format('tags: [chord prog]~n'),
-  format('---~n'),
-  nl,
-  format('|~w|chord prog|~n', Name),
-  format('|---|---|~n'),
-  format('|type|chord prog|~n'),
-  format('|name|~w|~n', Name),
-  format('|key|~w|~n', Key),
-  format('|chords|~w|~n', Chords),
-  format('|nashville|~w|~n', Nashville),
-  format('|artist|~w|~n', Artist),
-  told.
-save_moveable_chord(MC) :- [Name, RootString, Fingering, ScalePattern] = MC,
-                           get_filename('moveable_chord', Name, FileName),
-  tell(FileName),
-  format('---~n'),
-  format('title: "~w"~n', Name),
-  format('tags: [moveable chord]~n'),
-  format('---~n'),
-  nl,
-  format('|~w|moveable chord|~n', Name),
-  format('|---|---|~n'),
-  format('|type|moveable chord|~n'),
-  format('|name|~w|~n', Name),
-  format('|root string|~w|~n', RootString),
-  format('|fingering|~w|~n', Fingering),
-  format('|scale pattern|~w|~n', ScalePattern),
-  told.
-save_open_chord(OC) :- [Name, RootString, Fingering] = OC,
-                       get_filename('open_chord', Name, FileName),
-  tell(FileName),
-  format('---~n'),
-  format('title: "~w"~n', Name),
-  format('tags: [open chord]~n'),
-  format('---~n'),
-  nl,
-  format('|~w|open chord|~n', Name),
-  format('|---|---|~n'),
-  format('|type|open chord|~n'),
-  format('|name|~w|~n', Name),
-  format('|root string|~w|~n', RootString),
-  format('|fingering|~w|~n', Fingering),
-  told.
-save_open_chord_prog(OCP) :- [Name, Key, Chords, Nashville] = OCP,
-                             get_filename('open_chord_prog', Name, FileName),
-  tell(FileName),
-  format('---~n'),
-  format('title: "~w"~n', Name),
-  format('tags: [open chord prog]~n'),
-  format('---~n'),
-  nl,
-  format('|~w|open chord prog|~n', Name),
-  format('|---|---|~n'),
-  format('|type|open chord prog|~n'),
-  format('|name|~w|~n', Name),
-  format('|key|~w|~n', Key),
-  format('|chords|~w|~n', Chords),
-  format('|nashville|~w|~n', Nashville),
-  told.
-
-get_filename(Prefix, Name, FileName) :- replace_char(" ", "_", Name, FN_1),
-                                        replace_char("/", "_", FN_1, FN_2),
-                                        format(atom(FileName), '../../content/practice/chords/~w-~w.md', [Prefix, FN_2]).
-
-generic_format(Fact, Args, Formatter) :- findall(Args, apply(Fact, Args), Facts),
-                                         maplist(Formatter, Facts).
-head([H|_], H).
-
-replace_item(_, _, [], []).
-replace_item(O, R, [O|T], [R|T2]) :- replace_item(O, R, T, T2).
-replace_item(O, R, [H|T], [H|T2]) :- dif(H,O), replace_item(O, R, T, T2).
-
-replace_char(Original, Replacement, String, Result) :-
-    atom_codes(String, SCs),
-	atom_codes(Original,OCs), head(OCs, OC),
-	atom_codes(Replacement,RCs), head(RCs, RC),
-	replace_item(OC, RC, SCs, ResultCodes),
-	atom_codes(Result, ResultCodes).
-
-chord_prog('5th string root chords','D','D,DMaj7,D7,D7#9,D9,D7b9,D6/9,Dm,Dm7,Dm7b5,Ddim7','I','').
+﻿chord_prog('5th string root chords','D','D,DMaj7,D7,D7#9,D9,D7b9,D6/9,Dm,Dm7,Dm7b5,Ddim7','I','').
 chord_prog('6th string root chords','A','A,AMaj7,A7,A13,A7#5,A6,A6/9,Am,Am7,Am7b5,Adim7','I','').
 
 chord_prog('All Along The Watchtower','Bm','Bm,A,G,A','i,bVII,bVI,bVII','Jimi Hendrix').
@@ -272,3 +170,122 @@ open_chord_prog('G E7 A7 D7','G','G,E7,A7,D7','I,V7/ii,V7/V,V7').
 open_chord_prog('G Em Am D7','G','G,Em,Am,D7','I,vi,ii,V7').
 open_chord_prog('G G+ E7sus E7','G','G,G+,E7sus,E7','I,I+,VI7sus,VI7').
 open_chord_prog('Gadd9 Eadd9 Aadd9 Dadd9','G','Gadd9,Eadd9,Aadd9,Dadd9','Iadd9,Vadd9/ii,Vadd9/V,Vadd9').
+
+%-----------------------------------------------------------------------
+
+:- set_prolog_flag(verbose, silent).
+
+:- initialization main.
+
+main :-
+  set_timestamp,
+  save_chord_progs,
+  save_moveable_chords,
+  save_open_chords,
+  save_open_chord_progs,
+  halt.
+main :-
+  halt(1).
+
+set_timestamp :-
+  get_time(Stamp),
+  stamp_date_time(Stamp, DateTime, local),
+  format_time(atom(Now), '%FT%T%z', DateTime, posix),
+  asserta(timestamp(Now)).
+
+save_chord_progs :- generic_format(chord_prog, [_, _, _, _, _], save_chord_prog).
+save_moveable_chords :- generic_format(moveable_chord, [_, _, _, _], save_moveable_chord).
+save_open_chords :- generic_format(open_chord, [_, _, _], save_open_chord).
+save_open_chord_progs :- generic_format(open_chord_prog, [_, _, _, _], save_open_chord_prog).
+
+save_chord_prog(CP) :- [Name, Key, Chords, Nashville, Artist] = CP,
+                       get_filename('chord_prog', Name, FileName),
+  timestamp(Now),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('date: ~w~n', Now),
+  format('tags: [chord prog]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|chord prog|~n', Name),
+  format('|---|---|~n'),
+  format('|type|chord prog|~n'),
+  format('|name|~w|~n', Name),
+  format('|key|~w|~n', Key),
+  format('|chords|~w|~n', Chords),
+  format('|nashville|~w|~n', Nashville),
+  format('|artist|~w|~n', Artist),
+  told.
+save_moveable_chord(MC) :- [Name, RootString, Fingering, ScalePattern] = MC,
+                           get_filename('moveable_chord', Name, FileName),
+  timestamp(Now),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('date: ~w~n', Now),
+  format('tags: [moveable chord]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|moveable chord|~n', Name),
+  format('|---|---|~n'),
+  format('|type|moveable chord|~n'),
+  format('|name|~w|~n', Name),
+  format('|root string|~w|~n', RootString),
+  format('|fingering|~w|~n', Fingering),
+  format('|scale pattern|~w|~n', ScalePattern),
+  told.
+save_open_chord(OC) :- [Name, RootString, Fingering] = OC,
+                       get_filename('open_chord', Name, FileName),
+  timestamp(Now),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('date: ~w~n', Now),
+  format('tags: [open chord]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|open chord|~n', Name),
+  format('|---|---|~n'),
+  format('|type|open chord|~n'),
+  format('|name|~w|~n', Name),
+  format('|root string|~w|~n', RootString),
+  format('|fingering|~w|~n', Fingering),
+  told.
+save_open_chord_prog(OCP) :- [Name, Key, Chords, Nashville] = OCP,
+                             get_filename('open_chord_prog', Name, FileName),
+  timestamp(Now),
+  tell(FileName),
+  format('---~n'),
+  format('title: "~w"~n', Name),
+  format('date: ~w~n', Now),
+  format('tags: [open chord prog]~n'),
+  format('---~n'),
+  nl,
+  format('|~w|open chord prog|~n', Name),
+  format('|---|---|~n'),
+  format('|type|open chord prog|~n'),
+  format('|name|~w|~n', Name),
+  format('|key|~w|~n', Key),
+  format('|chords|~w|~n', Chords),
+  format('|nashville|~w|~n', Nashville),
+  told.
+
+get_filename(Prefix, Name, FileName) :- replace_char(" ", "_", Name, FN_1),
+                                        replace_char("/", "_", FN_1, FN_2),
+                                        format(atom(FileName), '../../content/practice/chords/~w-~w.md', [Prefix, FN_2]).
+
+generic_format(Fact, Args, Formatter) :- findall(Args, apply(Fact, Args), Facts),
+                                         maplist(Formatter, Facts).
+head([H|_], H).
+
+replace_item(_, _, [], []).
+replace_item(O, R, [O|T], [R|T2]) :- replace_item(O, R, T, T2).
+replace_item(O, R, [H|T], [H|T2]) :- dif(H,O), replace_item(O, R, T, T2).
+
+replace_char(Original, Replacement, String, Result) :-
+  atom_codes(String, SCs),
+	atom_codes(Original,OCs), head(OCs, OC),
+	atom_codes(Replacement,RCs), head(RCs, RC),
+	replace_item(OC, RC, SCs, ResultCodes),
+	atom_codes(Result, ResultCodes).
