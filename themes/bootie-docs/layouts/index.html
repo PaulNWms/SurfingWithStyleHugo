@@ -5,9 +5,9 @@
 
 <div class="row">
 	<!-- Main jumbotron for a primary marketing message or call to action -->
-	<div class="jumbotron">
-		<h1>{{ .Site.Title }}</h1>
-		<p>{{ with .Site.Params.description }}{{ . }}{{ else }}You can customize this text by params "description" in your <code>config.toml</code>.{{ end }}</p>
+	<div class="jumbotron offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+		<h1 class="text-center">{{ .Site.Title }}</h1>
+		<p class="text-center">{{ with .Site.Params.description }}{{ . }}{{ else }}You can customize this text by params "description" in your <code>config.toml</code>.{{ end }}</p>
 	</div>
 </div>
 
