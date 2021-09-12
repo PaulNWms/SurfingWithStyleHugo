@@ -1,4 +1,3 @@
-import $ from "jquery";
 import moment from 'moment';
 import { Binding } from './lib/binding'
 

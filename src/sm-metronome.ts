@@ -1,17 +1,17 @@
-﻿import { AnimationName, AnimationPlayState } from "./scheduled-metronome-globals";
+﻿import { MIN_TEMPO, AnimationName, AnimationPlayState, MetronomeState } from "./sm-globals";
 
-class MiniMetronome {
-    public static MIN_TEMPO: number = 20;
-    public static MAX_TEMPO: number = 240;
-
+class ScheduledMetronome {
     private _tempo: number = 120;
     private pendulumElement: HTMLDivElement = $(".pendulum-parent")[0] as HTMLDivElement;
     private tempoDisplayElement: HTMLElement = $(".display")[0] as HTMLElement
+
+    public state: MetronomeState = MetronomeState.Stopped;
+
     public get tempo(): number { return this._tempo; }
     public set tempo(value: number) {
         this._tempo = value;
 
-        if (this._tempo < MiniMetronome.MIN_TEMPO) {
+        if (this._tempo < MIN_TEMPO) {
             this.isRunning = false;
         }
         else {
@@ -30,7 +30,7 @@ class MiniMetronome {
     public set isRunning(value: boolean) {
         if (value !== this._isRunning) {
             this._isRunning = value;
-            if (this.tempo < MiniMetronome.MIN_TEMPO) { this._isRunning = false; }
+            if (this.tempo < MIN_TEMPO) { this._isRunning = false; }
             this.setAnimation();
         }
     }
@@ -76,8 +76,8 @@ class MiniMetronome {
         this.pendulumElement.style.animationDirection = this.animationDirection;
         this.pendulumElement.style.animationName = AnimationName[this.animationName];
         this.pendulumElement.style.animationPlayState = AnimationPlayState[this.animationPlayState];
-        console.log(this.pendulumElement.style);
+        //console.log(this.pendulumElement.style);
     }
 }
 
-export { MiniMetronome };
+export { ScheduledMetronome };

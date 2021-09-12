@@ -1,7 +1,6 @@
-﻿import $ from "jquery";
-import moment from "moment";
+﻿import moment from "moment";
 import { Action } from "./lib/binding";
-import { ui } from "./scheduled-metronome-globals";
+import { ui } from "./sm-globals";
 
 class EggTimer {
     public timeRemaining: moment.Duration = moment.duration(2, "minutes");

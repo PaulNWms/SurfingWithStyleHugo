@@ -1,55 +1,61 @@
-import { ui, exerciseMarkupElement, MetronomeState, AnimationName, AnimationPlayState } from "./sm-globals";
-import { ScheduledMetronome } from "./sm-metronome";
-import { Schedule } from "./sm-schedule";
+import { ui, exerciseMarkupElement, MetronomeState } from "./sm-globals";
+import { AcceleratingMetronome } from "./am-metronome";
+import { AcceleratingSchedule } from "./am-schedule";
 import { EggTimer } from "./egg-timer";
+import { Click } from "./click";
 
-let schedule: Schedule;
+const INTERRUPT_INTERVAL: string = "10ms"
+let schedule: AcceleratingSchedule;
 let eggTimer: EggTimer;
 
-function registerScheduled(metronome: ScheduledMetronome, selector: string) {
-    let direction = 1;
-    let element = $(".pendulum-parent")
+
+function registerScheduled(metronome: AcceleratingMetronome, selector: string) {
+    metronome.direction = 1;
+    let element = $(".interrupt-timer");
     let audio: HTMLAudioElement = $(selector)[0] as HTMLAudioElement;
-    element.on("animationstart", () => {
-        if (metronome.isRunning) {
-            audio.play().then(() => {
-                direction = 1;
-            });
-        }
-    });
+    let then: number = Date.now();
+    element[0].style.animationDuration = INTERRUPT_INTERVAL;
     element.on("animationiteration", () => {
         switch (metronome.state) {
             case MetronomeState.Starting:
-                direction = 1;
-                metronome.animationName = AnimationName.running;
-                metronome.state = MetronomeState.Running;
-                metronome.setStyle();
-                break;
-            case MetronomeState.Running:
                 audio.play().then(() => {
-                    direction = (direction + 1) % 2;
+                    let now = Date.now();
+                    then = now + schedule.GetClick().durationMS;
+                    console.log(`now: ${now.toString()} then: ${then.toString()}`);
+                    metronome.direction = 1;
+                    metronome.state = MetronomeState.Running;
                 });
                 break;
+            case MetronomeState.Running:
+                {
+                    let now = Date.now();
+                    if (now >= then) {
+                        audio.play().then(() => {
+                            let click: Click = schedule.GetClick();
+                            then = Date.now() + click.durationMS;
+                            metronome.tempo = click.tempo;
+                            metronome.durationMS = click.durationMS;
+                            metronome.direction = (metronome.direction + 1) % 2;
+                            metronome.state = MetronomeState.Running;
+                        });
+                    }
+                }
+                break;
             case MetronomeState.MakeItStop:
-                if (direction) {
-                    metronome.animationName = AnimationName.stopping_rl;
+                if (metronome.direction) {
                     metronome.state = MetronomeState.StoppingRL;
                 } else {
-                    metronome.animationName = AnimationName.stopping_lr
                     metronome.state = MetronomeState.StoppingLR;
                 }
-                metronome.setStyle();
+                // metronome.setStyle();
                 break;
             case MetronomeState.StoppingLR:
             case MetronomeState.StoppingRL:
             case MetronomeState.Stopped:
-                metronome.animationName = AnimationName.stopped;
-                metronome.animationPlayState = AnimationPlayState.paused;
+                // metronome.animationName = AnimationName.stopped;
+                // metronome.animationPlayState = AnimationPlayState.paused;
                 metronome.state = MetronomeState.Stopped;
-                metronome.setStyle();
-                break;
-            default:
-                console.log("data-metronome-state invalid");
+                // metronome.setStyle();
                 break;
         }
     });
@@ -82,12 +88,13 @@ function registerFormRowListener(html) {
 $(document).ready(function () {
     let w = window as any;
     eggTimer = new EggTimer();
-    schedule = new Schedule(eggTimer);
+    schedule = new AcceleratingSchedule(eggTimer);
+    schedule.metronome = new AcceleratingMetronome();
     eggTimer.initialize(() => { schedule.update(); }, () => { schedule.lineCompleted(); });
 
     w.onPlayPause = () => { schedule.onPlayPause(); };
     w.createLink = () => { schedule.createLink(); };
 
-    registerScheduled(schedule.metronome as ScheduledMetronome, ".audio-click");
+    registerScheduled(schedule.metronome, ".audio-click");
     registerFormRowListener(exerciseMarkupElement);
 });

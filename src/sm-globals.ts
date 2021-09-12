@@ -1,5 +1,8 @@
 import { Binding } from "./lib/binding";
 
+const MIN_TEMPO: number = 20;
+const MAX_TEMPO: number = 240;
+
 enum AnimationPlayState { running, paused }
 
 enum MetronomeState { Starting, Running, MakeItStop, StoppingLR, StoppingRL, Stopped }
@@ -40,8 +43,8 @@ new Binding({ object: ui, property: "timerDisplay" }).addBinding(timerDisplayEle
 let exerciseMarkupElement: HTMLElement = $(".exercise-markup")[0] as HTMLElement
 new Binding({ object: ui, property: "exerciseMarkup" }).addBinding(exerciseMarkupElement, "innerHTML");
 
-let pendulumElement: HTMLDivElement = $(".pendulum-parent")[0] as HTMLDivElement;
-new Binding({ object: ui, property: "metronomeState" }).addBinding(pendulumElement, "data-metronome-state");
+let stateElement: HTMLDivElement = $(".jumbotron")[0] as HTMLDivElement;
+new Binding({ object: ui, property: "metronomeState" }).addBinding(stateElement, "data-metronome-state");
 
 let restElement: HTMLInputElement = $(".rest")[0] as HTMLInputElement
 new Binding({ object: ui, property: "rest" }).addBinding(restElement, "value");
@@ -49,4 +52,8 @@ new Binding({ object: ui, property: "rest" }).addBinding(restElement, "value");
 let startWithRestElement: HTMLInputElement = $(".start-with-rest")[0] as HTMLInputElement
 new Binding({ object: ui, property: "startWithRest" }).addBinding(startWithRestElement, "checked");
 
-export { AnimationPlayState, MetronomeState, ScheduleState, AnimationName, ui, exerciseMarkupElement }
+export {
+    MIN_TEMPO, MAX_TEMPO,
+    AnimationPlayState, MetronomeState, ScheduleState, AnimationName,
+    ui, exerciseMarkupElement
+}

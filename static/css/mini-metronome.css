@@ -105,3 +105,14 @@
         padding-right: 0.3em;
         width:3.5em;margin-top:0.2em;margin-right:0.2em;padding-left:0.5em;padding-right:0.5em
     }
+
+    .mini-metronome .interrupt-timer {
+        animation-name: timer_interval;
+        animation-duration: 10ms;
+        animation-timing-function: step-end;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: none;
+        animation-play-state: running;
+    }

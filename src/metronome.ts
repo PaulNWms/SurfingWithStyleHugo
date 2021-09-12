@@ -1,4 +1,3 @@
-import $ from "jquery";
 import { Binding } from "./lib/binding";
 
 enum TimerState { Running, Paused };

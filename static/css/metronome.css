@@ -112,6 +112,11 @@
     }
 }
 
+@keyframes timer_interval {
+    0% { top: 0; }
+    100% { top: 0; }
+}
+
 @media (max-width: 767px) {
     .metronome {
         width: 50px;

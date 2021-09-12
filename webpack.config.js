@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
+        acceleratingMetronome: './src/accelerating-metronome.ts',
         calculator: './src/calculator.ts',
         flashcards: './src/flashcards.ts',
         metronome: './src/metronome.ts',
