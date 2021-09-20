@@ -1,4 +1,3 @@
-import moment from 'moment';
 import { Binding } from './lib/binding'
 
 enum TimerState { Stopped, Running, Paused };
@@ -19,8 +18,8 @@ let formattedDurationElement: HTMLInputElement = $("#formatted-duration")[0] as 
 new Binding({ object: ui, property: "formattedDuration" }).addBinding(formattedDurationElement, "value", "blur");
 
 let timerStatus: TimerState = TimerState.Stopped;
-let timeRemaining: moment.Duration = moment.duration(25, "minutes");
-let targetTime: number = moment.now();
+let timeRemainingMS: number = 25 * 60 * 1000;
+let targetTime: number = Date.now();
 let timer: ReturnType<typeof setInterval>;
 
 function min1() { usePreset("1-minute-timer", 1); }
@@ -49,43 +48,54 @@ function updateButton(state: TimerState) {
     }
 }
 
-function roundAndTrimDuration(span: moment.Duration): string {
-    const factor: number = 1000;
-    let boundedTicks: number = Math.max(span.asMilliseconds(), 0);
-    let roundedTicks: number = Math.round(boundedTicks / factor) * factor;
-    let roundedTimeSpan: moment.Duration = moment.duration(roundedTicks, "ms");
-    let str: string = moment.utc(roundedTimeSpan.asMilliseconds()).format("HH:mm:ss");
-    let i: number = 0;
-
-    for (i = 0; i < str.length - 4; i++) {
-        if (str[i] != '0' && str[i] != ':')
-            break;
-    }
-
-    return str.substring(i);
+function roundAndTrimDuration(spanMS: number): string {
+    let boundedTicks: number = Math.max(spanMS, 0);
+    let nonPaddedIntl = Intl.NumberFormat('en-us', { minimumIntegerDigits: 1 });
+    let paddedIntl = Intl.NumberFormat('en-us', { minimumIntegerDigits: 2 })
+    
+    let [delimiter] = ':';
+    let duration = Math.round(boundedTicks / 1000);
+    let hours = Math.floor(duration / 3600);
+    let minutes = Math.floor(duration / 60) % 60;
+    let seconds = duration % 60;
+    let indexToPad = hours ? 0 : 1;
+    let timeFormat =
+      [hours, minutes, seconds]
+      .map((val, i) => {
+        return (val < 10 && i > indexToPad) ? paddedIntl.format(val) : nonPaddedIntl.format(val);
+      })
+      .filter((val, i) => {
+        if (i === 0) {
+            return !(val === '00' || val === '0');
+        }
+    
+        return true;
+      })
+      .join(delimiter); // 4:32
+    return timeFormat;
 }
 
 function usePreset(url: string, minutes: number) {
-    timeRemaining = moment.duration(minutes, "minutes");
+    timeRemainingMS = 60 * 1000 * minutes;
     ui.formattedDuration = minutes.toString();
-    ui.timerDisplay = roundAndTrimDuration(timeRemaining);
+    ui.timerDisplay = roundAndTrimDuration(timeRemainingMS);
     updateButton(TimerState.Stopped);
     clearInterval(timer);
 }
 
 function onTimer() {
-    timeRemaining = moment.duration(targetTime - moment.now(), "ms");
-    ui.timerDisplay = roundAndTrimDuration(timeRemaining);
+    timeRemainingMS = targetTime - Date.now();
+    ui.timerDisplay = roundAndTrimDuration(timeRemainingMS);
     setTitle(ui.timerDisplay);
 
-    if (timeRemaining.asMilliseconds() <= 0) {
+    if (timeRemainingMS <= 0) {
         timerExpired();
     }
 }
 
 function timerExpired() {
-    targetTime = moment.now();
-    timeRemaining = moment.duration(0, "ms");
+    targetTime = Date.now();
+    timeRemainingMS = 0;
     colorBody();
     playAudio(".audio-bell");
     updateButton(TimerState.Stopped);
@@ -103,15 +113,12 @@ function onStartPause() {
                 if (match !== null) {
                     hours = parseInt(match[1]);
                     minutes = parseInt(match[2]);
-                    timeRemaining = moment.duration(60 * hours + minutes, "minutes");
-                }
-                else if (Number(ui.formattedDuration) !== NaN) {
-                    timeRemaining = moment.duration(Number(ui.formattedDuration), "minutes");
+                    timeRemainingMS = 1000 * (60 * ((60 * hours) + minutes));
                 }
 
-                targetTime = (moment as any)(moment.now()).add(timeRemaining.asMilliseconds(), "ms") as number;
+                targetTime = Date.now() + timeRemainingMS;
                 uncolorBody();
-                ui.timerDisplay = roundAndTrimDuration(timeRemaining);
+                ui.timerDisplay = roundAndTrimDuration(timeRemainingMS);
                 updateButton(TimerState.Running);
                 timer = setInterval(onTimer, 1000);
             }
@@ -124,8 +131,8 @@ function onStartPause() {
             break;
 
         case TimerState.Paused:
-            if (timeRemaining.asMilliseconds() > 0) {
-                targetTime = moment.now() + timeRemaining.asMilliseconds();
+            if (timeRemainingMS > 0) {
+                targetTime = Date.now() + timeRemainingMS;
                 updateButton(TimerState.Running);
                 timer = setInterval(onTimer, 1000);
             }

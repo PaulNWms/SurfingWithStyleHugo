@@ -1,5 +1,4 @@
-﻿import moment from "moment";
-import { Click } from "./click";
+﻿import { Click } from "./click";
 
 class Exercise {
     constructor(tempo: number, duration: string, description: string, tempo2: number = 120, clicks: Array<Click> = []) {
@@ -46,7 +45,7 @@ class Exercise {
 
     public CalculateClicks() {
         this.clicks = new Array<Click>();
-        let plateauMS: number = moment.duration(3, "seconds").asMilliseconds();
+        let plateauMS: number = 3000;
         // EggTimer.TimeRemaining is updated on timer callback, more accurate to recalculate
         let exerciseDurationMS: number = 1000*this.durationSec;
         let timeRemainingMS: number = exerciseDurationMS

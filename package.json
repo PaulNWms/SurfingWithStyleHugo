@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "moment": ">=2.24.0"
   },
   "devDependencies": {
     "@types/jquery": ">=3.3.31",

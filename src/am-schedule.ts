@@ -1,5 +1,4 @@
-﻿import moment from "moment";
-import { MIN_TEMPO, MetronomeState, ScheduleState, ui } from "./sm-globals";
+﻿import { MIN_TEMPO, MetronomeState, ScheduleState, ui } from "./sm-globals";
 import { Exercise } from "./exercise";
 import { EggTimer } from "./egg-timer";
 import { AcceleratingMetronome } from "./am-metronome";
@@ -96,7 +95,7 @@ class AcceleratingSchedule {
                 this.metronome.tempo = this.currentStep.tempo;
                 ui.tempoDisplay = this.metronome.tempoDisplay;
                 this.metronome.isRunning = this.metronome.tempo >= MIN_TEMPO;
-                this.eggTimer.timeRemaining = moment.duration(this.currentStep.durationSec, "seconds");
+                this.eggTimer.timeRemainingMS = 1000 * this.currentStep.durationSec;
                 this.eggTimer.isRunning = true;
                 this.status = ScheduleState.Running;
 

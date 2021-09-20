@@ -1,10 +1,9 @@
-﻿import moment from "moment";
-import { Action } from "./lib/binding";
+﻿import { Action } from "./lib/binding";
 import { ui } from "./sm-globals";
 
 class EggTimer {
-    public timeRemaining: moment.Duration = moment.duration(2, "minutes");
-    public targetTime: number = moment.now();
+    public timeRemainingMS: number = 2 * 60 * 1000;
+    public targetTime: number = Date.now();
     public timerDisplay: string = "2:00";
 
     public stateHasChanged: Action = () => { };
@@ -32,32 +31,43 @@ class EggTimer {
         this.onTimerExpired = onTimerExpired;
     }
 
-    private roundAndTrimDuration(span: moment.Duration): string {
-        const factor: number = 1000;
-        let boundedTicks: number = Math.max(span.asMilliseconds(), 0);
-        let roundedTicks: number = Math.round(boundedTicks / factor) * factor;
-        let roundedTimeSpan: moment.Duration = moment.duration(roundedTicks, "ms");
-        let str: string = moment.utc(roundedTimeSpan.asMilliseconds()).format("HH:mm:ss");
-        let i: number = 0;
+    private roundAndTrimDuration(spanMS: number): string {
+        let boundedTicks: number = Math.max(spanMS, 0);
+        let nonPaddedIntl = Intl.NumberFormat('en-us', { minimumIntegerDigits: 1 });
+        let paddedIntl = Intl.NumberFormat('en-us', { minimumIntegerDigits: 2 })
 
-        for (i = 0; i < str.length - 4; i++) {
-            if (str[i] != '0' && str[i] != ':')
-                break;
-        }
+        let [delimiter] = ':';
+        let duration = Math.round(boundedTicks / 1000);
+        let hours = Math.floor(duration / 3600);
+        let minutes = Math.floor(duration / 60) % 60;
+        let seconds = duration % 60;
+        let indexToPad = hours ? 0 : 1;
+        let timeFormat =
+            [hours, minutes, seconds]
+                .map((val, i) => {
+                    return (val < 10 && i > indexToPad) ? paddedIntl.format(val) : nonPaddedIntl.format(val);
+                })
+                .filter((val, i) => {
+                    if (i === 0) {
+                        return !(val === '00' || val === '0');
+                    }
 
-        return str.substring(i);
+                    return true;
+                })
+                .join(delimiter); // 4:32
+        return timeFormat;
     }
 
     private start() {
-        this.targetTime = moment.now() + this.timeRemaining.asMilliseconds();
+        this.targetTime = Date.now() + this.timeRemainingMS;
         this.uncolorBody();
-        ui.timerDisplay = this.roundAndTrimDuration(this.timeRemaining);
+        ui.timerDisplay = this.roundAndTrimDuration(this.timeRemainingMS);
         this.timer = setInterval(() => this.onTimer(), 1000);
     }
 
     public onTimer() {
-        this.timeRemaining = moment.duration(this.targetTime - moment.now(), "ms");
-        ui.timerDisplay = this.roundAndTrimDuration(this.timeRemaining);
+        this.timeRemainingMS = this.targetTime - Date.now();
+        ui.timerDisplay = this.roundAndTrimDuration(this.timeRemainingMS);
         document.title = ui.timerDisplay;
 
         if (ui.timerDisplay == "0:00") {
@@ -70,7 +80,7 @@ class EggTimer {
     private uncolorBody() { $("body").css({ "background-color": "", "color": "" }); }
 
     public timerExpired() {
-        this.targetTime = moment.now();
+        this.targetTime = Date.now();
         clearInterval(this.timer);
         this.onTimerExpired();
     }
