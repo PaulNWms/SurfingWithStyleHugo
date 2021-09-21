@@ -20,23 +20,32 @@ function registerScheduled(metronome: AcceleratingMetronome, selector: string) {
             case MetronomeState.Starting:
                 audio.play().then(() => {
                     let now = Date.now();
-                    then = now + schedule.GetClick().durationMS;
-                    console.log(`now: ${now.toString()} then: ${then.toString()}`);
-                    metronome.direction = 1;
-                    metronome.state = MetronomeState.Running;
+                    let click: Click | undefined = schedule.GetClick();
+                    if (click !== undefined) {
+                        then = now + click.durationMS;
+                        console.log(`now: ${now.toString()} then: ${then.toString()}`);
+                        metronome.direction = 1;
+                        metronome.state = MetronomeState.Running;
+                        metronome.setStyle();
+                    }
                 });
                 break;
             case MetronomeState.Running:
-                {
+                if (eggTimer.isRunning) {
                     let now = Date.now();
                     if (now >= then) {
                         audio.play().then(() => {
-                            let click: Click = schedule.GetClick();
-                            then = Date.now() + click.durationMS;
-                            metronome.tempo = click.tempo;
-                            metronome.durationMS = click.durationMS;
-                            metronome.direction = (metronome.direction + 1) % 2;
-                            metronome.state = MetronomeState.Running;
+                            let click: Click | undefined = schedule.GetClick();
+                            if (click === undefined) {
+                                metronome.state = MetronomeState.MakeItStop;
+                            } else {
+                                then = Date.now() + click.durationMS;
+                                metronome.tempo = click.tempo;
+                                metronome.durationMS = click.durationMS;
+                                metronome.direction = (metronome.direction + 1) % 2;
+                                metronome.state = MetronomeState.Running;
+                                metronome.setStyle();
+                            }
                         });
                     }
                 }
@@ -47,7 +56,7 @@ function registerScheduled(metronome: AcceleratingMetronome, selector: string) {
                 } else {
                     metronome.state = MetronomeState.StoppingLR;
                 }
-                // metronome.setStyle();
+                metronome.setStyle();
                 break;
             case MetronomeState.StoppingLR:
             case MetronomeState.StoppingRL:
@@ -55,7 +64,7 @@ function registerScheduled(metronome: AcceleratingMetronome, selector: string) {
                 // metronome.animationName = AnimationName.stopped;
                 // metronome.animationPlayState = AnimationPlayState.paused;
                 metronome.state = MetronomeState.Stopped;
-                // metronome.setStyle();
+                metronome.setStyle();
                 break;
         }
     });

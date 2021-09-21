@@ -4,6 +4,7 @@ class AcceleratingMetronome {
     public static MAX_TEMPO: number = 240;
 
     private _tempo: number = 120;
+    private pendulumElement: HTMLDivElement = $(".pendulum-parent")[0] as HTMLDivElement;
     private tempoDisplayElement: HTMLElement = $(".display")[0] as HTMLElement
 
     public direction: number = 1;
@@ -38,6 +39,17 @@ class AcceleratingMetronome {
     public get durationString(): string { return this._durationMS.toString() + "ms"; }
     public set durationMS(value: number) {
         this._durationMS = value;
+    }
+
+    public setStyle() {
+        if (this.isRunning) {
+            let degrees = -40 * (2 * this.direction - 1);
+            this.pendulumElement.style.transform = `rotate(${degrees}deg)`
+        }
+        else {
+            this.pendulumElement.style.transform = "rotate(0deg)"
+        }
+        console.log(this.pendulumElement.style.transform);
     }
 }
 

@@ -26,12 +26,10 @@ class AcceleratingSchedule {
         ui.exerciseMarkup = this.toHtml();
     }
 
-    public GetClick(): Click {
+    public GetClick(): Click | undefined {
         let cs: Exercise = this.currentStep as Exercise;
-        if (cs === undefined || cs.clicks === undefined) { return new Click(0, 0); }
-        let click: Click | undefined = cs.clicks.shift();
-        if (click === undefined) { return new Click(0, 0); }
-        return click;
+        if (cs === undefined || cs.clicks === undefined) { return undefined; }
+        return cs.clicks.shift();
     }
 
     public onPlayPause() {
