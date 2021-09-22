@@ -41,7 +41,13 @@ class AcceleratingMetronome {
         this._durationMS = value;
     }
 
+    constructor() {
+        this.pendulumElement.style.transitionProperty = "all";
+        this.pendulumElement.style.transitionTimingFunction = "ease-in-out";
+    }
+
     public setStyle() {
+        this.pendulumElement.style.transitionDuration = `${this.durationString}`;
         if (this.isRunning) {
             let degrees = -40 * (2 * this.direction - 1);
             this.pendulumElement.style.transform = `rotate(${degrees}deg)`
@@ -49,7 +55,7 @@ class AcceleratingMetronome {
         else {
             this.pendulumElement.style.transform = "rotate(0deg)"
         }
-        console.log(this.pendulumElement.style.transform);
+        //console.log(this.pendulumElement.style.transform);
     }
 }
 

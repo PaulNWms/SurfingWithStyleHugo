@@ -48,9 +48,6 @@ function registerScheduled(metronome: ScheduledMetronome, selector: string) {
                 metronome.state = MetronomeState.Stopped;
                 metronome.setStyle();
                 break;
-            default:
-                console.log("data-metronome-state invalid");
-                break;
         }
     });
 }

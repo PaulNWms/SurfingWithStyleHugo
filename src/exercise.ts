@@ -77,12 +77,12 @@ class Exercise {
             
             let durationMS: number = Math.round(60000 / tempo);
             let click: Click = new Click(Math.round(tempo), durationMS);
-            console.log("click tempo: " + click.tempo + "durationMS: " + click.durationMS);
+            //console.log("click tempo: " + click.tempo + "durationMS: " + click.durationMS);
             this.clicks.push(click);
             timeRemainingMS -= durationMS;
         }
 
-        console.log("clicks: " + this.clicks.length);
+        //console.log("clicks: " + this.clicks.length);
     }
 }
 

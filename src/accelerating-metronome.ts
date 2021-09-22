@@ -23,7 +23,8 @@ function registerScheduled(metronome: AcceleratingMetronome, selector: string) {
                     let click: Click | undefined = schedule.GetClick();
                     if (click !== undefined) {
                         then = now + click.durationMS;
-                        console.log(`now: ${now.toString()} then: ${then.toString()}`);
+                        metronome.tempo = click.tempo;
+                        metronome.durationMS = click.durationMS;
                         metronome.direction = 1;
                         metronome.state = MetronomeState.Running;
                         metronome.setStyle();
