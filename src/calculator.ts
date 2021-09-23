@@ -83,8 +83,10 @@ function parseAndFormat(c: string) {
         display.value += c;
     }
 
-    value = parseFloat(display.value);
-    display.value = value.toString();
+    if (c !== '0') {
+        value = parseFloat(display.value);
+        display.value = value.toString();
+    }
 
     if (c === '.') {
         let isInteger: boolean = ((value % 1) === 0);
