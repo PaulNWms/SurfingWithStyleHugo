@@ -83,8 +83,11 @@ function parseAndFormat(c: string) {
         display.value += c;
     }
 
-    if (c !== '0') {
-        value = parseFloat(display.value);
+    value = parseFloat(display.value);
+
+    if (c === '0') {
+        if (value === 0) { display.value = "0"; }
+    } else {
         display.value = value.toString();
     }
 
