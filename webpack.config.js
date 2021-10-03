@@ -14,7 +14,6 @@ module.exports = {
         // require("jquery") is external and available
         //  on the global var jQuery
         "jquery": "jQuery",
-        "moment": "moment"
     },
     //devtool: 'inline-source-map',
     module: {

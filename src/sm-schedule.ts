@@ -344,20 +344,20 @@ class Schedule {
 const URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&t={4}&d={5}&e={6}";
 
 const HTML_TEMPLATE: string = `\
-    <tr>
-        <td>
+    <tr class="d-flex">
+        <td class="col-2">
             <button type="button" class="btn btn-primary delete-schedule-row">␡</button>
         </td>
-        <td>
+        <td class="col-2">
             <input type="text" class="form-control digit-filter tempo tempo-0" placeholder="Tempo" autocomplete="off" value="{0}" />
         </td>
-        <td>
+        <td class="col-2">
             <input type="text" class="form-control time-filter midpoint midpoint-0" placeholder="Duration" autocomplete="off" value="{1}" />
         </td>
-        <td>
+        <td class="col-5">
             <input type="text" class="form-control exercise" placeholder="Exercise" value="{2}" />
         </td>
-        <td>
+        <td class="col-1">
             <button type="button" class="btn btn-primary add-schedule-row">⎀</button>
         </td>
     </tr>`;
