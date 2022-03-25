@@ -11,7 +11,7 @@
     "exports-loader": ">=0.7.0",
     "expose-loader": ">=0.7.5",
     "glob-parent": ">=5.1.2",
-    "minimist": ">=1.2.5",
+    "minimist": ">=1.2.6",
     "ts-loader": ">=6.2.1",
     "typescript": ">=4.4.0",
     "webpack": ">=5.0.0",
