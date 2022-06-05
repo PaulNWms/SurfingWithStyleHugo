@@ -129,11 +129,11 @@ Lazy Load (several variations)
 Mediator
 - Mediator provides a centralized location for communication between many instances of like
   classes 
-- Use when: There are many objects of a similar type that need to communicate with each other.
-- Colleagues: Individual components that need to communicate with each other 
+- Use when: There are many objects of a similar type that need to communicate with each other.
+- Colleagues: Individual components that need to communicate with each other
   - Implement the same base type (abstract class or interface)
   - Have knowledge of the Mediator component
-- Mediator: The centralized component that managed communication between the colleague
+- Mediator: The centralized component that managed communication between the colleague
   components
 - Behavioral
 
@@ -145,7 +145,7 @@ Memento
 - Use when: undo/redo
 - Behavioral
 
-MVP
+MVC
 
 MVVM
 
@@ -177,6 +177,8 @@ Publish/Subscribe
 - Asynchronous, generally uses a message queue
 
 Repository
+- Links:
+  - [Generic Data Manager](https://www.nuget.org/packages/OakIdeas.GenericRepository/0.0.5-alpha)
 
 Revealing Module (JavaScript ES5)
 - Function scoping provides encapsulation
