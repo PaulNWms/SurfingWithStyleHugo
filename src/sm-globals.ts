@@ -13,7 +13,7 @@ enum AnimationName { stopped, starting, running, stopping_lr, stopping_rl };
 
 let ui = {
     buttonFace: "▶️",
-    clickOnOff: false,
+    clickOnOff: true,
     display: "",
     endWithBell: true,
     exerciseDisplay: "",

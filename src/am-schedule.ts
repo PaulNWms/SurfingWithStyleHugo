@@ -94,6 +94,7 @@ class AcceleratingSchedule {
                 this.metronome.tempo = this.currentStep.tempo;
                 ui.tempoDisplay = this.metronome.tempoDisplay;
                 this.metronome.isRunning = this.metronome.tempo >= MIN_TEMPO;
+                if (!ui.clickOnOff) { this.metronome.tempo = 0 }
                 this.eggTimer.timeRemainingMS = 1000 * this.currentStep.durationSec;
                 this.eggTimer.isRunning = true;
                 this.status = ScheduleState.Running;

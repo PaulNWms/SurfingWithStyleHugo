@@ -92,6 +92,7 @@ class Schedule {
                 ui.exerciseDisplay = this.currentStep.description;
                 this.metronome.tempo = this.currentStep.tempo;
                 ui.tempoDisplay = this.metronome.tempoDisplay;
+                if (!ui.clickOnOff) { this.metronome.tempo = 0 }
                 this.metronome.isRunning = this.metronome.tempo >= MIN_TEMPO;
                 this.eggTimer.timeRemainingMS = 1000 * this.currentStep.durationSec;
                 this.eggTimer.isRunning = true;
