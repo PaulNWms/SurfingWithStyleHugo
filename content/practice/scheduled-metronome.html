@@ -1,6 +1,6 @@
 ---
 title: "Scheduled Metronome"
-date: 2020-01-11T07:08:10-08:00
+date: 2023-01-21T07:08:10-08:00
 ---
 
 <article class="narrow-article mini-metronome" itemprop="mainContentOfPage" itemscope
@@ -41,14 +41,14 @@ date: 2020-01-11T07:08:10-08:00
         <h3 class="offset-2">Schedule:</h3>
     </div>
     <div class="row">
-        <div class="row form-group offset-2 col-7 container-fluid">
+        <div class="row form-group offset-1 col-10 container-fluid">
             <table class="table">
                 <thead>
                    <tr class="d-flex">
-                       <th class="col-2"></th>
-                       <th class="col-2">Tempo</th>
-                       <th class="col-2">Time</th>
-                       <th class="col-5">Exercise</th>
+                       <th class="col-1"></th>
+                       <th class="col-1">mm</th>
+                       <th class="col-1">Time</th>
+                       <th class="col-8">Exercise</th>
                        <th class="col-1"></th>
                    </tr>
                </thead>
@@ -65,13 +65,19 @@ date: 2020-01-11T07:08:10-08:00
         <div class="row form-group offset-2 col-7">
             <div class="form-check">
                 <input class="form-check-input start-with-rest" type="checkbox" />
-                <label class="form-check-label">Start routine with a rest</label>
+                <label class="form-check-label" for="start-with-rest">Start routine with a rest</label>
             </div>
         </div>
         <div class="row form-group offset-2 col-7">
             <div class="form-check">
                 <input class="form-check-input end-with-bell" type="checkbox" />
-                <label class="form-check-label">End each exercise with a bell</label>
+                <label class="form-check-label" for="end-with-bell">End each exercise with a bell</label>
+            </div>
+        </div>
+        <div class="row form-group offset-2 col-7">
+            <div class="form-check">
+                <input class="form-check-input click-on-off" type="checkbox" />
+                <label class="form-check-label" for="click-on-off">Click on/off</label>
             </div>
         </div>
         <div class="row offset-2 col-7">
@@ -97,7 +103,5 @@ date: 2020-01-11T07:08:10-08:00
     </div>
 </article>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-</script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="/js/scheduledMetronome.bundle.js"></script>

@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-  },
   "devDependencies": {
     "@types/jquery": ">=3.3.31",
     "@types/mathjax": ">=0.0.36",

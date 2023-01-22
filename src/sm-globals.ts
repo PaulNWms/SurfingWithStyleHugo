@@ -13,6 +13,7 @@ enum AnimationName { stopped, starting, running, stopping_lr, stopping_rl };
 
 let ui = {
     buttonFace: "▶️",
+    clickOnOff: false,
     display: "",
     endWithBell: true,
     exerciseDisplay: "",
@@ -27,6 +28,9 @@ let ui = {
 
 let buttonFaceElement: HTMLSpanElement = $(".button-face")[0] as HTMLSpanElement
 new Binding({ object: ui, property: "buttonFace" }).addBinding(buttonFaceElement, "innerText");
+
+let clickOnOffElement: HTMLInputElement = $(".click-on-off")[0] as HTMLInputElement
+new Binding({ object: ui, property: "clickOnOff" }).addBinding(clickOnOffElement, "checked");
 
 let endWithBellElement: HTMLInputElement = $(".end-with-bell")[0] as HTMLInputElement
 new Binding({ object: ui, property: "endWithBell" }).addBinding(endWithBellElement, "checked");

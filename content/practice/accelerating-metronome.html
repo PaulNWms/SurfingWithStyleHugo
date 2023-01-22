@@ -1,6 +1,6 @@
 ---
 title: "Accelerating Metronome"
-date: 2020-01-20T18:58:54-08:00
+date: 2023-01-21T18:58:54-08:00
 ---
 
 <article class="narrow-article mini-metronome" itemprop="mainContentOfPage" itemscope
@@ -45,14 +45,12 @@ date: 2020-01-20T18:58:54-08:00
             <table class="table">
                 <thead>
                     <tr class="d-flex">
-                <!--
                         <th class="col-1"></th>
                         <th class="col-1">Low</th>
                         <th class="col-1">High</th>
                         <th class="col-1">Time</th>
                         <th class="col-7">Exercise</th>
                         <th class="col-1"></th>
-                -->
                     </tr>
                 </thead>
                 <tbody class="exercise-markup">
@@ -75,6 +73,12 @@ date: 2020-01-20T18:58:54-08:00
             <div class="form-check">
                 <input class="form-check-input end-with-bell" type="checkbox" />
                 <label class="form-check-label">End each exercise with a bell</label>
+            </div>
+        </div>
+        <div class="row form-group offset-2 col-7">
+            <div class="form-check">
+                <input class="form-check-input click-on-off" type="checkbox" />
+                <label class="form-check-label" for="click-on-off">Click on/off</label>
             </div>
         </div>
         <div class="row offset-2 col-7">
@@ -100,8 +104,6 @@ date: 2020-01-20T18:58:54-08:00
     </div>
 </article>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-</script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script>window.accelerating = true;</script>
 <script src="/js/acceleratingMetronome.bundle.js"></script>

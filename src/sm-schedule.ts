@@ -21,6 +21,7 @@ class Schedule {
         ui.rest = 3;
         ui.startWithRest = true;
         ui.endWithBell = true;
+        ui.clickOnOff = true;
         this.parseUrl();
         ui.exerciseMarkup = this.toHtml();
     }
@@ -141,7 +142,6 @@ class Schedule {
 
             this.metronome.tempo = 0;
             this.eggTimer.isRunning = false;
-            this.eggTimer.isRunning = false;
             this.status = ScheduleState.Stopped;
             this.eggTimer.colorBody();
             ui.exerciseDisplay = "Done!";
@@ -203,6 +203,10 @@ class Schedule {
                         ui.endWithBell = (value === "true");
                         break;
 
+                    case "c":
+                        ui.clickOnOff = (value === "true");
+                        break;
+            
                     case "t":
                         {
                             let strs: Array<string> = value.split('-');
@@ -236,8 +240,8 @@ class Schedule {
                             }
                         }
                         break;
-                }
-            });
+                    }
+                });
 
             for (let i: number = 0; i < tempos.length; i++) {
                 let ex: Exercise = new Exercise(tempos[i], "2:00", exes[i]);
@@ -294,9 +298,10 @@ class Schedule {
             .replace("{1}", ui.rest.toString())
             .replace("{2}", ui.startWithRest.toString())
             .replace("{3}", ui.endWithBell.toString())
-            .replace("{4}", ts)
-            .replace("{5}", ds)
-            .replace("{6}", es);
+            .replace("{4}", ui.clickOnOff.toString())
+            .replace("{5}", ts)
+            .replace("{6}", ds)
+            .replace("{7}", es);
     }
 
     public toHtml(): string {
@@ -341,20 +346,20 @@ class Schedule {
     }
 }
 
-const URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&t={4}&d={5}&e={6}";
+const URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&c={4}&t={5}&d={6}&e={7}";
 
 const HTML_TEMPLATE: string = `\
     <tr class="d-flex">
-        <td class="col-2">
+        <td class="col-1">
             <button type="button" class="btn btn-primary delete-schedule-row">␡</button>
         </td>
-        <td class="col-2">
+        <td class="col-1">
             <input type="text" class="form-control digit-filter tempo tempo-0" placeholder="Tempo" autocomplete="off" value="{0}" />
         </td>
-        <td class="col-2">
+        <td class="col-1">
             <input type="text" class="form-control time-filter midpoint midpoint-0" placeholder="Duration" autocomplete="off" value="{1}" />
         </td>
-        <td class="col-5">
+        <td class="col-8">
             <input type="text" class="form-control exercise" placeholder="Exercise" value="{2}" />
         </td>
         <td class="col-1">

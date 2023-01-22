@@ -22,6 +22,7 @@ class AcceleratingSchedule {
         ui.rest = 3;
         ui.startWithRest = true;
         ui.endWithBell = true;
+        ui.clickOnOff = true;
         this.parseUrl();
         ui.exerciseMarkup = this.toHtml();
     }
@@ -206,6 +207,10 @@ class AcceleratingSchedule {
                         ui.endWithBell = (value === "true");
                         break;
 
+                    case "c":
+                        ui.clickOnOff = (value === "true");
+                        break;
+
                     case "l":
                         {
                             let strs: Array<string> = value.split('-');
@@ -363,7 +368,7 @@ class AcceleratingSchedule {
     }
 }
 
-const URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&l={4}&h={5}&d={6}&e={7}";
+const URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&c={4}&l={5}&h={6}&d={7}&e={8}";
 
 const HTML_TEMPLATE: string = `\
     <tr class="d-flex">

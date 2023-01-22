@@ -32,7 +32,7 @@ class Exercise {
             seconds = parseInt(match[2]);
             sec = 60 * minutes + seconds;
         }
-        else if (Number(value) !== NaN) {
+        else {
             sec = Number(value)
         }
 

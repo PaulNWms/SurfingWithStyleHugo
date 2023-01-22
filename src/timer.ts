@@ -115,7 +115,7 @@ function onStartPause() {
                     minutes = parseInt(match[2]);
                     timeRemainingMS = 1000 * (60 * ((60 * hours) + minutes));
                 }
-                else if (Number(ui.formattedDuration) !== NaN) {
+                else {
                     timeRemainingMS = 60 * 1000 * Number(ui.formattedDuration);
                 }
 
