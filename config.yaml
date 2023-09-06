@@ -35,6 +35,10 @@ menu:
     parent: Study
     url: /study/flashcards/
     weight: 100
+  - name: Factoids
+    parent: Study
+    url: /study/factoids/
+    weight: 200
 
   - name: Practice
     url: /usage/

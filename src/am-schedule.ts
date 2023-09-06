@@ -82,7 +82,7 @@ class AcceleratingSchedule {
                 alert(err.message + err.stack);
             }
         }
-}
+    }
 
     public update() {
         switch (this.status) {
