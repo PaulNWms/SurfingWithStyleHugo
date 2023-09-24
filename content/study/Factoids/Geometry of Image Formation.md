@@ -1,8 +1,9 @@
 ---
-title: "Geometry of Image Formation"
+title: Geometry of Image Formation
 date: 2023-05-15T05:37-0800
-draft: true
-tags: #OpenCV
+draft: false
+tags:
+  - "#OpenCV"
 ---
 
 ### Pinhole camera

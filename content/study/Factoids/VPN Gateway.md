@@ -1,10 +1,10 @@
 ---
-title: ""
+title: VPN Gateway
 date: 2023-05-11T07:06-0800
 draft: false
-tags: #VPN Gateway
+tags:
+  - "#Azure"
 ---
-
 Connects your Azure network with your on-premises network securely.
 
 - A VPN Gateway is a specific VNet Gateway. It consists of two or more dedicated VMs.

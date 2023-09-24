@@ -1,8 +1,9 @@
 ---
-title: "Image Basics"
+title: Image Basics
 date: 2023-05-15T05:34-0800
-draft: true
-tags: #OpenCV
+draft: false
+tags:
+  - OpenCV
 ---
 
 - [Geometry of Image Formation](../geometry-of-image-formation/)

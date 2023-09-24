@@ -1,4 +1,4 @@
-$sourceDir = "..\..\..\OneDrive\Private\Vault\Zettelkasten"
+$sourceDir = "..\..\..\Documents\Vault\Zettelkasten"
 $targetDir = ".\content\study\Factoids"
 $mdFiles = Get-ChildItem "$sourceDir\*.md"
 $copied = 0

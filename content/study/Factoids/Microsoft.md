@@ -7,6 +7,7 @@ tags: #computer
 
 - [Azure](../azure/)
 - [C#](../c-/)
+- [Win32](../win32/)
 - [COM](../com/)
 - [OLE](../ole/)
 
