@@ -5,7 +5,7 @@ draft: true
 tags: []
 ---
 
-Caused by lack or [Iron](../iron/), [B12](../b12/)
+Caused by lack or [[Iron]], [[B12]]
 
 
 ---

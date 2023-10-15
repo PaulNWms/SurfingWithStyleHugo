@@ -172,7 +172,7 @@ main ()
 }
 ```
 
-Occasionally, an InProc server may have multiple apartments.  See [Apartment Models](../apartment-models/).
+Occasionally, an InProc server may have multiple apartments.  See [[Apartment Models]].
 
 ---
 # References

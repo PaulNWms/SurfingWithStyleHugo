@@ -5,11 +5,11 @@ draft: false
 tags: #Azure
 ---
 
-- [Data Lake Analytics](../data-lake-analytics/)
-- [HDInsights](../hdinsights/)
-- [Azure Databricks](../azure-databricks/)
-- [Azure Synapse Analytics](../azure-synapse-analytics/)
-- [Machine Learning](../machine-learning/)
+- [[Data Lake Analytics]]
+- [[HDInsights]]
+- [[Azure Databricks]]
+- [[Azure Synapse Analytics]]
+- [[Machine Learning]]
 
 ---
 # References

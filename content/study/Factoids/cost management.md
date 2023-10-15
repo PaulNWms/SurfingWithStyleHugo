@@ -5,13 +5,13 @@ draft: false
 tags: #Azure
 ---
 
-- [Spot VMs](../spot-vms/)
-- [Spending Limits](../spending-limits/)
-- [Quotas](../quotas/)
-- [Tags](../tags/)
-- [Reserved Instances](../reserved-instances/)
-- The [Advisor](../advisor/) portal gives you best-practice advice in general through recommendations.
-- [SLA](../sla/)
+- [[Spot VMs]]
+- [[Spending Limits]]
+- [[Quotas]]
+- [[Tags]]
+- [[Reserved Instances]]
+- The [[Advisor]] portal gives you best-practice advice in general through recommendations.
+- [[SLA]]
 
 ---
 # References

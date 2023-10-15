@@ -6,8 +6,8 @@ tags: #Azure
 ---
 
 - IoT Hub (PaaS)
-- [IoT Central](../iot-central/) (SaaS)
-- [Azure Sphere](../azure-sphere/)
+- [[IoT Central]] (SaaS)
+- [[Azure Sphere]]
 
 ---
 # References

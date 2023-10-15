@@ -6,9 +6,9 @@ tags:
   - OpenCV
 ---
 
-- [Geometry of Image Formation](../geometry-of-image-formation/)
-- [Digital Image Formation](../digital-image-formation/)
-- [Image Formats](../image-formats/)
+- [[Geometry of Image Formation]]
+- [[Digital Image Formation]]
+- [[Image Formats]]
 
 ---
 # References

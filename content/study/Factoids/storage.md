@@ -5,12 +5,12 @@ draft: false
 tags: #Azure
 ---
 
-- [blob](../blob/)
-- [disk](../disk/)
-- [file](../file/)
-- [archive](../archive/)
-- [redundancy](../redundancy/)
-- [premium options](../premium-options/)
+- [[blob]]
+- [[disk]]
+- [[file]]
+- [[archive]]
+- [[redundancy]]
+- [[premium options]]
 
 ---
 # References

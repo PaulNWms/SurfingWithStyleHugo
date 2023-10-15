@@ -5,9 +5,9 @@ draft: true
 tags: #history
 ---
 
-[Knights Templar](../knights-templar/)
-[Knights Hospitaller](../knights-hospitaller/)
-[Saladin](../saladin/)
+[[Knights Templar]]
+[[Knights Hospitaller]]
+[[Saladin]]
 
 ---
 # References

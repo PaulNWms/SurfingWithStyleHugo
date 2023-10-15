@@ -5,13 +5,13 @@ draft: false
 tags: #Azure
 ---
 
-- [Virtual Machines](../virtual-machines/)
-- [Scale Sets](../scale-sets/)
-- [App Services](../app-services/)
-- [Azure Container Instances](../azure-container-instances/)
-- [Azure Kubernetes Service](../azure-kubernetes-service/)
-- [Azure Virtual Desktop](../azure-virtual-desktop/)
-- [Functions](../functions/)
+- [[Virtual Machines]]
+- [[Scale Sets]]
+- [[App Services]]
+- [[Azure Container Instances]]
+- [[Azure Kubernetes Service]]
+- [[Azure Virtual Desktop]]
+- [[Functions]]
 
 ---
 # References

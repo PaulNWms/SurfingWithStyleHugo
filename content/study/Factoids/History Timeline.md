@@ -27,7 +27,7 @@ tags: #history
 [Aztecs - Wikipedia](https://en.wikipedia.org/wiki/Aztecs) - 1325-1521
 [Maya civilization - Wikipedia](https://en.wikipedia.org/wiki/Maya_civilization) - 250-1697
 [Toltec Empire - Wikipedia](https://en.wikipedia.org/wiki/Toltec_Empire) - 674-1122
-[Crusades](../crusades/) - 1096-1221
+[[Crusades]] - 1096-1221
 [Norman Conquest - Wikipedia](https://en.wikipedia.org/wiki/Norman_Conquest) - 1066
 [History of Normandy - Wikipedia](https://en.wikipedia.org/wiki/History_of_Normandy) - 790-1030
 [Zapotec civilization - Wikipedia](https://en.wikipedia.org/wiki/Zapotec_civilization) - <span style="color:gray">700 BC</span>-1521 AD

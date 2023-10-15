@@ -14,4 +14,4 @@ tags: #computer
 https://youtu.be/E6ySG7xYgjY
 https://youtu.be/D9ivU_IKO6M
 
-See also [Zotero setup](../zotero-setup/)
+See also [[Zotero setup]]

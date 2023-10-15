@@ -5,11 +5,11 @@ draft: true
 tags: #health
 ---
 
-Aromatase is an enzyme that converts testosterone to estrogen.  High estrogen levels in men can lead to an [enlarged prostate](../enlarged-prostate/).
+Aromatase is an enzyme that converts testosterone to estrogen.  High estrogen levels in men can lead to an [[enlarged prostate]].
 
 ### Lowers aromatase
 
-- [Cruciferous Vegetables](../cruciferous-vegetables/)
+- [[Cruciferous Vegetables]]
 - Mushrooms (sauteed)
 - Flaxseed
 - Green tea

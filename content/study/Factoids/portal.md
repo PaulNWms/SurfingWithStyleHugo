@@ -5,7 +5,7 @@ draft: false
 tags: #Azure
 ---
 
-- [cloud shell](../cloud-shell/)
+- [[cloud shell]]
 
 
 

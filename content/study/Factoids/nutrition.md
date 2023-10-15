@@ -5,7 +5,7 @@ draft: true
 tags: #health
 ---
 
-- [Nutrients](../nutrients/)
+- [[Nutrients]]
 
 ---
 # References

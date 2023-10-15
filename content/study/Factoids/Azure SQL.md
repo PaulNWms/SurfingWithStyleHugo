@@ -5,8 +5,8 @@ draft: false
 tags: #Azure
 ---
 
-- [Azure SQL Database](../azure-sql-database/) - Azure SQL Managed Instance Most like traditional SQL Server
-- [Azure SQL Managed Instance](../azure-sql-managed-instance/) - Aimed at migrating from on-premises
+- [[Azure SQL Database]] - Azure SQL Managed Instance Most like traditional SQL Server
+- [[Azure SQL Managed Instance]] - Aimed at migrating from on-premises
 
 | SQL Database | SQL Managed Instance |
 |---|---|

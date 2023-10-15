@@ -10,9 +10,9 @@ tags: #Azure
 - Built-in Apps - Azure has a number of built-in apps you can use for machine learning and AI straight away. These include cognitive services and bot services.
 
 Offerings
-- [Azure Bot Service](../azure-bot-service/)
-- [Azure Cognitive Services](../azure-cognitive-services/)
-- [Azure Machine Learning Studio](../azure-machine-learning-studio/)
-- [Machine Learning Service](../machine-learning-service/)
+- [[Azure Bot Service]]
+- [[Azure Cognitive Services]]
+- [[Azure Machine Learning Studio]]
+- [[Machine Learning Service]]
 ---
 # References

@@ -6,7 +6,7 @@ tags: #msbuild
 ---
 
 - entry point
-- contains [tasks](../tasks/)
+- contains [[tasks]]
 - Project DefaultTargets="..."
 - CallTarget Targets="..."
 - Target DependsOnTargets="..."

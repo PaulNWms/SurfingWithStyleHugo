@@ -5,13 +5,13 @@ draft: false
 tags: #msbuild
 ---
 
-- [targets](../targets/)
-- [tasks](../tasks/)
-- [properties](../properties/)
-- [items](../items/)
-- [response file](../response-file/)
-- [tricks](../tricks/)
-- [evaluation order](../evaluation-order/)
+- [[targets]]
+- [[tasks]]
+- [[properties]]
+- [[items]]
+- [[response file]]
+- [[tricks]]
+- [[evaluation order]]
 
 
 ---

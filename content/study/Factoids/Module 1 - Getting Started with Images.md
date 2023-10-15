@@ -6,8 +6,8 @@ tags:
   - OpenCV
 ---
 
-[Image Basics](../image-basics/)�
-[Getting Started with Images](../getting-started-with-images/)
+[[Image Basics]]�
+[[Getting Started with Images]]
 
 ---
 # References

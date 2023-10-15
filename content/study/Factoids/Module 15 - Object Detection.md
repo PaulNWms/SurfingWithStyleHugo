@@ -53,7 +53,7 @@ food_img = cv2.imread('fruit-vegetable.jpg')
 food_objects = detect_objects(net, food_img)
 
 # Each detected object returns a list with the structure of:
-# [[..., classId, score, x, y, w, h](../------classid--score--x--y--w--h/)]
+# [[[..., classId, score, x, y, w, h]]]
 print(f'Detected {len(food_objects[0][0])} objects (no confidence filtering)')
 first_detected_obj = food_objects[0][0][0]
 print('First object:', first_detected_obj)

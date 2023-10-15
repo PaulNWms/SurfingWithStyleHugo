@@ -5,10 +5,10 @@ draft: false
 tags: #Azure
 ---
 
-- [Firewall](../firewall/)
-- [DDoS Protection Service](../ddos-protection-service/)
-- [Network Security Group (NSG)](../network-security-group--nsg-/)
-- [Application Security Groups](../application-security-groups/)
+- [[Firewall]]
+- [[DDoS Protection Service]]
+- [[Network Security Group (NSG)]]
+- [[Application Security Groups]]
 
 
 ---

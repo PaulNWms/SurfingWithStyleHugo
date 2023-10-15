@@ -5,7 +5,7 @@ draft: true
 tags: #health
 ---
 
-Caused by [stress](../stress/)
+Caused by [[stress]]
 
 
 ---

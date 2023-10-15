@@ -5,8 +5,8 @@ draft: true
 tags: #math
 ---
 
-[Discrete Math](../discrete-math/)
-[Concrete Math](../concrete-math/)
+[[Discrete Math]]
+[[Concrete Math]]
 
 
 ---

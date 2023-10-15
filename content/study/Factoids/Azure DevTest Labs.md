@@ -5,9 +5,9 @@ draft: false
 tags: #Azure
 ---
 
-- [Environment Management](../environment-management/) Allow developers and engineers to create environments for test and development.
-- [cost management](../cost-management/) You won’t incur unexpected costs and will even minimize waste of resources on your account.
-- [Templates](../templates/) Tailor your development and test environments and reuse them with templated deployments.
+- [[Environment Management]] Allow developers and engineers to create environments for test and development.
+- [[cost management]] You won’t incur unexpected costs and will even minimize waste of resources on your account.
+- [[Templates]] Tailor your development and test environments and reuse them with templated deployments.
 
 ---
 # References

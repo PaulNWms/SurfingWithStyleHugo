@@ -5,12 +5,12 @@ draft: true
 tags: #health
 ---
 
-- [B12](../b12/)
-- [Iron](../iron/)
+- [[B12]]
+- [[Iron]]
 
 ### Non-nutrients
 
-- [Aromatase](../aromatase/)
+- [[Aromatase]]
 
 ---
 # References

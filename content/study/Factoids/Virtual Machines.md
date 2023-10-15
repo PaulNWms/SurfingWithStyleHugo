@@ -6,8 +6,8 @@ tags: #Azure
 ---
 
 - IaaS
-- Tools - [Azure Portal](../azure-portal/)
-- Compliance - [blueprints](../blueprints/)
+- Tools - [[Azure Portal]]
+- Compliance - [[blueprints]]
 - Recommendations
 - Choose configuration - Pricing goes up as resources go up, and you pay by the hour.
 

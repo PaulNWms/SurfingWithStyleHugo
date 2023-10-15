@@ -5,12 +5,12 @@ draft: false
 tags: #Azure
 ---
 
-- [Virtual Network](../virtual-network/)
-- [ExpressRoute](../expressroute/)
-- [VPN Gateway](../vpn-gateway/)
-- [Application Gateway](../application-gateway/)
-- [Load Balancer](../load-balancer/)
-- [Content Delivery Network](../content-delivery-network/)
+- [[Virtual Network]]
+- [[ExpressRoute]]
+- [[VPN Gateway]]
+- [[Application Gateway]]
+- [[Load Balancer]]
+- [[Content Delivery Network]]
 
 ---
 # References

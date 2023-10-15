@@ -5,8 +5,8 @@ draft: true
 tags: #CPP
 ---
 
-[Type-Safe Linking](../type-safe-linking/)
-[Multiple Inheritance](../multiple-inheritance/)
+[[Type-Safe Linking]]
+[[Multiple Inheritance]]
 
 
 

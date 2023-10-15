@@ -16,7 +16,7 @@ Characteristics
 - Users not responsible for hardware or software updates.
 - Rate limiting/QoS.
 
-Examples: [Microsoft 365](../microsoft-365/)
+Examples: [[Microsoft 365]]
 
 ---
 # References

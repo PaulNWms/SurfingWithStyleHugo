@@ -6,9 +6,9 @@ tags: #Azure
 ---
 
 PaaS
-- [Web Apps](../web-apps/)
-- [Web Apps for Containers](../web-apps-for-containers/)
-- [API Apps](../api-apps/)
+- [[Web Apps]]
+- [[Web Apps for Containers]]
+- [[API Apps]]
 
 ---
 # References

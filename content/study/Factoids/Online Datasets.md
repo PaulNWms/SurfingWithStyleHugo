@@ -1,8 +1,8 @@
 ---
-title: "Datasets"
+title: Online Datasets
 date: 2023-06-26T21:28-0800
 draft: true
-tags: #database
+tags:
 ---
 
 [Kaggle](https://www.kaggle.com/datasets)

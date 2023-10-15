@@ -5,8 +5,8 @@ draft: true
 tags:
   - "#Win32"
 ---
-- [SafeArray](../safearray/)
-- [Native Threads](../native-threads/)
+- [[SafeArray]]
+- [[Native Threads]]
 
 ---
 # References

@@ -5,10 +5,10 @@ draft: true
 tags: #OpenCV
 ---
 
-[Reading, Displaying and Saving Images](../reading--displaying-and-saving-images/)
-[Color Images](../color-images/)
-[Basic Image Manipulations](../basic-image-manipulations/)
-[Annotating Images](../annotating-images/)
+[[Reading, Displaying and Saving Images]]
+[[Color Images]]
+[[Basic Image Manipulations]]
+[[Annotating Images]]
 
 ---
 # References

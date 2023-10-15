@@ -5,7 +5,7 @@ draft: false
 tags: #Azure #AZ-204
 ---
 
-- [Provision Virtual Machines](../provision-virtual-machines/)
+- [[Provision Virtual Machines]]
 - Configure, validate, and deploy ARM templates
 - Create container images for solutions
 - Publish an image to the Azure Container Registry

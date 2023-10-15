@@ -5,7 +5,7 @@ draft: false
 tags: #OpenCV 
 ---
 
-[OpenCV For Beginners](../opencv-for-beginners/)
+[[OpenCV For Beginners]]
 
 ---
 # References

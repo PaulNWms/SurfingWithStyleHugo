@@ -5,10 +5,10 @@ draft: false
 tags: #Azure 
 ---
 
-- [IaaS](../iaas/)
-- [PaaS](../paas/)
-- [SaaS](../saas/)
-- [serverless (FaaS)](../serverless--faas-/)
+- [[IaaS]]
+- [[PaaS]]
+- [[SaaS]]
+- [[serverless (FaaS)]]
 
 ---
 # References

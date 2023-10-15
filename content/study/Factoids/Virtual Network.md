@@ -19,7 +19,7 @@ Cloud Advantages
 - Scaling
 - High Availability
 - Isolation
-- [VNet Peering](../vnet-peering/)
+- [[VNet Peering]]
 
 ---
 # References

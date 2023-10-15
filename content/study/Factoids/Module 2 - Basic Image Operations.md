@@ -5,10 +5,10 @@ draft: true
 tags: #OpenCV
 ---
 
-[Arithmetic & Logical Operations](../arithmetic---logical-operations/)
-[Thresholding in Images](../thresholding-in-images/)
-[Logical Operations on Images](../logical-operations-on-images/)
-[Alpha Channel](../alpha-channel/)
+[[Arithmetic & Logical Operations]]
+[[Thresholding in Images]]
+[[Logical Operations on Images]]
+[[Alpha Channel]]
 
 ---
 # References

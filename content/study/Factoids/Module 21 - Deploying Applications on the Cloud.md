@@ -5,9 +5,9 @@ draft: true
 tags: #OpenCV
 ---
 
-[Google Cloud](../google-cloud/)
-[AWS](../aws/)
-[Azure](../azure/)
+[[Google Cloud]]
+[[AWS]]
+[[Azure]]
 
 ---
 # References

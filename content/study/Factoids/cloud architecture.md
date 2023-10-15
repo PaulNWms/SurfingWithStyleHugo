@@ -5,9 +5,9 @@ draft: false
 tags: #Azure
 ---
 
-- [private cloud](../private-cloud/)
-- [public cloud](../public-cloud/)
-- [hybrid cloud](../hybrid-cloud/)
+- [[private cloud]]
+- [[public cloud]]
+- [[hybrid cloud]]
 
 ---
 # References

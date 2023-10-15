@@ -12,7 +12,7 @@ Kubernetes is an open-source container orchestration system for automating appli
 - Automatic application deployment. Kubernetes will deploy more images of containers as needed. 
 - Automatic scaling. Automatic monitoring of application load to determine when to scale the number of containers used.
 
-Deploy from the [Azure Container Registry (ACR)](../azure-container-registry--acr-/)
+Deploy from the [[Azure Container Registry (ACR)]]
 
 ---
 # References
