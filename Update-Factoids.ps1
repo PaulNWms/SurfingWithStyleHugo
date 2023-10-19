@@ -1,3 +1,6 @@
+using namespace System.Collections.Generic
+using namespace System.IO
+
 Import-Module powershell-yaml
 
 Add-Type -AssemblyName System.Core
@@ -16,10 +19,10 @@ class Page {
     [string[]]$Yaml
     [Hashtable]$Properties
     [Page]$Parent
-    [System.Collections.Generic.List[Page]]$Children
-    static [System.Collections.Generic.SortedDictionary[string,Page]]$Visited
+    [List[Page]]$Children
+    static [SortedDictionary[string,Page]]$Visited
 
-    Page([System.IO.FileInfo]$fileInfo) {
+    Page([FileInfo]$fileInfo) {
         $this.FileName = $fileInfo.FullName
         $this.Name = [Page]::LinkToFile($fileInfo.Name)
         $this.Yaml = @()
@@ -93,40 +96,45 @@ class Page {
 Remove-Item -Recurse $tempDir
 New-Item -ItemType Directory $tempDir
 foreach ($mdFile in $mdFiles) {
-    $sourcePage = [Page]::new($mdFile)
-    if ($sourcePage.Properties["tags"] -contains 'private') {
-        Write-Host "Skipping $($mdFile.Name)"
-        $skipped++
-    } else {
-        Copy-Item -Force $mdFile.FullName (Join-Path $tempDir $mdFile.Name)
-        $copied++
+    if ($mdFile -contains 'Productivity.md') {
+        $mdFile
     }
+    $sourcePage = [Page]::new($mdFile)
+    $tags = $sourcePage.Properties['tags']
+    foreach ($tag in $tags) {
+        if ($tag -match 'private') {
+            Write-Host "Skipping $($mdFile.Name)"
+            $skipped++
+            continue
+        }
+    }
+    Copy-Item -Force $mdFile.FullName (Join-Path $tempDir $mdFile.Name)
+    $copied++
 }
 
 Write-Host "Copied: $copied, Skipped: $skipped"
 
 # Populate hash
 $mds = Get-ChildItem -Path $tempDir -Filter *.md
-[System.Collections.Generic.SortedDictionary[string,Page]]$pages = @{}
+[SortedDictionary[string,Page]]$pages = @{}
 foreach ($md in $mds) {
     $page = [Page]::new($md)
     $pages[$page.Name] = $page
-    foreach ($line in $page.Yaml) {
-        if ($line -match 'parent:\s*(.*)') {
-            $parent = [Page]::LinkToFile($Matches[1])
-            $page.Parent = $pages[$parent]
-            break
-        }
-    }
 }
 
-# Decorate hash with parents and children, and rewrite links to standard markdown format
-$regex = '\[\[(.*?)]]'
+# Decorate hash with parents and children
+$linkPattern = '\[\[(.*?)]]'
 foreach ($page in $pages.Values) {
     $lines = Get-Content $page.FileName
+    if ($page.Properties['parent']) {
+        $parent = [Page]::LinkToFile($page.Properties['parent'])
+        $page.Parent = $pages[$parent]
+    }
     for ($i = 0; $i -lt $lines.Count; $i++) {
-        while ($lines[$i] -match $regex) {
-            $link = $Matches[1]
+        $Matches.Clear()
+        $lines[$i] -match $linkPattern | Out-Null
+        for ($j = 1; $j -le $Matches.Count; $j++) {
+            $link = $Matches[$j]
             $target = [Page]::LinkToFile($link)
             $child = $pages[$target]
             if ($child) {
@@ -135,11 +143,8 @@ foreach ($page in $pages.Values) {
                 }
                 $page.Children += $child
             }
-            $target = "../$target/"
-            $lines[$i] = $lines[$i].Replace($Matches[0], "[$link]($target)")
         }
     }
-    $lines | Out-File -FilePath $md
 }
 
 # The subjects are the pages with no parent
@@ -154,5 +159,22 @@ foreach ($subject in $subjects) {
 }
 
 $pages.Values | select -Property Name, TargetPath, Parent, Children | ft
+
+# Rewrite links to standard markdown format and new path
+$linkPattern = '\[\[(.*?)]]'
+foreach ($page in $pages.Values) {
+    $lines = Get-Content $page.FileName
+    for ($i = 0; $i -lt $lines.Count; $i++) {
+        $Matches.Clear()
+        $lines[$i] -match $linkPattern | Out-Null
+        for ($j = 1; $j -le $Matches.Count; $j++) {
+            $link = $Matches[$j]
+            $target = [Page]::LinkToFile($link)
+            $targetPage = $pages[$target]
+            $lines[$i] = $lines[$i].Replace($Matches[0], "[$link]($($targetPage.TargetPath))")
+        }
+    }
+    $lines | Out-File -FilePath $page.FileName
+}
 
 Pop-Location
