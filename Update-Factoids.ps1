@@ -7,7 +7,7 @@ Add-Type -AssemblyName System.Core
 
 $sourceDir = "$PSScriptRoot\..\..\..\Documents\Vault\Zettelkasten"
 $tempDir = "$PSScriptRoot\temp"
-$targetDir = "$PSScriptRoot\content\study\Factoids"
+$targetDir = "content\study\Factoids"
 $mdFiles = Get-ChildItem "$sourceDir\*.md"
 $copied = 0
 $skipped = 0
@@ -171,10 +171,11 @@ foreach ($page in $pages.Values) {
             $link = $Matches[$j]
             $target = [Page]::LinkToFile($link)
             $targetPage = $pages[$target]
-            $lines[$i] = $lines[$i].Replace($Matches[0], "[$link]($($targetPage.TargetPath))")
+            $lines[$i] = $lines[$i].Replace($Matches[0], "[$link]($targetDir\$($targetPage.TargetPath))")
         }
     }
-    $lines | Out-File -FilePath $page.FileName
+    New-Item -ItemType Directory -Force -Path "$PSScriptRoot\$targetDir\$($page.TargetPath)" | Out-Null
+    $lines | Out-File -FilePath "$PSScriptRoot\$targetDir\$($page.TargetPath)\index.md"
 }
 
 Pop-Location
