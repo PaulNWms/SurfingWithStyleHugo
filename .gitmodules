@@ -1,3 +1,7 @@
 [submodule "hugo-theme-bootie-docs"]
-	path = hugo-theme-bootie-docs
+	path = bootie-docs
 	url = https://github.com/progrhyme/hugo-theme-bootie-docs.git
+
+[submodule "hugo-theme-notrack"]
+	path = notrack
+	url = https://github.com/gevhaz/hugo-theme-notrack

@@ -1,114 +1,24 @@
-baseURL: 'http://surfingwithstyle.com/'
-languageCode: en-us
-title: Surfing With Style
-theme: bootie-docs
+baseURL: /
+languageCode: en-US
+defaultContentLanguage: en
+
+title: Hugo Learn Documentation
+theme: hugo-theme-learn
+metaDataFormat: yaml
+defaultContentLanguageInSubdir: true
+
 params:
-  description: The place to be.
-  withSitePosts: true
-  #searchDomain: your-domain.org
-  repositoryUrl: 'http://your-repository-url'
-  highlightStyle: github
-  noCategoryLink: true
-enableGitInfo: true
-menu:
-  main:
-  - name: Tools
-    url: /about/
-    weight: 100
-  - name: Timer
-    parent: Tools
-    url: /tools/timer/
-    weight: 100
-  - name: Calculator
-    parent: Tools
-    url: /tools/calculator/
-    weight: 300
-  - name: Old English Letters
-    parent: Tools
-    url: /tools/old-english-letters/
-    weight: 400
-    
-  - name: Study
-    url: /usage/
-    weight: 150
-  - name: Flashcards
-    parent: Study
-    url: /study/flashcards/
-    weight: 100
-  - name: Factoids
-    parent: Study
-    url: /study/factoids/
-    weight: 200
+  editURL: https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/
+  description: Documentation for Hugo Learn Theme
+  author: Mathieu Cornic
+  showVisitedLinks: true
+  disableBreadcrumb: false
+  disableNextPrev: false
+  disableLandingPageButton: true
+  disableMermaid: false
+  customMermaidURL: https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js
+  titleSeparator: "::"
 
-  - name: Practice
-    url: /usage/
-    weight: 200
-  - name: Metronome
-    parent: Practice
-    url: /practice/metronome/
-    weight: 100
-  - name: Scheduled Metronome
-    parent: Practice
-    url: /practice/scheduled-metronome/
-    weight: 200
-  - name: Accelerating Metronome
-    parent: Practice
-    url: /practice/accelerating-metronome/
-    weight: 300
-  - name: Presets
-    parent: Practice
-    url: /practice/scheduled-metronome-presets/
-    weight: 400
-  - name: Chords
-    parent: Practice
-    url: /practice/chords/
-    weight: 500
+outputs:
+home: [ "HTML", "RSS", "JSON"]
 
-  - name: Notes
-    url: /index/
-    weight: 300
-  - name: Data Science
-    parent: Notes
-    url: /Notes/Data-Science/
-    weight: 100
-  - name: MS
-    parent: Notes
-    url: /Notes/MS/
-    weight: 150
-  - name: Python
-    parent: Notes
-    url: /Notes/Python/
-    weight: 200
-  - name: Design Patterns
-    parent: Notes
-    url: /Notes/DesignPatterns/
-    weight: 400
-  - name: Git
-    parent: Notes
-    url: /Notes/Git/
-    weight: 500
-  - name: SOLID
-    parent: Notes
-    url: /Notes/SOLID/
-    weight: 600
-  - name: SQL
-    parent: Notes
-    url: /Notes/SQL/
-    weight: 700
-  - name: Other
-    parent: Notes
-    weight: 800
-  - name: Food
-    parent: Other
-    weight: 100
-  
-
-  - name: Links
-    url: /index/
-    weight: 400
-  - name: Tools2
-    parent: Links
-    weight: 100
-  - name: Books
-    parent: Links
-    weight: 200

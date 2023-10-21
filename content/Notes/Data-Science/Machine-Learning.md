@@ -273,9 +273,9 @@ $$s_k(\textbf{x})=\left(\theta^{(k)}\right)^T\cdot\textbf{x}$$
 
 Softmax function
 
-{{< rawhtml >}}
+*** rawhtml ***
 $$\hat{p}_k=\sigma(\textbf{s}(\textbf{x}))_k=\frac{exp(s_k(\textbf{x}))}{\sum_{j=1}^{K}exp(s_j(\textbf{x}))}$$
-{{</ rawhtml >}}
+*** rawhtml ***
 
 Softmax prediction
 

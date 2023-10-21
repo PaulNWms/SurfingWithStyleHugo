@@ -7,7 +7,8 @@ Add-Type -AssemblyName System.Core
 
 $sourceDir = "$PSScriptRoot\..\..\..\Documents\Vault\Zettelkasten"
 $tempDir = "$PSScriptRoot\temp"
-$targetDir = "content\study\Factoids"
+$targetDir = "study\Factoids"
+$targetUrlBase = "en/study/factoids"
 $mdFiles = Get-ChildItem "$sourceDir\*.md"
 $copied = 0
 $skipped = 0
@@ -65,13 +66,13 @@ class Page {
 
     [void] AssignTargetPathHelper() {
         if ([Page]::Visited[$this.Name]) {
-            Write-Host "$($this.Name) already visited"
+            #Write-Host "$($this.Name) already visited"
             return
         }
 
         if ($this.Parent) {
             if ($this.Parent.TargetPath) {
-                $this.TargetPath = Join-Path $this.Parent.TargetPath $this.Name
+                $this.TargetPath = $this.Parent.TargetPath + '/' + $this.Name
             } else {
                 $this.Parent.AssignTargetPathHelper()
                 return
@@ -95,6 +96,8 @@ class Page {
 # 1) Copy files to temp dir
 Remove-Item -Recurse $tempDir
 New-Item -ItemType Directory $tempDir
+Remove-Item -Recurse "$PSScriptRoot\content\$targetDir"
+New-Item -ItemType Directory "$PSScriptRoot\content\$targetDir"
 foreach ($mdFile in $mdFiles) {
     if ($mdFile -contains 'Productivity.md') {
         $mdFile
@@ -152,13 +155,18 @@ $subjects = $pages.GetEnumerator() |
     Where-Object { -not $_.Value.Parent } |
     ForEach-Object { $_.Value }
 
-$subjects | select -Property Name, TargetPath, Parent, Children, Yaml | fl
-
 foreach ($subject in $subjects) {
     $pages[$subject.Name].AssignTargetPath()
 }
 
-$pages.Values | select -Property Name, TargetPath, Parent, Children | ft
+$pages.Values | Select-Object -Property Name, TargetPath, Parent, Children | Format-Table
+
+$content = @"
+---
+title: Factoids
+---
+"@
+$content | Out-File -Force -FilePath "$PSScriptRoot\content\$targetDir\_index.md"
 
 # Rewrite links to standard markdown format and new path
 $linkPattern = '\[\[(.*?)]]'
@@ -171,11 +179,28 @@ foreach ($page in $pages.Values) {
             $link = $Matches[$j]
             $target = [Page]::LinkToFile($link)
             $targetPage = $pages[$target]
-            $lines[$i] = $lines[$i].Replace($Matches[0], "[$link]($targetDir\$($targetPage.TargetPath))")
+            $lines[$i] = $lines[$i].Replace($Matches[0], "[$link](/$targetUrlBase/$($targetPage.TargetPath))")
         }
     }
-    New-Item -ItemType Directory -Force -Path "$PSScriptRoot\$targetDir\$($page.TargetPath)" | Out-Null
-    $lines | Out-File -FilePath "$PSScriptRoot\$targetDir\$($page.TargetPath)\index.md"
+
+    if ($page.Parent) {
+        $parentFullDir = "$PSScriptRoot\content\$targetDir\$($page.Parent.TargetPath)"
+        if (-not (Test-Path "$parentFullDir")) {
+            New-Item -ItemType Directory $parentFullDir | Out-Null
+        }
+    } else {
+        $parentFullDir = "$PSScriptRoot\content\$targetDir"
+    }
+
+    if ($page.Children) {
+        $targetFullDir = "$PSScriptRoot\content\$targetDir\$($page.TargetPath)"
+        if (-not (Test-Path $targetFullDir)) {
+            New-Item -ItemType Directory $targetFullDir | Out-Null
+        }
+        $lines | Out-File -Force -FilePath "$targetFullDir\_index.md"
+    } else {
+        $lines | Out-File -Force -FilePath "$PSScriptRoot\content\$targetDir\$($page.TargetPath).md"
+    }
 }
 
 Pop-Location
