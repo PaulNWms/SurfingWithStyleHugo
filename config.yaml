@@ -3,7 +3,7 @@ languageCode: en-US
 defaultContentLanguage: en
 
 title: Hugo Learn Documentation
-theme: hugo-theme-learn
+theme: hugo-theme-relearn
 metaDataFormat: yaml
 defaultContentLanguageInSubdir: true
 
@@ -18,6 +18,7 @@ params:
   disableMermaid: false
   customMermaidURL: https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js
   titleSeparator: "::"
+  alwaysopen: false
 
 outputs:
 home: [ "HTML", "RSS", "JSON"]
