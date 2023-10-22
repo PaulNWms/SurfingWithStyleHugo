@@ -19,7 +19,7 @@ params:
   customMermaidURL: https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js
   titleSeparator: "::"
   alwaysopen: false
-  themeVariant: "blue"
+  themeVariant: "zen-dark"
 
 outputs:
 home: [ "HTML", "RSS", "JSON"]
