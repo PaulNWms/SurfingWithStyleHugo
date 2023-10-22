@@ -93,11 +93,13 @@ class Page {
     }
 }
 
-# 1) Copy files to temp dir
+# Delete temp and target folders
 Remove-Item -Recurse $tempDir
-New-Item -ItemType Directory $tempDir
+New-Item -ItemType Directory $tempDir | Out-Null
 Remove-Item -Recurse "$PSScriptRoot\content\$targetDir"
-New-Item -ItemType Directory "$PSScriptRoot\content\$targetDir"
+New-Item -ItemType Directory "$PSScriptRoot\content\$targetDir" | Out-Null
+
+# 1) Copy files to temp dir
 foreach ($mdFile in $mdFiles) {
     if ($mdFile -contains 'Productivity.md') {
         $mdFile
