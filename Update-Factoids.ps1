@@ -8,7 +8,7 @@ Add-Type -AssemblyName System.Core
 $sourceDir = "$PSScriptRoot\..\..\..\Documents\Vault\Zettelkasten"
 $tempDir = "$PSScriptRoot\temp"
 $targetDir = "study\Factoids"
-$targetUrlBase = "en/study/factoids"
+$targetUrlBase = "study/factoids"
 $mdFiles = Get-ChildItem "$sourceDir\*.md"
 $copied = 0
 $skipped = 0
@@ -101,9 +101,6 @@ New-Item -ItemType Directory "$PSScriptRoot\content\$targetDir" | Out-Null
 
 # 1) Copy files to temp dir
 foreach ($mdFile in $mdFiles) {
-    if ($mdFile -contains 'Productivity.md') {
-        $mdFile
-    }
     $sourcePage = [Page]::new($mdFile)
     $tags = $sourcePage.Properties['tags']
     foreach ($tag in $tags) {
@@ -136,7 +133,7 @@ foreach ($page in $pages.Values) {
         $page.Parent = $pages[$parent]
     }
     for ($i = 0; $i -lt $lines.Count; $i++) {
-        $Matches.Clear()
+        if ($Matches) { $Matches.Clear() }
         $lines[$i] -match $linkPattern | Out-Null
         for ($j = 1; $j -le $Matches.Count; $j++) {
             $link = $Matches[$j]
@@ -204,5 +201,7 @@ foreach ($page in $pages.Values) {
         $lines | Out-File -Force -FilePath "$PSScriptRoot\content\$targetDir\$($page.TargetPath).md"
     }
 }
+
+$subjects | Select-Object -Property Name, Children | Format-Table
 
 Pop-Location

@@ -1,16 +1,16 @@
 baseURL: /
-languageCode: en-US
-defaultContentLanguage: en
+#languageCode: en-US
+#defaultContentLanguage: en
 
 title: Hugo Learn Documentation
 theme: hugo-theme-relearn
 metaDataFormat: yaml
-defaultContentLanguageInSubdir: true
+#defaultContentLanguageInSubdir: true
 
 params:
   editURL: https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/
   description: Documentation for Hugo Learn Theme
-  author: Mathieu Cornic
+  author.name: Ivan McMower
   showVisitedLinks: true
   disableBreadcrumb: false
   disableNextPrev: false
@@ -19,7 +19,7 @@ params:
   customMermaidURL: https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js
   titleSeparator: "::"
   alwaysopen: false
-  themeVariant: "zen-dark"
+  themeVariant: zen-dark
 
 outputs:
 home: [ "HTML", "RSS", "JSON"]
