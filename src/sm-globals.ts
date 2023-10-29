@@ -47,7 +47,7 @@ new Binding({ object: ui, property: "timerDisplay" }).addBinding(timerDisplayEle
 let exerciseMarkupElement: HTMLElement = $(".exercise-markup")[0] as HTMLElement
 new Binding({ object: ui, property: "exerciseMarkup" }).addBinding(exerciseMarkupElement, "innerHTML");
 
-let stateElement: HTMLDivElement = $(".pendulum-parent")[0] as HTMLDivElement;
+let stateElement: HTMLDivElement = $(".control-panel")[0] as HTMLDivElement;
 new Binding({ object: ui, property: "metronomeState" }).addBinding(stateElement, "data-metronome-state");
 
 let restElement: HTMLInputElement = $(".rest")[0] as HTMLInputElement

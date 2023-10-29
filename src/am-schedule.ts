@@ -372,24 +372,24 @@ class AcceleratingSchedule {
 const URL_TEMPLATE: string = "{0}?r={1}&s={2}&b={3}&c={4}&l={5}&h={6}&d={7}&e={8}";
 
 const HTML_TEMPLATE: string = `\
-    <tr class="d-flex">
-        <td class="col-1">
-            <button type="button" class="btn btn-primary delete-schedule-row">␡</button>
+    <tr>
+        <td>
+            <button type="button" class="my-button delete-schedule-row">␡</button>
         </td>
-        <td class="col-1">
-            <input type='text' class='form-control digit-filter tempo tempo-0' placeholder='Tempo 1' autocomplete='off' value='{0}' />
+        <td>
+            <input type='text' class='digit-filter tempo tempo-0' placeholder='Tempo 1' autocomplete='off' value='{0}' />
         </td>
-        <td class="col-1">
-            <input type='text' class='form-control digit-filter tempo tempo-1' placeholder='Tempo 2' autocomplete='off' value='{1}' />
+        <td>
+            <input type='text' class='digit-filter tempo tempo-1' placeholder='Tempo 2' autocomplete='off' value='{1}' />
         </td>
-        <td class="col-1">
-            <input type='text' class='form-control time-filter midpoint midpoint-0' placeholder='Duration' autocomplete='off' value='{2}' />
+        <td>
+            <input type='text' class='time-filter midpoint midpoint-0' placeholder='Duration' autocomplete='off' value='{2}' />
         </td>
-        <td class="col-7">
-            <input type='text' class='form-control exercise' placeholder='Exercise' value='{3}' />
+        <td>
+            <input type='text' class='exercise' placeholder='Exercise' value='{3}' />
         </td>
-        <td class="col-1">
-            <button type="button" class="btn btn-primary add-schedule-row">⎀</button>
+        <td>
+            <button type="button" class="my-button add-schedule-row">⎀</button>
         </td>
     </tr>`;
 
