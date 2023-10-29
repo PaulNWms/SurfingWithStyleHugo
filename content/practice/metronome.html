@@ -3,4 +3,59 @@ title: "Metronome"
 date: 2023-01-21T17:39:42-08:00
 ---
 
-<iframe src="/html/metronome-frame.html" width="100%" height="600px"></iframe>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metronome</title>
+    <link href="/css/metronome.css" rel="stylesheet">
+</head>
+
+<body>
+    <article class="narrow-article metronome"
+        itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebApplication">
+        <meta itemprop="applicationCategory" content="Tool, Multimedia" />
+        <meta itemprop="applicationSubCategory" content="Music Rehearsal" />
+        <meta itemprop="operatingSystem" content="any" />
+        <div class="control-panel">
+            <div>
+                <button class="start" type="button" onclick="window.onPlayPause()"><span
+                        class="button-face">▶️</span></button>
+            </div>
+            <h1><span class="display">120</span></h1>
+            <div class="tempo-slider-container">
+                <button type="button" class="increment-decrement" onclick="window.decrementTempo()">◀</button>
+                <div style="width:80%; display: flex; justify-content: space-between;" >
+                    <input type="range" class="tempo-slider" style="width:100%;" min="20" max="240" step="1"
+                        oninput="window.onSliderChanged(this.value)" onchange="window.onSliderChanged(this.value)" />
+                </div>
+                <button type="button" class="increment-decrement" onclick="window.incrementTempo()">▶</button>
+            </div>
+        </div>
+        <div class="metronome-object">
+            <div class="spacer"></div>
+            <div class="pendulum-crossbar">
+                <div class="pendulum-grandparent">
+                    <div class="pendulum-parent">
+                        <div class="pendulum-child"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <audio class="audio-click" preload="auto" hidden="hidden">
+                <source src="/audio/downbeatClick.wav" type="audio/wav">
+                <source src="/audio/downbeatClick.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </article>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <script src="/js/metronome.bundle.js"></script>
+</body>
+
+</html>
