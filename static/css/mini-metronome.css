@@ -1,39 +1,65 @@
-﻿    .mini-metronome .unpad {
-        padding: unset;
-    }
+﻿.mini-metronome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .mini-metronome .tempo-slider-container {
-        width: 100%;
-        padding-top: 15px;
-        display: inline-block;
-    }
-
-    .mini-metronome .metronome-object {
-        width: 50px;
-        height: 225px;
-        margin: 0;
-        background-color: brown;
-    }
-
-    .mini-metronome .display {
-        font-size: 80px;
+    .mini-metronome .control-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: grey;
+        width: 80%;
+        margin: auto;
+        border-radius: 15px;
+        margin-bottom: 3%;
+        padding: 2% 2% 2% 2%;
     }
 
     .mini-metronome .start {
         height: 100px;
         width: 100px;
-        font-size: xx-large;
+        border-radius: 10px;
+        font-size: 4em;
+    }
+
+    .mini-metronome .timer-exercise-display {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .mini-metronome .metronome-object {
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        height: 225px;
+        margin: 0;
+        background-color: brown;
+
+    }
+
+    .mini-metronome .inviso {
+        background-color: grey;
+    }
+
+    .mini-metronome .spacer {
+        width: 100%;
+        height: 75%;
     }
 
     .mini-metronome .pendulum-crossbar {
-        width: 50px;
-        top: 265px;
-        position: absolute;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 4%;
     }
 
     .mini-metronome .pendulum-grandparent {
         display: inline-block;
+        width: 10px;
+        height: 10px;
     }
 
     .mini-metronome .pendulum-child {
@@ -115,4 +141,18 @@
         animation-direction: alternate;
         animation-fill-mode: none;
         animation-play-state: running;
+    }
+
+    .mini-metronome .option-row {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .mini-metronome .my-button {
+        display: flex;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
     }

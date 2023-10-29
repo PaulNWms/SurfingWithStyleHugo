@@ -16,6 +16,13 @@
         padding: 2% 2% 2% 2%;
     }
 
+    .metronome .start {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        font-size: 4em;
+    }
+
     .metronome .tempo-slider-container {
         width: 100%;
         display: flex;
@@ -41,17 +48,6 @@
         height: 450px;
         margin: 0;
         background-color: brown;
-    }
-
-    .metronome .display {
-        font-size: 80px;
-    }
-
-    .metronome .start {
-        height: 100px;
-        width: 100px;
-        border-radius: 10px;
-        font-size: xx-large;
     }
 
     .metronome .increment-decrement {
