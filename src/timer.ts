@@ -33,6 +33,7 @@ function min25() { usePreset("tomato-timer", 25); }
 function min30() { usePreset("30-minute-timer", 30); }
 function min45() { usePreset("45-minute-timer", 45); }
 function min60() { usePreset("1-hour-timer", 60); }
+function min90() { usePreset("90-minute-timer", 90); }
 
 function updateButton(state: TimerState) {
     timerStatus = state;
@@ -169,5 +170,6 @@ $(document).ready(function() {
     w.min30 = min30;
     w.min45 = min45;
     w.min60 = min60;
+    w.min90 = min90;
     updateButton(TimerState.Stopped);
 });

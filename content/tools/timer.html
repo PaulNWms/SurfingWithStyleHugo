@@ -1,79 +1,93 @@
 ---
 title: "Timer"
 date: 2019-12-30T19:11:51-08:00
+weight: 100
 ---
 
-<article class="narrow-article timer" itemprop="mainContentOfPage" itemscope
-    itemtype="http://schema.org/WebApplication">
-    <meta itemprop="applicationCategory" content="Tool, Multimedia" />
-    <meta itemprop="applicationSubCategory" content="Time Management" />
-    <meta itemprop="operatingSystem" content="IIS/ASP.NET MVC" />
-    <div class="jumbotron text-center">
-        <div class="row justify-content-center">
-            <button class="btn btn-primary btn-lg start" type="button" onclick="window.onStartPause()"><span
-                    id="button-face"></span></button>
-            <h1 class="offset-1 display"><span id="timer-display"></span></h1>
-        </div>
-    </div>
-    <div class="offset-md-3">
-        <div class="form-group row">
-            <label class="col-md-2 col-form-label" for="formatted-duration">Duration</label>
-            <div class="col-md-2">
-                <input class="form-control duration-minutes" id="formatted-duration" type="text" />
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metronome</title>
+    <link href="/css/my-style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <article class="narrow-article timer" itemprop="mainContentOfPage" itemscope
+        itemtype="http://schema.org/WebApplication">
+        <meta itemprop="applicationCategory" content="Tool, Multimedia" />
+        <meta itemprop="applicationSubCategory" content="Time Management" />
+        <meta itemprop="operatingSystem" content="IIS/ASP.NET MVC" />
+        <div class="control-panel">
+            <div>
+                <button class="start" type="button" onclick="window.onStartPause()"><span
+                        id="button-face"></span></button>
             </div>
+            <h1><span id="timer-display"></span></h1>
         </div>
-    </div>
-    <p class="offset-md-3 col-md-6 hidden-xs">Enter the timer duration, or choose one of the presets.</p>
-    <div class="row offset-md-3 col-md-6 btn-group btn-group-toggle" data-toggle="buttons">
-        <table>
-            <tr>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min1()">1 min.</button>
-                </td>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min2()">2 min.</button>
-                </td>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min3()">3 min.</button>
-                </td>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min5()">5 min.</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min10()">10 min.</button>
-                </td>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min15()">15 min.</button>
-                </td>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min20()">20 min.</button>
-                </td>
-                <td>
-                    <button class="btn btn-secondary active" onclick="window.min25()">25 min.</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min30()">30 min.</button>
-                </td>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min45()">45 min.</button>
-                </td>
-                <td>
-                    <button class="btn btn-secondary" onclick="window.min60()">1 hour</button>
-                </td>
-            </tr>
-        </table>
-    </div>
-</article>
+        <div class="my-row" style="justify-content: center;">
+            <label for="formatted-duration">Duration</label>&nbsp;
+            <input style="width: 5em;" id="formatted-duration" type="text" />
+        </div>
+        <p>Enter the timer duration, or choose one of the presets.</p>
+        <div data-toggle="buttons">
+            <table>
+                <tr>
+                    <td>
+                        <button class="my-button" onclick="window.min1()">1 min.</button>
+                    </td>
+                    <td>
+                        <button class="my-button" onclick="window.min2()">2 min.</button>
+                    </td>
+                    <td>
+                        <button class="my-button" onclick="window.min3()">3 min.</button>
+                    </td>
+                    <td>
+                        <button class="my-button" onclick="window.min5()">5 min.</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="my-button" onclick="window.min10()">10 min.</button>
+                    </td>
+                    <td>
+                        <button class="my-button" onclick="window.min15()">15 min.</button>
+                    </td>
+                    <td>
+                        <button class="my-button" onclick="window.min20()">20 min.</button>
+                    </td>
+                    <td>
+                        <button class="my-button active" onclick="window.min25()">25 min.</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="my-button" onclick="window.min30()">30 min.</button>
+                    </td>
+                    <td>
+                        <button class="my-button" onclick="window.min45()">45 min.</button>
+                    </td>
+                    <td>
+                        <button class="my-button" onclick="window.min60()">1 hour</button>
+                    </td>
+                    <td>
+                        <button class="my-button" onclick="window.min90()">90 min.</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </article>
 
-<audio class="audio-bell" preload="auto">
-    <source src="/audio/EndRoutine.wav" type="audio/wav">
-    <source src="/audio/EndRoutine.mp3" type="audio/mp3">
-</audio>
+    <audio class="audio-bell" preload="auto">
+        <source src="/audio/EndRoutine.wav" type="audio/wav">
+        <source src="/audio/EndRoutine.mp3" type="audio/mp3">
+    </audio>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
-    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-<script src="/js/timer.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="/js/timer.bundle.js"></script>
+
+</body>
