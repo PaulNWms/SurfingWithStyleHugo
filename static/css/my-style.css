@@ -1,0 +1,13 @@
+.my-button {
+    display: flex;
+    border-radius: .25em;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1.5em;
+}
+.my-checkbox-row {
+    display: flex;
+    justify-content: flex-start;
+}

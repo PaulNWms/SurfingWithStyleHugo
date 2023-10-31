@@ -3,128 +3,146 @@ title: "Old English Letters"
 date: 2020-07-22T09:07:16-07:00
 ---
 
-<article class="narrow-article timer" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebApplication">
-    <meta itemprop="applicationCategory" content="Tool, Multimedia" />
-    <meta itemprop="applicationSubCategory" content="Time Management" />
-    <meta itemprop="operatingSystem" content="IIS/ASP.NET MVC" />
-    <form>
-        <div class="form-group">
-            <p>Enter or paste some text into the upper box and hit [Convert].</p>
-            <p>Don't take the results too seriously.</p>
-        </div>
-        <div class="form-group offset-sm-1 col-10">
-            <textarea id="prose" class="form-control" rows="6"></textarea>
-        </div>
-        <div class="form-group offset-sm-2">
-            <button type="button" class="btn btn-primary" onclick="window.convert()">Convert</button>
-        </div>
-        <div class="form-group offset-sm-1 col-10">
-            <textarea id="converted" class="form-control" rows="6" readonly="readonly"></textarea>
-        </div>
-        <div class="form-group offset-sm-2">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="ash" checked onchange="convert()">
-                <label class="form-check-label" for="ash">
-                    ae → æ, <a href="https://en.wiktionary.org/wiki/%C3%A6">ash</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="gh2yogh" checked onchange="convert()">
-                <label class="form-check-label" for="yogh">
-                    gh → ȝ, <a href="https://en.wikipedia.org/wiki/Yogh">yogh</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="j2insularG" checked onchange="convert()">
-                <label class="form-check-label" for="j2insularG">
-                    j → ᵹ, <a href="https://en.wikipedia.org/wiki/Insular_G">insular G</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="eng" checked onchange="convert()">
-                <label class="form-check-label" for="eng">
-                    ng → ŋ, <a href="https://en.wikipedia.org/wiki/Eng_(letter)">eng</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="ethel" checked onchange="convert()">
-                <label class="form-check-label" for="ethel">
-                    oe → œ, <a href="https://en.wikipedia.org/wiki/%C5%92">ethel</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="longS" checked onchange="convert()">
-                <label class="form-check-label" for="longS">
-                    s → ſ, <a href="https://en.wikipedia.org/wiki/Long_s">long S</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="thorn" checked onchange="convert()">
-                <label class="form-check-label" for="thorn">
-                    th → þ, <a href="https://en.wikipedia.org/wiki/Thorn_(letter)">thorn</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="thornWithStroke" checked onchange="convert()">
-                <label class="form-check-label" for="thornWithStroke">
-                    that → ꝥ, <a href="https://en.wikipedia.org/wiki/Thorn_with_stroke">that</a>, also written 'þͭ'
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="theShorthand" checked onchange="convert()">
-                <label class="form-check-label" for="theShorthand">
-                    the → þͤ, <a href="https://en.wikipedia.org/wiki/Thorn_(letter)">the</a>, later written 'yͤ'
-                    <a href="https://gizmodo.com/ye-olde-is-fake-old-english-and-youre-mispronouncing-1679780566">but still pronounced 'the'</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="eth" checked onchange="convert()">
-                <label class="form-check-label" for="eth">
-                    th → ð, <a href="https://en.wikipedia.org/wiki/Eth">eth</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="wynn" checked onchange="convert()">
-                <label class="form-check-label" for="wynn">
-                    w → ƿ, <a href="https://en.wikipedia.org/wiki/Wynn">wynn</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="x2insularG" checked onchange="convert()">
-                <label class="form-check-label" for="x2insularG">
-                    x → ᵹ, <a href="https://en.wikipedia.org/wiki/Insular_G">insular G</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="y2yogh" onchange="convert()">
-                <label class="form-check-label" for="yogh">
-                    y → ȝ, <a href="https://en.wikipedia.org/wiki/Yogh">yogh</a>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="ampersand" checked onchange="convert()">
-                <label class="form-check-label" for="ampersand">
-                    and → &, <a href="https://en.wikipedia.org/wiki/Ampersand">ampersand</a>
-                </label>
-            </div>
-        </div>
-        <div>
-            <p>These letters were not in use at the same time and place, and this is only a partial list.</p>
+<!doctype html>
+<html lang="en">
 
-            <p>The shorthand for 'this' (thorn with a superscript 's') was left out because it doesn't render correctly
-            on most systems.  Maybe a Windows update will fix it someday.</p>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metronome</title>
+    <link href="/css/my-style.css" rel="stylesheet">
+</head>
 
-            <p>The long 'ſ' substitution mostly follows the rules for English given <a href="https://en.wikipedia.org/wiki/Long_s#Rules">here</a>.
-            It was used in German texts until WWII, where you're much more likely to see it.  The rules are a bit different from English though.</p>
-            
-            Related links:
-            <ul>
-                <li><a href="https://www.wordorigins.org/harmless-drudge/old-english-alphabet">Word Origins</a></li>
-                <li><a href="https://chaucer.fas.harvard.edu/how-read-medieval-handwriting-paleography">How to Read Medieval Handwriting (Paleography)</a></li>
-                <li><a href="https://mufi.info/m.php?p=mufi">The Medieval Unicode Font Initiative</a></li>
-            </ul>
-        </div>
-    </form>
-</article>
+<body>
+    <article class="narrow-article timer" itemprop="mainContentOfPage" itemscope
+        itemtype="http://schema.org/WebApplication">
+        <meta itemprop="applicationCategory" content="Tool, Multimedia" />
+        <meta itemprop="applicationSubCategory" content="Time Management" />
+        <meta itemprop="operatingSystem" content="IIS/ASP.NET MVC" />
+        <form>
+            <div class="form-group">
+                <p>Enter or paste some text into the upper box, then hit [Convert].</p>
+                <p>Don't take the results too seriously.</p>
+            </div>
+            <div>
+                <textarea id="prose" rows="6"></textarea>
+            </div>
+            <div>
+                <button type="button" class="my-button" onclick="window.convert()">Convert</button>
+            </div>
+            <div>
+                <textarea id="converted" rows="6" readonly="readonly"></textarea>
+            </div>
+            <div style="margin-left: 5em;">
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="ash" checked onchange="convert()">
+                    <label for="ash">
+                        ae → æ, <a href="https://en.wiktionary.org/wiki/%C3%A6">ash</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="gh2yogh" checked onchange="convert()">
+                    <label for="yogh">
+                        gh → ȝ, <a href="https://en.wikipedia.org/wiki/Yogh">yogh</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="j2insularG" checked onchange="convert()">
+                    <label for="j2insularG">
+                        j → ᵹ, <a href="https://en.wikipedia.org/wiki/Insular_G">insular G</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="eng" checked onchange="convert()">
+                    <label for="eng">
+                        ng → ŋ, <a href="https://en.wikipedia.org/wiki/Eng_(letter)">eng</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="ethel" checked onchange="convert()">
+                    <label for="ethel">
+                        oe → œ, <a href="https://en.wikipedia.org/wiki/%C5%92">ethel</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="longS" checked onchange="convert()">
+                    <label for="longS">
+                        s → ſ, <a href="https://en.wikipedia.org/wiki/Long_s">long S</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="thorn" checked onchange="convert()">
+                    <label for="thorn">
+                        th → þ, <a href="https://en.wikipedia.org/wiki/Thorn_(letter)">thorn</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="thornWithStroke" checked onchange="convert()">
+                    <label for="thornWithStroke">
+                        that → ꝥ, <a href="https://en.wikipedia.org/wiki/Thorn_with_stroke">that</a>, also written 'þͭ'
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="theShorthand" checked onchange="convert()">
+                    <label for="theShorthand">
+                        the → þͤ, <a href="https://en.wikipedia.org/wiki/Thorn_(letter)">the</a>, later written 'yͤ',
+                        <a href="https://gizmodo.com/ye-olde-is-fake-old-english-and-youre-mispronouncing-1679780566">but
+                            still pronounced 'the'</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="eth" checked onchange="convert()">
+                    <label for="eth">
+                        th → ð, <a href="https://en.wikipedia.org/wiki/Eth">eth</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="wynn" checked onchange="convert()">
+                    <label for="wynn">
+                        w → ƿ, <a href="https://en.wikipedia.org/wiki/Wynn">wynn</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="x2insularG" checked onchange="convert()">
+                    <label for="x2insularG">
+                        x → ᵹ, <a href="https://en.wikipedia.org/wiki/Insular_G">insular G</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="y2yogh" onchange="convert()">
+                    <label for="yogh">
+                        y → ȝ, <a href="https://en.wikipedia.org/wiki/Yogh">yogh</a>
+                    </label>
+                </div>
+                <div class="my-checkbox-row">
+                    <input type="checkbox" value="" id="ampersand" checked onchange="convert()">
+                    <label for="ampersand">
+                        and → &, <a href="https://en.wikipedia.org/wiki/Ampersand">ampersand</a>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <p>These letters were not in use at the same time and place, and this is only a partial list.</p>
 
-<script src="/js/oldEnglishLetters.bundle.js"></script>
+                <p>The shorthand for 'this' (thorn with a superscript 's') was left out because it doesn't render
+                    correctly
+                    on most systems. Maybe a Windows update will fix it someday.</p>
+
+                <p>The long 'ſ' substitution mostly follows the rules for English given <a
+                        href="https://en.wikipedia.org/wiki/Long_s#Rules">here</a>.
+                    It was used in German texts until WWII, where you're much more likely to see it. The rules are a bit
+                    different from English though.</p>
+
+                Related links:
+                <ul>
+                    <li><a href="https://www.wordorigins.org/harmless-drudge/old-english-alphabet">Word Origins</a></li>
+                    <li><a href="https://chaucer.fas.harvard.edu/how-read-medieval-handwriting-paleography">How to Read
+                            Medieval Handwriting (Paleography)</a></li>
+                    <li><a href="https://mufi.info/m.php?p=mufi">The Medieval Unicode Font Initiative</a></li>
+                </ul>
+            </div>
+        </form>
+    </article>
+
+    <script src="/js/oldEnglishLetters.bundle.js"></script>
+</body>
