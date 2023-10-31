@@ -1,50 +1,53 @@
-.calculator {
+.calculator {}
+
+.calculator body {
+    font-family: 'Segoe UI', sans-serif;
 }
 
-    .calculator body {
-        font-family: 'Segoe UI', sans-serif;
-    }
+.calculator span {
+    font-style: italic;
+}
 
-    .calculator span {
-        font-style: italic;
-    }
+.calculator table {
+    width: auto;
+    table-layout: auto;
+    border-collapse: collapse;
+}
 
-    .calculator td {
-        padding: 0px 0px 0px 0px;
-    }
+.calculator th,
+.calculator td {
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+    border: 0px;
+    padding: 1px;
+}
 
-    .calculator .device {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        border: 2px solid black;
-    }
+.calculator button {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: .25em;
+}
 
-    .calculator .display {
-        text-align: right;
-        font-family: monospace;
-        font-size: 16pt;
-        border: 2px solid silver;
-        background-color: black;
-        color: red;
-    }
+.calculator .device {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid black;
+}
 
-    .calculator .btn {
-        width: 40px;
-        height: 40px;
-        margin: 5px;
-        background-color: lightgray;
-    }
+.calculator .display {
+    text-align: right;
+    font-family: monospace;
+    font-size: 16pt;
+    border: 2px solid silver;
+    background-color: black;
+    color: red;
+}
 
-    .calculator .zero {
-        width: 90px;
-    }
-
-    .calculator .equals {
-        height: 90px;
-    }
-
-    .calculator .text {
-        text-align: center;
-    }
+.calculator .text {
+    text-align: center;
+}
