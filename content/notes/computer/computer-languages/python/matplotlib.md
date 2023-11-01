@@ -49,7 +49,7 @@ plt.axvline(x=lower, color='r', linewidth=2);
 plt.axvline(x=upper, color='r', linewidth=2);
 
 # visually check for collinearity between variables
-sb.pairplot(df['area', 'bedrooms', 'bathrooms'](/study/factoids/))
+sb.pairplot(df['area', 'bedrooms', 'bathrooms'](/notes/))
 
 # basic bar chart
 base_color = sb.color_palette()[0]

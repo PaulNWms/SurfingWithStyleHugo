@@ -6,13 +6,13 @@ tags:
   - health
 ---
 
-- [sleep](/study/factoids/)
-- [Nutrition](/study/factoids/health/nutrition)
-- [exercise](/study/factoids/)
-- [Hormones](/study/factoids/health/hormones)
-- [Symptoms](/study/factoids/health/symptoms)
-- [Sickness](/study/factoids/health/sickness)
-- [emergency care](/study/factoids/)
+- [sleep](/notes/)
+- [Nutrition](/notes/health/nutrition)
+- [exercise](/notes/)
+- [Hormones](/notes/health/hormones)
+- [Symptoms](/notes/health/symptoms)
+- [Sickness](/notes/health/sickness)
+- [emergency care](/notes/)
 
 ---
 # References

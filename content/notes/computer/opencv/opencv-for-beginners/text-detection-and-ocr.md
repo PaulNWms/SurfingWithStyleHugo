@@ -1,11 +1,10 @@
 ---
-title: Module 19 - Text Detection and OCR
+title: Text Detection and OCR
 date: 2023-06-14T05:24-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ```python
 # Define list to store the vocabulary, the recognizable characters.
 vocabulary =[]

@@ -5,16 +5,16 @@ draft: false
 tags:
   - "#WWW"
 ---
-- [HTTP](/study/factoids/computer/www/http)
-- [HTML](/study/factoids/computer/www/html)
-- [CSS](/study/factoids/computer/www/css)
-- [JavaScript](/study/factoids/computer/www/javascript)
-- [TypeScript](/study/factoids/computer/www/typescript)
-- [WASM](/study/factoids/computer/www/wasm)
-- [Hugo](/study/factoids/computer/www/hugo)
-- [Markdown](/study/factoids/computer/www/markdown)
-- [Webpack](/study/factoids/computer/www/webpack)
-- [Blazor](/study/factoids/computer/microsoft/blazor)
+- [HTTP](/notes/computer/www/http)
+- [HTML](/notes/computer/www/html)
+- [CSS](/notes/computer/www/css)
+- [JavaScript](/notes/computer/www/javascript)
+- [TypeScript](/notes/computer/www/typescript)
+- [WASM](/notes/computer/www/wasm)
+- [Hugo](/notes/computer/www/hugo)
+- [Markdown](/notes/computer/www/markdown)
+- [Webpack](/notes/computer/www/webpack)
+- [Blazor](/notes/computer/microsoft/blazor)
 
 ---
 # References

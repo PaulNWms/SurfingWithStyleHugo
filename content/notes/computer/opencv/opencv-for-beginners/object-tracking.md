@@ -1,5 +1,5 @@
 ---
-title: Module 16 - Object Tracking
+title: Object Tracking
 date: 2023-06-11T09:05-0800
 draft: false
 tags:

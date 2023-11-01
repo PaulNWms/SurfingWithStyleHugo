@@ -6,7 +6,7 @@ tags:
   - "#OpenCV" 
 ---
 
-- [OpenCV For Beginners](/study/factoids/computer/opencv/opencv-for-beginners)
+- [OpenCV For Beginners](/notes/computer/opencv/opencv-for-beginners)
 
 ---
 # References

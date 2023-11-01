@@ -201,7 +201,7 @@ X_train, X_test, y_train, y_test = train_test_split(features_final,
 # linear regression
 import statsmodels.api as sm;
 df['intercept'] = 1
-mod = sm.OLS(df['price'], df['intercept','area'](/study/factoids/)) # (y, X)
+mod = sm.OLS(df['price'], df['intercept','area'](/notes/)) # (y, X)
 res = mod.fit()
 res.summary()
 
@@ -217,7 +217,7 @@ vif.round(1)
 
 # logistic regression (see also scikit-learn)
 df['intercept'] = 1
-log_mod = sm.Logit(df['fraud'], df['intercept', 'weekday', 'duration'](/study/factoids/))
+log_mod = sm.Logit(df['fraud'], df['intercept', 'weekday', 'duration'](/notes/))
 results = log_mod.fit()
 results.summary()
 np.exp(results.params)

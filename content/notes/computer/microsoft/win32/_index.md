@@ -5,8 +5,8 @@ draft: false
 tags:
   - "#Win32"
 ---
-- [SafeArray](/study/factoids/computer/microsoft/com/safearray)
-- [Native Threads](/study/factoids/computer/microsoft/win32/native-threads)
+- [SafeArray](/notes/computer/microsoft/com/safearray)
+- [Native Threads](/notes/computer/microsoft/win32/native-threads)
 
 ---
 # References

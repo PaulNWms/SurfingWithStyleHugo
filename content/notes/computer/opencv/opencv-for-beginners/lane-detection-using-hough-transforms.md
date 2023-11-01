@@ -1,5 +1,5 @@
 ---
-title: Module 9 - Lane Detection using Hough Transforms
+title: Lane Detection using Hough Transforms
 date: 2023-06-07T18:40-0800
 draft: false
 tags:

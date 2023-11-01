@@ -6,7 +6,7 @@ tags:
   - "#health"
 ---
 
-- [Nutrients](/study/factoids/health/nutrition/nutrients)
+- [Nutrients](/notes/health/nutrition/nutrients)
 
 ---
 # References

@@ -6,8 +6,8 @@ keywords:
 draft: false
 tags:
 ---
-- [SOLID](/study/factoids/computer/best-practices/solid)
-- [Design Patterns](/study/factoids/computer/best-practices/design-patterns)
+- [SOLID](/notes/computer/best-practices/solid)
+- [Design Patterns](/notes/computer/best-practices/design-patterns)
 
 ---
 # References

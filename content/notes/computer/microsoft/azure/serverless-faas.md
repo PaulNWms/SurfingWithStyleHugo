@@ -6,9 +6,9 @@ tags:
   - "#Azure"
 ---
 
-- [Azure Functions](/study/factoids/) are the most basic of compute tasks. Does one function then dies until next time it is called.
-- [Logic Apps](/study/factoids/) are a quick and simple way to integrate systems and applications inside and outside of Azure.
-- [Event Grid](/study/factoids/) is a routing service for passing events between applications that need to know about the events.
+- [Azure Functions](/notes/) are the most basic of compute tasks. Does one function then dies until next time it is called.
+- [Logic Apps](/notes/) are a quick and simple way to integrate systems and applications inside and outside of Azure.
+- [Event Grid](/notes/) is a routing service for passing events between applications that need to know about the events.
 
 ---
 # References

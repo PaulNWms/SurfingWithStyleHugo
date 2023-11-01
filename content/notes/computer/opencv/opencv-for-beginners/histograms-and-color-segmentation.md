@@ -1,5 +1,5 @@
 ---
-title: Module 3 - Histograms and Color Segmentation
+title: Histograms and Color Segmentation
 date: 2023-06-03T07:51-0800
 draft: false
 tags:

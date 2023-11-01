@@ -1,11 +1,10 @@
 ---
-title: Module 11 - Image Registration Techniques
+title: Image Registration Techniques
 date: 2023-06-08T22:04-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ```python
 # Read reference image of the form.
 img_form = 'form.jpg'

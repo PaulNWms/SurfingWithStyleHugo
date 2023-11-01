@@ -13,7 +13,7 @@ tags:
 # References
 
 Offerings
-- [Azure Bot Service](/study/factoids/computer/microsoft/azure/big-data/azure-machine-learning/azure-bot-service)
-- [Azure Cognitive Services](/study/factoids/computer/microsoft/azure/big-data/azure-machine-learning/azure-cognitive-services)
-- [Azure Machine Learning Studio](/study/factoids/computer/microsoft/azure/big-data/azure-machine-learning/azure-machine-learning-studio)
-- [Machine Learning Service](/study/factoids/computer/microsoft/azure/big-data/azure-machine-learning/machine-learning-service)
+- [Azure Bot Service](/notes/computer/microsoft/azure/big-data/azure-machine-learning/azure-bot-service)
+- [Azure Cognitive Services](/notes/computer/microsoft/azure/big-data/azure-machine-learning/azure-cognitive-services)
+- [Azure Machine Learning Studio](/notes/computer/microsoft/azure/big-data/azure-machine-learning/azure-machine-learning-studio)
+- [Machine Learning Service](/notes/computer/microsoft/azure/big-data/azure-machine-learning/machine-learning-service)

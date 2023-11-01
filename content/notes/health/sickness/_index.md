@@ -8,7 +8,7 @@ draft: false
 tags:
   - Health
 ---
-- [Anemia](/study/factoids/health/sickness/anemia)
+- [Anemia](/notes/health/sickness/anemia)
 
 ---
 # References

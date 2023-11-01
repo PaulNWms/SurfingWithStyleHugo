@@ -6,12 +6,12 @@ tags:
   - "#Azure"
 ---
 
-- [Virtual Network](/study/factoids/computer/microsoft/azure/networking/virtual-network)
-- [ExpressRoute](/study/factoids/computer/microsoft/azure/networking/expressroute)
-- [VPN Gateway](/study/factoids/computer/microsoft/azure/networking/vpn-gateway)
-- [Application Gateway](/study/factoids/computer/microsoft/azure/networking/application-gateway)
-- [Load Balancer](/study/factoids/computer/microsoft/azure/networking/load-balancer)
-- [Content Delivery Network](/study/factoids/computer/microsoft/azure/networking/content-delivery-network)
+- [Virtual Network](/notes/computer/microsoft/azure/networking/virtual-network)
+- [ExpressRoute](/notes/computer/microsoft/azure/networking/expressroute)
+- [VPN Gateway](/notes/computer/microsoft/azure/networking/vpn-gateway)
+- [Application Gateway](/notes/computer/microsoft/azure/networking/application-gateway)
+- [Load Balancer](/notes/computer/microsoft/azure/networking/load-balancer)
+- [Content Delivery Network](/notes/computer/microsoft/azure/networking/content-delivery-network)
 
 ---
 # References

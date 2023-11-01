@@ -7,9 +7,9 @@ tags:
 ---
 
 PaaS
-- [Web Apps](/study/factoids/computer/microsoft/azure/app-services/web-apps)
-- [Web Apps for Containers](/study/factoids/computer/microsoft/azure/app-services/web-apps-for-containers)
-- [API Apps](/study/factoids/computer/microsoft/azure/app-services/api-apps)
+- [Web Apps](/notes/computer/microsoft/azure/app-services/web-apps)
+- [Web Apps for Containers](/notes/computer/microsoft/azure/app-services/web-apps-for-containers)
+- [API Apps](/notes/computer/microsoft/azure/app-services/api-apps)
 
 ---
 # References

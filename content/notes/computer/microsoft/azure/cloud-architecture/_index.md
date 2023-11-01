@@ -6,9 +6,9 @@ tags:
   - "#Azure"
 ---
 
-- [Private Cloud](/study/factoids/computer/microsoft/azure/cloud-architecture/private-cloud)
-- [Public Cloud](/study/factoids/computer/microsoft/azure/cloud-architecture/public-cloud)
-- [Hybrid Cloud](/study/factoids/computer/microsoft/azure/cloud-architecture/hybrid-cloud)
+- [Private Cloud](/notes/computer/microsoft/azure/cloud-architecture/private-cloud)
+- [Public Cloud](/notes/computer/microsoft/azure/cloud-architecture/public-cloud)
+- [Hybrid Cloud](/notes/computer/microsoft/azure/cloud-architecture/hybrid-cloud)
 
 ---
 # References

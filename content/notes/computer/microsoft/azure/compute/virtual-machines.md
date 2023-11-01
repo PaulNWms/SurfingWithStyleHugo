@@ -7,8 +7,8 @@ tags:
 ---
 
 - IaaS
-- Tools - [Azure Portal](/study/factoids/)
-- Compliance - [blueprints](/study/factoids/)
+- Tools - [Azure Portal](/notes/)
+- Compliance - [blueprints](/notes/)
 - Recommendations
 - Choose configuration - Pricing goes up as resources go up, and you pay by the hour.
 

@@ -1,11 +1,10 @@
 ---
-title: Module 12 - ArUco Markers for Augmented Reality
+title: ArUco Markers for Augmented Reality
 date: 2023-06-09T07:18-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ```python
 # Load the pre-defined ArUco Marker dictionary that has 250 6x6 marker patterns.
 import cv2

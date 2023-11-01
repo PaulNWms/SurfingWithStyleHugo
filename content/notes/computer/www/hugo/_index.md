@@ -12,10 +12,10 @@ tags:
 - `> hugo server` - run the webserver
   Commonly used options are `--environment`, `--disableFastRender` and `--disableLiveReload`
 
-[Hugo Folders](/study/factoids/computer/www/hugo/hugo-folders)
-[Page Bundle](/study/factoids/computer/www/hugo/page-bundle)
-[Front Matter](/study/factoids/computer/www/hugo/front-matter)
-[Go Template Language](/study/factoids/computer/www/hugo/go-template-language) (not to be confused with Go)
+[Hugo Folders](/notes/computer/www/hugo/hugo-folders)
+[Page Bundle](/notes/computer/www/hugo/page-bundle)
+[Front Matter](/notes/computer/www/hugo/front-matter)
+[Go Template Language](/notes/computer/www/hugo/go-template-language) (not to be confused with Go)
 
 The landing page `index.md` is treated specially.
 

@@ -1,11 +1,10 @@
 ---
-title: Module 20 - Super Resolution
+title: Super Resolution
 date: 2023-06-16T06:58-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ```Python
 # Create super-resolution object.
 obj = cv2.dnn_superres.DnnSuperResImpl_create()

@@ -6,13 +6,13 @@ tags:
   - "#Azure"
 ---
 
-- [Virtual Machines](/study/factoids/computer/microsoft/azure/compute/virtual-machines)
-- [Scale Sets](/study/factoids/computer/microsoft/azure/compute/scale-sets)
-- [App Services](/study/factoids/computer/microsoft/azure/app-services)
-- [Azure Container Instances](/study/factoids/computer/microsoft/azure/compute/azure-container-instances)
-- [Azure Kubernetes Service](/study/factoids/computer/microsoft/azure/compute/azure-kubernetes-service)
-- [Azure Virtual Desktop](/study/factoids/computer/microsoft/azure/compute/azure-virtual-desktop)
-- [Functions](/study/factoids/computer/microsoft/azure/compute/functions)
+- [Virtual Machines](/notes/computer/microsoft/azure/compute/virtual-machines)
+- [Scale Sets](/notes/computer/microsoft/azure/compute/scale-sets)
+- [App Services](/notes/computer/microsoft/azure/app-services)
+- [Azure Container Instances](/notes/computer/microsoft/azure/compute/azure-container-instances)
+- [Azure Kubernetes Service](/notes/computer/microsoft/azure/compute/azure-kubernetes-service)
+- [Azure Virtual Desktop](/notes/computer/microsoft/azure/compute/azure-virtual-desktop)
+- [Functions](/notes/computer/microsoft/azure/compute/functions)
 
 ---
 # References

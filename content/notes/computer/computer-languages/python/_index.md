@@ -9,13 +9,13 @@ tags:
 ---
 ## Libraries
 
-- [NumPy](/study/factoids/computer/computer-languages/python/numpy)
-- [Pandas](/study/factoids/computer/computer-languages/python/pandas)
-- [ScikitLearn](/study/factoids/computer/computer-languages/python/scikitlearn)
-- [MatPlotLib](/study/factoids/computer/computer-languages/python/matplotlib)
-- [TensorFlow](/study/factoids/computer/computer-languages/python/tensorflow)
-- [Keras](/study/factoids/)
-- [PyTorch](/study/factoids/)
+- [NumPy](/notes/computer/computer-languages/python/numpy)
+- [Pandas](/notes/computer/computer-languages/python/pandas)
+- [ScikitLearn](/notes/computer/computer-languages/python/scikitlearn)
+- [MatPlotLib](/notes/computer/computer-languages/python/matplotlib)
+- [TensorFlow](/notes/computer/computer-languages/python/tensorflow)
+- [Keras](/notes/)
+- [PyTorch](/notes/)
 
 ```python
 # create a requirements.txt

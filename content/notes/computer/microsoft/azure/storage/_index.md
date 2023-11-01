@@ -6,12 +6,12 @@ tags:
   - "#Azure"
 ---
 
-- [Blob](/study/factoids/computer/microsoft/azure/storage/blob)
-- [Disk](/study/factoids/computer/microsoft/azure/storage/disk)
-- [file](/study/factoids/)
-- [archive](/study/factoids/)
-- [Redundancy](/study/factoids/computer/microsoft/azure/storage/redundancy)
-- [Premium Options](/study/factoids/computer/microsoft/azure/storage/premium-options)
+- [Blob](/notes/computer/microsoft/azure/storage/blob)
+- [Disk](/notes/computer/microsoft/azure/storage/disk)
+- [file](/notes/)
+- [archive](/notes/)
+- [Redundancy](/notes/computer/microsoft/azure/storage/redundancy)
+- [Premium Options](/notes/computer/microsoft/azure/storage/premium-options)
 
 ---
 # References

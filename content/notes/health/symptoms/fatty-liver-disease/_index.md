@@ -11,7 +11,7 @@ hepatic steatosis
 
 ## Causes
 
-- [Omega-6 Vegetable Oils](/study/factoids/health/symptoms/fatty-liver-disease/omega-6-vegetable-oils)
+- [Omega-6 Vegetable Oils](/notes/health/symptoms/fatty-liver-disease/omega-6-vegetable-oils)
 - sugary foods
 - alcohol
 - high fructose corn syrup
@@ -34,9 +34,9 @@ hepatic steatosis
 - digestive enzyme supplement
 - choline
 - reduce sugar and starch
-- [Anti-inflammatory Foods](/study/factoids/health/symptoms/fatty-liver-disease/anti-inflammatory-foods)
-- [Sulfur-rich Vegetables](/study/factoids/health/symptoms/fatty-liver-disease/sulfur-rich-vegetables)
-- [cruciferous vegetables](/study/factoids/health/nutrition/nutrients/aromatase/cruciferous-vegetables)
+- [Anti-inflammatory Foods](/notes/health/symptoms/fatty-liver-disease/anti-inflammatory-foods)
+- [Sulfur-rich Vegetables](/notes/health/symptoms/fatty-liver-disease/sulfur-rich-vegetables)
+- [cruciferous vegetables](/notes/health/nutrition/nutrients/aromatase/cruciferous-vegetables)
 - milk thistle extract
 - intermittent fasting
 

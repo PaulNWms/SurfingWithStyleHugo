@@ -1,5 +1,5 @@
 ---
-title: Module 5 - Contour and Shape Analysis
+title: Contour and Shape Analysis
 date: 2023-06-03T09:17-0800
 draft: false
 tags:

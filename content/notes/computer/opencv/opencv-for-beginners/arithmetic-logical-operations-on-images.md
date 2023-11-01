@@ -1,11 +1,10 @@
 ---
-title: Arithmetic & Logical Operations
+title: Arithmetic & Logical Operations on Images
 date: 2023-05-22T06:07-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ### Brightness
 
 ```python

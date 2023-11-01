@@ -212,7 +212,7 @@ $$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}+\alpha\textbf{A}\right)^{-1}\cd
 ```py
 ridge_reg = Ridge(alpha=1, solver="cholesky")
 ridge_reg.fit(X, y)
-ridge_reg.predict([1.5](/study/factoids/))
+ridge_reg.predict([1.5](/notes/))
 ```
 
 - Lasso regression tends to completely eliminate the weights of the least important features.
@@ -221,7 +221,7 @@ $$J(\theta)=MSE(\theta)+\alpha\sum_{i=1}^{n}\left|\theta_i\right|$$
 ```py
 lasso_reg = Lasso(alpha=0.1)
 lasso_reg.fit(X, y)
-lasso_reg.predict([1.5](/study/factoids/))
+lasso_reg.predict([1.5](/notes/))
 ```
 
 - Elastic Net is a combination of the two.
@@ -231,7 +231,7 @@ $$J(\theta)=MSE(\theta)+r\alpha\sum_{i=1}^{n}\left|\theta_i\right|+\frac{1-r}{2}
 from sklearn.linear_model import ElasticNet
 elastic_net = ElasticNet(alpha=0.1, l1_ratio=0.5)
 elastic_net.fit(X, y)
-elastic_net.predict([1.5](/study/factoids/))
+elastic_net.predict([1.5](/notes/))
 ```
 - Early stopping
 
@@ -282,8 +282,8 @@ $$\nabla_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{p}_k^{(i)}-
 ```py
 softmax_reg = LogisticRegression(multi_class="multinomial", solver="lbfgs", C=10)
 softmax_reg.fit(X, y)
-softmax_reg.predict([5, 2](/study/factoids/))
-softmax_reg.predict_proba([5, 2](/study/factoids/))
+softmax_reg.predict([5, 2](/notes/))
+softmax_reg.predict_proba([5, 2](/notes/))
 ```
 
 ### Support Vector Machines
@@ -381,8 +381,8 @@ export_graphviz(
 Decision tree prediction
 
 ```py
-tree_clf.predict_proba([5, 1.5](/study/factoids/))
-tree_clf.predict([5, 1.5](/study/factoids/))
+tree_clf.predict_proba([5, 1.5](/notes/))
+tree_clf.predict([5, 1.5](/notes/))
 ```
 
 Regularization hyperparameters

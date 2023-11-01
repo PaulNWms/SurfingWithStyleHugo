@@ -5,10 +5,10 @@ draft: false
 tags:
   - computer
 ---
-- [XML](/study/factoids/computer/text-file-formats/xml)
-- [JSON](/study/factoids/computer/text-file-formats/json)
-- [YAML](/study/factoids/computer/text-file-formats/yaml)
-- [TOML](/study/factoids/computer/text-file-formats/toml)
+- [XML](/notes/computer/text-file-formats/xml)
+- [JSON](/notes/computer/text-file-formats/json)
+- [YAML](/notes/computer/text-file-formats/yaml)
+- [TOML](/notes/computer/text-file-formats/toml)
 
 ---
 # References

@@ -45,7 +45,7 @@ streetlights = np.array( [[ 1, 0, 1 ],
                           [ 0, 0, 1 ],
                           [ 1, 1, 1 ] ] )
  
-walk_vs_stop = np.array([ 1, 1, 0, 0](/study/factoids/)).T
+walk_vs_stop = np.array([ 1, 1, 0, 0](/notes/)).T
  
 alpha = 0.2
 hidden_size = 4

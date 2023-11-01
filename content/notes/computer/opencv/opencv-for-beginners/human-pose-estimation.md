@@ -1,5 +1,5 @@
 ---
-title: Module 17 - Human Pose Estimation
+title: Human Pose Estimation
 date: 2023-06-12T06:16-0800
 draft: false
 tags:

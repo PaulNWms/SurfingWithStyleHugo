@@ -1,5 +1,5 @@
 ---
-title: Module 8 - Convolution and Image Filtering
+title: Convolution and Image Filtering
 date: 2023-06-07T05:11-0800
 draft: false
 tags:

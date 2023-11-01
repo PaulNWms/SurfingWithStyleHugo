@@ -1,11 +1,10 @@
 ---
-title: Module 18 - Person Segmentation
+title: Person Segmentation
 date: 2023-06-12T07:30-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ```python
 mp_selfie_segmentation = mp.solutions.selfie_segmentation
 segment = mp_selfie_segmentation.SelfieSegmentation(model_selection=0)

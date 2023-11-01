@@ -6,7 +6,7 @@ tags:
   - "#health"
 ---
 
-Causes: [Anemia](/study/factoids/health/sickness/anemia), [[underactive thyroid]], [[digestive problems]], [[Cortisol]]
+Causes: [Anemia](/notes/health/sickness/anemia), [[underactive thyroid]], [[digestive problems]], [[Cortisol]]
 
 
 ---

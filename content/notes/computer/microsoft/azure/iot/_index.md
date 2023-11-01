@@ -7,8 +7,8 @@ tags:
 ---
 
 - IoT Hub (PaaS)
-- [IoT Central](/study/factoids/computer/microsoft/azure/iot/iot-central) (SaaS)
-- [Azure Sphere](/study/factoids/computer/microsoft/azure/iot/azure-sphere)
+- [IoT Central](/notes/computer/microsoft/azure/iot/iot-central) (SaaS)
+- [Azure Sphere](/notes/computer/microsoft/azure/iot/azure-sphere)
 
 ---
 # References

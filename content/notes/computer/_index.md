@@ -5,15 +5,15 @@ draft: false
 tags:
   - computer
 ---
-- [WWW](/study/factoids/computer/www)
-- [Database](/study/factoids/computer/database)
-- [Text File Formats](/study/factoids/computer/text-file-formats)
-- [Computer Languages](/study/factoids/computer/computer-languages)
-- [OpenCV](/study/factoids/computer/opencv)
-- [Microsoft](/study/factoids/computer/microsoft)
-- [Data](/study/factoids/computer/data)
-- [Git](/study/factoids/computer/git)
-- [Best Practices](/study/factoids/computer/best-practices)
+- [WWW](/notes/computer/www)
+- [Database](/notes/computer/database)
+- [Text File Formats](/notes/computer/text-file-formats)
+- [Computer Languages](/notes/computer/computer-languages)
+- [OpenCV](/notes/computer/opencv)
+- [Microsoft](/notes/computer/microsoft)
+- [Data](/notes/computer/data)
+- [Git](/notes/computer/git)
+- [Best Practices](/notes/computer/best-practices)
 
 ---
 # References

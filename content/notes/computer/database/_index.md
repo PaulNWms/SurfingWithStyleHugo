@@ -5,9 +5,9 @@ draft: false
 tags:
   - "#database"
 ---
-- [Data](/study/factoids/computer/data)
-- [CAP Theorem](/study/factoids/computer/database/cap-theorem)
-- [SQL](/study/factoids/computer/database/sql)
-- [Azure SQL](/study/factoids/computer/microsoft/azure/azure-sql)
+- [Data](/notes/computer/data)
+- [CAP Theorem](/notes/computer/database/cap-theorem)
+- [SQL](/notes/computer/database/sql)
+- [Azure SQL](/notes/computer/microsoft/azure/azure-sql)
 ---
 # References

@@ -7,8 +7,8 @@ Add-Type -AssemblyName System.Core
 
 $sourceDir = "$PSScriptRoot\..\..\..\Documents\Vault\Zettelkasten"
 $tempDir = "$PSScriptRoot\temp"
-$targetDir = "study\Factoids"
-$targetUrlBase = "study/factoids"
+$targetDir = "notes"
+$targetUrlBase = "notes"
 $mdFiles = Get-ChildItem "$sourceDir\*.md"
 $copied = 0
 $skipped = 0
@@ -162,7 +162,8 @@ $pages.Values | Select-Object -Property Name, TargetPath, Parent, Children | For
 
 $content = @"
 ---
-title: Factoids
+title: Notes
+weight: 300
 ---
 "@
 $content | Out-File -Force -FilePath "$PSScriptRoot\content\$targetDir\_index.md"

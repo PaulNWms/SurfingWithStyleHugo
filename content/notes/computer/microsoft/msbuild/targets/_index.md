@@ -7,7 +7,7 @@ tags:
 ---
 
 - entry point
-- contains [Tasks](/study/factoids/computer/microsoft/msbuild/tasks)
+- contains [Tasks](/notes/computer/microsoft/msbuild/tasks)
 - Project DefaultTargets="..."
 - CallTarget Targets="..."
 - Target DependsOnTargets="..."

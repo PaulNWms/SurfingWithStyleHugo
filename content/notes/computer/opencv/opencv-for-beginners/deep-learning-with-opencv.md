@@ -1,11 +1,10 @@
 ---
-title: Module 13 - Deep Learning with OpenCV
+title: Deep Learning with OpenCV
 date: 2023-06-09T19:02-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ```python
 # Read the ImageNet class names.
 with open('input/classification_classes_ILSVRC2012.txt', 'r') as f:

@@ -1,5 +1,5 @@
 ---
-title: Module 6 - Human-computer interaction (HCI)
+title: Human-computer interaction (HCI)
 date: 2023-06-03T18:07-0800
 draft: false
 tags:

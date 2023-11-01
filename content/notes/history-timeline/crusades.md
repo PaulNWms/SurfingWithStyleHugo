@@ -6,9 +6,9 @@ tags:
   - "#history"
 ---
 
-- [Knights Templar](/study/factoids/)
-- [Knights Hospitaller](/study/factoids/)
-- [Saladin](/study/factoids/)
+- [Knights Templar](/notes/)
+- [Knights Hospitaller](/notes/)
+- [Saladin](/notes/)
 
 ---
 # References

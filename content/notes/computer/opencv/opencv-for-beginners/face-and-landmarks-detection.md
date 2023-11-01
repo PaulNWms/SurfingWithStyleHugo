@@ -1,11 +1,10 @@
 ---
-title: Module 14 - Face and Landmarks Detection
+title: Face and Landmarks Detection
 date: 2023-06-10T07:43-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ```python
 # A smaller version of the model (FP16) is also provided.
 # MODEL_PATH = './model/res10_300x300_ssd_iter_140000_fp16.caffemodel'

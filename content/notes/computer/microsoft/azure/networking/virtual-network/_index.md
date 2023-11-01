@@ -20,7 +20,7 @@ Cloud Advantages
 - Scaling
 - High Availability
 - Isolation
-- [VNet Peering](/study/factoids/computer/microsoft/azure/networking/virtual-network/vnet-peering)
+- [VNet Peering](/notes/computer/microsoft/azure/networking/virtual-network/vnet-peering)
 
 ---
 # References

@@ -17,7 +17,7 @@ Characteristics
 - Services are highly scalable.
 - Multiple users share a single piece of hardware.
 
-Examples: [VM](/study/factoids/), [[VNet]], [[Storage]]
+Examples: [VM](/notes/), [[VNet]], [[Storage]]
 
 ---
 # References

@@ -73,7 +73,7 @@ m.transpose()
 # create row matrix
 features = [ 0.49671415, -0.1382643 ,  0.64768854]
 np.array(features, ndmin=2)
-> array([ 0.49671415, -0.1382643 ,  0.64768854](/study/factoids/))
+> array([ 0.49671415, -0.1382643 ,  0.64768854](/notes/))
 
 # create column matrix
 np.array(features, ndmin=2).T

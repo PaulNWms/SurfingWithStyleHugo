@@ -6,8 +6,8 @@ tags:
   - "#math"
 ---
 
-- [Discrete Math](/study/factoids/)
-- [Concrete Math](/study/factoids/)
+- [Discrete Math](/notes/)
+- [Concrete Math](/notes/)
 
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: Module 4 - Video Processing and Analysis
+title: Video Processing and Analysis
 date: 2023-06-03T08:24-0800
 draft: false
 tags:

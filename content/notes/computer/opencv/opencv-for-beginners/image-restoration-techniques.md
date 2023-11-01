@@ -1,11 +1,10 @@
 ---
-title: Module 10 - Image Restoration Techniques
+title: Image Restoration Techniques
 date: 2023-06-08T06:33-0800
 draft: false
 tags:
   - "#OpenCV"
 ---
-
 ### Median Blur and Bilateral Filter
 ```python
 # Load an images with Salt and pepper noise.

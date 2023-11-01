@@ -6,7 +6,7 @@ tags:
   - "#Azure"
 ---
 
-- [Cloud Shell](/study/factoids/computer/microsoft/azure/portal/cloud-shell)
+- [Cloud Shell](/notes/computer/microsoft/azure/portal/cloud-shell)
 
 
 

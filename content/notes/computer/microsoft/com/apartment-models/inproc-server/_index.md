@@ -173,7 +173,7 @@ main ()
 }
 ```
 
-Occasionally, an InProc server may have multiple apartments.  See [Apartment Models](/study/factoids/computer/microsoft/com/apartment-models).
+Occasionally, an InProc server may have multiple apartments.  See [Apartment Models](/notes/computer/microsoft/com/apartment-models).
 
 ---
 # References

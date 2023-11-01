@@ -17,7 +17,7 @@ Characteristics
 - Users not responsible for hardware or software updates.
 - Rate limiting/QoS.
 
-Examples: [Microsoft 365](/study/factoids/)
+Examples: [Microsoft 365](/notes/)
 
 ---
 # References

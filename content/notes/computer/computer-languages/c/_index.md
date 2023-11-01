@@ -6,8 +6,8 @@ tags:
   - "#CPP"
 ---
 
-- [Type-Safe Linking](/study/factoids/computer/computer-languages/c/type-safe-linking)
-- [Multiple Inheritance](/study/factoids/computer/computer-languages/c/multiple-inheritance)
+- [Type-Safe Linking](/notes/computer/computer-languages/c/type-safe-linking)
+- [Multiple Inheritance](/notes/computer/computer-languages/c/multiple-inheritance)
 
 
 

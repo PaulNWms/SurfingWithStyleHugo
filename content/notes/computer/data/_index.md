@@ -14,13 +14,13 @@ Types:
 
 Applications:
 
-- [Database](/study/factoids/computer/database)
-- [Data Analysis](/study/factoids/computer/data/data-analysis)
-- [Data Science](/study/factoids/computer/data/data-science)
-- [Deep Learning](/study/factoids/computer/data/deep-learning)
-- [Machine Learning](/study/factoids/computer/data/machine-learning)
+- [Database](/notes/computer/database)
+- [Data Analysis](/notes/computer/data/data-analysis)
+- [Data Science](/notes/computer/data/data-science)
+- [Deep Learning](/notes/computer/data/deep-learning)
+- [Machine Learning](/notes/computer/data/machine-learning)
 
 ---
 # References
 
-- [Online Datasets](/study/factoids/computer/data/online-datasets)
+- [Online Datasets](/notes/computer/data/online-datasets)

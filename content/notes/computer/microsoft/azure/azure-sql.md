@@ -6,8 +6,8 @@ tags:
   - "#Azure"
 ---
 
-- [Azure SQL Database](/study/factoids/) - Azure SQL Managed Instance Most like traditional SQL Server
-- [Azure SQL Managed Instance](/study/factoids/) - Aimed at migrating from on-premises
+- [Azure SQL Database](/notes/) - Azure SQL Managed Instance Most like traditional SQL Server
+- [Azure SQL Managed Instance](/notes/) - Aimed at migrating from on-premises
 
 | SQL Database | SQL Managed Instance |
 |---|---|

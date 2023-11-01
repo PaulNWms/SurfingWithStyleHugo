@@ -8,11 +8,11 @@ draft: false
 tags:
   - computer
 ---
-- [C++](/study/factoids/computer/computer-languages/c)
-- [CSharp](/study/factoids/computer/computer-languages/csharp)
-- [FSharp](/study/factoids/computer/computer-languages/fsharp)
-- [PowerShell](/study/factoids/computer/computer-languages/powershell)
-- [Python](/study/factoids/computer/computer-languages/python)
+- [C++](/notes/computer/computer-languages/c)
+- [CSharp](/notes/computer/computer-languages/csharp)
+- [FSharp](/notes/computer/computer-languages/fsharp)
+- [PowerShell](/notes/computer/computer-languages/powershell)
+- [Python](/notes/computer/computer-languages/python)
 
 ---
 # References

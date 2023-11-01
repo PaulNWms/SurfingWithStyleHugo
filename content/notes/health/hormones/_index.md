@@ -8,9 +8,9 @@ draft: false
 tags:
   - health
 ---
-- [Cortisol](/study/factoids/health/hormones/cortisol)
-- [T3](/study/factoids/)
-- [T4](/study/factoids/)
+- [Cortisol](/notes/health/hormones/cortisol)
+- [T3](/notes/)
+- [T4](/notes/)
 
 ---
 # References

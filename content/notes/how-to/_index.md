@@ -5,8 +5,8 @@ draft: false
 tags:
   - HowTo
 ---
-- [Elon Musk's Algorithm](/study/factoids/how-to/elon-musk-s-algorithm)
-- [Code Reviews](/study/factoids/how-to/code-reviews)
+- [Elon Musk's Algorithm](/notes/how-to/elon-musk-s-algorithm)
+- [Code Reviews](/notes/how-to/code-reviews)
 
 ---
 # References

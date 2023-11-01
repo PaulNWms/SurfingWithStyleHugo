@@ -1,5 +1,5 @@
 ---
-title: Module 15 - Object Detection
+title: Object Detection
 date: 2023-06-10T19:33-0800
 draft: false
 tags:
@@ -54,7 +54,7 @@ food_img = cv2.imread('fruit-vegetable.jpg')
 food_objects = detect_objects(net, food_img)
 
 # Each detected object returns a list with the structure of:
-# [[..., classId, score, x, y, w, h](/study/factoids/)]
+# [[..., classId, score, x, y, w, h](/notes/)]
 print(f'Detected {len(food_objects[0][0])} objects (no confidence filtering)')
 first_detected_obj = food_objects[0][0][0]
 print('First object:', first_detected_obj)

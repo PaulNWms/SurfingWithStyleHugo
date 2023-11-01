@@ -11,7 +11,7 @@ tags:
 - content
 - data - structured content for Hugo to consume
 - layouts - theme overrides
-- themes - [Hugo Themes](/study/factoids/computer/www/hugo/hugo-folders/hugo-themes)
+- themes - [Hugo Themes](/notes/computer/www/hugo/hugo-folders/hugo-themes)
 - config
 - static - content like fonts or PDFs
 ### Other folders & files

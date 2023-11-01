@@ -7,13 +7,13 @@ draft: false
 tags:
   - msbuild
 ---
-- [Targets](/study/factoids/computer/microsoft/msbuild/targets)
-- [Tasks](/study/factoids/computer/microsoft/msbuild/tasks)
-- [MSBuild Properties](/study/factoids/computer/microsoft/msbuild/msbuild-properties)
-- [Items](/study/factoids/computer/microsoft/msbuild/items)
-- [response file](/study/factoids/)
-- [MSBuild Tricks](/study/factoids/computer/microsoft/msbuild/msbuild-tricks)
-- [Evaluation Order](/study/factoids/computer/microsoft/msbuild/evaluation-order)
+- [Targets](/notes/computer/microsoft/msbuild/targets)
+- [Tasks](/notes/computer/microsoft/msbuild/tasks)
+- [MSBuild Properties](/notes/computer/microsoft/msbuild/msbuild-properties)
+- [Items](/notes/computer/microsoft/msbuild/items)
+- [response file](/notes/)
+- [MSBuild Tricks](/notes/computer/microsoft/msbuild/msbuild-tricks)
+- [Evaluation Order](/notes/computer/microsoft/msbuild/evaluation-order)
 
 Minimal project template:  
 ```xml

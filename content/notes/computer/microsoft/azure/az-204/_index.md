@@ -7,7 +7,7 @@ tags:
   - AZ-204
 ---
 
-- [Implement IaaS Solutions](/study/factoids/computer/microsoft/azure/az-204/implement-iaas-solutions)
+- [Implement IaaS Solutions](/notes/computer/microsoft/azure/az-204/implement-iaas-solutions)
 
 ---
 # References

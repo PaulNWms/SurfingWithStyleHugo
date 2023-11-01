@@ -6,7 +6,7 @@ tags:
   - "#health"
 ---
 
-Caused by [stress](/study/factoids/)
+Caused by [stress](/notes/)
 
 
 ---

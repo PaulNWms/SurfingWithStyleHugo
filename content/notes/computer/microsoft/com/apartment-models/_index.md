@@ -5,18 +5,19 @@ draft: false
 tags:
   - "#COM"
 ---
-
-Occasionally, an [InProc Server](/study/factoids/computer/microsoft/com/apartment-models/inproc-server) may have multiple apartments. There are 3 types of of apartment:
+The apartment model is COM's way of communicating whether a server is thread safe.  A COM server typically has one apartment.  There are 3 types:
 
 - Single-Threaded Apartment (STA)
 - Multithreaded Apartment (MTA)
 - Thread-Neutral Apartment (TNA)
 
-One process may have multiple STA apartments, a single MTA and a single TNA, in any combination.  If you don't specify anything, by default both server and client go into the 'main' STA.  This was the only option available in Win16.
+Occasionally, a COM server may have multiple apartments.
 
-A COM server can live in an STA, MTA or TNA apartment and a COM client can live in an STA or MTA apartment.  It's a complicated subject, which starts off on the wrong foot with inconsistent terminology.
+One server may have multiple STA apartments, a single MTA and a single TNA, in any combination.  If you don't specify anything, by default both server and client go into the 'main' STA.  This was the only option available in Win16.
 
-The apartment model of a COM server is specified in the class's registry entry under `HKEY_CLASSES_ROOT\CLSID\<GUID>\InprocServer32\ThreadingModel`.  The options are
+A COM server can have an STA, MTA or TNA apartment and a COM client can have an STA or MTA apartment.  It's a complicated subject, which starts off on the wrong foot with inconsistent terminology.
+
+The apartment model of an [InProc Server](/notes/computer/microsoft/com/apartment-models/inproc-server) is specified in the class's registry entry under `HKEY_CLASSES_ROOT\CLSID\<GUID>\InprocServer32\ThreadingModel`.  The options are
 
 | ThreadingModel | Apartment |
 |---|---|
@@ -26,7 +27,9 @@ The apartment model of a COM server is specified in the class's registry entry u
 | Both | client's apartment |
 | Neutral | TNA |
 
-The apartment model of a COM client is specified when the runtime is initialized.
+Instead of using a registry entry, an [OutProc Server](/notes/computer/microsoft/com/apartment-models/outproc-server) specifies its apartment model when it calls [CoInitializeEx](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)
+
+The apartment model of a COM client is also specified when the runtime is initialized.
 
 | Function Call | Apartment|
 |---|---|
@@ -34,7 +37,7 @@ The apartment model of a COM client is specified when the runtime is initialized
 | `CoInitializeEx((void*)0, COINIT_APARTMENTTHREADED);` | STA |
 | `CoInitializeEx((void*)0, COINIT_MULTITHREADED);` | MTA |
 
-Ideally they server and client live in the same apartment, in which case the method calls are direct.  Communication with a COM server in another apartment incurs some overhead.
+Ideally the server and client live in the same apartment, in which case the method calls are direct.  Communication with a COM server in another apartment incurs some overhead.
 
 To describe these models very briefly -
 - An STA is implemented as a window named `OleMainThreadWndClass` and its thread is running a message loop.
@@ -54,10 +57,6 @@ In the unusual case where there are multiple apartments, you can run into a prob
 Strangely, the COM+ literature recommends [Neutral as the default](https://learn.microsoft.com/en-us/windows/win32/cossdk/neutral-apartments).  However, the registry on my dev box shows that TNA servers are exceedingly rare in practice, appearing only in very large applications like SQL Server and Visual Studio.
 
 Even though different apartments live in the same process, i.e. address space, interface pointers can't be shared between apartments.  To send a pointer over, place it on a stream with [CoMarshalInterThreadInterfaceInStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) and retrieve it with [CoGetInterfaceAndReleaseStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream).  To coordinate these calls, generally you'll need to use a kernel event.
-
-An [OutProc Server](/study/factoids/computer/microsoft/com/apartment-models/outproc-server) may also have multiple apartments.
-
-.NET COM clients can be either [MTA or STA](https://learn.microsoft.com/en-us/dotnet/api/system.stathreadattribute?view=net-7.0).
 
 ---
 # References
