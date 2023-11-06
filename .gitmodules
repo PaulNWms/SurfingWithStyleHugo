@@ -5,3 +5,6 @@
 [submodule "hugo-theme-notrack"]
 	path = notrack
 	url = https://github.com/gevhaz/hugo-theme-notrack
+[submodule "themes/hugo-theme-relearn"]
+	path = themes/hugo-theme-relearn
+	url = https://github.com/McShelby/hugo-theme-relearn
