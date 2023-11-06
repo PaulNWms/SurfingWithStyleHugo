@@ -17,7 +17,7 @@ To implement a COM class, you need to
 
 Because this is a lot of boilerplate and is also error prone, you'll want to use [ATL](/notes/computer/microsoft/com/atl).  Let the AppWizard do the heavy lifting for you.
 
-Interfaces
+### Interfaces
 
 - [IUnknown](/notes/computer/microsoft/com/iunknown)
 - [InProc Server](/notes/computer/microsoft/com/apartment-models/inproc-server) ([IClassFactory](https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nn-unknwn-iclassfactory))
@@ -35,8 +35,7 @@ Interfaces
 - [COM Events](/notes/computer/microsoft/com/com-events) (not to be confused with [Event Objects](https://learn.microsoft.com/en-us/windows/win32/sync/event-objects), or various UI framework events)
 - [Apartment Models](/notes/computer/microsoft/com/apartment-models)
 
----
-# References
+### Types
 
 A large number of related types are part of  [OLE Automation ](https://learn.microsoft.com/en-us/windows/win32/api/_automat/), here are a few of the more common ones.
 
@@ -44,3 +43,7 @@ A large number of related types are part of  [OLE Automation ](https://learn.mic
 - [Variant](/notes/computer/microsoft/com/variant)
 - [SafeArray](/notes/computer/microsoft/com/safearray)
 - [Registry](/notes/computer/microsoft/com/registry)
+---
+# References
+
+

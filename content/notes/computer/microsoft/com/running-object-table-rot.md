@@ -5,7 +5,7 @@ draft: false
 tags:
   - "#COM"
 ---
-The ROT is a system-wide table that keeps track of COM objects that are in use.  The interface to the ROT is COM-based.  Use the Win32 function [GetRunningObjectTable](https://learn.microsoft.com/en-us/windows/win32/api/objbase/nf-objbase-getrunningobjecttable) to get a [IRunningObjectTable](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-irunningobjecttable) object pointer.
+The ROT is a system-wide table that keeps track of COM objects that are in use.  The interface to the ROT is COM-based.  Use the Win32 function [GetRunningObjectTable](https://learn.microsoft.com/en-us/windows/win32/api/objbase/nf-objbase-getrunningobjecttable) to get an [IRunningObjectTable](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-irunningobjecttable) object pointer.
 
 The ROT contains _monikers_ that identify COM objects.  Similar to how COM classes are identified by a CLSID, which is a GUID in the registry, COM objects are identified by a moniker, which is a system object that implements [IMoniker](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-imoniker) in the ROT.  There is a moniker for every entry in the ROT.
 

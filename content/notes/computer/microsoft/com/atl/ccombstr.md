@@ -5,6 +5,8 @@ date: 2023-11-02T20:11
 keywords: 
 draft: false
 tags:
+  - COM
+  - ATL
 ---
 CComBSTR is a convenience class for handling BSTRs.  It's convenient, but not full-featured.  For advanced operations, sometimes ya gotta convert to a std::wstring and use the STL.
 

@@ -6,6 +6,8 @@ keywords:
 draft: false
 tags:
 ---
+- [PowerShell COM Client](/notes/computer/computer-languages/powershell/powershell-com-client)
+
 ```powershell
 # show version
 $PSVersionTable

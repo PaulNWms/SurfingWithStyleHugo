@@ -5,6 +5,8 @@ date: 2023-11-02T20:28
 keywords: 
 draft: false
 tags:
+  - COM
+  - ATL
 ---
 CComDispatchDriver lets you conveniently get a dispinterface and call its members by ID or name.  
 This example looks the dispatch ID of a function calls it using the ID with `Invoke`, then at the end calls Quit by name using `Invoke0`.

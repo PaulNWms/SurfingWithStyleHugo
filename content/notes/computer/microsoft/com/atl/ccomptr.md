@@ -6,6 +6,7 @@ keywords:
 draft: false
 tags:
   - COM
+  - ATL
 ---
 COM smart pointers take care of reference counting, add type safety, and shorten the source code a lot.
 
