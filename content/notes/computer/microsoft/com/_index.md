@@ -5,6 +5,17 @@ draft: false
 tags:
   - COM
 ---
+To implement a COM class, you need to
+
+- Write the the class, implementing [IUnknown](/notes/computer/microsoft/com/iunknown) correctly.
+- Add [IDispatch](/notes/) (or a dual interface) if the object is to be available to a scripting environment.
+- Write a class object (which implements [IClassFactory](/notes/) in most cases).
+- Add a reference counting mechanism to the server.
+- Add self-registration to the server:
+    - Add the correct entry points if the server is a DLL: DllGetClassObject, DllCanUnloadNow, DllRegisterServer, and DllUnregisterServer.
+    - Add calls to CoRegisterClassObject if the server is an EXE.
+
+Because this is a lot of boilerplate and is also error prone, you'll want to use [ATL](/notes/computer/microsoft/com/atl).  Let the AppWizard do the heavy lifting for you.
 
 Interfaces
 

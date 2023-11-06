@@ -5,16 +5,15 @@ draft: false
 tags:
   - "#COM"
 ---
+`IUnknown` describes 2 areas of functionality: interface type coercion (`QueryInterface`) and object lifetime control (`AddRef` and `Release`).
+### `QueryInterface()`
+
+Microsoft defines a bunch of goofy and pseudo-mathematical rules which state in essence that, if you have a pointer to any interface on an object, you can always get a pointer to any other interface on that object, including `IUnknown`.
 ### `AddRef()` and `Release()`
 
 1. Functions that return an interface pointer should call `AddRef()`
 2. Functions that use an interface pointer provided by another function are responsible for calling `Release()`
 3. If you copy an interface pointer, the best practice is to call `AddRef()` and `Release()`
-
-### `QueryInterface()`
-
-Microsoft defines a bunch of goofy and pseudo-mathematical rules which state in essence that, if you have a pointer to any interface on an object, you can always get a pointer to any other interface on that object, including `IUnknown`.
-
 
 ---
 # References

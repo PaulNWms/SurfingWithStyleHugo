@@ -11,6 +11,8 @@ COM has 3 flavors of marshaling:
 - Standard marshaling, if the parameters include any user-defined types.  The MIDL compiler will generate a marshaling DLL.
 - User-defined marshaling, in case there are performance issues with the above, can be achieved by implementing [IMarshal](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-imarshal).  The use cases for this are few.
 
+The marshaling code is defined in an [IDL](https://learn.microsoft.com/en-us/uwp/midl-3/intro) file and compiled with the [MIDL Compiler](https://learn.microsoft.com/en-us/uwp/midl-3/intro).
+
 It's simplest to stick with type library marshaling.  One of the supported automation types is BSTR, so in a pinch you can always serialize objects to JSON or XML strings.  In other words, it's really all you technically _need_.  A user application that's using an OutProc server is probably not in a hurry anyway.
 
 Standard marshaling can handle any user defined type.  VS sets it up automatically at project creation.  The argument against it is that the generated code might not be the smartest.  The MIDL compiler has no semantic knowledge of your application and generates safe, one-size-fits-all code.  For example, it might pass the same constant value on every single call.  That being said, it works great in practice.  
