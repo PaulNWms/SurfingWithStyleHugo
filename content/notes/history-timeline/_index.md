@@ -11,7 +11,7 @@ tags:
 |---|---|
 | 2023 | [ChatGPT](https://openai.com/chatgpt) |
 | 2020 | [.NET 5 \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-5) |
-| 2017 | [WebAssembly]([WebAssembly](https://webassembly.org/)) |
+| 2017 | [WebAssembly](https://webassembly.org/) |
 | 2002 | [.NET Framework](https://learn.microsoft.com/en-us/dotnet/framework/get-started/overview)<br>[C#](https://learn.microsoft.com/en-us/dotnet/csharp/) |
 | 1998 | [XML (w3.org)](https://www.w3.org/XML/) |
 | 1997 | [HTTP 1.1](https://en.wikipedia.org/wiki/HTTP) |
