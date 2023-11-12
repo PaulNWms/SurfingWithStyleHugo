@@ -7,6 +7,7 @@ draft: false
 tags:
   - COM
   - ATL
+parent: COM
 ---
 An ActiveX control is intended to be a lighter weight version of an [OLE custom control](/notes/computer/microsoft/com/activex/ole-custom-control).  The only requirement of an ActiveX control is that it implements [IUnknown](/notes/computer/microsoft/com/activex/iunknown), so technically every COM object is an ActiveX control.
 
