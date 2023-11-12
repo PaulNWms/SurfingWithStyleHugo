@@ -7,9 +7,8 @@ draft: false
 tags:
   - COM
   - ATL
-parent: ATL
 ---
-Here's the COM map for an ATL control generated in VS '22.  This is the closest thing you'll find to an [ActiveX](/notes/computer/microsoft/com/atl/atl-control/activex) control today.  It implements [IOleObject](https://learn.microsoft.com/en-us/windows/win32/api/oleidl/nn-oleidl-ioleobject), so technically it's also an [[OLE custom control]].
+Here's the COM map for an ATL control generated in VS '22.  This is the closest thing you'll find to an ActiveX control today.  It implements [IOleObject](https://learn.microsoft.com/en-us/windows/win32/api/oleidl/nn-oleidl-ioleobject), so technically it's also an [OLE custom control](/notes/computer/microsoft/com/activex/ole-custom-control).
 
 BEGIN_COM_MAP(CATLControl)
 	COM_INTERFACE_ENTRY(IATLControl)

@@ -18,7 +18,7 @@ The historical context is important.  OLE custom controls came into being at a t
 - MFC had been around, but was not yet widely adopted.
 - Many ISVs were actually still in the process switching from C to C++.
 
-Control development at that time meant getting an MSDN subscription and copying sample code off the CDs. OLE custom controls were superseded by [ActiveX](/notes/computer/microsoft/com/atl/atl-control/activex) controls in '96.  [[ATL]] did not come out until that year.  If there's OCX on your system, there's a very good chance it was hand-rolled.  Be afraid.
+Control development at that time meant getting an MSDN subscription and copying sample code off the CDs. OLE custom controls were superseded by [ActiveX](/notes/computer/microsoft/com/activex) controls in '96.  [ATL](/notes/computer/microsoft/com/atl) did not come out until that year.  If there's OCX on your system, there's a very good chance it was hand-rolled.  Be afraid.
 
 ---
 # References

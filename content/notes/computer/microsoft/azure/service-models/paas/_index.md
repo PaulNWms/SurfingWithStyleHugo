@@ -16,7 +16,7 @@ Characteristics
 - Multi-user access via the same development application.
 - Integrates web services and databases.
 
-Examples: [App Services](/notes/computer/microsoft/azure/app-services), [[Azure CDN]], [[Cosmos DB]]
+Examples: [App Services](/notes/computer/microsoft/azure/app-services), [Azure CDN](/notes/), [Cosmos DB](/notes/)
 
 ---
 # References

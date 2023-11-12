@@ -4,6 +4,7 @@ using namespace System.IO
 Import-Module powershell-yaml
 
 Add-Type -AssemblyName System.Core
+Add-Type -AssemblyName System.Text.RegularExpressions
 
 $sourceDir = "$PSScriptRoot\..\..\..\Documents\Vault\Zettelkasten"
 $tempDir = "$PSScriptRoot\temp"
@@ -66,7 +67,7 @@ class Page {
 
     [void] AssignTargetPathHelper() {
         if ([Page]::Visited[$this.Name]) {
-            #Write-Host "$($this.Name) already visited"
+            Write-Host "$($this.Name) already visited"
             return
         }
 
@@ -133,10 +134,9 @@ foreach ($page in $pages.Values) {
         $page.Parent = $pages[$parent]
     }
     for ($i = 0; $i -lt $lines.Count; $i++) {
-        if ($Matches) { $Matches.Clear() }
-        $lines[$i] -match $linkPattern | Out-Null
-        for ($j = 1; $j -le $Matches.Count; $j++) {
-            $link = $Matches[$j]
+        $regexMatches = [Regex]::Matches($lines[$i], $linkPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
+        foreach ($match in $regexMatches) {
+            $link = $match.Groups[1]
             $target = [Page]::LinkToFile($link)
             $child = $pages[$target]
             if ($child) {
@@ -173,13 +173,12 @@ $linkPattern = '\[\[(.*?)]]'
 foreach ($page in $pages.Values) {
     $lines = Get-Content $page.FileName
     for ($i = 0; $i -lt $lines.Count; $i++) {
-        $Matches.Clear()
-        $lines[$i] -match $linkPattern | Out-Null
-        for ($j = 1; $j -le $Matches.Count; $j++) {
-            $link = $Matches[$j]
+        $regexMatches = [Regex]::Matches($lines[$i], $linkPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
+        foreach ($match in $regexMatches) {
+            $link = $match.Groups[1]
             $target = [Page]::LinkToFile($link)
             $targetPage = $pages[$target]
-            $lines[$i] = $lines[$i].Replace($Matches[0], "[$link](/$targetUrlBase/$($targetPage.TargetPath))")
+            $lines[$i] = $lines[$i].Replace($match.Groups[0], "[$link](/$targetUrlBase/$($targetPage.TargetPath))")
         }
     }
 

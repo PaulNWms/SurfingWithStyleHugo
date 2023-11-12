@@ -37,7 +37,7 @@ These are some flags to consider when setting up a COM server:
 | `_UNICODE` | You'll probably want this |
 | `_DEBUG`, `NDEBUG`  | Debug or not |
 | `_ATL_DLL`, `_ATL_STATIC_REGISTRY` | Dynamically link to the registration code in atl.dll, or put it in the server |
-| `_MERGE_PROXYSTUB` | For [InProc server](/notes/computer/microsoft/com/apartment-models/inproc-server)s, place the [[parameter marshaling]] code in the server DLL |
+| `_MERGE_PROXYSTUB` | For [InProc server](/notes/computer/microsoft/com/apartment-models/inproc-server)s, place the [parameter marshaling](/notes/computer/microsoft/com/atl/parameter-marshaling) code in the server DLL |
 
 Use the AppWizard again to add COM objects to the server.  Right click project | Add | New Item... | ATL Object.  It will automatically update the IDL and object map.
 

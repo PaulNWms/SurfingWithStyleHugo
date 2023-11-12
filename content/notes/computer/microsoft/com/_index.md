@@ -10,7 +10,7 @@ tags:
 
 Suppose you had a problem, and you solved by writing a COM server.  Now you have two problems.
 
-- Implementing an [ActiveX](/notes/computer/microsoft/com/atl/atl-control/activex) control is often more complex than the business problem it solves.  Win32/COM development is system programming.
+- Implementing an [ActiveX](/notes/computer/microsoft/com/activex) control is often more complex than the business problem it solves.  Win32/COM development is system programming.
 - You can't write it by hand.  Technically, you can, and this was the only option until [ATL](/notes/computer/microsoft/com/atl) came out.  AFAIK, nobody outside of Microsoft actually got it right.
 - Even at that, you still have to have low-level understanding of COM's inner workings, as well as broad knowledge of all the interfaces.
 - Registering a bunch of COM objects on your system written by different vendors will slow it down and make it unstable.
@@ -34,7 +34,7 @@ It's not going anywhere.  WinRT uses COM heavily.
 
 To implement a COM class, you need to
 
-- Write the the class, implementing [IUnknown](/notes/computer/microsoft/com/iunknown) correctly.
+- Write the the class, implementing [IUnknown](/notes/computer/microsoft/com/activex/iunknown) correctly.
 - Add [IDispatch](/notes/) (or a dual interface) if the object is to be available to a scripting environment.
 - Write a class object (which implements [IClassFactory](/notes/) in most cases).
 - Add a reference counting mechanism to the server.
@@ -46,11 +46,11 @@ Because this is a lot of boilerplate and is also error prone, you'll want to use
 
 ## Interfaces
 
-- [IUnknown](/notes/computer/microsoft/com/iunknown)
+- [IUnknown](/notes/computer/microsoft/com/activex/iunknown)
 - [InProc Server](/notes/computer/microsoft/com/apartment-models/inproc-server) ([IClassFactory](https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nn-unknwn-iclassfactory))
 - [OutProc Server](/notes/computer/microsoft/com/apartment-models/outproc-server)
 - [Type Libraries](/notes/computer/microsoft/com/type-libraries)
-- [Parameter Marshaling](/notes/computer/microsoft/com/parameter-marshaling)
+- [Parameter Marshaling](/notes/computer/microsoft/com/atl/parameter-marshaling)
 - [IStream](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-istream), [ISequentialStream](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-isequentialstream)
 - [IEnumXXX](/notes/computer/microsoft/com/ienumxxx)
 - [Clipboard](/notes/computer/microsoft/com/clipboard)
@@ -78,8 +78,8 @@ Most COM objects implement multiple interfaces statically, through multiple inhe
 
 These are (or were) some types of COM objects -
 
-- [OLE custom control](/notes/computer/microsoft/com/atl/atl-control/activex/ole-custom-control)s
-- [ActiveX](/notes/computer/microsoft/com/atl/atl-control/activex) controls
+- [OLE custom control](/notes/computer/microsoft/com/activex/ole-custom-control)s
+- [ActiveX](/notes/computer/microsoft/com/activex) controls
 - MMC snap-ins
 
 ---

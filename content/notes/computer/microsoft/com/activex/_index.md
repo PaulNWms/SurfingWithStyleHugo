@@ -8,7 +8,7 @@ tags:
   - COM
   - ATL
 ---
-An ActiveX control is intended to be a lighter weight version of an [OLE custom control](/notes/computer/microsoft/com/atl/atl-control/activex/ole-custom-control).  The only requirement of an ActiveX control is that it implements [[IUnknown]], so technically every COM object is an ActiveX control.
+An ActiveX control is intended to be a lighter weight version of an [OLE custom control](/notes/computer/microsoft/com/activex/ole-custom-control).  The only requirement of an ActiveX control is that it implements [IUnknown](/notes/computer/microsoft/com/activex/iunknown), so technically every COM object is an ActiveX control.
 
 This is not a useful definition.  In practice, a 'control' is expected to support certain behaviors, i.e. implement certain interfaces.  The best definition I've been able to come up with is, a control whose project was originally created by running the ActiveX AppWizard.  There were 6 templates available in Visual Studio 97:
 
@@ -16,7 +16,7 @@ This is not a useful definition.  In practice, a 'control' is expected to suppor
 - ActiveX Composite Control and Lite Composite Control
 - ActiveX HTML Control and Lite HTML Control
 
-All of these are deprecated, except the HTML Control, which is _very_ deprecated.  In VS '22, the closest thing to be found is the [ATL Control](/notes/computer/microsoft/com/atl/atl-control), which is lighter weight than any of the 'Lite' controls.  (It's basically a Lite Control without the persistence.)  The punchline to the joke is that all of these, including the ATL Control, implement [IOleObject](https://learn.microsoft.com/en-us/windows/win32/api/oleidl/nn-oleidl-ioleobject).
+All of these are deprecated, except the HTML Control, which is _very_ deprecated.  In VS '22, the closest thing to be found is the [ATL Control](/notes/computer/microsoft/com/activex/atl-control), which is lighter weight than any of the 'Lite' controls.  (It's basically a Lite Control without the persistence.)  The punchline to the joke is that all of these, including the ATL Control, implement [IOleObject](https://learn.microsoft.com/en-us/windows/win32/api/oleidl/nn-oleidl-ioleobject).
 
 For an idea of what these are like, here are their COM maps:
 

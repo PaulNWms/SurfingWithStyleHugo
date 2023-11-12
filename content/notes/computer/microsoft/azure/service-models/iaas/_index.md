@@ -17,7 +17,7 @@ Characteristics
 - Services are highly scalable.
 - Multiple users share a single piece of hardware.
 
-Examples: [VM](/notes/), [[VNet]], [[Storage]]
+Examples: [VM](/notes/), [VNet](/notes/), [Storage](/notes/computer/microsoft/azure/storage)
 
 ---
 # References
