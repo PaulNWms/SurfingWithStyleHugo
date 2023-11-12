@@ -7,6 +7,19 @@ tags:
 ---
 ## World history, according to Wikipedia
 
+| Date | Event |
+|---|---|
+| 2023 | [ChatGPT](https://openai.com/chatgpt) |
+| 2020 | [.NET 5 \| Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-5) |
+| 2017 | [WebAssembly]([WebAssembly](https://webassembly.org/)) |
+| 2002 | [.NET Framework](https://learn.microsoft.com/en-us/dotnet/framework/get-started/overview)<br>[C#](https://learn.microsoft.com/en-us/dotnet/csharp/) |
+| 1998 | [XML (w3.org)](https://www.w3.org/XML/) |
+| 1997 | [HTTP 1.1](https://en.wikipedia.org/wiki/HTTP) |
+| 1996 | [ActiveX - Wikipedia](https://en.wikipedia.org/wiki/ActiveX)<br>[ATL \| Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/atl-com-desktop-components?view=msvc-170) |
+| 1994 | [OLE 2.0 - Wikipedia](https://en.wikipedia.org/wiki/Object_Linking_and_Embedding#OLE_2.0) |
+| 1993 | [Mosaic (web browser) - Wikipedia](https://en.wikipedia.org/wiki/Mosaic_(web_browser)) |
+| 1992 | [MFC - Wikipedia](https://en.wikipedia.org/wiki/Microsoft_Foundation_Class_Library) |
+
 - [Hawaii - Wikipedia](https://en.wikipedia.org/wiki/Hawaii) - 1959
 - [Alaska Statehood Act - Wikipedia](https://en.wikipedia.org/wiki/Alaska_Statehood_Act) - 1959
 - [Washington (state) - Wikipedia](https://en.wikipedia.org/wiki/Washington_(state)) - 1889

@@ -21,10 +21,6 @@ params:
   alwaysopen: false
   themeVariant: zen-dark
 
-module:
-  imports:
-  - path: hugo-theme-relearn
-
 outputs:
 home: [ "HTML", "RSS", "JSON"]
 
