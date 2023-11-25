@@ -14,14 +14,14 @@ ATL has some wrapper classes to help simplify COM clients.  Here are some common
 
 | C type | ATL class | runtime type |
 |---|---|---|
-| void * | [CComPtr](/notes/computer/microsoft/com/dynamic-composition/atl/ccomptr) | `_com_ptr_t` |
-| BSTR | [CComBSTR](/notes/computer/microsoft/com/dynamic-composition/atl/ccombstr) | `_bstr_t` |
-| VARIANT | [CComVariant](/notes/computer/microsoft/com/dynamic-composition/atl/ccomvariant) | `_variant_t` |
-| IDispatch | [CComDispatchDriver](/notes/computer/microsoft/com/dynamic-composition/atl/ccomdispatchdriver) | |
+| void * | [CComPtr](/notes/computer/microsoft/com/atl/ccomptr) | `_com_ptr_t` |
+| BSTR | [CComBSTR](/notes/computer/microsoft/com/atl/ccombstr) | `_bstr_t` |
+| VARIANT | [CComVariant](/notes/computer/microsoft/com/atl/ccomvariant) | `_variant_t` |
+| IDispatch | [CComDispatchDriver](/notes/computer/microsoft/com/atl/ccomdispatchdriver) | |
 
 The ATL classes are in atl.dll, the runtime types are compiler COM support extensions in comsuppw.lib.
 
-The main difference in usage is that the ATL classes return error codes and the runtime types throw [_com_error](/notes/computer/microsoft/com/dynamic-composition/atl/_com_error) exceptions.  Typically the runtime types are used in clients and the ATL classes are used in servers, because you have to be more careful about throwing exceptions.
+The main difference in usage is that the ATL classes return error codes and the runtime types throw [_com_error](/notes/computer/microsoft/com/atl/_com_error) exceptions.  Typically the runtime types are used in clients and the ATL classes are used in servers, because you have to be more careful about throwing exceptions.
 
 ## COM Servers
 
@@ -37,7 +37,7 @@ These are some flags to consider when setting up a COM server:
 | `_UNICODE` | You'll probably want this |
 | `_DEBUG`, `NDEBUG`  | Debug or not |
 | `_ATL_DLL`, `_ATL_STATIC_REGISTRY` | Dynamically link to the registration code in atl.dll, or put it in the server |
-| `_MERGE_PROXYSTUB` | For [InProc server](/notes/computer/microsoft/com/apartment-models/inproc-server)s, place the [parameter marshaling](/notes/computer/microsoft/com/dynamic-composition/atl/parameter-marshaling) code in the server DLL |
+| `_MERGE_PROXYSTUB` | For [InProc server](/notes/computer/microsoft/com/apartment-models/inproc-server)s, place the [parameter marshaling](/notes/computer/microsoft/com/atl/parameter-marshaling) code in the server DLL |
 
 Use the AppWizard again to add COM objects to the server.  Right click project | Add | New Item... | ATL Object.  It will automatically update the IDL and object map.
 
@@ -47,12 +47,12 @@ To add methods and variables to the objects, right click project | Class Wizard.
 
 ATL has several facilities to support COM objects.  They can be grouped into these areas:
 
-- [ATL Critical Sections](/notes/computer/microsoft/com/dynamic-composition/atl/atl-critical-sections)
-- [ATL Threading Model](/notes/computer/microsoft/com/dynamic-composition/atl/atl-threading-model)
-- [CComObject](/notes/computer/microsoft/com/dynamic-composition/atl/ccomobject)
-- [ATL COM Map](/notes/computer/microsoft/com/dynamic-composition/atl/atl-com-map)
+- [ATL Critical Sections](/notes/computer/microsoft/com/atl/atl-critical-sections)
+- [ATL Threading Model](/notes/computer/microsoft/com/atl/atl-threading-model)
+- [CComObject](/notes/computer/microsoft/com/atl/ccomobject)
+- [ATL COM Map](/notes/computer/microsoft/com/atl/atl-com-map)
 - [IDispatchImpl Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/idispatchimpl-class?view=msvc-170)
-- [ATL Debug Flags](/notes/computer/microsoft/com/dynamic-composition/atl/atl-debug-flags)
+- [ATL Debug Flags](/notes/computer/microsoft/com/atl/atl-debug-flags)
 
 ---
 # References

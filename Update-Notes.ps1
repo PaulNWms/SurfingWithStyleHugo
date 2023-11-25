@@ -50,8 +50,12 @@ class Page {
         if ($formattedString -match $regex) {
             $formattedString = $Matches[1]
         }
-        $formattedString = $formattedString -replace '\W', '-'
-        $formattedString = $formattedString -replace '[-]+', '-'
+        $formattedString = $formattedString -replace '\s', '-'
+        $formattedString = $formattedString -replace "'", ''
+        $formattedString = $formattedString -replace '\(', ''
+        $formattedString = $formattedString -replace '\)', ''
+        $formattedString = $formattedString -replace '&', 'and'
+        $formattedString = $formattedString -replace '\+', '-plus'
         $formattedString = $formattedString -replace '-$', ''
         return $formattedString
     }

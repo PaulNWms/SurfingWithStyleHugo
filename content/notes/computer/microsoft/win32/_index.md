@@ -5,7 +5,7 @@ draft: false
 tags:
   - "#Win32"
 ---
-- [SafeArray](/notes/computer/microsoft/win32/safearray)
+- [SafeArray](/notes/computer/microsoft/com/safearray)
 - [Native Threads](/notes/computer/microsoft/win32/native-threads)
 
 ---

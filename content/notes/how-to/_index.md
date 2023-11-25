@@ -5,7 +5,7 @@ draft: false
 tags:
   - HowTo
 ---
-- [Elon Musk's Algorithm](/notes/how-to/elon-musk-s-algorithm)
+- [Elon Musk's Algorithm](/notes/how-to/elon-musks-algorithm)
 - [Code Reviews](/notes/how-to/code-reviews)
 
 ---

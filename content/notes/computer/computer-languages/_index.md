@@ -8,7 +8,7 @@ draft: false
 tags:
   - computer
 ---
-- [C++](/notes/computer/computer-languages/c)
+- [C++](/notes/computer/computer-languages/c-plus-plus)
 - [CSharp](/notes/computer/computer-languages/csharp)
 - [FSharp](/notes/computer/computer-languages/fsharp)
 - [PowerShell](/notes/computer/computer-languages/powershell)

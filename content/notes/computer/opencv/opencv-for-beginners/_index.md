@@ -7,7 +7,7 @@ tags:
 ---
 - [Image Basics](/notes/computer/opencv/opencv-for-beginners/image-basics)
 - [Getting Started with Images](/notes/computer/opencv/opencv-for-beginners/getting-started-with-images)
-- [Arithmetic & Logical Operations on Images](/notes/computer/opencv/opencv-for-beginners/arithmetic-logical-operations-on-images)
+- [Arithmetic & Logical Operations on Images](/notes/computer/opencv/opencv-for-beginners/arithmetic-and-logical-operations-on-images)
 - [Thresholding in Images](/notes/computer/opencv/opencv-for-beginners/thresholding-in-images)
 - [Logical Operations on Images](/notes/computer/opencv/opencv-for-beginners/logical-operations-on-images)
 - [Alpha Channel](/notes/computer/opencv/opencv-for-beginners/alpha-channel)
