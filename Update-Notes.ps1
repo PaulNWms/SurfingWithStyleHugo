@@ -26,7 +26,7 @@ class Page {
 
     Page([FileInfo]$fileInfo) {
         $this.FileName = $fileInfo.FullName
-        $this.Name = [Page]::LinkToFile($fileInfo.Name)
+        $this.Name = [Page]::TransformLinkToFilename($fileInfo.Name)
         $this.Yaml = @()
         [bool]$yamlStarted = $false
         foreach ($line in (Get-Content $this.FileName)) {
@@ -44,7 +44,7 @@ class Page {
         $this.Properties = ConvertFrom-Yaml ($this.Yaml | Join-String -Separator "`r`n")
     }
 
-    static [string] LinkToFile([string]$inputString) {
+    static [string] TransformLinkToFilename([string]$inputString) {
         $formattedString = $inputString.ToLower()
         $regex = '(.*?)(\.md)?$'
         if ($formattedString -match $regex) {
@@ -151,14 +151,14 @@ $linkPattern = '\[\[(.*?)]]'
 foreach ($page in $pages.Values) {
     $lines = Get-Content $page.FileName
     if ($page.Properties['parent']) {
-        $parent = [Page]::LinkToFile($page.Properties['parent'])
+        $parent = [Page]::TransformLinkToFilename($page.Properties['parent'])
         $page.Parent = $pages[$parent]
     }
     for ($i = 0; $i -lt $lines.Count; $i++) {
         $regexMatches = [Regex]::Matches($lines[$i], $linkPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
         foreach ($match in $regexMatches) {
             $link = $match.Groups[1]
-            $target = [Page]::LinkToFile($link)
+            $target = [Page]::TransformLinkToFilename($link)
             $child = $pages[$target]
             if ($child) {
                 if (-not $child.Parent) {
@@ -218,7 +218,7 @@ foreach ($page in $pages.Values) {
         $regexMatches = [Regex]::Matches($lines[$i], $linkPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
         foreach ($match in $regexMatches) {
             $link = $match.Groups[1]
-            $target = [Page]::LinkToFile($link)
+            $target = [Page]::TransformLinkToFilename($link)
             $targetPage = $pages[$target]
             $lines[$i] = $lines[$i].Replace($match.Groups[0], "[$link](/$targetUrlBase/$($targetPage.TargetPath))")
         }

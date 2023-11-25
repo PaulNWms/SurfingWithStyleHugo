@@ -15,7 +15,7 @@ COM+ is a technology stack, built approximately like this:
 | DCOM | remote architecture<br/>distributed component service |
 | COM | interface-based programming |
 
-[DCOM](/notes/computer/microsoft/com/com-plus/dcom) failed in the marketplace, taking out most of the stack above it.  
+[DCOM](/notes/computer/microsoft/com/dcom) failed in the marketplace, taking out most of the stack above it.  
 
 Microsoft built a monument on top of COM, a lot of  which is deprecated now.  This was motivated by [Windows DNA](/notes/computer/microsoft/com/com-plus/windows-dna), parts of which are still around.
 

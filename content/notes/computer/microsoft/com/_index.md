@@ -11,25 +11,26 @@ description:
 
 Most software falls into one of three categories - alive (like .NET Core), done (like .NET Framework), or dead (like Internet Explorer).  COM is all three at once.  ActiveX is dead, Drag 'n Drop is done, and new interfaces are being developed all the time, like [IInspectable](/notes/).  There are a lot of COM zombies running on your system right now.
 
-Suppose you had a problem, and you solved by writing a COM server.  Now you have two problems.
+Suppose you had a problem, and you solved it by writing a COM server.  Now you have two problems.
 
 - Implementing an [ActiveX](/notes/computer/microsoft/com/activex) control is often more complex than the business problem it is intended to solve.  Win32/COM development is system programming.
 - You can't write it by hand.  Technically, you can, and this was the only option until [ATL](/notes/computer/microsoft/com/atl) came out.  AFAIK, nobody outside of Microsoft actually got it right.
-- Low-level understanding of COM's inner workings, as well as broad knowledge of all the interfaces.
+- It requires low-level understanding of COM's inner workings, as well as broad knowledge of all the interfaces.  In order to troubleshoot _any_ of it, you have to understand _all_ of it.
 - Registering a bunch of COM objects on your system written by different vendors will slow down the boot time and make it unstable.
 - DLL hell.  This problem is not limited to COM, or even unmanaged code in general, but COM tends to accentuate it.
     - For a long time there was a misconception that interface-based programming would, in itself, solve all our compatibility issues.  Nothing could be further from the truth.  An implementation can change quite a lot, in incompatible ways, and still support the same interface.  Two subtle causes of breaking changes are changing the order of operations and changing default settings.
     - COM amplifies this problem through aggregation.  When you load in a COM object, it may in turn load in more components behind the scenes, increasing the odds of this happening.
 - Good luck debugging.
 - Just like the early internet protocols, COM was designed to be used in a trusted environment.  It's one giant security hole.
+- [DCOM](/notes/computer/microsoft/com/dcom) will not play nicely with your firewall or security team.
 
 When originally released, the idea was that ISVs would publish libraries of COM components, and the task of software development would evolve into mainly connecting them all together, like Legos.  This didn't pan out.  Software is just plain complicated, and adding COM to your project does not make it any simpler.
 
 It turns out that in order to use COM components, you have to completely trust their publisher, they have to be very well tested, and they must not break any other controls installed on the _target system_.  Ideally you would also have access to their source code.
 
-COM does have its upsides though, and in certain environments, these requirements can be met.  One such place is at Microsoft itself.  If you treat registering a COM server as extending the OS, which you probably should, it can be thought of as a systems programming tool.
+COM does have its upsides though, and in certain environments, these requirements can be met.  One such place is at Microsoft itself.  If you treat registering a COM server as extending the OS, it can be thought of as a systems programming tool.
 
-Also, creating a COM _client_ is pretty simple.  So the guidance for probably the last 25 years has been something like, leave the COM server development to MS, but feel free to use it as a client.
+Also, creating a COM _client_ is pretty simple.  So the guidance since .NET came into being has been something like, leave the COM server development to MS, but feel free to use it as a client.
 
 - Removing it would break a lot of stuff.
 - Communications with [InProc server](/notes/computer/microsoft/com/apartment-models/inproc-server)s is fast.

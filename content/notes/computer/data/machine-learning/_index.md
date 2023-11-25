@@ -35,7 +35,6 @@ Problems
 
 Feature engineering involves feature selection, feature extraction and feature creation.
 
-
 To see how well a model will generalize to new cases, the data is split into a training set, a test set and a validation set.
 
 It is common to use 80% of the data for training and hold out 20% for testing.
@@ -227,9 +226,7 @@ $$s_k(\textbf{x})=\left(\theta^{(k)}\right)^T\cdot\textbf{x}$$
 
 Softmax function
 
-*** rawhtml ***
 $$\hat{p}_k=\sigma(\textbf{s}(\textbf{x}))_k=\frac{exp(s_k(\textbf{x}))}{\sum_{j=1}^{K}exp(s_j(\textbf{x}))}$$
-*** rawhtml ***
 
 Softmax prediction
 
@@ -501,6 +498,7 @@ X_reduced = rbf_pca.fit_transform(X)
 ---
 # References
 
+- [lack of a priori distinctions between learning algorithms - Google Scholar](https://scholar.google.fr/scholar?q=lack+of+a+priori+distinctions+between+learning+algorithms)
 - [Sample code](https://github.com/ageron/handson-ml)
 - [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php)  
 - [Kaggle](https://www.kaggle.com/datasets)  

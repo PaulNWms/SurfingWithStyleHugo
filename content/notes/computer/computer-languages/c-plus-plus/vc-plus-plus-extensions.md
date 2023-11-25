@@ -25,7 +25,7 @@ tags:
 ---
 # References
 
-[Preprocessor | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/preprocessor/preprocessor?view=msvc-170)
-[Predefined macros | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/preprocessor/predefined-macros?view=msvc-170)
-[Calling Conventions | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/cpp/calling-conventions?view=msvc-170)
-[Precompiled Header Files | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/build/creating-precompiled-header-files?view=msvc-170)
+- [Preprocessor | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/preprocessor/preprocessor?view=msvc-170)
+- [Predefined macros | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/preprocessor/predefined-macros?view=msvc-170)
+- [Calling Conventions | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/cpp/calling-conventions?view=msvc-170)
+- [Precompiled Header Files | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/build/creating-precompiled-header-files?view=msvc-170)
