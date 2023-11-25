@@ -6,7 +6,7 @@ keywords:
 draft: false
 tags:
 ---
-ATL has the CComCriticalSection class, which wraps the native Win32 CS calls.  CComAutoCriticalSection is a slightly more convenient variation of it.  These are used by the [ATL Threading Model](/notes/computer/microsoft/com/atl/atl-threading-model)s, but can be used outside this context.
+ATL has the CComCriticalSection class, which wraps the native Win32 CS calls.  CComAutoCriticalSection is a slightly more convenient variation of it.  These are used by the [ATL Threading Model](/notes/computer/microsoft/com/dynamic-composition/atl/atl-threading-model)s, but can be used outside this context.
 
 CComFakeCriticalSection is an empty implementation, which can be swapped in to turn off the critical section with minimal code change.
 

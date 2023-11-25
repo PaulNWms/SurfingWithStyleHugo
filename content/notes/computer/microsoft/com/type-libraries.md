@@ -1,9 +1,10 @@
 ---
-title: "Type Libraries"
+title: Type Libraries
 date: 2023-09-02T18:24-0800
 draft: false
-tags: 
-  - "#COM" 
+tags:
+  - "#COM"
+parent: COM
 ---
 
 Type libraries are specified in [Interface Definition Language (IDL)](https://learn.microsoft.com/en-us/windows/win32/rpc/the-interface-definition-language-idl-file) and created using the [MIDL compiler](https://learn.microsoft.com/en-us/windows/win32/midl/using-the-midl-compiler-2).  This is a deep subject that most of us don't need to know very much about.

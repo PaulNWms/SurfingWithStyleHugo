@@ -1,9 +1,10 @@
 ---
-title: "Other Interfaces"
+title: Other Interfaces
 date: 2023-08-18T20:44-0800
 draft: false
-tags: 
+tags:
   - "#COM"
+parent: COM
 ---
 
 [IMallocSpy](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-imallocspy) is used by debuggers to detect memory leaks and other issues in calls to [IMalloc](https://learn.microsoft.com/en-us/windows/desktop/api/objidl/nn-objidl-imalloc) methods.

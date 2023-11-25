@@ -4,6 +4,7 @@ date: 2023-09-22T22:32
 draft: false
 tags:
   - "#COM"
+parent: COM
 ---
 The apartment model is COM's way of communicating whether a server is thread safe.  A COM server typically has one apartment.  There are 3 types:
 

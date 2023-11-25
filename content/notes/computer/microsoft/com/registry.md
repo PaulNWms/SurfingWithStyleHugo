@@ -1,10 +1,11 @@
 ---
-title: "Registry"
+title: Registry
 date: 2023-08-05T08:40-0800
 draft: false
-tags: 
+tags:
   - "#COM"
   - "#NET"
+parent: COM
 ---
 
 Registering a COM server is complicated, but the essential parts are

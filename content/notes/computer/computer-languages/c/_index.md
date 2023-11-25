@@ -8,7 +8,7 @@ tags:
 
 - [Type-Safe Linking](/notes/computer/computer-languages/c/type-safe-linking)
 - [Multiple Inheritance](/notes/computer/computer-languages/c/multiple-inheritance)
-
+- [VC++ Extensions](/notes/computer/computer-languages/c/vc-extensions)
 
 
 

@@ -60,32 +60,49 @@ class Page {
         return $this.Children.Count
     }
 
-    [void] AssignTargetPath() {
+    static [void] AssignTargetPaths($subjects) {
         [Page]::Visited = @{}
-        $this.AssignTargetPathHelper()
+
+        foreach ($subject in $subjects) {
+            $subject.AssignTargetPathHelper($true)
+        }
     }
 
-    [void] AssignTargetPathHelper() {
+    static [void] AssignOrphans($orphans) {
+        [Page]::Visited = @{}
+
+        foreach ($orphan in $orphans) {
+            $orphan.AssignTargetPathHelper($false)
+        }
+    }
+
+    [void] AssignTargetPathHelper([bool]$isSubject) {
         if ([Page]::Visited[$this.Name]) {
             Write-Host "$($this.Name) already visited"
             return
         }
 
+        [Page]::Visited[$this.Name] = $this
+
         if ($this.Parent) {
-            if ($this.Parent.TargetPath) {
-                $this.TargetPath = $this.Parent.TargetPath + '/' + $this.Name
-            } else {
-                $this.Parent.AssignTargetPathHelper()
-                return
+            if (-not $this.Parent.TargetPath) {
+                $this.Parent.AssignTargetPathHelper($isSubject)
             }
-        } else {
+
+            if ($this.Parent.TargetPath) {
+                $this.TargetPath = $($this.Parent.TargetPath) + '/' + $this.Name
+            } else {
+                # leave it orphaned for now
+            }
+        }
+        elseif ($isSubject) {
             $this.TargetPath = $this.Name
         }
 
-        [Page]::Visited[$this.Name] = $this
-
-        foreach ($child in $this.Children) {
-            $child.AssignTargetPathHelper()
+        if ($this.TargetPath) {
+            foreach ($child in $this.Children) {
+                $child.AssignTargetPathHelper($isSubject)
+            }
         }
     }
 
@@ -154,8 +171,29 @@ $subjects = $pages.GetEnumerator() |
     Where-Object { -not $_.Value.Parent } |
     ForEach-Object { $_.Value }
 
-foreach ($subject in $subjects) {
-    $pages[$subject.Name].AssignTargetPath()
+[Page]::AssignTargetPaths($subjects)
+
+# Because of the way we're doing this, some orphans are expected
+$oldOrphanCount = 0
+while ($true) {
+    $orphans = $pages.GetEnumerator() | 
+        Where-Object { -not $_.Value.TargetPath } |
+        ForEach-Object { $_.Value }
+
+    if (-not $orphans.Count) { break }
+
+    if ($orphans.Count -eq $oldOrphanCount) {
+        Write-Host
+        Write-Host "*** Some pages were orphaned ***"
+        foreach ($page in $orphans) {
+            Write-Host $page.Name
+        }
+        Write-Host
+        break
+    }
+
+    [Page]::AssignOrphans($orphans)
+    $oldOrphanCount = $orphans.Count
 }
 
 $pages.Values | Select-Object -Property Name, TargetPath, Parent, Children | Format-Table

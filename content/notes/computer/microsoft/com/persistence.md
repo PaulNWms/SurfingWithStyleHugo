@@ -2,8 +2,9 @@
 title: Persistence
 date: 2023-09-04T10:51-0800
 draft: false
-tags: 
+tags:
   - "#COM"
+parent: COM
 ---
 Persistence is achieved by implementing [IPersistStorage](https://learn.microsoft.com/en-us/windows/desktop/api/objidl/nn-objidl-ipersiststorage), [IPersistStream](https://learn.microsoft.com/en-us/windows/desktop/api/objidl/nn-objidl-ipersiststream), or [IPersistFile](https://learn.microsoft.com/en-us/windows/desktop/api/objidl/nn-objidl-ipersistfile).  These all derive from [IPersist](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-ipersist).
 

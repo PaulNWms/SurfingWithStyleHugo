@@ -4,9 +4,11 @@ date: 2023-08-12T12:26-0800
 draft: false
 tags:
   - "#COM"
+  - ATL
+parent: COM
 ---
 
-COM enumerators implement `Reset()`, `Next()`, `Skip()` and `Clone()`.
+COM enumerators implement `Reset()`, `Next()`, `Skip()` and `Clone()`.  Here's the client side:
 
 ```C++
     // initialize COM libraries
@@ -37,6 +39,10 @@ COM enumerators implement `Reset()`, `Next()`, `Skip()` and `Clone()`.
     hr = pIEnumFORMATETC -> Release ();
 ```
 
+ATL has a number of classes to support enumeration on the server side.  To create a collection that can be consumed like in the code above, [CComEnum](https://learn.microsoft.com/en-us/cpp/atl/reference/ccomenum-class?view=msvc-170) and [CComEnumImpl](https://learn.microsoft.com/en-us/cpp/atl/reference/ccomenumimpl-class?view=msvc-170) are classes of interest.
+
+ATL also has support for loading a COM collection into a C++ STL vector, e.g. `std:vector<IThing*>`, which is kind of a neat trick.  See [CComEnumOnSTL](https://learn.microsoft.com/en-us/cpp/atl/reference/ccomenumonstl-class?view=msvc-170) and [IEnumOnSTLImpl](https://learn.microsoft.com/en-us/cpp/atl/reference/ienumonstlimpl-class?view=msvc-170)
+
 ---
 # References
 
@@ -44,4 +50,8 @@ COM enumerators implement `Reset()`, `Next()`, `Skip()` and `Clone()`.
 - [IEnumFORMATETC (objidl.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-ienumformatetc)
 - [IEnumGUID (comcat.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/comcat/nn-comcat-ienumguid)
 - [IEnumMoniker (objidl.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-ienummoniker)
+- [CComEnum Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/ccomenum-class?view=msvc-170)
+- [CComEnumImpl Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/ccomenumimpl-class?view=msvc-170)
+- [CComEnumOnSTL Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/ccomenumonstl-class?view=msvc-170)
+- [IEnumOnSTLImpl Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/ienumonstlimpl-class?view=msvc-170)
 

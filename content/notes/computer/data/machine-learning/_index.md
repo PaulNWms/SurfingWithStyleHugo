@@ -7,72 +7,36 @@ draft: false
 tags:
   - DataScience
 ---
-In supervised learning, the training data is labelled.
+ML algorithms can be grouped into these categories:
 
-Typical supervised learning tasks include classification and predicting a target numeric value.
+- [Supervised Learning](/notes/computer/data/machine-learning/supervised-learning)
+- [Unsupervised Learning](/notes/computer/data/machine-learning/unsupervised-learning)
+- [Semisupervised Learning](/notes/computer/data/machine-learning/semisupervised-learning)
+- [Reinforcement Learning](/notes/computer/data/machine-learning/reinforcement-learning)
 
-Some of the most important supervised learning algorithms include
-- k-nearest neighbors
-- linear regression
-- logistical regression
-- support vector machines
-- decision trees and random forests
-- neural networks
+The data may arrive 2 different ways.
 
-In unsupervised learning, the training data is unlabelled.
+- In batch learning, the system is trained using all available data.
+- In online learning, the system is trained incrementally by feeding it data in mini-batches.
 
-Typical unsupervised learning tasks include
-- clustering,
-- visualization,
-- dimensionality reduction / feature extraction,
-- anomaly detection and
-- association rule learning.
+The algorithm may generalize in 2 different ways.
 
-Some of the most important unsupervised learning algorithms include
-- clustering
--- k-means
--- hierarchical cluster analysis (HCA)
--- expectation maximization
-- visualization and dimensionality reduction
--- principle component analysis (PCA)
--- kernel PCA
--- locally-linear embedding (LLE)
--- t-distributed stochastic neighbor embedding (t-SNE)
-- association rule learning
--- Apriori
--- Eclat
+- In instance-based learning, the system learns examples by heart, then generalizes to new cases using a similarity measure.
+- In model-based learning, a model is built from a set of examples, then the model is used to make predictions.
 
-In semisupervised learning, some of the training data is labelled.
+Problems
 
-In reinforcement learning, an agent observes the environment and receives rewards for actions performed.
-
-In batch learning, the system is trained using all available data.
-
-In online learning, the system is trained incrementally by feeding it data in mini-batches.
-
-In instance-based learning, the system learns examples by heart, then generalizes to new cases using a similarity measure.
-
-In model-based learning, a model is built from a set of examples, then the model is used to make predictions.
-
-Small data sets often suffer from sampling noise, and large data sets can still suffer from sampling bias.
+- Insufficient data - Small data sets often suffer from sampling noise.
+- Non-representative data - Large data sets can suffer from sampling bias.
+- Poor-quality data
+- Irrelevant features
+- [Overfitting](/notes/computer/data/machine-learning/overfitting)
+- [Underfitting](/notes/computer/data/machine-learning/underfitting)
 
 Feature engineering involves feature selection, feature extraction and feature creation.
 
-To fix overfitting you can
-- simplify the model
-- gather more training data
-- fix data errors and remove outliers
 
-Regularization constrains a model to make it simpler and reduce the risk of overfitting.
-
-Underfitting occurs when your model is too simple to learn the underlying structure of the data.
-
-To fix underfitting you can
-- select a more powerful model
-- perform feature engineering
-- reduce regularization
-
-To see how well a model will generalize to new cases, the data is split into a training set and a test set.
+To see how well a model will generalize to new cases, the data is split into a training set, a test set and a validation set.
 
 It is common to use 80% of the data for training and hold out 20% for testing.
 

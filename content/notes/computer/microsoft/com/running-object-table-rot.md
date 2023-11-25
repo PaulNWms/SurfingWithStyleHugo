@@ -4,6 +4,7 @@ date: 2023-09-18T20:52
 draft: false
 tags:
   - "#COM"
+parent: COM
 ---
 The ROT is a system-wide table that keeps track of COM objects that are in use.  The interface to the ROT is COM-based.  Use the Win32 function [GetRunningObjectTable](https://learn.microsoft.com/en-us/windows/win32/api/objbase/nf-objbase-getrunningobjecttable) to get an [IRunningObjectTable](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-irunningobjecttable) object pointer.
 
