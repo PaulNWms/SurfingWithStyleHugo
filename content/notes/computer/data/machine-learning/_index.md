@@ -120,15 +120,15 @@ Multioutput classification output multiple multiclass labels.
 
 Linear regression model prediction
 
-$$\hat{y}=\theta_0+\theta_1x_1+\theta_2x_2+\cdots +\theta_nx_n$$
+$$\hat{y}=\theta\_0+\theta\_1x\_1+\theta\_2x\_2+\cdots +\theta\_nx\_n$$
 
 Vectorized form
 
-$$\hat{y}=h_\theta(\textbf{x})=\theta^T\cdot \textbf{x}$$
+$$\hat{y}=h\_\theta(\textbf{x})=\theta^T\cdot \textbf{x}$$
 
 Cost function of the linear regression model
 
-$$MSE(\textbf{X},h_\theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}\right)^2$$
+$$MSE(\textbf{X},h\_\theta)=\frac{1}{m}\sum\_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}\right)^2$$
 
 Normal equation
 
@@ -146,7 +146,7 @@ Preprocess the data with Scikit-Learn's `StandardScalar`
 ### Batch Gradient Descent
 Partial derivatives of the cost function
 
-$$\frac{\delta}{\delta\theta_j}=\frac{2}{m}\sum_{i=1}^{m}\left(\theta^T\cdot\textbf{x}^{(i)}-y^{(i)}\right)x_j^{(i)}$$
+$$\frac{\delta}{\delta\theta\_j}=\frac{2}{m}\sum\_{i=1}^{m}\left(\theta^T\cdot\textbf{x}^{(i)}-y^{(i)}\right)x\_j^{(i)}$$
 
 Gradient vector of the cost function
 
@@ -160,7 +160,7 @@ $$\nabla_\theta MSE(\theta)=\begin{pmatrix}
 
 Gradient descent step
 
-$$\theta^{(\text{next step})}=\theta-\eta\nabla_\theta MSE(\theta)$$
+$$\theta^{(\text{next step})}=\theta-\eta\nabla\_\theta MSE(\theta)$$
 
 ### Stochastic Gradient Descent
 ```py
@@ -170,7 +170,7 @@ sgd_reg.fit(X, y.ravel())
 ### Regularized Linear Models
 - Ridge regression adds a regularization term to the cost function, forcing the learning algorithm to keep the weights as small as possible.
 
-$$J(\theta)=MSE(\theta)+\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$
+$$J(\theta)=MSE(\theta)+\alpha\frac{1}{2}\sum\_{i=1}^{n}\theta\_i^2$$
 $$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}+\alpha\textbf{A}\right)^{-1}\cdot\textbf{X}^T\cdot \textbf{y}$$
 ```py
 ridge_reg = Ridge(alpha=1, solver="cholesky")
@@ -180,7 +180,7 @@ ridge_reg.predict([1.5](/notes/))
 
 - Lasso regression tends to completely eliminate the weights of the least important features.
 
-$$J(\theta)=MSE(\theta)+\alpha\sum_{i=1}^{n}\left|\theta_i\right|$$
+$$J(\theta)=MSE(\theta)+\alpha\sum\_{i=1}^{n}\left|\theta\_i\right|$$
 ```py
 lasso_reg = Lasso(alpha=0.1)
 lasso_reg.fit(X, y)
@@ -189,7 +189,7 @@ lasso_reg.predict([1.5](/notes/))
 
 - Elastic Net is a combination of the two.
 
-$$J(\theta)=MSE(\theta)+r\alpha\sum_{i=1}^{n}\left|\theta_i\right|+\frac{1-r}{2}\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$
+$$J(\theta)=MSE(\theta)+r\alpha\sum\_{i=1}^{n}\left|\theta\_i\right|+\frac{1-r}{2}\alpha\frac{1}{2}\sum\_{i=1}^{n}\theta\_i^2$$
 ```py
 from sklearn.linear_model import ElasticNet
 elastic_net = ElasticNet(alpha=0.1, l1_ratio=0.5)
@@ -201,15 +201,15 @@ elastic_net.predict([1.5](/notes/))
 ### Logistic regression
 estimates the probability that an instance belongs to a particular class.
 
-$$\hat{p}=h_\theta(\textbf{x})=\sigma\left(\theta^T\cdot\textbf{x}\right)$$
+$$\hat{p}=h\_\theta(\textbf{x})=\sigma\left(\theta^T\cdot\textbf{x}\right)$$
 
 The logistic regression loss function is convex
 
-$$J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\text{log}\left(\hat{p}^{(I)}\right)+\left(1-y^{(i)}\right)\text{log}\left(1-\hat{p}^{(I)}\right)\right]$$
+$$J(\theta)=-\frac{1}{m}\sum\_{i=1}^{m}\left[y^{(i)}\text{log}\left(\hat{p}^{(I)}\right)+\left(1-y^{(i)}\right)\text{log}\left(1-\hat{p}^{(I)}\right)\right]$$
 
 and its derivative is
 
-$$\frac{\delta}{\delta\theta_j}=\frac{1}{m}\sum_{i=1}^{m}\left(\sigma\left( \theta^T\cdot \textbf{x}^{(i)}-y^{(I)} \right) \right)x_j^{(I)}$$
+$$\frac{\delta}{\delta\theta\_j}=\frac{1}{m}\sum\_{i=1}^{m}\left(\sigma\left( \theta^T\cdot \textbf{x}^{(i)}-y^{(I)} \right) \right)x\_j^{(I)}$$
 
 To train a logistic regression model
 ```py
@@ -222,23 +222,23 @@ log_reg.fit(X, y)
 
 Softmax score for class _k_
 
-$$s_k(\textbf{x})=\left(\theta^{(k)}\right)^T\cdot\textbf{x}$$
+$$s\_k(\textbf{x})=\left(\theta^{(k)}\right)^T\cdot\textbf{x}$$
 
 Softmax function
 
-$$\hat{p}_k=\sigma(\textbf{s}(\textbf{x}))_k=\frac{exp(s_k(\textbf{x}))}{\sum_{j=1}^{K}exp(s_j(\textbf{x}))}$$
+$$\hat{p}\_k=\sigma(\textbf{s}(\textbf{x}))\_k=\frac{exp(s\_k(\textbf{x}))}{\sum\_{j=1}^{K}exp(s\_j(\textbf{x}))}$$
 
 Softmax prediction
 
-$$\hat{y}=\underset{k}{\text{argmax }}\sigma(\textbf{s}(\textbf{x}))_k=\underset{k}{\text{argmax }}s_k(\textbf{x})=\underset{k}{\text{argmax }}\left(\left(\theta^{(k)}\right)^T\cdot\textbf{x}\right)$$
+$$\hat{y}=\underset{k}{\text{argmax }}\sigma(\textbf{s}(\textbf{x}))\_k=\underset{k}{\text{argmax }}s\_k(\textbf{x})=\underset{k}{\text{argmax }}\left(\left(\theta^{(k)}\right)^T\cdot\textbf{x}\right)$$
 
 Cross entropy cost function
 
-$$J(\Theta)=-\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}y_k^{(i)}\text{log}\left(\hat{p}_k^{(i)}\right)$$
+$$J(\Theta)=-\frac{1}{m}\sum\_{i=1}^{m}\sum\_{k=1}^{K}y\_k^{(i)}\text{log}\left(\hat{p}\_k^{(i)}\right)$$
 
 Cross entropy gradient vector
 
-$$\nabla_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{p}_k^{(i)}-y_k^{(i)}\right)\textbf{x}^{(i)}$$
+$$\nabla\_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum\_{i=1}^{m}\left(\hat{p}\_k^{(i)}-y\_k^{(i)}\right)\textbf{x}^{(i)}$$
 
 ```py
 softmax_reg = LogisticRegression(multi_class="multinomial", solver="lbfgs", C=10)
@@ -290,7 +290,7 @@ poly_kernel_svm_clf.fit(X, y)
 
 Gaussian radial bias function (RBF)
 
-$$\phi_\gamma(\textbf{x},l)=\text{exp}\left(-\gamma\left\|\textbf{x}-l\right\|^2\right)$$
+$$\phi\_\gamma(\textbf{x},l)=\text{exp}\left(-\gamma\left\|\textbf{x}-l\right\|^2\right)$$
 
 Increasing `gamma` makes the bell-shape curve narrower.
 

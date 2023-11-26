@@ -212,6 +212,7 @@ $content | Out-File -Force -FilePath "$PSScriptRoot\content\$targetDir\_index.md
 
 # Rewrite links to standard markdown format and new path
 $linkPattern = '\[\[(.*?)]]'
+$mathJaxPattern = '(\$\$.*?\$\$)|(\$.*\$)'
 foreach ($page in $pages.Values) {
     $lines = Get-Content $page.FileName
     for ($i = 0; $i -lt $lines.Count; $i++) {
@@ -221,6 +222,14 @@ foreach ($page in $pages.Values) {
             $target = [Page]::TransformLinkToFilename($link)
             $targetPage = $pages[$target]
             $lines[$i] = $lines[$i].Replace($match.Groups[0], "[$link](/$targetUrlBase/$($targetPage.TargetPath))")
+        }
+
+        # While we're here, escape underscores in MathJax
+        $regexMatches = [Regex]::Matches($lines[$i], $mathJaxPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
+        foreach ($match in $regexMatches) {
+            $eqn = $match.Groups[0].Value
+            $eqn = $eqn -replace '_', '\_'
+            $lines[$i] = $lines[$i].Replace($match.Groups[0].Value, $eqn)
         }
     }
 

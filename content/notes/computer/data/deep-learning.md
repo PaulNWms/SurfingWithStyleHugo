@@ -104,19 +104,19 @@ The perceptron step works as follows. For a point with coordinates (p,q), label 
 
 By replacing the step function with the sigmoid function, ŷ = σ(w₁x₁ + w₂x₂ + b) becomes a probability that the point is above or below the line.
 
-$$Softmax=\sum(\mathbf{z})_j=$$ 
+$$Softmax=\sum(\mathbf{z})\_j=$$ 
 
-$$\frac{e^{z_j}}{\sum_{k=1}^{K}e^{z_k}}$$
+$$\frac{e^{z\_j}}{\sum\_{k=1}^{K}e^{z\_k}}$$
 
-$$CrossEntropy=-\sum_{i=1}^m y_i ln(p_i) + (1-y_i)ln(1-p_i)$$
+$$CrossEntropy=-\sum\_{i=1}^m y\_i ln(p\_i) + (1-y\_i)ln(1-p\_i)$$
 
-$$MultiClassCE=-\sum_{i=1}^n \sum_{j=1}^m y_{ij} ln(p_{ij})$$
+$$MultiClassCE=-\sum\_{i=1}^n \sum\_{j=1}^m y\_{ij} ln(p\_{ij})$$
 
-$$Error=-\frac{1}{m}\sum_{i=1}^m (1-y_i)ln(1-\hat{y}_i) + y_i ln(\hat{y}_i)$$
+$$Error=-\frac{1}{m}\sum\_{i=1}^m (1-y\_i)ln(1-\hat{y}\_i) + y\_i ln(\hat{y}\_i)$$
 
-$$E(W,b)=-\frac{1}{m}\sum_{i=1}^m (1-y_i)ln(1-\sigma(Wx^{(i)}+b)) + y_i ln(\sigma(Wx^{(i)}+b))$$
+$$E(W,b)=-\frac{1}{m}\sum\_{i=1}^m (1-y\_i)ln(1-\sigma(Wx^{(i)}+b)) + y\_i ln(\sigma(Wx^{(i)}+b))$$
 
-$$MultiClassError=-\sum_{i=1}^n \sum_{j=1}^m y_{ij} ln(\hat{y}_{ij})$$
+$$MultiClassError=-\sum\_{i=1}^n \sum\_{j=1}^m y\_{ij} ln(\hat{y}\_{ij})$$
 
 The derivative of the sigmoid function is really simple (here the tick means first-order derivative):
 
@@ -124,16 +124,16 @@ $$\sigma'(x) = \sigma(x) (1-\sigma(x))$$
 
 After applying some calculus, this is the gradient step (here the tick means new value):
 
-$$w_i' \leftarrow w_i + \alpha (y - \hat{y}) x_i \qquad b' \leftarrow b + \alpha (y - \hat{y})$$
+$$w\_i' \leftarrow w\_i + \alpha (y - \hat{y}) x\_i \qquad b' \leftarrow b + \alpha (y - \hat{y})$$
 
 Feedforward:
 
 $$\hat{y} = \sigma \circ W^{(n)} \circ \ldots \circ \sigma \circ W^{(2)} \circ \sigma \circ W^{(1)}(x)$$
-$$\nabla E = (\ldots, \frac{\delta E}{\delta W_{ij}^{(k)}}, \ldots)$$
+$$\nabla E = (\ldots, \frac{\delta E}{\delta W\_{ij}^{(k)}}, \ldots)$$
 
 Backpropagation:
 
-$$\forall W_{ij}^{(k)}\text{ in }\nabla E: \quad W_{ij}^{'(k)} \leftarrow W_{ij}^{(k)} - \alpha\frac{\delta E}{\delta W_{ij}^{(k)}}$$
+$$\forall W\_{ij}^{(k)}\text{ in }\nabla E: \quad W\_{ij}^{'(k)} \leftarrow W\_{ij}^{(k)} - \alpha\frac{\delta E}{\delta W\_{ij}^{(k)}}$$
 
 If you can't find the right size of pants, it's better to go for the slightly larger pair and use a belt.
 ```python
@@ -149,8 +149,8 @@ An epoch is a single forward and backward pass of the whole dataset.
 
 Backpropagation (another notation):
 
-$$\delta^h_j = \sum{W_{jk}\delta^0_kf'(h_j)}$$
-$$\Delta w_{ij} = \eta \delta^h_jx_i$$
+$$\delta^h\_j = \sum{W\_{jk}\delta^0\_kf'(h\_j)}$$
+$$\Delta w\_{ij} = \eta \delta^h\_jx\_i$$
 
 Limitations of MLPs:
 - use a lot of parameters because they only use fully connected layers

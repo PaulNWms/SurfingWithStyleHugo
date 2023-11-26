@@ -85,8 +85,8 @@ Measures of Spread
 3. Standard Deviation
 4. Variance
 
-$$\sigma^2 = \frac{1}{n} \sum_{i=1}^n{(x_i-\bar{x})^2} \quad or \quad \sigma^2 = \frac{1}{n-1} \sum_{i=1}^n{(x_i-\bar{x})^2}$$
-$$\sigma = \sqrt{\sigma^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n{(x_i-\bar{x})^2}} \quad or \quad \sigma = \sqrt{\frac{1}{n-1} \sum_{i=1}^n{(x_i-\bar{x})^2}}$$
+$$\sigma^2 = \frac{1}{n} \sum\_{i=1}^n{(x\_i-\bar{x})^2} \quad or \quad \sigma^2 = \frac{1}{n-1} \sum\_{i=1}^n{(x\_i-\bar{x})^2}$$
+$$\sigma = \sqrt{\sigma^2} = \sqrt{\frac{1}{n} \sum\_{i=1}^n{(x\_i-\bar{x})^2}} \quad or \quad \sigma = \sqrt{\frac{1}{n-1} \sum\_{i=1}^n{(x\_i-\bar{x})^2}}$$
 
 Calculating the 5 Number Summary
 1. Minimum: The smallest number in the dataset.
@@ -276,7 +276,7 @@ Linear regression is notated as: ŷ = b₀ + b₁x₁
 
 The least squares algorithm finds the line that minimizes:
 
-$$\sum\limits_{i=1}^n(y_i - \hat{y}_i)^2$$
+$$\sum\limits\_{i=1}^n(y\_i - \hat{y}\_i)^2$$
 
 The R-squared value is the square of the correlation coefficient.
 

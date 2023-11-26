@@ -26,9 +26,9 @@ y = (w₁ + p(q - q')α)x + (w₂ + (q - q')α)
 
 Mean Absolute Error:
 
-$$Error = \frac{1}{m}\sum_{i=1}^m{|y - \hat y|}$$
+$$Error = \frac{1}{m}\sum\_{i=1}^m{|y - \hat y|}$$
 Mean Squared Error:
-$$Error = \frac{1}{2m}\sum_{i=1}^m{(y - \hat y)^2}$$
+$$Error = \frac{1}{2m}\sum\_{i=1}^m{(y - \hat y)^2}$$
 
 ```python
 # Example: calculate MSE explicitly to update line (don't actually use this)
@@ -72,8 +72,8 @@ Perceptron:
 
 Entropy in a set for 2 classes and multi-class:
 
-$$entropy = -\frac{m}{m+n}log_2(\frac{m}{m+n})-\frac{n}{m+n}log_2(\frac{n}{m+n})$$
-$$entropy = -\sum_{i=1}^n p_i\log_2(p_i)$$
+$$entropy = -\frac{m}{m+n}log\_2(\frac{m}{m+n})-\frac{n}{m+n}log\_2(\frac{n}{m+n})$$
+$$entropy = -\sum\_{i=1}^n p\_i\log\_2(p\_i)$$
 
 As entropy increases, knowledge decreases, and vice versa.
 
@@ -132,8 +132,8 @@ Type 2 Error (Error of the second kind, or False Negative): In the medical examp
 Precision: TP / (TP + FP) - Think: murder trial
 Recall:    TP / (TP + FN) - Think: parachute manufacturer
 
-$$HarmonicMean= \frac{2xy}{x+y} \qquad F_1 = 2\cdot\frac{Precision\times Recall}{Precision+Recall}$$
-$$F_\beta = (1+N^2) \cdot \frac{\text{Precision} \cdot \text{Recall}}{N^2 \cdot \text{Precision} + \text{Recall}} = \frac{\text{Precision} \cdot \text{Recall}}{\frac{N^2}{1+N^2}\text{Precision} + \frac{1}{1+N^2}\text{Recall}}$$
+$$HarmonicMean= \frac{2xy}{x+y} \qquad F\_1 = 2\cdot\frac{Precision\times Recall}{Precision+Recall}$$
+$$F\_\beta = (1+N^2) \cdot \frac{\text{Precision} \cdot \text{Recall}}{N^2 \cdot \text{Precision} + \text{Recall}} = \frac{\text{Precision} \cdot \text{Recall}}{\frac{N^2}{1+N^2}\text{Precision} + \frac{1}{1+N^2}\text{Recall}}$$
 
 The area under the Receiver Operating Characteristic (ROC) Curve is 1 for a perfect split, and .5 for a random split.
 
@@ -173,8 +173,8 @@ Some Supervised Learning Models available in scikit-learn
 
 Backpropagation:
 
-$$\delta^h_j = \sum{W_{jk}\delta^0_kf'(h_j)}$$
-$$\Delta w_{ij} = \eta \delta^h_jx_i$$
+$$\delta^h\_j = \sum{W\_{jk}\delta^0\_kf'(h\_j)}$$
+$$\Delta w\_{ij} = \eta \delta^h\_jx\_i$$
 
 2 popular methods for unsupervised machine learning:
 - Clustering
