@@ -21,60 +21,18 @@ The data may arrive 2 different ways.
 
 The algorithm may generalize in 2 different ways.
 
-- In instance-based learning, the system learns examples by heart, then generalizes to new cases using a similarity measure.
+- In instance-based learning, the system learns examples by rote, then generalizes to new cases using a similarity measure.
 - In model-based learning, a model is built from a set of examples, then the model is used to make predictions.
 
-Problems
-
-- Insufficient data - Small data sets often suffer from sampling noise.
-- Non-representative data - Large data sets can suffer from sampling bias.
-- Poor-quality data
-- Irrelevant features
-- [Overfitting](/notes/computer/data/machine-learning/overfitting)
-- [Underfitting](/notes/computer/data/machine-learning/underfitting)
+Model training can go wrong in several ways.  [ML Challenges](/notes/computer/data/machine-learning/ml-challenges)
 
 Feature engineering involves feature selection, feature extraction and feature creation.
 
-To see how well a model will generalize to new cases, the data is split into a training set, a test set and a validation set.
+To train the model, data is divided into [ML Data Sets](/notes/computer/data/machine-learning/ml-data-sets).
 
-It is common to use 80% of the data for training and hold out 20% for testing.
+As a general rule, the project will follow a pretty standard [ML Workflow](/notes/computer/data/machine-learning/ml-workflow).
 
-In cross-validation, a validation set is randomly held out from the training set during training.
 
-The No Free Lunch Theorem states that there is no model that is guaranteed to work best on a given dataset.  The only way to know for sure is to evaluate them all.
-
-Project flow:
-
-1. Look at the big picture.
-  - Frame the problem
-  -- How will the model benefit the company?
-  -- What current solutions exist, if any?
-  -- Supervised, unsupervised, or reinforcement learning?
-  -- Classification, regression, or something else?
-  -- Batch learning or online learning?
-  - Select a performance measure (RMSE ‖∙‖<sub>2</sub>, MAE ‖∙‖<sub>1</sub>, or ?)
-  - Check any assumptions
-2. Get the data.
-  - Familiarize yourself with it (pandas)
-  - Plot histograms (matplotlib)
-  - Create a test set
-3. Discover and visualize the data to gain insights.
-  - Scatter plots (pandas)
-  - Correlations plots 
-4. Prepare the data.
-  - Clean data
-  -- Delete rows with nulls (dropna)
-  -- Delete attributes with nulls (drop)
-  -- Replace nulls with default value (fillna or imputer)
-  - Convert text to integers (factorize() to integer or one-hot encode)
-  - Feature scaling (min-max scaling or standardization)
-5. Select a model and train it.
-  - Cross-validation (cross_val_score)
-6. Fine-tune your model.
-  - GridSearchCV
-  - RandomizedSearchCV
-7. Present your solution.
-8. Launch, monitor and maintain your system.
 
 A binary classifier distinguishes between 2 classes.
 
@@ -498,7 +456,6 @@ X_reduced = rbf_pca.fit_transform(X)
 ---
 # References
 
-- [lack of a priori distinctions between learning algorithms - Google Scholar](https://scholar.google.fr/scholar?q=lack+of+a+priori+distinctions+between+learning+algorithms)
 - [Sample code](https://github.com/ageron/handson-ml)
 - [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php)  
 - [Kaggle](https://www.kaggle.com/datasets)  

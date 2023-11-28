@@ -1,5 +1,6 @@
 using namespace System.Collections.Generic
 using namespace System.IO
+using namespace System.Web.HttpUtility
 
 Import-Module powershell-yaml
 
@@ -9,24 +10,26 @@ Add-Type -AssemblyName System.Text.RegularExpressions
 $sourceDir = "$PSScriptRoot\..\..\..\Documents\Vault\Zettelkasten"
 $tempDir = "$PSScriptRoot\temp"
 $targetDir = "notes"
+$imageSourcePath = "$PSScriptRoot\..\..\..\Documents\Vault\Files\*"
+$imageTargetDir = "$PSScriptRoot\static\img"
 $targetUrlBase = "notes"
 $mdFiles = Get-ChildItem "$sourceDir\*.md"
 $copied = 0
 $skipped = 0
 
-class Page {
+class Zettel {
     [string]$Name
     [string]$FileName
     [string]$TargetPath
     [string[]]$Yaml
     [Hashtable]$Properties
-    [Page]$Parent
-    [List[Page]]$Children
-    static [SortedDictionary[string,Page]]$Visited
+    [Zettel]$Parent
+    [List[Zettel]]$Children
+    static [SortedDictionary[string,Zettel]]$Visited
 
-    Page([FileInfo]$fileInfo) {
+    Zettel([FileInfo]$fileInfo) {
         $this.FileName = $fileInfo.FullName
-        $this.Name = [Page]::TransformLinkToFilename($fileInfo.Name)
+        $this.Name = [Zettel]::TransformLinkToFilename($fileInfo.Name)
         $this.Yaml = @()
         [bool]$yamlStarted = $false
         foreach ($line in (Get-Content $this.FileName)) {
@@ -65,7 +68,7 @@ class Page {
     }
 
     static [void] AssignTargetPaths($subjects) {
-        [Page]::Visited = @{}
+        [Zettel]::Visited = @{}
 
         foreach ($subject in $subjects) {
             $subject.AssignTargetPathHelper($true)
@@ -73,7 +76,7 @@ class Page {
     }
 
     static [void] AssignOrphans($orphans) {
-        [Page]::Visited = @{}
+        [Zettel]::Visited = @{}
 
         foreach ($orphan in $orphans) {
             $orphan.AssignTargetPathHelper($false)
@@ -81,12 +84,12 @@ class Page {
     }
 
     [void] AssignTargetPathHelper([bool]$isSubject) {
-        if ([Page]::Visited[$this.Name]) {
+        if ([Zettel]::Visited[$this.Name]) {
             Write-Host "$($this.Name) already visited"
             return
         }
 
-        [Page]::Visited[$this.Name] = $this
+        [Zettel]::Visited[$this.Name] = $this
 
         if ($this.Parent) {
             if (-not $this.Parent.TargetPath) {
@@ -121,9 +124,9 @@ New-Item -ItemType Directory $tempDir | Out-Null
 Remove-Item -Recurse "$PSScriptRoot\content\$targetDir"
 New-Item -ItemType Directory "$PSScriptRoot\content\$targetDir" | Out-Null
 
-# 1) Copy files to temp dir
+# Copy files to temp dir
 foreach ($mdFile in $mdFiles) {
-    $sourcePage = [Page]::new($mdFile)
+    $sourcePage = [Zettel]::new($mdFile)
     $tags = $sourcePage.Properties['tags']
     foreach ($tag in $tags) {
         if ($tag -match 'private') {
@@ -138,11 +141,14 @@ foreach ($mdFile in $mdFiles) {
 
 Write-Host "Copied: $copied, Skipped: $skipped"
 
+# Copy bitmaps
+Copy-Item -Path $imageSourcePath -Destination $imageTargetDir -Recurse -Include *.png, *.jpg, *.bmp
+
 # Populate hash
 $mds = Get-ChildItem -Path $tempDir -Filter *.md
-[SortedDictionary[string,Page]]$pages = @{}
+[SortedDictionary[string,Zettel]]$pages = @{}
 foreach ($md in $mds) {
-    $page = [Page]::new($md)
+    $page = [Zettel]::new($md)
     $pages[$page.Name] = $page
 }
 
@@ -151,14 +157,14 @@ $linkPattern = '\[\[(.*?)]]'
 foreach ($page in $pages.Values) {
     $lines = Get-Content $page.FileName
     if ($page.Properties['parent']) {
-        $parent = [Page]::TransformLinkToFilename($page.Properties['parent'])
+        $parent = [Zettel]::TransformLinkToFilename($page.Properties['parent'])
         $page.Parent = $pages[$parent]
     }
     for ($i = 0; $i -lt $lines.Count; $i++) {
-        $regexMatches = [Regex]::Matches($lines[$i], $linkPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
+        $regexMatches = [Regex]::Matches($lines[$i], $linkPattern)
         foreach ($match in $regexMatches) {
             $link = $match.Groups[1]
-            $target = [Page]::TransformLinkToFilename($link)
+            $target = [Zettel]::TransformLinkToFilename($link)
             $child = $pages[$target]
             if ($child) {
                 if (-not $child.Parent) {
@@ -175,7 +181,7 @@ $subjects = $pages.GetEnumerator() |
     Where-Object { -not $_.Value.Parent } |
     ForEach-Object { $_.Value }
 
-[Page]::AssignTargetPaths($subjects)
+[Zettel]::AssignTargetPaths($subjects)
 
 # Because of the way we're doing this, some orphans are expected
 $oldOrphanCount = 0
@@ -196,7 +202,7 @@ while ($true) {
         break
     }
 
-    [Page]::AssignOrphans($orphans)
+    [Zettel]::AssignOrphans($orphans)
     $oldOrphanCount = $orphans.Count
 }
 
@@ -211,15 +217,23 @@ weight: 300
 $content | Out-File -Force -FilePath "$PSScriptRoot\content\$targetDir\_index.md"
 
 # Rewrite links to standard markdown format and new path
+$imagePattern = '!\[\[(.*?)]]'
 $linkPattern = '\[\[(.*?)]]'
 $mathJaxPattern = '(\$\$.*?\$\$)|(\$.*\$)'
 foreach ($page in $pages.Values) {
     $lines = Get-Content $page.FileName
     for ($i = 0; $i -lt $lines.Count; $i++) {
+        $regexMatches = [Regex]::Matches($lines[$i], $imagePattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
+        foreach ($match in $regexMatches) {
+            $image =  [uri]::EscapeUriString($match.Groups[1].Value)
+            $image = "![image](/img/$image)"
+            $lines[$i] = $lines[$i].Replace($match.Groups[0].Value, $image)
+        }
+
         $regexMatches = [Regex]::Matches($lines[$i], $linkPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
         foreach ($match in $regexMatches) {
             $link = $match.Groups[1]
-            $target = [Page]::TransformLinkToFilename($link)
+            $target = [Zettel]::TransformLinkToFilename($link)
             $targetPage = $pages[$target]
             $lines[$i] = $lines[$i].Replace($match.Groups[0], "[$link](/$targetUrlBase/$($targetPage.TargetPath))")
         }
