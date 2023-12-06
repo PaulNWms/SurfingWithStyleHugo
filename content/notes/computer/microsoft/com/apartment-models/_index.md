@@ -50,8 +50,10 @@ To describe these models very briefly -
 Calling from one apartment into another may incur overhead.  Depending on the scenario, the client may call the server in another apartment using direct pointer access, using the proxy from the class's typelib, or generate a hidden "lightweight" proxy.
 
 As a rule of thumb - keep everything in the same apartment, unless there is a compelling reason to do otherwise.
-- If the COM server touches UI, like and ActiveX control, leave ThreadingModel undefined or set it to Apartment, to keep the server on the window's UI thread.
+- If the COM server touches UI, leave ThreadingModel undefined or set it to Apartment, to keep the server on the window's UI thread.
 - Otherwise use Both.  In all cases, this will allow direct pointer access.
+
+An object in an STA can implement [IMessageFilter](/notes/computer/microsoft/com/apartment-models/imessagefilter).
 
 In the unusual case where there are multiple apartments, you can run into a problem of fairness.  If a client in apartment STA1 instantiates an InProc server, and then a client in STA2 instantiates the same server, the server object will end up in STA1.  The first client will have direct access to it and the second will have to communicate over a proxy/stub.  (Talk about a first-world problem...)  This is where the TNA comes into the picture.  It's a neutral place where both clients will have indirect access to the server, but it will be running on their threads.
 

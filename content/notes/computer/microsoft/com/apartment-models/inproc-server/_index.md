@@ -6,7 +6,7 @@ tags:
   - "#COM"
 ---
 
-An InProc server implements `IClassFactory` and implements `DllGetClassObject()` and `DllCanUnloadNow()`.  The boiler plate .def file Visual Studio generates in an ATL project looks like this:
+An InProc server implements `IClassFactory`, `DllGetClassObject()` and `DllCanUnloadNow()`.  The boiler plate .def file Visual Studio generates in an ATL project looks like this:
 
 ```def
 LIBRARY
@@ -19,6 +19,8 @@ EXPORTS
 ```
 
 A client application will typically instantiate a COM object with `CoCreateInstance()` if it needs a single instance.
+
+Note that DllGetClassObject() _does not_ directly create objects, as the name would imply.  Instead, is called with IID_IClassFactory to get a factory object.  pFactory->CreateInstance() is then called to create the object.  This all happens behind the scenes when you call CoCreateInstance.
 
 ```C++
 int
@@ -175,8 +177,33 @@ main ()
 
 Occasionally, an InProc server may have multiple apartments.  See [Apartment Models](/notes/computer/microsoft/com/apartment-models).
 
+Not recommended, but just to complete the thought - it _is_ possible to load an inproc server without using the registry or SCM.
+
+```C++
+IUnknown* pUnknown;
+IClassFactory* pClassFactory;
+
+// Load the DLL.
+HINSTANCE myDLL = LoadLibrary("C:\\component.dll");
+
+// Declare a pointer to the DllGetClassObject function.
+typedef HRESULT (____stdcall *PFNDLLGETCLASSOBJECT)(REFCLSID clsid, 
+    REFIID riid, void** ppv);
+
+// Get a pointer to the component's DllGetClassObject function.
+PFNDLLGETCLASSOBJECT DllGetClassObject = 
+    (PFNDLLGETCLASSOBJECT)GetProcAddress(myDLL, "DllGetClassObject");
+
+// Call DllGetClassObject to get a pointer to the class factory.
+DllGetClassObject(CLSID_InsideCOM, IID_IClassFactory, (void**)&pClassFactory);
+// IClassFactory::CreateInstance and IUnknown::Release
+pClassFactory->CreateInstance(NULL, IID_IUnknown, (void**)&pUnknown);
+pClassFactory->Release();
+```
+
 ---
 # References
 
 - [CoCreateInstance function (combaseapi.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 - [CoGetClassObject function (combaseapi.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cogetclassobject)
+- [DllGetClassObject function (combaseapi.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject)

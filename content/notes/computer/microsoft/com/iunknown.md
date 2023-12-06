@@ -4,6 +4,7 @@ date: 2023-07-25T07:29-0800
 draft: false
 tags:
   - "#COM"
+parent: COM
 ---
 `IUnknown` describes 2 areas of functionality: interface type coercion (`QueryInterface`) and object lifetime control (`AddRef` and `Release`).
 ### `QueryInterface()`
@@ -18,7 +19,7 @@ Microsoft defines some pseudo-mathematical identity rules which state in essence
 
 (I'm not sure why all the formality, but every COM book seems to point this out.)
 
-Another identity rule is that IUnknown must be unique.  However, this does not apply to other interfaces, which can be dynamically reallocated. The implication is that, to test if objects are the same, you need to QueryInterface to get the IUnknown pointer for each and compare those.  
+Another identity rule is that IUnknown must be unique.  However, this does not apply to other interfaces, which can be dynamically reallocated. The implication is that, to test if objects are the same, you need to QueryInterface to get the IUnknown pointer for each and compare those.
 ### `AddRef()` and `Release()`
 
 1. Functions that return an interface pointer should call `AddRef()`

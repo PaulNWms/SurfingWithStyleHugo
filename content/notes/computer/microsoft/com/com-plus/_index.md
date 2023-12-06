@@ -19,7 +19,7 @@ COM+ is a technology stack, built approximately like this:
 
 Microsoft built a monument on top of COM, a lot of  which is deprecated now.  This was motivated by [Windows DNA](/notes/computer/microsoft/com/com-plus/windows-dna), parts of which are still around.
 
-COM+ and DNA are terms that overlap.  The way I think of it is, COM+ is this specific technology stack, and DNA is more of a marketing term that means "whatever tools make up a 3-tier application".  This includes IIS and SQL Server.
+COM+ and DNA are terms that overlap.  The way I think of it is, COM+ is this specific technology stack, and DNA is more of a marketing term that means "whatever tools make up a 3-tier application".  This includes IIS and SQL Server.  The list of [COM+ objects](/notes/computer/microsoft/com/com-plus-objects) is a little more tangible.
 
 ---
 # References

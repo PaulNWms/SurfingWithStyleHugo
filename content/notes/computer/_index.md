@@ -10,6 +10,7 @@ tags:
 - [Text File Formats](/notes/computer/text-file-formats)
 - [Computer Languages](/notes/computer/computer-languages)
 - [OpenCV](/notes/computer/opencv)
+- [ROS](/notes/computer/ros)
 - [Microsoft](/notes/computer/microsoft)
 - [Data](/notes/computer/data)
 - [Git](/notes/computer/git)

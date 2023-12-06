@@ -7,10 +7,10 @@ Import-Module powershell-yaml
 Add-Type -AssemblyName System.Core
 Add-Type -AssemblyName System.Text.RegularExpressions
 
-$sourceDir = "$PSScriptRoot\..\..\..\Documents\Vault\Zettelkasten"
+$sourceDir = "$PSScriptRoot\..\Vault\Zettelkasten"
 $tempDir = "$PSScriptRoot\temp"
 $targetDir = "notes"
-$imageSourcePath = "$PSScriptRoot\..\..\..\Documents\Vault\Files\*"
+$imageSourcePath = "$PSScriptRoot\..\Vault\Files\*"
 $imageTargetDir = "$PSScriptRoot\static\img"
 $targetUrlBase = "notes"
 $mdFiles = Get-ChildItem "$sourceDir\*.md"
@@ -223,6 +223,7 @@ $mathJaxPattern = '(\$\$.*?\$\$)|(\$.*\$)'
 foreach ($page in $pages.Values) {
     $lines = Get-Content $page.FileName
     for ($i = 0; $i -lt $lines.Count; $i++) {
+        # Use standard markdown image tags
         $regexMatches = [Regex]::Matches($lines[$i], $imagePattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
         foreach ($match in $regexMatches) {
             $image =  [uri]::EscapeUriString($match.Groups[1].Value)
@@ -230,6 +231,8 @@ foreach ($page in $pages.Values) {
             $lines[$i] = $lines[$i].Replace($match.Groups[0].Value, $image)
         }
 
+        # Replace link with filename
+        # This goes second, because '[[]]' is a substring of '![[]]'
         $regexMatches = [Regex]::Matches($lines[$i], $linkPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
         foreach ($match in $regexMatches) {
             $link = $match.Groups[1]
@@ -238,7 +241,7 @@ foreach ($page in $pages.Values) {
             $lines[$i] = $lines[$i].Replace($match.Groups[0], "[$link](/$targetUrlBase/$($targetPage.TargetPath))")
         }
 
-        # While we're here, escape underscores in MathJax
+        # Escape underscores in MathJax
         $regexMatches = [Regex]::Matches($lines[$i], $mathJaxPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
         foreach ($match in $regexMatches) {
             $eqn = $match.Groups[0].Value
