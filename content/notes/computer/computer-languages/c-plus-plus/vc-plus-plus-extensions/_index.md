@@ -28,6 +28,10 @@ tags:
 
 - VS AppWizard creates by default.
 
+## Other Dialects
+
+Microsoft also created [C++/CLI](/notes/) for [DotNET](/notes/computer/microsoft/dotnet) and [C++/CX](/notes/) for [WinRT](/notes/).
+
 ---
 # References
 

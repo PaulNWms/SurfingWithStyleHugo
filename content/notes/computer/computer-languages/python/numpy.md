@@ -9,6 +9,64 @@ tags:
 ---
 
 ```python
+import numpy as np
+digits = np.array(range(10))
+digits.dtype
+```
+`dtype('int32')`
+```python
+# Operations
+digits.shape
+```
+`(10,)`
+```python
+np.sin(digits)
+```
+`array([ 0.        ,  0.84147098,  0.90929743,  0.14112001, -0.7568025 , -0.95892427, -0.2794155 ,  0.6569866 ,  0.98935825,  0.41211849])`
+```python
+# Creation
+np.arange(3)
+```
+`array([0, 1, 2])`
+```python
+np.ones(3)
+```
+`array([1., 1., 1.])`
+```python
+np.zeros(3)
+```
+`array([0., 0., 0.])`
+```python
+np.eye(3, 5)
+```
+`array([1., 0., 0., 0., 0.], [0., 1., 0., 0., 0.], [0., 0., 1., 0., 0.](/notes/))`
+```python
+np.diag(range(3))
+```
+`array([0, 0, 0], [0, 1, 0], [0, 0, 2](/notes/))`
+```python
+np.linspace(0, 10, num=15)
+```
+`array([ 0.        ,  0.71428571,  1.42857143,  2.14285714,  2.85714286, 3.57142857, 4.28571429,  5.        ,  5.71428571,  6.42857143, 7.14285714,  7.85714286,  8.57142857,  9.28571429, 10.        ])`
+```python
+# Random Creation
+np.random.random(3)  # between [0,1)
+```
+`array([0.77345657, 0.75312733, 0.84764337])`
+```python
+rng = np.random.default_rng()
+rng.integers(low=11, high=15, size=5)  # 5 between [11,15)
+```
+`array([11, 12, 11, 14, 13])`
+```python
+np.random.bytes(5)  # 5 bytes
+```
+`b'\x00\xb6\xbb\\\xc6'`
+```python
+np.random.randn(3)  # normal distribution
+```
+`array([1.57567154, 0.28837618, 0.54008422])`
+```python
 X = np.linspace(0, 110000, 1000)
 
 # to make this notebook's output identical at every run
@@ -73,15 +131,13 @@ m.transpose()
 # create row matrix
 features = [ 0.49671415, -0.1382643 ,  0.64768854]
 np.array(features, ndmin=2)
-> array([ 0.49671415, -0.1382643 ,  0.64768854](/notes/))
-
+```
+`array([ 0.49671415, -0.1382643 ,  0.64768854](/notes/))`
+```python
 # create column matrix
 np.array(features, ndmin=2).T
-> array([[ 0.49671415],
-       [-0.1382643 ],
-       [ 0.64768854]])
 ```
-
+`array([ 0.49671415], [-0.1382643 ], [ 0.64768854](/notes/))`
 
 ---
 # References

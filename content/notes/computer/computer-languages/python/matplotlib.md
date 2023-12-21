@@ -7,6 +7,28 @@ draft: false
 tags:
   - Python
 ---
+**Note:** ChatGPT is pretty good at generating matplotlib plots
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.arange(0, 10, 0.2)
+y = np.sin(x)
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.plot(x, y)
+plt.savefig('pyplot1.png', dpi=300)
+```
+
+```python
+from pylab import *
+import numpy as np
+x = arange(0, 10, 0.2)
+y = sin(x)
+plot(x, y)
+savefig('pylab1.png', dpi=300)
+```
+
 ```python
 import matplotlib.pyplot as plt
 import seaborn as sb
@@ -313,10 +335,10 @@ sb.palplot(sb.color_palette('viridis', 9))
 sb.palplot(sb.color_palette('vlag', 9))
 ```
 
-Qualitative (all up to 6 colors): 'deep', 'pastel', 'dark', 'muted', 'bright', 'colorblind'  
-Sequential: 'rocket' (white-orange-red-purple-black), 'mako' (mint-green-blue-purple-black)  
-Diverging: 'vlag' (blue-white-red), 'icefire' (blue-black-orange)
-For all of these strings, appending '_r' reverses the palette  
+- Qualitative (all up to 6 colors): 'deep', 'pastel', 'dark', 'muted', 'bright', 'colorblind'  
+- Sequential: 'rocket' (white-orange-red-purple-black), 'mako' (mint-green-blue-purple-black)  
+- Diverging: 'vlag' (blue-white-red), 'icefire' (blue-black-orange)
+- For all of these strings, appending '_r' reverses the palette  
 
 ```python
 # faceted boxplot
@@ -384,8 +406,6 @@ sns.clustermap(normalized_X, figsize=(12,18), method=linkage_type, cmap='viridis
 plt.show()
 ```
 
-
-
 ---
 # References
 
@@ -394,4 +414,4 @@ plt.show()
 - [Choosing color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html)  
 - [How The Rainbow Color Map Misleads](https://eagereyes.org/basics/rainbow-color-map)  
 - [No more rainbows!](https://agilescientific.com/blog/2017/12/14/no-more-rainbows)  
-- [How to choose a color palette for choropleth maps](https://blog.datawrapper.de/how-to-choose-a-color-palette-for-choropleth-maps/)  
+- [How to choose a color palette for choropleth maps](https://blog.datawrapper.de/how-to-choose-a-color-palette-for-choropleth-maps/) 

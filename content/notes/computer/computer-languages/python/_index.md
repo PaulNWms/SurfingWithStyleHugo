@@ -7,6 +7,23 @@ draft: false
 tags:
   - Python
 ---
+## Step-By-Step
+
+- [Python Setup](/notes/computer/computer-languages/python/python-setup)
+- [Jupyter](/notes/computer/computer-languages/python/jupyter)
+- [Python Objects](/notes/computer/computer-languages/python/python-objects)
+- [Python Literals](/notes/computer/computer-languages/python/python-literals)
+- [Python Math](/notes/computer/computer-languages/python/python-math)
+- [Python Strings](/notes/computer/computer-languages/python/python-strings)
+- [Python Help](/notes/computer/computer-languages/python/python-help)
+- [Python Files](/notes/computer/computer-languages/python/python-files)
+- [Python Lists](/notes/computer/computer-languages/python/python-lists)
+- [Python Slicing](/notes/computer/computer-languages/python/python-slicing)
+- [Python Comprehensions](/notes/computer/computer-languages/python/python-comprehensions)
+- [Python Functions](/notes/computer/computer-languages/python/python-functions)
+- [Python Modules](/notes/computer/computer-languages/python/python-modules)
+- [Python Classes](/notes/computer/computer-languages/python/python-classes)
+- [Python Exceptions](/notes/computer/computer-languages/python/python-exceptions)
 ## Libraries
 
 - [NumPy](/notes/computer/computer-languages/python/numpy)
@@ -18,6 +35,19 @@ tags:
 - [PyTorch](/notes/)
 
 ```python
+# Continue one line with '\'
+
+# Continue multiple lines with parenthetical expression '(...)' (preferred)
+
+# Separate multiple statements on one line with ';'
+
+# All variables are pointers (including ints)
+
+# Everything is an object (including ints)
+
+# null
+x = None
+
 # create a requirements.txt
 $ pip freeze > requirements.txt
 
@@ -35,85 +65,6 @@ assert cuda.is_available()
 assert cuda.device_count() > 0
 print(cuda.get_device_name(cuda.current_device()))
 
-Common Jupyter keystrokes
-SHIFT+ENTER
-CTRL+ENTER
-UP/DOWN
-TAB
-SHIFT+TAB
-SHIFT+TAB,SHIFT+TAB
-ESC,H
-CTRL+SHIFT+P
-
-Common magic keywords:
-%matplotlib
-%timeit
-%pdb
-
-# convert a notebook to HTML, slides
-jupyter nbconvert --to html notebook.ipynb
-jupyter nbconvert notebook.ipynb --to slides
-jupyter nbconvert notebook.ipynb --to slides --post serve
-
-# Continue one line with '\'
-
-# Continue multiple lines with parenthetical expression '(...)' (preferred)
-
-# Separate multiple statements on one line with ';'
-
-# All variables are pointers (including ints)
-
-# Everything is an object (including ints)
-
-# floor division
-a // b
-
-# exponentiation
-a ** b
-
-# bit SHIFT left, right
-a << b; a >> b
-
-# bitwise NOT
-~a
-
-# output binary
-bin(10)
-
-# Boolean operators: and, or, not
-
-# boolean XOR
-(x > 1) != (x < 10)
-
-# identity operators
-a is b
-a is not b
-
-# membership operators
-a in b
-a not in b
-
-# complex numbers
-x = 1 + 2j
-
-# null
-x = None
-
-# length of a string, list, tuple
-len(s)
-
-# string case
-str.upper()
-str.lower()
-str.capitalize()
-str.title()
-
-# string, list concatenation
-a + b
-
-# string power
-5 * s
-
 # list
 [1, 2, 3]
 
@@ -126,33 +77,6 @@ a + b
 
 # set
 {1, 2, 3}
-
-# list append
-x.append(11)
-
-# list sort
-x.sort()
-
-# last element of list
-x[-1]
-
-# first 3 elements of list
-x[0:3]
-x[:3]
-
-# last 3 elements of list
-x[-3:len(x)]
-x[-3:]
-
-# select every other element of list
-x[0:len(x):2]
-x[::2]
-
-# reverse list
-x[::-1]
-
-# slicing works on LHS of assignment
-x[1:3] = [1, 2]
 
 # Tuples are immutable.
 
@@ -261,7 +185,7 @@ new_L1, new_L2 = zip(*z)
 # "ternary operator"
 val if val >= 0 else -val
 
-# list comprehensions - [<em>expr</em> for <em>var</em> in <em>iterable</em>]
+# list comprehensions - [expr for var in iterable]
 [i for i in range(20) if i % 3 > 0]
 
 # set comprehension
@@ -298,100 +222,11 @@ pickle - Tools for object persistence: saving objects to and loading objects fro
 json and csv - Tools for reading JSON-formatted and CSV-formatted files 
 urllib - Tools for doing HTTP and other web requests
 
-# string trimming
-line.strip()
-line.lstrip()
-line.rstrip()
-
-# justify
-line.ljust()
-line.rjust()
-
-# find / replace
-line.find('fox')
-line.rfind('fox')
-line.index('fox')
-line.rindex('fox')
-line.startswith('fox')
-line.endswith('dog')
-line.replace('brown', 'red')
-
-# splitting
-line.partition('fox')
-line.split()
-
-# formatting
-"pi = {0:.3f}".format(pi)
-
-# regex
-import re
-regex = re.compile('\s+')
-regex.split(line)
-found = regex.match(s)
-
 # Common tools include numpy, scipy, pandas, matplotlib, scikit-learn.
-
-class Employee:
-   'Common base class for all employees'
-   empCount = 0
-
-   def __init__(self, name, salary):
-      self.name = name
-      self.salary = salary
-      Employee.empCount += 1
-   
-   def __del__(self):
-      class_name = self.__class__.__name__
-      print class_name, "destroyed"
-
-   def displayCount(self):
-     print "Total Employee %d" % Employee.empCount
-
-   def displayEmployee(self):
-      print "Name : ", self.name,  ", Salary: ", self.salary
-
-The getattr(obj, name[, default]) − to access the attribute of object.
-The hasattr(obj,name) − to check if an attribute exists or not.
-The setattr(obj,name,value) − to set an attribute. If attribute does not exist, then it would be created.
-The delattr(obj, name) − to delete an attribute.
-
-__dict__ − Dictionary containing the class's namespace.
-__doc__ − Class documentation string or none, if undefined. 
-__name__ − Class name.
-__module__ − Module name in which the class is defined. This attribute is "__main__" in interactive mode. 
-__bases__ − A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
-
-# multiple inheritance
-class SubClassName (ParentClass1[, ParentClass2, ...]):
-   'Optional class documentation string'
-   class_suite
-
-__init__ ( self [,args...] ) 
-Constructor (with any optional arguments) 
-Sample Call : obj = className(args)
-
-__del__( self )
-Destructor, deletes an object
-Sample Call : del obj
-
-__repr__( self )
-Evaluable string representation
-Sample Call : repr(obj)
-
-__str__( self )
-Printable string representation
-Sample Call : str(obj)
-
-__cmp__ ( self, x )
-Object comparison
-Sample Call : cmp(obj, x)
 
 # typecast
 int(4.0)
 float(7)
-
-# string interpolation
-f"Nice to meet you {name}.  I am {machine}."
 
 # remove item from list
 del student_names[2]
@@ -428,26 +263,15 @@ def read_file():
 
 # There are no interfaces.
 
-pip install virtualenv
-virtualenv &lt;name&gt;
-source &lt;path&gt;&lt;name&gt;/bin/activate
-deactivate
-
-# create .exe
-pip install pyinstaller
-pyinstaller --onefile &lt;filename containing entry point&gt;
-
-# Use InnoSetup to create installer, see links.
-
-os.path.join(<em>string</em>, <em>string</em>)
-os.path.isdir(<em>string</em>)
-os.makedirs(<em>string</em>)
+os.path.join(string, string)
+os.path.isdir(string)
+os.makedirs(string)
 
 import os
 import tarfile
 from six.moves import urllib
 
-DOWNLOAD_ROOT = "&lt;URL&gt;"
+DOWNLOAD_ROOT = "<URL>"
 HOUSING_PATH = os.path.join("datasets", "housing")
 HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
 
@@ -459,56 +283,6 @@ def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
     housing_tgz = tarfile.open(tgz_path)
     housing_tgz.extractall(path=housing_path)
     housing_tgz.close()
-
-conda upgrade conda
-conda upgrade --all
-conda install package_name
-conda install numpy=1.10
-conda remove package_name
-conda update package_name
-conda list
-conda search *beautifulsoup*
-conda create -n env_name list of packages
-conda create -n py2 python=2
-conda create -n py python=3.3
-source activate my_env
-source deactivate
-conda env export > environment.yaml
-conda env create -f environment.yaml
-conda env list
-conda env remove -n env_name
-pip freeze > requirements.txt
-pip install -r requirements.txt
-
-conda install jupyter notebook
-jupyter notebook
-conda install nb_conda
-
-Then if you run the notebook server from a conda environment, you'll also have access to the "Conda" tab.
-
-Magic keywords
-
-# set up matplotlib to work interactively in the notebook
-%matplotlib
-
-# time how long it takes for a function to run
-%timeit fibo1(20)
-
-# time how long it takes for a whole cell to run
-%%timeit
-
-# render figures directly in the notebook
-%matplotlib inline
-
-# On higher resolution screens, use
-%config InlineBackend.figure_format = 'retina'
-
-# turn on the interactive debugger
-%pdb
-
-jupyter nbconvert --to html notebook.ipynb
-jupyter nbconvert notebook.ipynb --to slides
-jupyter nbconvert notebook.ipynb --to slides --post serve
 
 # booleans can be added
 True + True == 2
@@ -540,7 +314,6 @@ i = Image.open(BytesIO(r.content))
 - [SQL Alchemy](http://docs.sqlalchemy.org/en/latest/)  
 - [Flask SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.3/)  
 - [Example Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)  
-- [Inno Setup install wizard creator](http://www.jrsoftware.org/isinfo.php)  
 - [nltk.tokenize](http://www.nltk.org/api/nltk.tokenize.html)  
 - [The beginner’s guide to contributing to a GitHub project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/)  
 - [How to Version Control Your Production Machine Learning Models](https://blog.algorithmia.com/how-to-version-control-your-production-machine-learning-models/)  
@@ -553,7 +326,6 @@ i = Image.open(BytesIO(r.content))
 - [Mixins for Fun and Profit](https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556)  
 - [Contributing to a Github Project](https://github.com/MarcDiethelm/contributing/blob/master/README.md)  
 - [Magic Commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)  
-- [NumPy Docstring Guide](https://numpydoc.readthedocs.io/en/latest/format.html)  
 - [The MIT License](https://opensource.org/licenses/MIT)  
 - [Packaging Python Projects](https://packaging.python.org/tutorials/distributing-packages/)  
 - [PyPI package browser](https://pypi.org/)  

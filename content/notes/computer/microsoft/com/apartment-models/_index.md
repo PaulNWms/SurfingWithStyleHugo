@@ -6,6 +6,12 @@ tags:
   - "#COM"
 parent: COM
 ---
+**TL;DR:** Don't mix apartment models.
+
+---
+
+But if you're stuck, it can be done, at the cost of code complexity and performance.  This is a deep subject that you'll have to read about in a COM book.  Sorry, it's just plain complicated.
+
 The apartment model is COM's way of communicating whether a server is thread safe.  A COM server typically has one apartment.  There are 3 types:
 
 - Single-Threaded Apartment (STA)
@@ -59,7 +65,17 @@ In the unusual case where there are multiple apartments, you can run into a prob
 
 Strangely, the COM+ literature recommends [Neutral as the default](https://learn.microsoft.com/en-us/windows/win32/cossdk/neutral-apartments).  However, the registry on my dev box shows that TNA servers are exceedingly rare in practice, appearing only in very large applications like SQL Server and Visual Studio.
 
-Even though different apartments live in the same process, i.e. address space, interface pointers can't be shared between apartments.  To send a pointer over, place it on a stream with [CoMarshalInterThreadInterfaceInStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) and retrieve it with [CoGetInterfaceAndReleaseStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream).  To coordinate these calls, generally you'll need to use a kernel event.
+Even though different apartments _can_ live in the same process, i.e. address space, this is not a happy situation.  Interface pointers can't be shared between apartments.  To send a pointer over, place it on a stream with [CoMarshalInterThreadInterfaceInStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) to wrap it in a thread-neutral representation, and retrieve it with [CoGetInterfaceAndReleaseStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream).  To coordinate these calls,  you may need to use a kernel event.  A better option is the [Global Interface Table](/notes/computer/microsoft/com/apartment-models/global-interface-table).
+
+All that being said, for inproc servers with multiple apartments, there is a [Free-Threaded Marshaler](/notes/computer/microsoft/com/apartment-models/free-threaded-marshaler) to help with performance.
+
+|Client|Not Specified|Apartment|Free|Both|Neutral|
+|---|---|---|---|---|---|
+|Main STA|Created in the main STA. Direct access.|Created in the main STA. Direct access.|Created in the MTA. The MTA is created by the system if necessary. Proxy access.|Created in the main STA. Direct access.|Created in the NA. Lightweight proxy access —no thread switch.|
+|STA|Created in the main STA. Proxy access.|Created in the caller's STA. Direct access.|Created in the MTA. The MTA is created by the system if necessary. Proxy access.|Created in the caller's STA. Direct access.|Created in the NA. Lightweight proxy access—no thread switch.|
+|MTA|Created in the main STA. The main STA is created by the system if necessary. Proxy access.|Created in a host STA. Proxy access.|Created in the MTA. Direct access.|Created in the MTA. Direct access.|Created in the NA. Lightweight proxy access—no thread switch.|
+|Neutral (on an STA thread)|Created in the main STA. Proxy access.|Created in the caller's STA. Lightweight proxy access—no thread switch.|Created in the MTA. The MTA is created by the system if necessary. Proxy access.|Created in the NA. Direct access.|Created in the NA. Direct access.|
+|Neutral (on an MTA thread)|Created in the main STA. Proxy access.|Created in a host STA. Proxy access.|Created in the MTA. Lightweight proxy access—no thread switch.|Created in the NA. Direct access.|Created in the NA. Direct access.|
 
 ---
 # References

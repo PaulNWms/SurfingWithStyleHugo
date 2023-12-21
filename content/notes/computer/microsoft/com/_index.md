@@ -11,14 +11,16 @@ description:
 
 Most software falls into one of three categories - alive (like .NET Core), done (like .NET Framework), or dead (like Internet Explorer).  COM is all three at once.  ActiveX is dead, Drag 'n Drop is done, and new interfaces pop up occasionally, like [IInspectable](/notes/).  There are a lot of COM zombies running on your system right now.
 
+**Note:** [WinRT](/notes/) is based on COM, and solves most of the problems of 'classic' COM.
+
 Suppose you had a problem, and you solved it by writing a COM server.  Now you have two problems.
 
 - Implementing an [ActiveX](/notes/computer/microsoft/com/activex) control is often more complex than the business problem it is intended to solve.  Win32/COM development is really system programming.
 - You can't write it by hand.  Technically, you can, and that was the only option until [ATL](/notes/computer/microsoft/com/atl) came out.  AFAIK, nobody outside of Microsoft actually got it right.
 - It requires low-level understanding of COM's inner workings, as well as broad knowledge of the interfaces.  In order to troubleshoot _any_ of it, you have to understand _all_ of it.
-- Registering a bunch of COM objects on your system written by different vendors will slow down the boot time and make it unstable.
 - DLL hell.  This problem is not unique to COM, or even unmanaged code, but COM tends to accentuate it.
     - For a long time there was a misconception that interface-based programming would, in itself, solve all our compatibility issues.  It doesn't.  An implementation can change quite a lot and still support the same interface.  Two subtle causes of breaking changes are changing the order of operations and changing default settings.
+    - Installing a custom control makes it global to the system, whether you want it to be or not.  Registering a bunch of COM objects on your system written by different vendors will slow down the boot time and make it unstable.  ([WinRT](/notes/) and DirectX take a different approach.)
     - COM amplifies this problem through aggregation.  When you load in a COM object, it may in turn load in more components behind the scenes, increasing the odds of this happening.
 - Good luck debugging.
 - Just like the early internet protocols, COM was designed to be used in a trusted environment.  Security and licensing are not part of the core design.
@@ -37,7 +39,10 @@ Also, creating a COM _client_ is pretty simple.  Ever since .NET came into being
 - Communications with [InProc server](/notes/computer/microsoft/com/apartment-models/inproc-server)s is fast.
 - .NET supports access as a client.  Many common tools are automation clients, e.g. PowerShell can load in Windows Script Host.
 - Components written by Microsoft can mostly be trusted.
-- Learning COM is a big part of understanding Windows.  For home projects, [ATL](/notes/computer/microsoft/com/atl) helps you sidestep a lot of traps.
+- Learning COM is a big part of understanding Windows.
+- [ATL](/notes/computer/microsoft/com/atl) helps you sidestep a lot of traps.
+
+[WinRT](/notes/) provides a large collection of system-provided COM objects.  It's a clean, well thought out API.  Again, COM is easy when you're the client.  There are WinRT libraries for many popular languages, including C++, C#, and Rust.
 
 COM will continue to haunt us for the foreseeable future - and possibly eternity.
 ## The Basics
@@ -46,7 +51,7 @@ To implement a COM class, you need to
 
 - Write the the class, implementing [IUnknown](/notes/computer/microsoft/com/iunknown) correctly.
 - Write a class object which implements [IClassFactory](/notes/computer/microsoft/com/iclassfactory), so it can be instantiated.
-- Add [IDispatch](/notes/) (or a dual interface) if the object is to be available to a scripting environment.
+- Add [IDispatch](/notes/computer/microsoft/com/idispatch) (or a dual interface) if the object is to be available to a scripting environment.
 - Add a reference counting mechanism to the server.
 - Add self-registration to the server:
     - Add the correct entry points if the server is a DLL: DllGetClassObject, DllCanUnloadNow, DllRegisterServer, and DllUnregisterServer.
@@ -85,6 +90,10 @@ Interfaces and user-defined types can be defined in [type libraries](/notes/comp
 ## [COM+](/notes/computer/microsoft/com/com-plus)
 
 There are (or were) several types of [COM+ objects](/notes/computer/microsoft/com/com-plus-objects) supported by the AppWizard.
+
+## [WinRT](/notes/)
+
+As mentioned before, for new project development, WinRT is your friend.
 
 ---
 # References

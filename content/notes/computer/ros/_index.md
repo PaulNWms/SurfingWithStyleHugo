@@ -7,8 +7,8 @@ draft: false
 tags:
   - ROS
 ---
-[ROS1](/notes/computer/ros/ros1)
-[ROS2](/notes/)
+- [ROS1](/notes/computer/ros/ros1)
+- [ROS2](/notes/)
 
 ---
 # References

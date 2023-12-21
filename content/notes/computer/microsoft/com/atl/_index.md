@@ -21,7 +21,7 @@ ATL has some wrapper classes to help simplify COM clients.  Here are some common
 
 The ATL classes are in atl.dll, the runtime types are compiler COM support extensions in comsuppw.lib.
 
-The main difference in usage is that the ATL classes return error codes and the runtime types throw [_com_error](/notes/computer/microsoft/com/atl/_com_error) exceptions.  Typically the runtime types are used in clients and the ATL classes are used in servers, because you have to be more careful about throwing exceptions.
+The main difference in usage is that the ATL classes return error codes and the runtime types throw [_com_error](/notes/) exceptions.  Typically the runtime types are used in clients and the ATL classes are used in servers, because you have to be more careful about throwing exceptions.
 
 ## COM Servers
 
