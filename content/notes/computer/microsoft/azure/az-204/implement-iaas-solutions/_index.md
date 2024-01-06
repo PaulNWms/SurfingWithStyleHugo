@@ -6,7 +6,6 @@ tags:
   - "#Azure"
   - "#AZ-204"
 ---
-
 - [Provision Virtual Machines](/notes/computer/microsoft/azure/az-204/implement-iaas-solutions/provision-virtual-machines)
 - Configure, validate, and deploy ARM templates
 - Create container images for solutions

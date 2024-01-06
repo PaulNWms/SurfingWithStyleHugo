@@ -1,5 +1,5 @@
 ---
-title: Variant
+title: VARIANT
 date: 2023-09-02T19:05-0800
 draft: false
 tags:

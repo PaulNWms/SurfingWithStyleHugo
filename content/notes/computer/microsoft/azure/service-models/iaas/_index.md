@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure" 
 ---
-
 - Infrastructure = actual servers
 - Scaling is fast 
 - No ownership of hardware

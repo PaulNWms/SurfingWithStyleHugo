@@ -7,7 +7,6 @@ tags:
   - "#NET"
 parent: COM
 ---
-
 Registering a COM server is complicated, but the essential parts are
 - ProgID, a human-readable name
     - `HKEY_CLASSES_ROOT\<name>` is the ProgID
@@ -17,15 +16,23 @@ Registering a COM server is complicated, but the essential parts are
     - `HKEY_CLASSES_ROOT\CLSID\<GUID>\InprocServer32` points to the server's filename (InProc)
     - `HKEY_CLASSES_ROOT\CLSID\<GUID>\LocalServer32` points to the server's filename (OutProc)
     - `HKEY_CLASSES_ROOT\CLSID\<GUID>\ProgID` points back to the ProgID
+    - `HKEY_CLASSES_ROOT\CLSID\<GUID>\Implemented Categories` lists the implemented CATIDs
+    - `HKEY_CLASSES_ROOT\CLSID\<GUID>\Required Categories` lists the required CATIDs
+    - `HKEY_CLASSES_ROOT\CLSID\<GUID>\TreatAs` maps a CLSID to newer, compatible CLSID
 - IIDs, one or more GUIDs
     - `HKEY_CLASSES_ROOT\Interface\<GUID>` is an IID
     - `HKEY_CLASSES_ROOT\Interface\<GUID>\TypeLib` points to the type library
     - `HKEY_CLASSES_ROOT\Interface\<GUID>\ProxyStubClsid32` points to marshaler (oleaut32.dll)
-- TypeLib, a type library
-    - `HKEY_CLASSES_ROOT\TypeLib\<GUID>` is a TypeLib
+- LIBID, a type library
+    - `HKEY_CLASSES_ROOT\TypeLib\<GUID>` is a LIBID
     - `HKEY_CLASSES_ROOT\TypeLib\<GUID>\<version>\0\win32` points to the .tlb file
+- CATID, category ID
+    - `HKEY_CLASSES_ROOT\Component Categories\<GUID>` is a CATID
+    - `HKEY_CLASSES_ROOT\CLSID\<GUID>\TreatAs` maps a CATID to a default CLSID (not a typo)
 
 The IIDs are associated with the class through `QueryInterface()` and other API calls.
+
+CoCreateInstance() can take a CATID instead of a CLSID, if there is a TreatAs entry specifying a default.
 
 If a COM DLL implements `DllRegisterServer()` and `DllUnregisterServer()`, it can be registered/unregistered with `regsvr32.exe`.
 

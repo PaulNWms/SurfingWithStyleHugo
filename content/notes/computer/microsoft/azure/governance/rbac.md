@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Define User Access - You can define specific user access to individual resources.
 - Minimum Access - RBAC can enable minimum access necessary to resources. This ensures only users with valid access can manage resources.
 - Target Specific Use Cases - Be very explicit about uses and access. For example, allow an application access to certain resources or allow a user to manage resources in a resource group.

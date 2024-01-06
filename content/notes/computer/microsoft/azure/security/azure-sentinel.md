@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 Sentinel is a security information and event management (SIEM) tool.
 
 Step 1: Data Collection

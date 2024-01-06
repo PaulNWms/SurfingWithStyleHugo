@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#math"
 ---
-
 - [Discrete Math](/notes/)
 - [Concrete Math](/notes/)
 

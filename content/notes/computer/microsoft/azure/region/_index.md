@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 A set of data centers that are close enough to each other that it doesn’t matter which data center your data is in.
 
 Each region is in a [Paired Region](/notes/computer/microsoft/azure/region/paired-region).

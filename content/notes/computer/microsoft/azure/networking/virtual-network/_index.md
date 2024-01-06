@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 A fundamental part of Azure. All services are connected to a VNet. Includes an IP address range and subnets. Belongs to a single region and a single subscription.
 
 - Resource Grouping - Group resources onto the same subnet to make it easier to keep an overview.

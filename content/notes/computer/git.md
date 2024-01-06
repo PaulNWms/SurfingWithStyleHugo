@@ -6,7 +6,6 @@ keywords:
 draft: false
 tags:
 ---
-
 ```lang-none
 git init
 

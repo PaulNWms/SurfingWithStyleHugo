@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 Direct link between on-premises and Azure. Enables a private, secure, high-bandwidth, low-latency connection.
 
 ---

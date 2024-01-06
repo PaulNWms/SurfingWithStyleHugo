@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - [Azure Boards](/notes/) Keep track of work tasks, timelines, issues, planning and much more. Project managers love this part.
 - [Azure Pipelines](/notes/) Produce and test your software automatically and continuously.
 - [Azure Test Plans](/notes/) Design tests of applications to implement automatically. Quality assurance engineers love this bit.

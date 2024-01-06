@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 Distributes and balances the incoming traffic to an application or network. Uses IP address and port number to determine the receiving VM in the backend pool.
 
 - Inbound Flows - Traffic from the Internet or local network.

@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Based on Apache Spark, a distributed clustercomputing framework.
 - Run and process a dataset on many computers simultaneously.
 - Databricks provides all the computing power.

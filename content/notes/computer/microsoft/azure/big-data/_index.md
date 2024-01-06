@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - [Data Lake Analytics](/notes/computer/microsoft/azure/big-data/data-lake-analytics)
 - [HDInsights](/notes/computer/microsoft/azure/big-data/hdinsights)
 - [Azure Databricks](/notes/computer/microsoft/azure/big-data/azure-databricks)

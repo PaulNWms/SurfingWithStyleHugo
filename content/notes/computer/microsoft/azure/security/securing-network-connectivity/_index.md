@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - [Firewall](/notes/computer/microsoft/azure/security/securing-network-connectivity/firewall)
 - [DDoS Protection Service](/notes/computer/microsoft/azure/security/securing-network-connectivity/ddos-protection-service)
 - [Network Security Group (NSG)](/notes/computer/microsoft/azure/security/securing-network-connectivity/network-security-group-nsg)

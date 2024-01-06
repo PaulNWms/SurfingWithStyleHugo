@@ -7,7 +7,6 @@ tags:
   - ATL
 parent: COM
 ---
-
 COM enumerators implement `Reset()`, `Next()`, `Skip()` and `Clone()`.  Here's the client side:
 
 ```C++
@@ -46,6 +45,7 @@ ATL also has support for loading a COM collection into a C++ STL vector, e.g. `s
 ---
 # References
 
+- [IEnumVARIANT (oaidl.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/oaidl/nn-oaidl-ienumvariant)
 - [IEnumConnectionPoints (ocidl.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/ocidl/nn-ocidl-ienumconnectionpoints)
 - [IEnumFORMATETC (objidl.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-ienumformatetc)
 - [IEnumGUID (comcat.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/comcat/nn-comcat-ienumguid)
@@ -54,4 +54,5 @@ ATL also has support for loading a COM collection into a C++ STL vector, e.g. `s
 - [CComEnumImpl Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/ccomenumimpl-class?view=msvc-170)
 - [CComEnumOnSTL Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/ccomenumonstl-class?view=msvc-170)
 - [IEnumOnSTLImpl Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/ienumonstlimpl-class?view=msvc-170)
+
 

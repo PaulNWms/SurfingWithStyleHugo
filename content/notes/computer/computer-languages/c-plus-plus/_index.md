@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#CPP"
 ---
-
 - [Type-Safe Linking](/notes/computer/computer-languages/c-plus-plus/type-safe-linking)
 - [Multiple Inheritance](/notes/computer/computer-languages/c-plus-plus/multiple-inheritance)
 - [VC++ Extensions](/notes/computer/computer-languages/c-plus-plus/vc-plus-plus-extensions)

@@ -14,7 +14,7 @@ When a client thread calls CoMarshalInterThreadInterfaceInStream, the SCM querie
 
 But wait, there's more!  An object that aggregates the FTM may itself contain proxies to other objects, i.e. it references objects that themselves do not aggregate the FTM.  Calling one of these may error out with `RPC_E_WRONG_THREAD`.  ("May" as in, "intermittently".)
 
-To get around this edge case, the interface pointers can be registered in the process's [Global Interface Table](/notes/computer/microsoft/com/apartment-models/global-interface-table).
+To get around this edge case, the interface pointers can be registered in the process's [Global Interface Table (GIT)](/notes/computer/microsoft/com/apartment-models/global-interface-table-git).
 
 [The Ten Threading Commandments](/notes/computer/microsoft/com/apartment-models/free-threaded-marshaler/the-ten-threading-commandments)
 

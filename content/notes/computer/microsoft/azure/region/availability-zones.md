@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 Physically located within a region, and each zone has its own separate power, cooling and networking.
 
 ---

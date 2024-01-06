@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - No maintenance
 - No processes
 - Nothing VM related

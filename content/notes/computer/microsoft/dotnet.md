@@ -2,7 +2,6 @@
 title: "DotNet"
 date: 2020-06-17
 ---
-
 # .NET
 
 Code Access Security (CAS) sandboxes code.

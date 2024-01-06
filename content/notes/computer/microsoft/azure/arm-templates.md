@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - describe resource usage
 - common syntax
 - idempotent

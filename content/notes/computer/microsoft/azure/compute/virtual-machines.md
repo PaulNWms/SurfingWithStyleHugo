@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - IaaS
 - Tools - [Azure Portal](/notes/)
 - Compliance - [blueprints](/notes/)

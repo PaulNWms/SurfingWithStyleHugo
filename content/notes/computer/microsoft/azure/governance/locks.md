@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Assigning - Assign a lock to a subscription, resource group or resource.
 - Types - A lock can be of two types.
     - Delete, where you can’t delete the locked object.

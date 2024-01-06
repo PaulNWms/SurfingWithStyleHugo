@@ -6,7 +6,7 @@ tags:
   - "#COM"
 parent: COM
 ---
-**TL;DR:** Don't mix apartment models.
+**Writ large:** Don't mix apartment models.
 
 ---
 
@@ -65,7 +65,7 @@ In the unusual case where there are multiple apartments, you can run into a prob
 
 Strangely, the COM+ literature recommends [Neutral as the default](https://learn.microsoft.com/en-us/windows/win32/cossdk/neutral-apartments).  However, the registry on my dev box shows that TNA servers are exceedingly rare in practice, appearing only in very large applications like SQL Server and Visual Studio.
 
-Even though different apartments _can_ live in the same process, i.e. address space, this is not a happy situation.  Interface pointers can't be shared between apartments.  To send a pointer over, place it on a stream with [CoMarshalInterThreadInterfaceInStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) to wrap it in a thread-neutral representation, and retrieve it with [CoGetInterfaceAndReleaseStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream).  To coordinate these calls,  you may need to use a kernel event.  A better option is the [Global Interface Table](/notes/computer/microsoft/com/apartment-models/global-interface-table).
+Even though different apartments _can_ live in the same process, i.e. address space, this is not a happy situation.  Interface pointers can't be shared between apartments.  To send a pointer over, place it on a stream with [CoMarshalInterThreadInterfaceInStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) to wrap it in a thread-neutral representation, and retrieve it with [CoGetInterfaceAndReleaseStream](https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream).  To coordinate these calls,  you may need to use a kernel event.  A better option is the [Global Interface Table (GIT)](/notes/computer/microsoft/com/apartment-models/global-interface-table-git).
 
 All that being said, for inproc servers with multiple apartments, there is a [Free-Threaded Marshaler](/notes/computer/microsoft/com/apartment-models/free-threaded-marshaler) to help with performance.
 

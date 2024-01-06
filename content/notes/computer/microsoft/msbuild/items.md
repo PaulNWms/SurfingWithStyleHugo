@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#msbuild"
 ---
-
 - Declared in ItemGroup
 - referenced by @(item)
 - look up metadata by @(item->'%(property)')

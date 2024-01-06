@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - stand-alone
 - in-portal
 

@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#COM"
 ---
-
 COM has 3 flavors of marshaling:
 - Type library marshaling, for [automation-compatible types](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-oaut/7b5fa59b-d8f6-4a47-9695-630d3c10363e).   This is handled by `oleaut32.dll` in an optimized way.
 - Standard marshaling, if the parameters include any user-defined types.  The MIDL compiler will generate a marshaling DLL.

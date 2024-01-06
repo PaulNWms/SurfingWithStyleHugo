@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 Manage users and permissions with Azure Active Directory.
 
 - [Active Directory](/notes/computer/microsoft/azure/identity-services/azure-active-directory/active-directory) (AD) is not the same as Azure Active Directory.

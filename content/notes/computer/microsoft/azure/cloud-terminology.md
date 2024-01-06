@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - High availability means VMs can spin up fast to help process requests. 
 - Fault tolerance describes how Azure will ensure you have zero downtime for services provided by Azure. 
 - Disaster recovery uses time-to-recovery and recovery point metrics to recover from tornadoes, floods and more. 

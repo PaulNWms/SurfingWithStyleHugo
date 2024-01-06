@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#msbuild"
 ---
-
 ### Union, intersection, difference, & cross-join
 
 ```xml

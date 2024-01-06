@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#database"
 ---
-
 In a distributed database, we can simultaneously have at most 2 of the 3 CAP properties.
 
 - Consistency - Every read receives the most recent write or error.

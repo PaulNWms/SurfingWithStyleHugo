@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Confidence - Critical to ensure confidence in the uptime and reliability of services.
 - Contract - Contract between you and Azure stating Microsoft’s commitment for uptime and connectivity.
 - Complex - SLAs can have various levels depending on the number and variety of services, which region you use, and much more.

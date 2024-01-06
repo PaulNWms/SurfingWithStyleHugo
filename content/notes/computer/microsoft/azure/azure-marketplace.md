@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Solutions and Services
 - Azure App Store
 - Easy to Integrate

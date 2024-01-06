@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - block
 - append
 - page

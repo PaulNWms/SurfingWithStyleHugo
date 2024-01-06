@@ -7,7 +7,6 @@ tags:
   - "#OLE"
 parent: COM
 ---
-
 - [OleGetClipboard function (ole2.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/ole2/nf-ole2-olegetclipboard)
 - [OleIsCurrentClipboard function (ole2.h) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/ole2/nf-ole2-oleiscurrentclipboard)
 

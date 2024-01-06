@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - single region
     - locally redundant storage (LRS)
       copies on 3 different racks within the same availability zone

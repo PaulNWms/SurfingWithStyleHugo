@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#health"
 ---
-
 - [athlete's foot](/notes/)
 - [dandruff](/notes/)
 - [plantar warts](/notes/)

@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - [Virtual Machines](/notes/computer/microsoft/azure/compute/virtual-machines)
 - [Scale Sets](/notes/computer/microsoft/azure/compute/scale-sets)
 - [App Services](/notes/computer/microsoft/azure/app-services)

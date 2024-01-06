@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 Governance keeps you compliant and out of trouble.
 
 - [Azure Policy](/notes/) ensures that policies applied to resources are compliant.

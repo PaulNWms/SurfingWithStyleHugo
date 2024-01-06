@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - [Azure SQL Database](/notes/) - Azure SQL Managed Instance Most like traditional SQL Server
 - [Azure SQL Managed Instance](/notes/) - Aimed at migrating from on-premises
 

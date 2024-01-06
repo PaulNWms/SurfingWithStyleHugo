@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 Pros
 - Avoid disruptions and outages
 - Adhere to regulation, governance etc.

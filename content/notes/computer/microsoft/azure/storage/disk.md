@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - HDD
 - SSD
 - Premium SSD

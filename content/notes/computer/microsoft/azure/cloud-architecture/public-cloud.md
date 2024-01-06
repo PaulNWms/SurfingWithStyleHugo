@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 Pros
 - No purchase of hardware
 - Low monthly fees

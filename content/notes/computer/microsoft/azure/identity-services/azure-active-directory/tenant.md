@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - Organization - A tenant represents the organization. 
 - Dedicated AAD - A tenant is a dedicated instance of AAD that an organization receives when signing up for Azure.
 - Tenant Separate - Each tenant is distinct and completely separate from other AAD tenants.

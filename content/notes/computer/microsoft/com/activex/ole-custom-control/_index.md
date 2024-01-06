@@ -1,5 +1,5 @@
 ---
-title: OLE custom control
+title: OLE Custom Control
 description: 
 date: 2023-11-11T09:39
 keywords: 

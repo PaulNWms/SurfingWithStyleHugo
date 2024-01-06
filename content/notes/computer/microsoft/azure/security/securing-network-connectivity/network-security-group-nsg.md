@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Resource - Firewall Personal resource firewall. Attach to virtual network, subnet or network interface.
 - Rules - A NSG determines who can access the resources attached to it, using rules for inbound and outbound traffic
 

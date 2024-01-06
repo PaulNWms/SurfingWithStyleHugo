@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - [Blob](/notes/computer/microsoft/azure/storage/blob)
 - [Disk](/notes/computer/microsoft/azure/storage/disk)
 - [file](/notes/)

@@ -126,17 +126,22 @@ New-Item -ItemType Directory "$PSScriptRoot\content\$targetDir" | Out-Null
 
 # Copy files to temp dir
 foreach ($mdFile in $mdFiles) {
-    $sourcePage = [Zettel]::new($mdFile)
-    $tags = $sourcePage.Properties['tags']
-    foreach ($tag in $tags) {
-        if ($tag -match 'private') {
-            Write-Host "Skipping $($mdFile.Name)"
-            $skipped++
-            continue
+    try {
+        $sourcePage = [Zettel]::new($mdFile)
+        $tags = $sourcePage.Properties['tags']
+        foreach ($tag in $tags) {
+            if ($tag -match 'private') {
+                Write-Host "Skipping $($mdFile.Name)"
+                $skipped++
+                continue
+            }
         }
+        Copy-Item -Force $mdFile.FullName (Join-Path $tempDir $mdFile.Name)
+        $copied++
+    } catch {
+        Write-Host "Error processing $mdfile"
+        exit
     }
-    Copy-Item -Force $mdFile.FullName (Join-Path $tempDir $mdFile.Name)
-    $copied++
 }
 
 Write-Host "Copied: $copied, Skipped: $skipped"

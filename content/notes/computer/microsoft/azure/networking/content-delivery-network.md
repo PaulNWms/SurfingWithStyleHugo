@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 Stores a cached version of your application on an edge node. Provides better performance and less traffic to your main server. Content cache is updated as necessary.
 
 ---

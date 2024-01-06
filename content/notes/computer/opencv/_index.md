@@ -5,8 +5,8 @@ draft: false
 tags: 
   - "#OpenCV" 
 ---
-
-- [OpenCV For Beginners](/notes/computer/opencv/opencv-for-beginners)
+- [OpenCV Setup](/notes/computer/opencv/opencv-setup)
+- [OpenCV Basics](/notes/computer/opencv/opencv-basics)
 
 ---
 # References

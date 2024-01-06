@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Application Programming Interface
 - No graphical component.
 - No user interface.

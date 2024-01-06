@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Keep track of current valid container images
 - Manages files and artifacts for containers
 - Feeds container images to ACI and AKS

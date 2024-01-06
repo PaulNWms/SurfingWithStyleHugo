@@ -7,7 +7,6 @@ draft: false
 tags:
   - DataScience
 ---
-
 ```python
 # convert .ipynb to .html
 jupyter nbconvert --to html notebook.ipynb

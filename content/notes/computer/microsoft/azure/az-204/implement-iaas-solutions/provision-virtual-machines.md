@@ -6,7 +6,6 @@ tags:
   - "#Azure"
   - "#AZ-204"
 ---
-
 - Virtual Machine Components
     - Resource Group
     - VM Size

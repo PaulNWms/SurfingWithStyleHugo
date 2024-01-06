@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 An application gateway is a higher level load balancer.
 
 Distributes incoming traffic based on HTTP request properties, such as URL and host headers. Same session traffic can be handled by multiple servers.

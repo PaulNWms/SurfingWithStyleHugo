@@ -9,7 +9,7 @@ tags:
   - ATL
 parent: COM
 ---
-An ActiveX control is intended to be a lighter weight version of an [OLE custom control](/notes/computer/microsoft/com/activex/ole-custom-control).  The only requirement of an ActiveX control is that it implements [IUnknown](/notes/computer/microsoft/com/iunknown), so technically every COM object is an ActiveX control.
+An ActiveX control is intended to be a lighter weight version of an [OLE Custom Control](/notes/computer/microsoft/com/activex/ole-custom-control).  The only requirement of an ActiveX control is that it implements [IUnknown](/notes/computer/microsoft/com/iunknown), so technically every COM object is an ActiveX control.
 
 This is not a useful definition.  In practice, a 'control' is expected to support certain behaviors, i.e. implement certain interfaces.  The best definition I've been able to come up with is, a control whose project was originally created by running the ActiveX AppWizard.  There were 6 templates available in Visual Studio 97:
 

@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Save money by using unused capacity.
 - The VM can be evicted at any time.
 - Use for interruptible non-critical workloads.

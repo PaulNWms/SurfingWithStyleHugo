@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Azure’s data warehouse offering
 - Used to be Azure SQL Data Warehouse
 - Used for reporting and data analysis

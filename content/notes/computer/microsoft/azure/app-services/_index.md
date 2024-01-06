@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 PaaS
 - [Web Apps](/notes/computer/microsoft/azure/app-services/web-apps)
 - [Web Apps for Containers](/notes/computer/microsoft/azure/app-services/web-apps-for-containers)

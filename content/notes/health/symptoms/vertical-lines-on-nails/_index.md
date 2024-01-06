@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#health"
 ---
-
 Causes: [Anemia](/notes/health/sickness/anemia), [underactive thyroid](/notes/), [digestive problems](/notes/), [Cortisol](/notes/health/hormones/cortisol)
 
 

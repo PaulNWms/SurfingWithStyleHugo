@@ -7,7 +7,6 @@ draft: false
 tags:
   - Python
 ---
-
 ```python
 import numpy as np
 digits = np.array(range(10))

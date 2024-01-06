@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#msbuild"
 ---
-
 - entry point
 - contains [Tasks](/notes/computer/microsoft/msbuild/tasks)
 - Project DefaultTargets="..."

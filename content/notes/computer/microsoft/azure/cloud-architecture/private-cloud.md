@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 Pros 
 - Complete control of infrastructure
 - Benefits of public cloud

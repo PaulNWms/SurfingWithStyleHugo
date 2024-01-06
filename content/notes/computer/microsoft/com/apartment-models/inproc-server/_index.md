@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#COM"
 ---
-
 An InProc server implements `IClassFactory`, `DllGetClassObject()` and `DllCanUnloadNow()`.  The boiler plate .def file Visual Studio generates in an ATL project looks like this:
 
 ```def

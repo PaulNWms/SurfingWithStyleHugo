@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - [Cloud Shell](/notes/computer/microsoft/azure/portal/cloud-shell)
 
 

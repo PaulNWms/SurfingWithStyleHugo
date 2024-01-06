@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Manage Application Dependencie
 - Increased Portability
 - Consistency

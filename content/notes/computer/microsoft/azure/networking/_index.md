@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - [Virtual Network](/notes/computer/microsoft/azure/networking/virtual-network)
 - [ExpressRoute](/notes/computer/microsoft/azure/networking/expressroute)
 - [VPN Gateway](/notes/computer/microsoft/azure/networking/vpn-gateway)

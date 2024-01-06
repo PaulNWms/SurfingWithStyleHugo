@@ -5,7 +5,6 @@ draft: false
 tags:
   - msbuild
 ---
-
 - declared in a PropertyGroup
 - referenced by $(property)
 - reserved properties

@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#msbuild"
 ---
-
 - custom tasks with UsingTask
 - implement ITask
 - extend Task

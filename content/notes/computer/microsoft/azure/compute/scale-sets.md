@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 A group of identical, load balanced VMs
 
 - Multiple VMs

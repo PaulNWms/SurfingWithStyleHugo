@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#health"
 ---
-
 Caused by [stress](/notes/)
 
 

@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Secure Hardware  -The Key Vault hardware is secure too. Not even Microsoft can access the keys in it.
 - Application Isolation - An application can’t pass on secrets, nor access another application’s secrets.
 - Global Scaling - Scale globally like any other managed Azure service.

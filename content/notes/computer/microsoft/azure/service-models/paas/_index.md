@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Superset of IaaS
 - PaaS supports web application lifecycle
 - Avoids software license issues

@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#CPP"
 ---
-
 C++ uses type-safe linking to enable function overloading, implemented by name mangling.  There is no standard for this, and each compiler uses a proprietary format.
 
 

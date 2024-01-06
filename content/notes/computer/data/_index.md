@@ -6,19 +6,23 @@ tags:
   - DP-900
   - Azure
 ---
-Types:
+## Types:
 
 - structured
 - unstructured
 - semi-structured
 
-Applications:
+## Applications:
 
 - [Database](/notes/computer/database)
 - [Data Analysis](/notes/computer/data/data-analysis)
 - [Data Science](/notes/computer/data/data-science)
 - [Deep Learning](/notes/computer/data/deep-learning)
 - [Machine Learning](/notes/computer/data/machine-learning)
+
+
+![image](/img/DSvDA.jpg)
+
 
 ---
 # References

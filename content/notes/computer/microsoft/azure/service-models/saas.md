@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Providing a managed service
 - Pay an access fee to use
 - No maintenance and latest features

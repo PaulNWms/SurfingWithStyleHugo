@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - Standard
     - General Purpose v2 (all redundancy types)
 - Premium

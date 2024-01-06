@@ -6,7 +6,6 @@ tags:
   - "#COM"
 parent: COM
 ---
-
 [IMallocSpy](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-imallocspy) is used by debuggers to detect memory leaks and other issues in calls to [IMalloc](https://learn.microsoft.com/en-us/windows/desktop/api/objidl/nn-objidl-imalloc) methods.
 
 To provide UI for the [OLE/COM Object Viewer](https://learn.microsoft.com/en-us/windows/win32/com/ole-com-object-viewer), implement IInterfaceViewer.

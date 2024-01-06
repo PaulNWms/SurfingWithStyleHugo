@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Physical 
     - Identity and Access
         - Perimeter

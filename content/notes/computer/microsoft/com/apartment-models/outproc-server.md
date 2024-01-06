@@ -5,7 +5,6 @@ draft: false
 tags:
   - COM
 ---
-
 An OutProc server is housed in an EXE.  From the client's perspective, a COM object is instantiated with CoCreateInstance, just like an InProc server.  The client is unaware of the difference.
 
 An OutProc server is a lot slower than an InProc server, approx. 1000X.

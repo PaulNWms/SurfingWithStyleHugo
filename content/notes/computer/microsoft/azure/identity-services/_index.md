@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - authentication and authorization
 - [Azure Active Directory](/notes/computer/microsoft/azure/identity-services/azure-active-directory)
 - [Multi-Factor Authentication](/notes/computer/microsoft/azure/identity-services/multi-factor-authentication)

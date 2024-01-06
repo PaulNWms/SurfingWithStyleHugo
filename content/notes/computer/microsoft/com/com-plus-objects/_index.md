@@ -8,7 +8,7 @@ tags:
 ---
 There are (or were) several types of COM+ objects supported by the AppWizard in prior versions of Visual Studio.  The terminology gets confusing.  Vague marketing terms map to items in the AppWizard with specific technical meaning.  (FWIW, no one I knew at the time ever used these terms "correctly" anyway.)
 
-We began the early '90s in Win16 with OLE 2.0 and [OLE custom control](/notes/computer/microsoft/com/activex/ole-custom-control)s.  which sort of got redefined and renamed and [ActiveX](/notes/computer/microsoft/com/activex) controls at around the time Win32 came onto the scene.  In the late '90s', it got extended and rebranded again to [COM+](/notes/computer/microsoft/com/com-plus), sort of.  (This might not be completely accurate, but it's close enough and nobody cares anyway.)  I put the list here under COM+ because it's the high water mark for the technology, and also because I found this table in _Inside COM+_.
+We began the early '90s in Win16 with OLE 2.0 and [OLE Custom Control](/notes/computer/microsoft/com/activex/ole-custom-control)s.  which sort of got redefined and renamed and [ActiveX](/notes/computer/microsoft/com/activex) controls at around the time Win32 came onto the scene.  In the late '90s', it got extended and rebranded again to [COM+](/notes/computer/microsoft/com/com-plus), sort of.  (This might not be completely accurate, but it's close enough and nobody cares anyway.)  I put the list here under COM+ because it's the high water mark for the technology, and also because I found this table in _Inside COM+_.
 
 Because library APIs are written in stone, the product history is reflected in interface and function names.
 

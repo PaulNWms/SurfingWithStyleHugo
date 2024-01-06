@@ -30,7 +30,7 @@ tags:
 
 ## Other Dialects
 
-Microsoft also created [C++/CLI](/notes/) for [DotNET](/notes/computer/microsoft/dotnet) and [C++/CX](/notes/) for [WinRT](/notes/).
+Microsoft also created [C++/CLI](/notes/) for [DotNET](/notes/computer/microsoft/dotnet), and [C++/CX](/notes/) & [C++/WinRT](/notes/) for [WinRT](/notes/).
 
 ---
 # References

@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 Kubernetes is an open-source container orchestration system for automating application deployment, scaling, and management
 
 - Open source. Public code base and community involvement in the product.

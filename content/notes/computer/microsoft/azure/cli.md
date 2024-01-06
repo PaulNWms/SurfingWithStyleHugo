@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#CSharp"
 ---
-
 - stable
 - structured
 - cross-platform

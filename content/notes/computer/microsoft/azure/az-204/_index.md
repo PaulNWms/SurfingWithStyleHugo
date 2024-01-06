@@ -6,7 +6,6 @@ tags:
   - "#Azure"
   - AZ-204
 ---
-
 - [Implement IaaS Solutions](/notes/computer/microsoft/azure/az-204/implement-iaas-solutions)
 
 ---

@@ -5,7 +5,6 @@ draft: false
 tags: 
   - "#Azure"
 ---
-
 - Similar to Azure Data Lake Analytics
 - Open Source, which is free and community supported
 - Includes Apache Hadoop, Spark and Kafka

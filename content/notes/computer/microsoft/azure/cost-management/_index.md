@@ -5,7 +5,6 @@ draft: false
 tags:
   - "#Azure"
 ---
-
 - [Spot VMs](/notes/computer/microsoft/azure/cost-management/spot-vms)
 - [Spending Limits](/notes/computer/microsoft/azure/cost-management/spending-limits)
 - [Quotas](/notes/computer/microsoft/azure/cost-management/quotas)
