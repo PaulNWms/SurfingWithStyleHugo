@@ -19,3 +19,13 @@ The No Free Lunch Theorem states that there is no model that is guaranteed to wo
 
 - [The Unreasonable Effectiveness of Data (googleusercontent.com)](http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/35179.pdf)
 - [The Lack of A Priori Distinctions Between Learning Algorithms - Google Scholar](https://scholar.google.fr/scholar?q=lack+of+a+priori+distinctions+between+learning+algorithms)
+
+- [UCI Machine Learning Repository](https://archive.ics.uci.edu/)
+- [Kaggle](https://www.kaggle.com/datasets)
+- [AWS](https://registry.opendata.aws/)
+- [Data Portals](https://dataportals.org/)
+- [Open Data Monitor](https://opendatamonitor.eu)
+- [Retail Trading Activity Tracker: Keep track of retail sentiment (nasdaq.com)](https://data.nasdaq.com/institutional-investors)
+- [Wikipedia](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research)
+- [Where can I find large datasets open to the public? - Quora](https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public)
+- [Datasets (reddit.com)](https://www.reddit.com/r/datasets/)

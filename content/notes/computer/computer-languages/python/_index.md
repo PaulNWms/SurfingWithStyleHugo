@@ -28,9 +28,9 @@ tags:
 
 - [NumPy](/notes/computer/computer-languages/python/numpy)
 - [Pandas](/notes/computer/computer-languages/python/pandas)
-- [ScikitLearn](/notes/computer/computer-languages/python/scikitlearn)
+- [Scikit-Learn](/notes/computer/data/machine-learning/scikit-learn)
 - [MatPlotLib](/notes/computer/computer-languages/python/matplotlib)
-- [TensorFlow](/notes/computer/computer-languages/python/tensorflow)
+- [TensorFlow](/notes/computer/data/machine-learning/tensorflow)
 - [Keras](/notes/)
 - [PyTorch](/notes/)
 

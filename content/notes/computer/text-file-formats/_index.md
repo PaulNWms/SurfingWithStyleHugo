@@ -6,7 +6,7 @@ tags:
   - computer
 ---
 - [XML](/notes/computer/text-file-formats/xml)
-- [JSON](/notes/computer/text-file-formats/json)
+- [JSON](/notes/computer/database/non-relational-database/json)
 - [YAML](/notes/computer/text-file-formats/yaml)
 - [TOML](/notes/computer/text-file-formats/toml)
 

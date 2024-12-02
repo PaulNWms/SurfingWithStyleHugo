@@ -9,7 +9,7 @@ A set of data centers that are close enough to each other that it doesn’t matt
 
 Each region is in a [Paired Region](/notes/computer/microsoft/azure/region/paired-region).
 
-Each region contains 3 or more [Availability Zones](/notes/computer/microsoft/azure/region/availability-zones).
+Each region contains 3 or more [Azure Availability Zones](/notes/computer/microsoft/azure/region/azure-availability-zones).
 
 
 ---

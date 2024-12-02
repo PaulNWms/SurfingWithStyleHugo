@@ -7,14 +7,14 @@ draft: false
 tags:
   - ROS
 ---
-- [roscore](/notes/computer/ros/ros1/roscore)
-- [catkin](/notes/computer/ros/ros1/catkin)
-- [workspace](/notes/computer/ros/ros1/workspace)
+- [ROS roscore](/notes/computer/ros/ros1/ros-roscore)
+- [ROS catkin](/notes/computer/ros/ros1/ros-catkin)
+- [ROS workspace](/notes/computer/ros/ros1/ros-workspace)
 - [ROS package](/notes/computer/ros/ros1/ros-package)
-- [rosrun](/notes/computer/ros/ros1/rosrun)
+- [ROS rosrun](/notes/computer/ros/ros1/ros-rosrun)
 - [rqt_graph](/notes/computer/ros/ros1/rqt_graph)
 - [ROS namespace](/notes/computer/ros/ros1/ros-namespace)
-- [roslaunch](/notes/computer/ros/ros1/roslaunch)
+- [ROS roslaunch](/notes/computer/ros/ros1/ros-roslaunch)
 - [ROS tf](/notes/computer/ros/ros1/ros-tf)
 
 ---

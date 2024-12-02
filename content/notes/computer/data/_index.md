@@ -7,13 +7,17 @@ tags:
   - Azure
 ---
 ## Types:
-
-- structured
-- unstructured
-- semi-structured
-
+- structured (goes into table)
+- unstructured (loose files)
+- semi-structured - no schema (log files, CSV, XML)
+## Batch Data
+- Often easier to implement
+- When efficient pre-processing is needed
+- When combining multiple sources
+## vs. Streaming Data
+- Near real-time processing
+- Data velocity is high
 ## Applications:
-
 - [Database](/notes/computer/database)
 - [Data Analysis](/notes/computer/data/data-analysis)
 - [Data Science](/notes/computer/data/data-science)

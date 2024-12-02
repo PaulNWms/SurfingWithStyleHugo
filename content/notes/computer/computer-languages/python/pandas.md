@@ -7,6 +7,8 @@ draft: false
 tags:
   - Python
 ---
+
+
 ```python
 # load DataFrame
 import pandas as pd
@@ -16,7 +18,9 @@ df = pd.read_csv('student_scores.csv', index_col='ID')
 df_powerplant.to_csv('powerplant_data_edited.csv', index=False)
 
 Pandas actually stores pointers to strings in dataframes and series, which is why object instead of str appears as the datatype.
+```
 
+```python
 # inspect DataFrame
 df.head()
 df.info()
@@ -30,7 +34,9 @@ df.dtypes
 df[col].value_counts()
 df.hist();
 sns.heatmap(df.corr(), annot=True, fmt='.2f');
+```
 
+```python
 # select all the columns from 'id' to the last mean column
 df_means = df.loc[:,'id':'fractal_dimension_mean']
 
@@ -257,10 +263,9 @@ cat_df = df.select_dtypes(include=['object'])
 ---
 # References
 
-- [pandas](https://pandas.pydata.org/)  
-- [Cheat Sheet 1 (PDF)](/pdf/PandasPythonForDataScience.pdf)  
-- [Cheat Sheet 2 (PDF)](/pdf/numpy_pandas_cheatsheet.pdf)  
-- [10 Minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)  
+- [pandas](https://pandas.pydata.org/docs/user_guide/index.html)  
+- [Cheat Sheet](https://github.com/pandas-dev/pandas/blob/main/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
+- [10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
 - [Pandas Basic Functionality](https://pandas.pydata.org/pandas-docs/stable/getting_started/basics.html)  
 - [Data Science TDD](https://www.linkedin.com/pulse/data-science-test-driven-development-sam-savage/)  
 - [TDD for Data Science](http://engineering.pivotal.io/post/test-driven-development-for-data-science/)  

@@ -7,7 +7,7 @@ draft: false
 tags:
   - COM
 ---
-The _IDispatch_ interface was defined so that a single, standard interface could be used by all components wanting to expose their functionality to interested clients. This interface, and the marshaling code built for it, are called [OLE automation](/notes/computer/microsoft/com/ole-automation).  _IDispatch_ and [VARIANT](/notes/computer/microsoft/com/variant)s are joined at the hip.  As you would expect, calling methods through `IDispatch` is slower than over the custom interface.
+The _IDispatch_ interface was defined so that a single, standard interface could be used by all components wanting to expose their functionality to interested clients. This interface, and the marshaling code built for it, are called [OLE automation](/notes/computer/microsoft/com/ole-automation).  _IDispatch_ and [COM VARIANT](/notes/computer/microsoft/com/com-variant)s are joined at the hip.  As you would expect, calling methods through `IDispatch` is slower than over the custom interface.
 
 The proxy-stub code needed to marshal the _IDispatch_ interface is contained in the oleaut32.dll file; this is important because it means that applications implementing the _IDispatch_ interface don't have to provide their own marshaling code.
 

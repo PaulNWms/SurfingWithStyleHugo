@@ -7,6 +7,7 @@ tags:
 parent: Microsoft
 ---
 - [AZ-900](/notes/computer/microsoft/azure/az-900)
+- [DP-900](/notes/computer/microsoft/azure/dp-900)
 - [AZ-204](/notes/computer/microsoft/azure/az-204)
 - [CLI](/notes/computer/microsoft/azure/cli)
 - [Portal](/notes/computer/microsoft/azure/portal)

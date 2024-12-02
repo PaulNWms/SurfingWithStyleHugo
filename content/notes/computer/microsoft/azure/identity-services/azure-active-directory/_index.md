@@ -7,7 +7,7 @@ tags:
 ---
 Manage users and permissions with Azure Active Directory.
 
-- [Active Directory](/notes/computer/microsoft/azure/identity-services/azure-active-directory/active-directory) (AD) is not the same as Azure Active Directory.
+- [Windows Active Directory](/notes/computer/microsoft/azure/identity-services/azure-active-directory/windows-active-directory) (AD) is not the same as Azure Active Directory.
 - Different skillset from AD to Azure AD.
 - Every Azure account will have an Azure AD service.
 - A [Tenant](/notes/computer/microsoft/azure/identity-services/azure-active-directory/tenant) is a dedicated instance of Azure AD. It represents your organization in Azure.

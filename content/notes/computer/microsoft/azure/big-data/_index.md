@@ -5,8 +5,13 @@ draft: false
 tags:
   - "#Azure"
 ---
+- Volume
+- Velocity
+- Variety
+- Veracity
+
 - [Data Lake Analytics](/notes/computer/microsoft/azure/big-data/data-lake-analytics)
-- [HDInsights](/notes/computer/microsoft/azure/big-data/hdinsights)
+- [HDInsight](/notes/computer/microsoft/azure/big-data/hdinsight)
 - [Azure Databricks](/notes/computer/microsoft/azure/big-data/azure-databricks)
 - [Azure Synapse Analytics](/notes/computer/microsoft/azure/big-data/azure-synapse-analytics)
 - [Azure Machine Learning](/notes/computer/microsoft/azure/big-data/azure-machine-learning)

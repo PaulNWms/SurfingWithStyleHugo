@@ -14,10 +14,10 @@ ATL has some wrapper classes to help simplify COM clients.  Here are some common
 
 | C type | ATL class | runtime type |
 |---|---|---|
-| void * | [CComPtr](/notes/computer/microsoft/com/atl/ccomptr) | `_com_ptr_t` |
-| BSTR | [CComBSTR](/notes/computer/microsoft/com/atl/ccombstr) | `_bstr_t` |
-| VARIANT | [CComVariant](/notes/computer/microsoft/com/atl/ccomvariant) | `_variant_t` |
-| IDispatch | [CComDispatchDriver](/notes/computer/microsoft/com/atl/ccomdispatchdriver) | |
+| void * | [ATL CComPtr](/notes/computer/microsoft/com/atl/atl-ccomptr) | `_com_ptr_t` |
+| BSTR | [ATL CComBSTR](/notes/computer/microsoft/com/atl/atl-ccombstr) | `_bstr_t` |
+| VARIANT | [ATL CComVariant](/notes/computer/microsoft/com/atl/atl-ccomvariant) | `_variant_t` |
+| IDispatch | [ATL CComDispatchDriver](/notes/computer/microsoft/com/atl/atl-ccomdispatchdriver) | |
 
 The ATL classes are in atl.dll, the runtime types are compiler COM support extensions in comsuppw.lib.
 
@@ -37,7 +37,7 @@ These are some flags to consider when setting up a COM server:
 | `_UNICODE` | You'll probably want this |
 | `_DEBUG`, `NDEBUG`  | Debug or not |
 | `_ATL_DLL`, `_ATL_STATIC_REGISTRY` | Dynamically link to the registration code in atl.dll, or put it in the server |
-| `_MERGE_PROXYSTUB` | For [InProc server](/notes/computer/microsoft/com/apartment-models/inproc-server)s, place the [parameter marshaling](/notes/computer/microsoft/com/atl/parameter-marshaling) code in the server DLL |
+| `_MERGE_PROXYSTUB` | For [InProc server](/notes/computer/microsoft/com/atl/inproc-server)s, place the [parameter marshaling](/notes/computer/microsoft/com/atl/parameter-marshaling) code in the server DLL |
 
 Use the AppWizard again to add COM objects to the server.  Right click project | Add | New Item... | ATL Object.  It will automatically update the IDL and object map.
 
@@ -49,7 +49,7 @@ ATL has several facilities to support COM objects.  They can be grouped into the
 
 - [ATL Critical Sections](/notes/computer/microsoft/com/atl/atl-critical-sections)
 - [ATL Threading Model](/notes/computer/microsoft/com/atl/atl-threading-model)
-- [CComObject](/notes/computer/microsoft/com/atl/ccomobject)
+- [ATL CComObject](/notes/computer/microsoft/com/atl/atl-ccomobject)
 - [ATL COM Map](/notes/computer/microsoft/com/atl/atl-com-map)
 - [IDispatchImpl Class | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/atl/reference/idispatchimpl-class?view=msvc-170)
 - [ATL Debug Flags](/notes/computer/microsoft/com/atl/atl-debug-flags)

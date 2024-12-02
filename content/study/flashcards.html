@@ -3,73 +3,85 @@ title: "Flashcards"
 date: 2020-01-02
 ---
 
-<nav class="navbar navbar-default">
-    <div class="col-sm-offset-2 col-sm-8">
-        <div class="col-xs-6">
-            <span class="navbar-brand">Total: <span id="total">0</span></span>
-        </div>
-        <div class="col-xs-6">
-            <span class="navbar-brand">Remaining: <span id="remaining">0</span></span>
-        </div>
-    </div>
-</nav>
+<!doctype html>
+<html lang="en">
 
-<div id="selectDeckDiv" style="display:block">
-    <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
-        <select id="select-deck" class="form-control" placeholder="Select Deck" aria-label="Select Deck"></select>
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" onclick="window.selectDeck()">Select</button>
-        </div>
-    </div>
-</div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flashcards</title>
+    <link href="/css/flashcards.css" rel="stylesheet">
+</head>
 
-<div id="fromToDiv" style="display:none">
-    <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
-        <input type="number" id="from" class="form-control" placeholder="From" aria-label="From">
-        <input type="number" id="to" class="form-control" placeholder="To" aria-label="To">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" onclick="window.selectRange()">Select</button>
-        </div>
-    </div>
-</div>
+<body>
+    <article class="narrow-article flashcard" itemprop="mainContentOfPage" itemscope
+        itemtype="http://schema.org/WebApplication">
 
-<div id="countDiv" style="display:none">
-    <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
-        <input type="number" id="count" class="form-control" placeholder="Count" aria-label="Count">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" onclick="window.start()">Start</button>
+    <nav class="navbar navbar-default">
+        <div class="col-sm-offset-2 col-sm-8">
+            <div class="col-xs-6">
+                <span class="navbar-brand">Total: <span id="total">0</span></span>
+            </div>
+            <div class="col-xs-6">
+                <span class="navbar-brand">Remaining: <span id="remaining">0</span></span>
+            </div>
         </div>
-    </div>
-</div>
+    </nav>
 
-<div id="mainDiv" style="display:none">
-    <div class="row col-sm-offset-1 col-sm-10 card">
-        <div id="question" style="height:1.5in; display:flex; justify-content:center; align-items: center;">
-            <span>&nbsp;</span>
+    <div id="selectDeckDiv" style="display:block">
+        <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
+            <select id="select-deck" class="form-control" placeholder="Select Deck" aria-label="Select Deck"></select>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="window.selectDeck()">Select</button>
+            </div>
         </div>
     </div>
 
-    <div class="row col-sm-offset-1 col-sm-10 card">
-        <div id="answer" style="height:1.5in; display:flex; justify-content:center; align-items: center;">
-            <span>&nbsp;</span>
+    <div id="fromToDiv" style="display:none">
+        <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
+            <input type="number" id="from" class="form-control" placeholder="From" aria-label="From">
+            <input type="number" id="to" class="form-control" placeholder="To" aria-label="To">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="window.selectRange()">Select</button>
+            </div>
         </div>
     </div>
 
-    <div class="row col-sm-offset-3 col-sm-10">
-        <button type="button" class="btn btn-primary btn-block" id="flip"
-            onclick="window.flipCard()">Flip</button>
-    </div>
-
-    <div class="row col-sm-offset-3 col-sm-10">
-        <div class="btn-group btn-group-toggle btn-block" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-                <input type="radio" name="options"  id="right" onclick="window.setRight()"> Right
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="wrong" onclick="window.setWrong()"> Wrong
-            </label>
+    <div id="countDiv" style="display:none">
+        <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
+            <input type="number" id="count" class="form-control" placeholder="Count" aria-label="Count">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="window.start()">Start</button>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="/js/flashcards.bundle.js"></script>
+    <div id="mainDiv" style="display:none">
+        <div class="row col-sm-offset-1 col-sm-10 card">
+            <div id="question" style="height:1.5in; display:flex; justify-content:center; align-items: center;">
+                <span>&nbsp;</span>
+            </div>
+        </div>
+
+        <div class="row col-sm-offset-1 col-sm-10 card">
+            <div id="answer" style="height:1.5in; display:flex; justify-content:center; align-items: center;">
+                <span>&nbsp;</span>
+            </div>
+        </div>
+
+        <div class="row col-sm-offset-3 col-sm-10">
+            <button type="button" class="btn btn-primary" id="flip"
+                onclick="window.flipCard()">Flip</button>
+        </div>
+
+        <div class="row col-sm-offset-3 col-sm-10 answer">
+            <button type="button" class="btn btn-right" id="right" name="options" onclick="window.setRight()" disabled="true">Right</button>
+            <button type="button" class="btn btn-wrong" id="wrong" name="options" onclick="window.setWrong()" disabled="true">Wrong</button>
+        </div>
+    </div>
+
+    <script src="/js/flashcards.bundle.js"></script>
+
+</body>
+
+</html>

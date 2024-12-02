@@ -14,6 +14,8 @@ To register and enumerate COM categories, use the [ICatRegister](https://learn.m
 
 The [IObjectSafety](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224(v=vs.85)) interface should be implemented by objects that have interfaces which support "untrusted" clients, such as scripts.  (Legacy IE)
 
+Fine-grained permissions can be set using [IClientSecurity](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-iclientsecurity) and [IServerSecurity](https://learn.microsoft.com/en-us/windows/win32/api/objidl/nn-objidl-iserversecurity).
+
 A scripting engine implements [IActiveScriptParse](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/reference/iactivescriptparse), [IActiveScriptSite](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/reference/iactivescriptsite) and [IActiveScript](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/reference/iactivescript) at a minimum.
 
 Metro apps introduced [IInspectable](https://learn.microsoft.com/en-us/windows/win32/api/inspectable/nn-inspectable-iinspectable)

@@ -6,10 +6,10 @@ tags:
   - "#OpenCV"
 ---
 - [OpenCV Setup](/notes/computer/opencv/opencv-setup)
-- [Reading, Displaying and Saving Images](/notes/computer/opencv/opencv-basics/opencv-getting-started/reading,-displaying-and-saving-images)
+- [OpenCV Reading, Displaying and Saving Images](/notes/computer/opencv/opencv-basics/opencv-getting-started/opencv-reading,-displaying-and-saving-images)
 - [Color Images](/notes/computer/opencv/opencv-basics/opencv-getting-started/color-images)
 - [Basic Image Manipulations](/notes/computer/opencv/opencv-basics/opencv-getting-started/basic-image-manipulations)
-- [Annotating Images](/notes/computer/opencv/opencv-basics/opencv-getting-started/annotating-images)
+- [OpenCV Annotating Images](/notes/computer/opencv/opencv-basics/opencv-getting-started/opencv-annotating-images)
 
 ---
 # References

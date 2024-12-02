@@ -7,6 +7,14 @@ draft: false
 tags:
   - DataScience
 ---
+Machine Learning is the art of programming computers so they can learn from data.
+
+In practice, ML is mostly done in [Python](/notes/computer/computer-languages/python) and tasks usually involve
+ - [Scikit-Learn](/notes/computer/data/machine-learning/scikit-learn) which has a large collection of canned algorithms (start here), 
+ - [TensorFlow](/notes/computer/data/machine-learning/tensorflow) for deep learning
+
+![image](/img/GRRso1KXwAAnFS5.jpg)
+
 ML algorithms can be grouped into these categories:
 
 - [Supervised Learning](/notes/computer/data/machine-learning/supervised-learning)
@@ -16,13 +24,13 @@ ML algorithms can be grouped into these categories:
 
 The data may arrive 2 different ways.
 
-- In batch learning, the system is trained using all available data.
-- In online learning, the system is trained incrementally by feeding it data in mini-batches.
+- In [Batch Learning](/notes/), the system is trained using all available data.
+- In [Online Learning](/notes/), the system is trained incrementally by feeding it data in mini-batches.
 
 The algorithm may generalize in 2 different ways.
 
-- In instance-based learning, the system learns examples by rote, then generalizes to new cases using a similarity measure.
-- In model-based learning, a model is built from a set of examples, then the model is used to make predictions.
+- In [Instance-Based Learning](/notes/), the system learns examples by rote, then generalizes to new cases using a similarity measure.
+- In [Model-Based Learning](/notes/), a model is built from a set of examples, then the model is used to make predictions.
 
 Model training can go wrong in several ways.  [ML Challenges](/notes/computer/data/machine-learning/ml-challenges)
 
@@ -466,3 +474,5 @@ X_reduced = rbf_pca.fit_transform(X)
 - [Wikipedia's list of datasets](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research)  
 - [Quora](https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public)  
 - [Datasets' Discord server](https://www.reddit.com/r/datasets/)  
+- [Shadow Government Statistics](https://www.shadowstats.com/)
+
