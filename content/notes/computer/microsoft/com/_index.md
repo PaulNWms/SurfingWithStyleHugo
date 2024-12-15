@@ -12,6 +12,7 @@ description:
 - Writing a COM client is pretty easy, especially in .NET.
 - Writing a COM server is hard.  Don't write a COM server.
     - (Unless it's in .NET, or ATL.)
+    - COM development is best done in a VM.
 
 COM is not dead, it's undead.  It's baked into Windows.  It will be with us always.
 ## Features?

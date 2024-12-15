@@ -44,10 +44,6 @@ function showQuestion(card: Card, reverse: boolean) {
         }
     }
 
-    if (ui.question.match(/^\$\$.*\$\$$/)) {
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub, questionElement]);
-    }
-
     ui.answer = "\n"
 }
 
@@ -62,10 +58,6 @@ function showAnswer(card: Card, reverse: boolean) {
     }
     else {
         ui.answer = lineConcat(card.back)
-    }
-
-    if (ui.answer.match(/^\$\$.*\$\$$/)) {
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub, answerElement]);
     }
 }
 
@@ -228,10 +220,10 @@ let countElement: HTMLInputElement = document.getElementById("count") as HTMLInp
 new Binding({ object: ui, property: "count" }).addBinding(countElement, "value", "change");
 
 let questionElement: HTMLDivElement = document.getElementById("question") as HTMLDivElement
-new Binding({ object: ui, property: "question" }).addBinding(questionElement, "innerText");
+new Binding({ object: ui, property: "question" }).addBinding(questionElement, "innerHTML");
 
 let answerElement: HTMLDivElement = document.getElementById("answer") as HTMLDivElement
-new Binding({ object: ui, property: "answer" }).addBinding(answerElement, "innerText");
+new Binding({ object: ui, property: "answer" }).addBinding(answerElement, "innerHTML");
 
 let flipElement: HTMLButtonElement = document.getElementById("flip") as HTMLButtonElement
 
