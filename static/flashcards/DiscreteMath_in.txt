@@ -113,7 +113,7 @@ real numbers symbol
 R
 
 |S| is called
-cardinality<br />
+cardinality
 the number of elements in a finite set
 
 ∀x(x|x ∈ A → x ∈ B)
@@ -135,7 +135,7 @@ A ∩ B = ∅
 disjoint
 
 A - B = {x|x ∈ A ∧ x ∉ B}
-difference<br />
+difference
 compelement of B w/ respect to A
 
 A̅ = {x|x ∉ A}
@@ -193,7 +193,7 @@ Computer implementation of sets sometimes use ____ to indicate membership.
 bit strings
 
 If f is a function from A to B, A is the ____ of f and B is the ____ of f.
-domain<br />
+domain
 codomain
 
 If f(a) = b, b is the ____ of a.
@@ -203,21 +203,21 @@ If f(a) = b, a is the ____ of b.
 pre-image
 
 f is ____ if f(x) ≠ f(y) whenever x ≠ y.
-one-to-one<br />
+one-to-one
 injective
 
 <img src="/img/one-to-one.jpg" alt="one-to-one" />
 one-to-one
 
 f is ____ IFF ∀b: b ∈ B, ∃a: a ∈ A with f(a) = b
-onto<br />
+onto
 surjective
 
 <img src="/img/onto.jpg" alt="onto" />
 onto
 
 f is a _____ if it is both one-to-one and onto.
-one-to-one correspondence<br />
+one-to-one correspondence
 bijection
 
 <img src="/img/one-to-one_and_onto.jpg" alt="one-to-one and onto" />
@@ -450,13 +450,13 @@ There are ____ r-permutations of a set with n elements when repetition is allowe
 There are ____ r-combinations of a set with n elements when repetition is allowed.
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mi>r</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mi>r</mi><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>!</mi></mrow><mrow><mi>r</mi><mi>!</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">C(n + r - 1,r) = \frac{(n + r - 1)!}{r!(n - r)!}</annotation></semantics></math>
 
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mi>C</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mtext mathvariant="normal">____(Theorem 4.3.4)</mtext></mrow><annotation encoding="application/x-tex">\sum\limits_{k = 0}^{n}C(n,k) = \text{\_\_\_\_(Theorem 4.3.4)}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mi>C</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mtext mathvariant="normal">____(Theorem 4.3.4)</mtext></mrow><annotation encoding="application/x-tex">\sum\limits_{k = 0}^{n}C(n,k) = \text{\_\_\_\_ (Theorem 4.3.4)}</annotation></semantics></math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mi>n</mi></msup><annotation encoding="application/x-tex">2^{n}</annotation></semantics></math>
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>m</mi><mo>+</mo><mi>n</mi><mo>,</mo><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mi>C</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>m</mi><mo>,</mo><mi>r</mi><mo>−</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>C</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">C(m + n,r) = \sum\limits_{k = 0}^{n}C(m,r - k)C(n,k)</annotation></semantics></math>
 Vandermonde's Identity
 
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>k</mi></msup><mi>C</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mtext mathvariant="normal">____(Theorem 4.3.7)</mtext></mrow><annotation encoding="application/x-tex">\sum\limits_{k = 0}^{n}(-1)^{k}C(n,k) = \text{\_\_\_\_(Theorem 4.3.7)}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>k</mi></msup><mi>C</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mtext mathvariant="normal">____(Theorem 4.3.7)</mtext></mrow><annotation encoding="application/x-tex">\sum\limits_{k = 0}^{n}(-1)^{k}C(n,k) = \text{\_\_\_\_ (Theorem 4.3.7)}</annotation></semantics></math>
 0
 
 p(E̅) = ____ (Theorem 4.4.1)
@@ -466,7 +466,7 @@ p(E₁ ⋃ E₂) = ____ (Theorem 4.4.2)
 p(E₁ ⋃ E₂) = p(E₁) + p(E₂) - p(E₁ ⋂ E₂)
 
 A sequence is uniquely determined by a ____ and ____.
-recurrence relation<br />
+recurrence relation
 initial conditions
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>c</mi><mn>1</mn></msub><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>c</mi><mi>k</mi></msub><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{n} = c_{1}a_{n - 1} + c_{2}a_{n - 2} + \cdots + c_{k}a_{n - k}</annotation></semantics></math>
@@ -488,7 +488,7 @@ it is not homogeneous.
 it does not have constant coefficients.
 
 Linear homogeneous recurrence relations are studied because ____ and ____.
-they occur frequently<br />
+they occur frequently
 they can be systematically solved
 
 To solve linear homogeneous recurrence relations, look for solutions of the form
@@ -507,7 +507,7 @@ characteristic roots
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal">is a solution to an LHRR of degree</mtext><mspace width="0.333em"></mspace></mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">\{ a_{n}\}{\mspace{6mu}\text{is a solution to an LHRR of degree}\mspace{6mu}}2</annotation></semantics></math>
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">LHRR:</mtext><mspace width="0.333em"></mspace></mrow><msup><mi>r</mi><mn>2</mn></msup><mo>−</mo><msub><mi>c</mi><mn>1</mn></msub><mi>r</mi><mo>−</mo><msub><mi>c</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">{\text{LHRR:}\mspace{6mu}}r^{2} - c_{1}r - c_{2} = 0</annotation></semantics></math>
-LHRR of degree 2 with 2 roots: characteristic equation<br />
+LHRR of degree 2 with 2 roots: characteristic equation
 LHRR of degree 2 with 1 root: characteristic equation
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">LHRR:</mtext><mspace width="0.333em"></mspace></mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>α</mi><mn>1</mn></msub><msubsup><mi>r</mi><mn>1</mn><mi>n</mi></msubsup><mo>+</mo><msub><mi>α</mi><mn>2</mn></msub><msubsup><mi>r</mi><mn>2</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">{\text{LHRR:}\mspace{6mu}}a_{n} = \alpha_{1}r_{1}^{n} + \alpha_{2}r_{2}^{2}</annotation></semantics></math>
@@ -544,7 +544,7 @@ a̸Rb denotes
 (a,b) ∉ R
 
 A relation on the set A is a relation from ____ to ____.
-A<br />
+A
 A
 
 R is ____ if (a,a) ∈ R for every element a ∈ A.
