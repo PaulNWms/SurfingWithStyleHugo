@@ -286,7 +286,7 @@ The Fundamental Theorem of Arithmetic
 If n is a composite integer, then n has a prime divisor ≤ ____. (Theorem 2.3)
 √n
 
-There are unique integers q &amp; r, with 0 ≤ r &lt; d, s. th. a = ____. (The Division Algorithm)
+There are unique integers q &amp; r, with 0 ≤ r &lt; d, s. th. a = ____. (The Division Algorithm, Theorem 2.3)
 a = dq + r
 
 The integers a and b are ____ if their gcd is 1.
@@ -359,8 +359,9 @@ indirect proof
 If a contradiction q can be found s.th. ¬p → q is true, then p must be true.
 proof by contradiction
 
-If p ⇔ (p1 ∨ p2) and (p1 ∨ p2) → q, then p → q.
-proof by cases
+If p ⇔ (p₁ ∨ p₂ ∨ ⋯ ∨ pₙ) and (p₁ ∨ p₂ ∨ ⋯ ∨ pₙ) → q, then p → q.
+proof by cases<br />
+[(p₁ ∨ p₂ ∨ ⋯ ∨ pₙ) → q] ↔︎ [(p₁ → q) ∧ (p₂ → q) ∧ ⋯ ∧ (pₙ → q)]
 
 (p ↔︎ q) ↔︎ [(p → q) ∧ (q → p)]
 proof of equivalence
@@ -372,7 +373,8 @@ Proving ∃x P(x) without finding an example (such as by contradiction)
 nonconstructive existence proof
 
 An element x s.th. P(x) is false
-counterexample
+counterexample<br />
+leverages ¬∀x P(x) ⇔ ∃x ¬P(x)
 
 Every nonempty set of nonnegative integers has a least element.
 The Well-Ordering Property
@@ -383,13 +385,19 @@ basis step
 Induction: P(n) → P(n + 1) is shown to be true.
 inductive step
 
+The P(n) in P(n) → P(n + 1)
+inductive hypothesis
+
 [P(1) ∧ ∀n(P(n) → P(n + 1))] → ∀nP(n)
 mathematical induction
 
-[P(1) ∧ P(2) ∧ ... ∧ P(n -1)] → P(n)
+[P(1) ∧ P(2) ∧ ... ∧ P(n - 1)] → P(n)
 second principle of mathematical induction
 
-[p{S1}q ∧ q{S2}r ]→ p{S1;S2}r
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mi>−</mi><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">x={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}}</annotation></semantics></math>
+quadratic formula
+
+[p{S1}q ∧ q{S2}r ] → p{S1;S2}r
 composition rule
 
 [(p ∧ condition){S}q ∧ ((p ∧ ¬condition) → q)] → p{if condition then S}q
