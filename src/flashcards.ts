@@ -138,6 +138,7 @@ function start() {
     fromToDiv.style.display = "none"
     countDiv.style.display = "none"
     mainDiv.style.display = "block"
+    updateStats()
     drawCard()
 }
 

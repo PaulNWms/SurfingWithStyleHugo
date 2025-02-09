@@ -1,0 +1,136 @@
+Categories of ML systems
+supervised vs. unsupervised<br />
+online vs. batch<br />
+instance-based vs. model-based
+
+The training data you feed to the algorithm includes labels.
+supervised learning
+
+k-Nearest Neighbors is an algorithm for _____.
+supervised learning
+
+Linear Regression is an algorithm for _____.
+supervised learning
+
+Logistic Regression is an algorithm for _____.
+supervised learning
+
+Support Vector Machines (SVMs) is an algorithm for _____.
+supervised learning
+
+Decision Trees and Random Forests is an algorithm for _____.
+supervised learning
+
+(most) Neural networks is an algorithm for _____.
+supervised learning
+
+The training data you feed to the algorithm does not include labels.
+unsupervised learning
+
+Clustering is a task of ______.
+unsupervised learning
+
+Visualization is a task of _____.
+unsupervised learning
+
+Dimensionality reduction and feature extraction are a tasks of _____.
+unsupervised learning
+
+Anomaly detection is a task of _____.
+unsupervised learning
+
+Association rule learning is a type of ______.
+unsupervised learning
+
+A deep belief network (DBN) is a type of _____.
+semi-supervised learning
+
+Deep belief networks (DBNs) are based on _____.
+restricted Boltzman machines
+
+A restricted Boltzman machine is a type of _____.
+unsupervised learning
+
+k-Means is an algorithm for _____.
+clustering
+
+Hierarchical Cluster Analysis (HCA) is an algorithm for _____.
+clustering
+
+Expectation Maximization is an algorithm for _____.
+clustering
+
+Principal Component Analysis (PCA) is an algorithm for _____.
+visualization and dimensionality reduction
+
+Kernel PCA is an algorithm for _____.
+visualization and dimensionality reduction
+
+Locally-Linear Embedding (LLE) is an algorithm for _____.
+visualization and dimensionality reduction
+
+t-distributed Stochastic Neighbor Embedding (t-SNE) is an algorithm for _____.
+visualization and dimensionality reduction
+
+Apriori is an algorithm for _____.
+association rule learning
+
+Eclat is an algorithm for _____.
+association rule learning
+
+A similarity measure to existing data to make predictions in _____.
+instance-based learning
+
+Linear regression is a type of _____.
+model-based learning
+
+Insufficient training data is a _____.
+challenge of ML
+
+Nonrepresentative training data is a _____.
+challenge of ML
+
+Nonresponse bias is a _____.
+challenge of ML
+
+Poor-quality data is a _____.
+challenge of ML
+
+Irrelevant features is a _____.
+challenge of ML
+
+Overfitting is a _____.
+challenge of ML
+
+Underfitting is a _____.
+challenge of ML
+
+Feature selection is a task of _____.
+feature engineering
+
+Feature extraction and dimensionality reduction are tasks of _____.
+feature engineering
+
+Creating new features by gathering new data is a task of _____.
+feature engineering
+
+The data is split into a _____ and a ______.
+training set<br />
+test set
+
+The training set is split into a _____ and a _____.
+training set<br />
+validation set
+
+An alternative to splitting the training set and the validation set is _____.
+cross-validation
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">RMSE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐗</mtext><mo>,</mo><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msqrt><mrow><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>h</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\text{RMSE}(\textbf{X},h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}(h(\textbf{x}^{(i)}) - y^{(i)})^{2}}</annotation></semantics></math>
+Root Mean Square Error (RMSE)<br />
+Euclidian norm<br />
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝓁</mi><mn>2</mn></msub><mspace width="0.222em"></mspace><mtext mathvariant="normal">norm</mtext></mrow><annotation encoding="application/x-tex">\mathscr{l}_{2}\ \text{norm}</annotation></semantics></math>
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">MAE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐗</mtext><mo>,</mo><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">|</mo><mi>h</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">\text{MAE}(\textbf{X},h)=\frac{1}{m}\sum_{i=1}^{m}|h(\textbf{x}^{(i)}-y^{(i)})|</annotation></semantics></math>
+Mean Absolute Error (MAE)<br />
+Manhattan norm<br />
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝓁</mi><mn>1</mn></msub><mspace width="0.222em"></mspace><mtext mathvariant="normal">norm</mtext></mrow><annotation encoding="application/x-tex">\mathscr{l}_{1}\ \text{norm}</annotation></semantics></math>

@@ -388,13 +388,13 @@ inductive step
 The P(n) in P(n) → P(n + 1)
 inductive hypothesis
 
-[P(1) ∧ ∀n(P(n) → P(n + 1))] → ∀nP(n)
+[P(1) ∧ (P(n) → P(n + 1))] → ∀nP(n)
 mathematical induction
 
 [P(1) ∧ P(2) ∧ ... ∧ P(n - 1)] → P(n)
 second principle of mathematical induction
 
-$$x={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}}$$
+$$x={\frac {-b \pm  {\sqrt {b^{2} - 4ac}}}{2a}}$$
 quadratic formula
 
 [p{S1}q ∧ q{S2}r ] → p{S1;S2}r
@@ -434,28 +434,32 @@ time complexity of nested loops
 Product Rule
 
 when more than k objects are placed in k boxes
-Pigeonhole Principle
+Pigeonhole Principle (Theorem 4.2.1)
 
 when N objects are placed in k boxes there must be a box containing ____ objects
 $$\lceil N/k \rceil$$
+Generalized Pigeonhole Principle (Theorem 4.2.2)
+
+Every sequence of n² + 1 distinct real numbers contains a subsequence of length n + 1 that is either strictly increasing or strictly decreasing.
+Theorem 4.2.3
 
 $$P(n,r) = \frac{n!}{(n - r)!}$$
-permutation formula (Theorem 4.3.1)
+r-permutations w/o repetition (Theorem 4.3.1)
 
 $$C(n,r) = \frac{n!}{r!(n - r)!}$$
-combination formula (Theorem 4.3.2)
+r-combinations w/o repetition (Theorem 4.3.2)
 
 C(n + 1,k) = C(n,k - 1) + C(n,k)
 Pascal's Identity
 
-$$(x + y)^n = \sum_{k=0}^{n} C(n,k)x^{n-k}y^k$$
+$$(x + y)^n = \sum_{k=0}^{n} C(n,k)x^{n - k}y^k$$
 Binomial Theorem
 
-There are ____ r-permutations of a set with n elements when repetition is allowed.
-$$n^r$$
+$$P(n,r) = n^r$$
+r-permutations w/ repetition
 
-There are ____ r-combinations of a set with n elements when repetition is allowed.
 $$C(n + r - 1, r) = \frac{(n + r - 1)!}{r!(n - r)!}$$
+r-combinations w/ repetition
 
 $$\sum_{k=0}^{n} C(n,k) = \textrm{____ (Theorem 4.3.4)}$$
 $$2^n$$
@@ -466,6 +470,9 @@ Vandermonde's Identity
 $$\sum_{k=0}^{n} (-1)^k C(n,k) = \textrm{____ (Theorem 4.3.7)}$$
 0
 
+p(E) = |E|/|S|
+probability
+
 p(E̅) = ____ (Theorem 4.4.1)
 p(E̅) = 1 - p(E)
 
@@ -475,6 +482,9 @@ p(E₁ ⋃ E₂) = p(E₁) + p(E₂) - p(E₁ ⋂ E₂)
 A sequence is uniquely determined by a ____ and ____.
 recurrence relation
 initial conditions
+
+A linear homogeneous recurrence relation of degree k
+LHRR
 
 $$a_n = c_1a_{n-1} + c_2a_{n-2} + \cdots + c_k a_{n-k}$$
 A linear homogeneous recurrence relation of degree k
@@ -502,10 +512,10 @@ To solve linear homogeneous recurrence relations, look for solutions of the form
 $$a_n = r^n$$
 
 $$a_n = r^n\textrm{ is a solution to a linear homogeneous recurrence IFF}$$
-$$a_n = c_1r^{n-1} + c_2r^{n-2} + \cdots + c_k r^{n-k}$$
+$$a_n = c_1r^{n - 1} + c_2r^{n - 2} + \cdots + c_k r^{n - k}$$
 
-$$\textrm{characteristic function of }a_n = c_1r^{n-1} + c_2r^{n-2} + \cdots + c_k r^{n-k}$$
-$$r^k - c_1r^{k-1} - c_2r^{k-2} - \cdots - c_{k-1}r - c_k = 0$$
+$$\textrm{characteristic function of }a_n = c_1r^{n - 1} + c_2r^{n - 2} + \cdots + c_k r^{n - k}$$
+$$r^k - c_1r^{k - 1} - c_2r^{k - 2} - \cdots - c_{k - 1}r - c_k = 0$$
 
 The solutions of a characteristic equation are the ____ of a recurrence relation.
 characteristic roots
@@ -517,13 +527,13 @@ $$\textrm{LHRR: } r^2 - c_1r - c_2 = 0$$
 LHRR of degree 2 with 2 roots: characteristic equation
 LHRR of degree 2 with 1 root: characteristic equation
 
-$$\textrm{LHRR: } a_n = \alpha_1 r_1^n + \alpha_2 r_2^2$$
+$$\textrm{LHRR: } a_n = \alpha_1 r_1^n + \alpha_2 r_2^n$$ (Theorem 5.2.1)
 LHRR of degree 2 with 2 roots: closed form
 
-$$\textrm{LHRR: } a_n = \alpha_1 r_0^n + \alpha_2 nr_0^2$$
+$$\textrm{LHRR: } a_n = \alpha_1 r_0^n + \alpha_2 nr_0^n$$ (Theorem 5.2.2)
 LHRR of degree 2 with 1 root: closed form
 
-$$\textrm{LHRR: } a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}$$
+$$\textrm{LHRR: } a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}$$ 
 $$\{a_n\} \textrm{ is a solution to an LHRR of degree } k$$
 
 $$\textrm{LHRR: } r^k - c_1r^{k-1} - \cdots - c_k = 0$$

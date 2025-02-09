@@ -1,0 +1,136 @@
+Categories of ML systems
+supervised vs. unsupervised
+online vs. batch
+instance-based vs. model-based
+
+The training data you feed to the algorithm includes labels.
+supervised learning
+
+k-Nearest Neighbors is an algorithm for _____.
+supervised learning
+
+Linear Regression is an algorithm for _____.
+supervised learning
+
+Logistic Regression is an algorithm for _____.
+supervised learning
+
+Support Vector Machines (SVMs) is an algorithm for _____.
+supervised learning
+
+Decision Trees and Random Forests is an algorithm for _____.
+supervised learning
+
+(most) Neural networks is an algorithm for _____.
+supervised learning
+
+The training data you feed to the algorithm does not include labels.
+unsupervised learning
+
+Clustering is a task of ______.
+unsupervised learning
+
+Visualization is a task of _____.
+unsupervised learning
+
+Dimensionality reduction and feature extraction are a tasks of _____.
+unsupervised learning
+
+Anomaly detection is a task of _____.
+unsupervised learning
+
+Association rule learning is a type of ______.
+unsupervised learning
+
+A deep belief network (DBN) is a type of _____.
+semi-supervised learning
+
+Deep belief networks (DBNs) are based on _____.
+restricted Boltzman machines
+
+A restricted Boltzman machine is a type of _____.
+unsupervised learning
+
+k-Means is an algorithm for _____.
+clustering
+
+Hierarchical Cluster Analysis (HCA) is an algorithm for _____.
+clustering
+
+Expectation Maximization is an algorithm for _____.
+clustering
+
+Principal Component Analysis (PCA) is an algorithm for _____.
+visualization and dimensionality reduction
+
+Kernel PCA is an algorithm for _____.
+visualization and dimensionality reduction
+
+Locally-Linear Embedding (LLE) is an algorithm for _____.
+visualization and dimensionality reduction
+
+t-distributed Stochastic Neighbor Embedding (t-SNE) is an algorithm for _____.
+visualization and dimensionality reduction
+
+Apriori is an algorithm for _____.
+association rule learning
+
+Eclat is an algorithm for _____.
+association rule learning
+
+A similarity measure to existing data to make predictions in _____.
+instance-based learning
+
+Linear regression is a type of _____.
+model-based learning
+
+Insufficient training data is a _____.
+challenge of ML
+
+Nonrepresentative training data is a _____.
+challenge of ML
+
+Nonresponse bias is a _____.
+challenge of ML
+
+Poor-quality data is a _____.
+challenge of ML
+
+Irrelevant features is a _____.
+challenge of ML
+
+Overfitting is a _____.
+challenge of ML
+
+Underfitting is a _____.
+challenge of ML
+
+Feature selection is a task of _____.
+feature engineering
+
+Feature extraction and dimensionality reduction are tasks of _____.
+feature engineering
+
+Creating new features by gathering new data is a task of _____.
+feature engineering
+
+The data is split into a _____ and a ______.
+training set
+test set
+
+The training set is split into a _____ and a _____.
+training set
+validation set
+
+An alternative to splitting the training set and the validation set is _____.
+cross-validation
+
+$$\text{RMSE}(\textbf{X},h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}(h(\textbf{x}^{(i)}) - y^{(i)})^{2}}$$
+Root Mean Square Error (RMSE)
+Euclidian norm
+$$\mathscr{l}_{2}\ \text{norm}$$
+
+$$\text{MAE}(\textbf{X},h)=\frac{1}{m}\sum_{i=1}^{m}|h(\textbf{x}^{(i)}-y^{(i)})|$$
+Mean Absolute Error (MAE)
+Manhattan norm
+$$\mathscr{l}_{1}\ \text{norm}$$
