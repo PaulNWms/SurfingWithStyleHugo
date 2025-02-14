@@ -84,27 +84,6 @@ instance-based learning
 Linear regression is a type of _____.
 model-based learning
 
-Insufficient training data is a _____.
-challenge of ML
-
-Nonrepresentative training data is a _____.
-challenge of ML
-
-Nonresponse bias is a _____.
-challenge of ML
-
-Poor-quality data is a _____.
-challenge of ML
-
-Irrelevant features is a _____.
-challenge of ML
-
-Overfitting is a _____.
-challenge of ML
-
-Underfitting is a _____.
-challenge of ML
-
 Feature selection is a task of _____.
 feature engineering
 
@@ -134,3 +113,78 @@ $$\text{MAE}(\textbf{X},h)=\frac{1}{m}\sum_{i=1}^{m}|h(\textbf{x}^{(i)}-y^{(i)})
 Mean Absolute Error (MAE)
 Manhattan norm
 $$\mathscr{l}_{1}\ \text{norm}$$
+
+Python: join paths
+os.path.join()
+
+Python: download file
+urllib.request.urlretrieve()
+
+Pandas: read CSV into DataFrame
+pd.read_csv()
+
+Pandas: list top 5 rows
+df.head()
+
+Pandas: get quick description of data
+df.info()
+
+Pandas: get summary of numerical data
+df.describe()
+
+Jupyter: magic command to enable Matplotlib
+%matplotlib inline
+
+ScikitLearn: put aside test set
+train_set, test_set = train_test_split()
+
+NumPy: create array with shuffled indexes
+np.random.permutation(len(data))
+
+ScikitLearn: create a stratified test set
+StratifiedShuffleSplit
+
+Pandas: create a correlation matrix
+data.corr()
+
+Pandas: create scatter plots
+scatter_matrix()
+
+Pandas: remove rows with a missing value
+data.dropna()
+
+Pandas: remove columns
+data.drop()
+
+Pandas: fill in missing data
+data[column].fillna(median, inplace=True)
+
+ScikitLearn: fill in missing values
+Imputer
+
+Pandas: map categorical data to integers
+col.factorize()
+
+ScikitLearn: one-hot encode categorical data
+OneHotEncoder
+
+ScikitLearn: min-max scale numerical data
+MinMaxScaler
+
+ScikitLearn: standardize numerical data
+StandardScaler
+
+ScikitLearn: train pipeline
+pipeline.fit_transform()
+
+ScikitLearn: save model
+joblib
+
+ScikitLearn: grid search
+GridSearchCV
+
+ScikitLearn: randomized search
+RandomSearchCV
+
+ScikitLearn: run trained pipeline
+pipeline.transform()

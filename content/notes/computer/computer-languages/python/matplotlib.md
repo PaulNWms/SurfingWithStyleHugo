@@ -1,6 +1,6 @@
 ---
 title: MatPlotLib
-date: 2023-10-26T22:50
+date: 2023-10-26
 description: 
 keywords: 
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: Python Strings
 description: 
-date: 2023-12-18T06:08
+date: 2023-12-18
 keywords: 
 draft: false
 tags:

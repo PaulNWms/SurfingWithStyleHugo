@@ -1,7 +1,7 @@
 ---
 title: Python Exceptions
 description: 
-date: 2023-12-19T21:51
+date: 2023-12-19
 keywords: 
 draft: false
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Python Literals
 description: 
-date: 2023-12-18T05:37
+date: 2023-12-18
 keywords: 
 draft: false
 tags:

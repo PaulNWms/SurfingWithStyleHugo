@@ -1,6 +1,6 @@
 ---
 title: NumPy
-date: 2023-10-26T22:45
+date: 2023-10-26
 description: 
 keywords: 
 draft: false

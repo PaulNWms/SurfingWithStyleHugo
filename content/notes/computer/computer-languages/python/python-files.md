@@ -1,7 +1,7 @@
 ---
 title: Python Files
 description: 
-date: 2023-12-18T18:23
+date: 2023-12-18
 keywords: 
 draft: false
 tags:

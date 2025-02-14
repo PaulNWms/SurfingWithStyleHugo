@@ -1,7 +1,7 @@
 ---
 title: Computer Languages
 description: 
-date: 2023-10-14T19:46
+date: 2023-10-14
 keywords: 
 slug: 
 draft: false
