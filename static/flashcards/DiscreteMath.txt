@@ -307,14 +307,20 @@ a + c ≡ b + d (mod m)
 If a ≡ b (mod m) and c ≡ d (mod m), then ac ≡ ____ (Theorem 2.7.2)
 ac ≡ bd (mod m)
 
-A ∨ B, where A &amp; B are boolean matrices
+A ∨ B, where A &amp; B are zero-one matrices
 join
 
-A ∧ B, where A &amp; B are boolean matrices
+A ∧ B, where A &amp; B are zero-one matrices
 meet
 
-A ⊙ B, where A &amp; B are boolean matrices
-binary product
+A ⊙ B, where A &amp; B are zero-one matrices
+Boolean product
+
+A ⊙ B, where A &amp; B are zero-one matrices
+Boolean product
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mrow><mo stretchy="true" form="prefix">[</mo><mi>r</mi><mo stretchy="true" form="postfix">]</mo></mrow></msup><mo>=</mo><mi>A</mi><mo>⊙</mo><mi>A</mi><mo>⊙</mo><mi>⋯</mi><mo>⊙</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A^{[r]}=A\odot A\odot \cdots \odot A</annotation></semantics></math>
+Boolean power
 
 p → (p ∨ q)
 addition
@@ -508,10 +514,10 @@ Linear homogeneous recurrence relations are studied because ____ and ____.
 they occur frequently<br />
 they can be systematically solved
 
-To solve linear homogeneous recurrence relations, look for solutions of the form
+To solve LHRRs, look for solutions of the form
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msup><mi>r</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">a_n = r^n</annotation></semantics></math>
 
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msup><mi>r</mi><mi>n</mi></msup><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> is a solution to a linear homogeneous recurrence IFF</mtext></mrow></mrow><annotation encoding="application/x-tex">a_n = r^n\textrm{ is a solution to a linear homogeneous recurrence IFF}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msup><mi>r</mi><mi>n</mi></msup><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> is a solution to an LHRR </mtext><mspace width="0.333em"></mspace></mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">a_n = r^n\textrm{ is a solution to an LHRR }\iff</annotation></semantics></math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>c</mi><mn>1</mn></msub><msup><mi>r</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub><msup><mi>r</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msup><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>c</mi><mi>k</mi></msub><msup><mi>r</mi><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">a_n = c_1r^{n - 1} + c_2r^{n - 2} + \cdots + c_k r^{n - k}</annotation></semantics></math>
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mrow><mtext mathvariant="normal">characteristic function of </mtext><mspace width="0.333em"></mspace></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>c</mi><mn>1</mn></msub><msup><mi>r</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub><msup><mi>r</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msup><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>c</mi><mi>k</mi></msub><msup><mi>r</mi><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align}\textrm{characteristic function of }\\a_n = c_1r^{n - 1} + c_2r^{n - 2} + \cdots + c_k r^{n - k}\end{align}</annotation></semantics></math>
@@ -598,3 +604,124 @@ symmetric
 
 R is ____ if (a,b) ∈ R and (b,a) ∈ R only if a = b, for a, b ∈ A.
 antisymmetric
+
+R is ____ if whenever (a,b) ∈ R and (b,c) ∈ R then (a,c) ∈ R, for a, b, c ∈ A.
+transitive
+
+S ∘ R
+composite of relations R and S
+
+R¹ = R, and Rⁿ⁺¹ = Rⁿ ∘ R
+powers of a relation
+
+Let Rⁿ be a transitive relation on a set A. Then Rⁿ ⊆ _____
+R
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext mathvariant="bold">𝐌</mtext><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></msub><mo>=</mo><msub><mtext mathvariant="bold">𝐌</mtext><msub><mi>R</mi><mn>1</mn></msub></msub><mo>∨</mo><msub><mtext mathvariant="bold">𝐌</mtext><msub><mi>R</mi><mn>2</mn></msub></msub></mrow><annotation encoding="application/x-tex">\textbf{M}_{R_1\cup  R_2}=\textbf{M}_{R_1}\vee \textbf{M}_{R_2}</annotation></semantics></math>
+union of relations
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext mathvariant="bold">𝐌</mtext><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></msub><mo>=</mo><msub><mtext mathvariant="bold">𝐌</mtext><msub><mi>R</mi><mn>1</mn></msub></msub><mo>∧</mo><msub><mtext mathvariant="bold">𝐌</mtext><msub><mi>R</mi><mn>2</mn></msub></msub></mrow><annotation encoding="application/x-tex">\textbf{M}_{R_1\cap R_2}=\textbf{M}_{R_1}\wedge \textbf{M}_{R_2}</annotation></semantics></math>
+intersection of relations
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext mathvariant="bold">𝐌</mtext><mrow><mi>S</mi><mo>∘</mo><mi>R</mi></mrow></msub><mo>=</mo><msub><mtext mathvariant="bold">𝐌</mtext><mi>R</mi></msub><mo>⊙</mo><msub><mtext mathvariant="bold">𝐌</mtext><mi>S</mi></msub></mrow><annotation encoding="application/x-tex">\textbf{M}_{S\circ R}=\textbf{M}_R\odot \textbf{M}_S</annotation></semantics></math>
+composite of relations S and R
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext mathvariant="bold">𝐌</mtext><msup><mi>R</mi><mi>n</mi></msup></msub><mo>=</mo><msubsup><mtext mathvariant="bold">𝐌</mtext><mi>R</mi><mrow><mo stretchy="true" form="prefix">[</mo><mi>n</mi><mo stretchy="true" form="postfix">]</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\textbf{M}_{R^n}=\textbf{M}_R^{[n]}</annotation></semantics></math>
+Boolean powers of relation R
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mo>*</mo></msup><mo>=</mo><munderover><mo>⋃</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mo accent="false">∞</mo></munderover><msup><mi>R</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">R^*=\bigcup_{n=1}^{\infty}R^n</annotation></semantics></math>
+connectivity relation
+
+The transitive closure of a relation R equals _____. (Theorem 6.4.2)
+the connectivity relation R*.
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><msup><mi>R</mi><mo>*</mo></msup></msub><mo>=</mo><msub><mi>M</mi><mi>R</mi></msub><mo>∨</mo><msubsup><mi>M</mi><mi>R</mi><mrow><mo stretchy="true" form="prefix">[</mo><mn>2</mn><mo stretchy="true" form="postfix">]</mo></mrow></msubsup><mo>∨</mo><mi>⋯</mi><mo>∨</mo><msubsup><mi>M</mi><mi>R</mi><mrow><mo stretchy="true" form="prefix">[</mo><mi>n</mi><mo stretchy="true" form="postfix">]</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">M_{R^*}=M_R\vee M_R^{[2]}\vee  \cdots \vee M_R^{[n]}</annotation></semantics></math>
+zero-one matrix of the transitive closure R*
+
+find the transitive closure of a relation in 2n³ operations
+Warshall's algorithm
+
+A relation on a set A is called a _____ if it is reflexive, symmetric, and transitive.
+equivalence relation
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">[</mo><mi>a</mi><mo stretchy="true" form="postfix">]</mo></mrow><mi>R</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>s</mi><mo stretchy="false" form="prefix">|</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∈</mo><mi>R</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">[a]_R=\{s|(a,s)\in R\}</annotation></semantics></math>
+equivalence class
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">If </mtext><mspace width="0.333em"></mspace></mrow><mi>b</mi><mo>∈</mo><msub><mrow><mo stretchy="true" form="prefix">[</mo><mi>a</mi><mo stretchy="true" form="postfix">]</mo></mrow><mi>R</mi></msub><mtext mathvariant="normal">, b is called a _____.</mtext></mrow><annotation encoding="application/x-tex">\text{If }b\in [a]_R\text{,  b is called a _____.}</annotation></semantics></math>
+representative of this equivalence class
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>i</mi></msub><mo>≠</mo><mi>⌀</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>j</mi></msub><mo>=</mo><mi>⌀</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>⋃</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mrow></mrow></munderover><msub><mi>A</mi><mi>i</mi></msub><mo>=</mo><mi>S</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(A_i\ne \varnothing) \wedge (A_i\cap  A_j=\varnothing) \wedge \left( \bigcup_{i\in I}^{}A_i=S \right)</annotation></semantics></math>
+partition
+
+A relation R on a set S is called a _____ if it is reflexive, antisymmetric, and transitive.
+partial ordering
+
+The elements a nd b of a poset are called _____ if either a ⪯ b or b ⪯ a.
+comparable
+
+When a and b are elements or R such that neither a ⪯ b nor b ⪯ a, a and b are called _____.
+incomparable
+
+If (S,⪯) is a poset and every two elements of S are comparable, S is called ______.
+totally ordered<br />
+linearly ordered<br />
+a chain
+
+Constructing a compatible total ordering from a partial ordering is called _____.
+topological sorting
+
+A poset can be visualized in a ______.
+Hasse diagram
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>e</mi><mo>=</mo><munder><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></munder><mtext mathvariant="normal">deg</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>v</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">2e=\sum_{v\in V}\text{deg}(v)</annotation></semantics></math>
+The Handshaking Theorem (Theorem 7.1.1)
+
+An undirected graph has an even number of vertices of _____. (Theorem 7.1.2)
+odd degree
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></munder><msup><mtext mathvariant="normal">deg</mtext><mo>−</mo></msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>v</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munder><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></munder><msup><mtext mathvariant="normal">deg</mtext><mo>+</mo></msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>v</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>E</mi><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">\sum_{v\in V}\text{deg}^-(v)=\sum_{v\in V}\text{deg}^+(v)=\left| E \right|</annotation></semantics></math>
+directed graph (Theorem 7.1.3)
+
+A graph represented by a list of vertices is called _____.
+an adjacency list
+
+A graph represented by a matrix of vertices is called ______.
+an adjacency matrix
+
+A graph represented by a matrix of vertices × edges is called _____.
+an incidence matrix
+
+Two graphs are _____ if there is a one-to-one correspondence between vertices that preserves the adjacency relationship.
+isomorphic
+
+Invariant properties of isomorphic graphs
+number of vertices<br />
+number of edges<br />
+degree of the vertices
+
+The number of paths between two vertices can be determined using its _____.
+adjacency matrix
+
+The number of paths from vᵢ to vⱼ equals _____.
+the (i,j)ᵗʰ entry of Aʳ
+
+_____ in a graph G is a simple circuit containing every edge of G.
+An Euler circuit
+
+_____ in a graph G is a simple path containing every edge of G.
+An Euler path
+
+A connected multigraph has an Euler circuit IFF each of its vertices _____. (Theorem 7.5.1)
+has an even degree
+
+A connected multigraph has an Euler path but not an Euler circuit IFF it has _____. (Theorem 7.5.2)
+exactly 2 vertices of odd degree
+
+_____ in a graph G is a simple circuit containing every edge and vertex of G.
+A Hamilton circuit
+
+_____ in a graph G is a simple path containing every edge and vertex of G.
+A Hamilton path
+
+If G is a connected simple graph with more than 2 vertices, then G has a Hamilton circuit if _____. (Theorem 7.5.3)
+the degree of each vertex is at least n/2.

@@ -107,12 +107,12 @@ cross-validation
 $$\text{RMSE}(\textbf{X},h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}(h(\textbf{x}^{(i)}) - y^{(i)})^{2}}$$
 Root Mean Square Error (RMSE)
 Euclidian norm
-$$\mathscr{l}_{2}\ \text{norm}$$
+ℓ₂ norm
 
 $$\text{MAE}(\textbf{X},h)=\frac{1}{m}\sum_{i=1}^{m}|h(\textbf{x}^{(i)}-y^{(i)})|$$
 Mean Absolute Error (MAE)
 Manhattan norm
-$$\mathscr{l}_{1}\ \text{norm}$$
+ℓ₁ norm
 
 Python: join paths
 os.path.join()
@@ -120,16 +120,16 @@ os.path.join()
 Python: download file
 urllib.request.urlretrieve()
 
-Pandas: read CSV into DataFrame
-pd.read_csv()
+pandas: read CSV into DataFrame
+pandas.read_csv()
 
-Pandas: list top 5 rows
+pandas: list top 5 rows
 df.head()
 
-Pandas: get quick description of data
+pandas: get quick description of data
 df.info()
 
-Pandas: get summary of numerical data
+pandas: get summary of numerical data
 df.describe()
 
 Jupyter: magic command to enable Matplotlib
@@ -141,28 +141,31 @@ train_set, test_set = train_test_split()
 NumPy: create array with shuffled indexes
 np.random.permutation(len(data))
 
+pandas: segment and sort data values into bins
+pandas.cut
+
 ScikitLearn: create a stratified test set
 StratifiedShuffleSplit
 
-Pandas: create a correlation matrix
-data.corr()
+pandas: create a correlation matrix
+df.corr(numeric_only=True)
 
-Pandas: create scatter plots
+pandas: create scatter plots
 scatter_matrix()
 
-Pandas: remove rows with a missing value
+pandas: remove rows with a missing value
 data.dropna()
 
-Pandas: remove columns
+pandas: remove columns
 data.drop()
 
-Pandas: fill in missing data
+pandas: fill in missing data
 data[column].fillna(median, inplace=True)
 
 ScikitLearn: fill in missing values
 Imputer
 
-Pandas: map categorical data to integers
+pandas: map categorical data to integers
 col.factorize()
 
 ScikitLearn: one-hot encode categorical data
@@ -170,6 +173,9 @@ OneHotEncoder
 
 ScikitLearn: min-max scale numerical data
 MinMaxScaler
+
+pandas: perform a log operation on a column
+col.apply(np.log)
 
 ScikitLearn: standardize numerical data
 StandardScaler
@@ -188,3 +194,317 @@ RandomSearchCV
 
 ScikitLearn: run trained pipeline
 pipeline.transform()
+
+predict values
+regression
+
+predict classes
+classification
+
+ScikitLearn: stochastic gradient descent (SGD)
+SGDClassifier
+
+ScikitLearn: confusion matrix
+confusion_matrix()
+
+$$\frac{TP}{TP+FP}$$
+precision
+
+$$\frac{TP}{TP+FN}$$
+recall
+TPR
+sensitivity
+
+$$\frac{2}{\frac{1}{\text{precision}} + \frac{1}{\text{recall}}}$$
+F₁
+
+$$\frac{\text{precision}\times \text{recall}}{\text{precision }+ \text{recall}}$$
+F₁
+
+$$\frac{TP}{TP+\frac{FN+FP}{2}}$$
+F₁
+
+ScikitLearn: cross-validation score
+cross_val_score()
+
+ScikitLearn: cross-validate on test set
+cross_val_predict()
+
+ScikitLearn: get data to plot precision & recall, also precision vs. recall
+precision_recall_curve()
+
+$$\frac{TN}{TN+FP}$$
+TNR
+specificity
+
+1 - TNR
+FPR
+
+The receiver operating characteric (ROC) curve plots
+sensitivity vs. 1 - specificity
+
+ScikitLearn: get data to plot receiver operating characteric (ROC) curve
+roc_curve()
+
+NumPy: create array of random integers
+np.random.randint()
+
+$$\hat{y}=\theta_0+\theta_1x_1+\theta_2x_2+\cdots +\theta_nx_n$$
+Linear Regression model prediction
+
+$$\hat{y}=h_{\theta}(\textbf{x})=\theta^T\cdot \textbf{x}$$
+vectorized Linear Regression model prediction
+
+$$MSE(\textbf{X}, h_{\theta})=\frac{1}{m}\sum_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}  \right)^2$$
+MSE cost function for a Linear Regression model
+
+$$\hat{\theta}=(\textbf{X}^T\cdot \textbf{X})^{-1}\cdot \textbf{X}^T\cdot \textbf{y}$$
+normal equation
+
+$$\frac{\delta}{\delta\theta_j}=\frac{2}{m}\sum_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}\right)x_j^{(i)}$$
+partial derivatives of the cost function
+
+$$\nabla _{\theta}MSE(\theta)=\begin{pmatrix} \frac{\delta}{\delta\theta_0}MSE(\theta) \\\frac{\delta}{\delta\theta_1}MSE(\theta)  \\\vdots \\\frac{\delta}{\delta\theta_n}MSE(\theta)\end{pmatrix}=\frac{2}{m}\textbf{X}^T\cdot (\textbf{X}\cdot \theta-\textbf{y})$$
+gradient vector of the cost function
+
+$$\theta^{(\text{next step})}=\theta - \eta\nabla _{\theta}MSE(\theta)$$
+gradient descent step
+
+ScikitLearn: Stochastic GD
+SGDRegressor
+
+ScikitLearn: Mini-batch GD
+SGDRegressor
+
+ScikitLearn: polynomial regression
+PolynomialFeatures
+
+Generalization error due to wrong assumptions is called _____.
+bias
+
+A model's excessive sensitivity to small variations in training data is called _____.
+variance
+
+Noisiness in the data causes _____.
+irreducible error
+
+$$J(\theta)=\text{MSE}(\theta)+\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2$$
+ridge regression cost function
+
+$$\hat\theta=\left(\textbf{X}^T\cdot \textbf{X}+\alpha \textbf{A}\right)^{-1}\cdot \textbf{X}^T\cdot \textbf{y}$$
+ridge regression closed-form solution
+
+ScikitLearn: ridge regression
+Ridge
+SGDRegressor(penalty="l2")
+
+LASSO regression
+Least Absolute Shrinkage and Selection Operator regression
+
+$$J(\theta)=\text{MSE}(\theta)+\alpha\sum_{i=1}^{n}\left|\theta_i\right|$$
+LASSO regression cost function
+
+ScikitLearn: LASSO regression
+Lasso
+SGDRegressor(penalty="l1")
+
+$$J(\theta)=\text{MSE}(\theta)+r\alpha\sum_{i=1}^{n}\left|\theta_i\right|+\frac{1-r}{2}\alpha\sum_{i=1}^{n}\theta_i^2$$
+Elastic Net cost function
+
+ScikitLearn: Elastic Net
+ElasticNet
+
+$$\hat{p}=h_\theta(\textbf{x})=\sigma(\theta^T\cdot \textbf{x})$$
+Logistic Regression model estimated probability
+
+$$\sigma(t)=\frac{1}{1+\text{exp}(-t)}$$
+logistic function
+
+$$J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\hat log\left(p^{(i)}\right)+\left(1-y^{(i)}\right)log\left( 1-\hat p^{(i)} \right)\right]$$
+Logistic Regression cost function (log loss)
+
+$$\frac{\delta}{\delta\theta_j}J(\theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\sigma\left(\theta^T\cdot \textbf{x}^{(i)}\right)-y^{(i)}\right)x_j^{(i)}$$
+logistic cost function partial derivatives
+
+ScikitLearn: logistic regression
+LogisticRegression
+
+$$s_k(\textbf{x})=\left(\theta^{(k)} \right)^T\cdot \textbf{x}$$
+SoftMax score for class k
+
+$$\hat{p}_k=\sigma(\textbf{s}(\textbf{x}))_k=\frac{exp(s_k(\textbf{x}))}{\sum_{j=1}^{K}exp(s_j(\textbf{x}))}$$
+SoftMax function
+
+$$J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}y_k^{(i)}log\left(\hat{p}_k^{(i)}\right)$$
+cross entropy cost function
+
+$$\nabla_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{p}_k^{(i)}-y_k^{(i)}\right)\textbf{x}^{(i)}$$
+cross entropy gradient vector for class k
+
+ScikitLearn: linear support vector machine
+LinearSVC
+LinearSVR
+
+ScikitLearn: nonlinear support vector machine
+pipeline w. PolynomialFeatures & LinearSVC
+SVC
+SVR
+
+$$ \phi (\mathbf{x}, \textit{l})=exp\left(-\gamma \left\| \mathbf{x}-\textit{l} \right\|^2\right)$$
+Gaussian radial basis function (RBF)
+
+$$max(0, 1-t)$$
+hinge loss function
+
+ScikitLearn: decision tree
+DecisionTreeClassifier
+DecisionTreeRegressor
+
+$$G_i=1-\sum_{k=1}^{n}p_{i,k}^2$$
+Gini impurity
+
+ScikitLearn: decision tree algorithm
+Classification and Regression Tree (CART)
+
+$$J(k,t_k)=\frac{m_{\text{left}}}{m}G_{\text{left}}+\frac{m_{\text{right}}}{m}G_{\text{right}}$$
+CART cost function for classification
+
+$$H_i=-\sum_{k=1}^{n}p_{i,k}\text{log}(p_{i,k})$$
+entropy
+
+$$J(k,t_k)=\frac{m_{\text{left}}}{m}\text{MSE}_{\text{left}}+\frac{m_{\text{right}}}{m}\text{MSE}_{\text{right}}$$
+CART cost function for regression
+
+ScikitLearn: voting classifier
+VotingClassifier
+
+sampling is performed with replacement
+bagging
+
+sampling is performed without replacement
+pasting
+
+ScikitLearn: bagging classifier
+BaggingClassifier
+
+ScikitLearn: pasting classifier
+BaggingClassifier(bootstrap=False)
+
+ScikitLearn: use the out-of-bag set for validation
+BaggingClassifier(oob_score=True)
+
+ScikitLearn: bagging a decision tree
+RandomForestClassifier
+BaggingClassifier w/ a DecisionTreeClassifier
+
+ScikitLearn: make forests of extremely random trees
+ExtraTreeClassifier
+ExtraTreeRegressor
+
+creating a strong learner from weak learners
+boosting
+
+Sequentially add predictors to an ensemble, each one correcting its predecessor by weighting the misclassified instances.
+AdaBoost
+
+ScikitLearn: AdaBoost classifier
+AdaBoostClassifier
+
+Sequentially add predictors to an ensemble, trying to fit the new predictor to residual errors of the previous predictor.
+Gradient Boost
+
+ScikitLearn: Gradient Boost regressor
+GradiengBoostingRegressor
+
+training a model to aggregate predictions of predictors in an ensemble
+stacking
+
+ScikitLearn: stacking
+not supported
+
+ScikitLearn: PCA dimensionality reduction
+PCA
+IncrementalPCA
+KernelPCA
+
+ScikitLearn: randomized PCA
+PCA(svd_solver="randomized")
+
+ScikitLearn: LLE dimensionality reduction
+LocallyLinearEmbedding
+
+TensorFlow: variable
+tf.Variable(3, name="x")
+
+TensorFlow: variable initialization node
+init = tf.global_variable_initializer()
+
+TensorFlow: initialize variables
+sess.run(init)
+
+TensorFlow: session
+with tf.Session() as sess:
+
+TensorFlow: interactive
+sess = tf.InteractiveSession()
+
+TensorFlow: default graph
+tf.get_default_graph()
+
+TensorFlow: new graph
+graph = tf.graph()
+with graph.as_default:
+
+TensorFlow: constant
+X = tf.constant(...)
+
+TensorFlow: transpose matrix
+XT = tf.transpose(X)
+
+TensorFlow: matrix multiply
+theta = tf.matmul(...)
+
+TensorFlow: evaluate
+theta_value = theta.eval()
+
+TensorFlow: update a variable
+training_op = tf.assign(...)
+
+TensorFlow: autodiff
+gradients = tf.gradients(mse, [theta])[0]
+
+TensorFlow: gradient descent
+optimizer = tf.train.GradientDescentOptimizer(...)
+
+TensorFlow: momentum
+optimizer = tf.train.MomentumOptimizer(...)
+
+TensorFlow: specify data to be passed in
+A = tf.placeholder(tf.float32, shape=(None, 3))
+
+TensorFlow: pass in data
+B_val = B.eval(feed_dict={A: [[1, 2, 3]]})
+
+TensorFlow: create saver node
+saver = tf.train.Saver()
+
+TensorFlow: save model
+save_path = saver.save(sess, "/tmp/my_model.ckpt")
+
+TensorFlow: restore model
+saver.restore(sess, "/tmp/my_model.ckpt")
+
+TensorFlow: restore graph
+saver = tf.train.import_meta_graph(sess, "/tmp/my_model.ckpt.meta")
+
+TensorFlow: name scope
+with tf.name_scope("loss") as scope:
+
+TensorFlow: variable scope
+with tf.variable_scope("relu", reuse=True):
+
+Machine Learning is great for
+- complex problems for which we have no algorithmic solution
+- to replace long lists of hand-tuned rules
+- to build systems that adapt to fluctuating environments
+- data mining and visualization

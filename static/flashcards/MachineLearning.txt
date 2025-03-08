@@ -107,12 +107,12 @@ cross-validation
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">RMSE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐗</mtext><mo>,</mo><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msqrt><mrow><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>h</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\text{RMSE}(\textbf{X},h)=\sqrt{\frac{1}{m}\sum_{i=1}^{m}(h(\textbf{x}^{(i)}) - y^{(i)})^{2}}</annotation></semantics></math>
 Root Mean Square Error (RMSE)<br />
 Euclidian norm<br />
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝓁</mi><mn>2</mn></msub><mspace width="0.222em"></mspace><mtext mathvariant="normal">norm</mtext></mrow><annotation encoding="application/x-tex">\mathscr{l}_{2}\ \text{norm}</annotation></semantics></math>
+ℓ₂ norm
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">MAE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐗</mtext><mo>,</mo><mi>h</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">|</mo><mi>h</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">\text{MAE}(\textbf{X},h)=\frac{1}{m}\sum_{i=1}^{m}|h(\textbf{x}^{(i)}-y^{(i)})|</annotation></semantics></math>
 Mean Absolute Error (MAE)<br />
 Manhattan norm<br />
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝓁</mi><mn>1</mn></msub><mspace width="0.222em"></mspace><mtext mathvariant="normal">norm</mtext></mrow><annotation encoding="application/x-tex">\mathscr{l}_{1}\ \text{norm}</annotation></semantics></math>
+ℓ₁ norm
 
 Python: join paths
 os.path.join()
@@ -120,16 +120,16 @@ os.path.join()
 Python: download file
 urllib.request.urlretrieve()
 
-Pandas: read CSV into DataFrame
-pd.read_csv()
+pandas: read CSV into DataFrame
+pandas.read_csv()
 
-Pandas: list top 5 rows
+pandas: list top 5 rows
 df.head()
 
-Pandas: get quick description of data
+pandas: get quick description of data
 df.info()
 
-Pandas: get summary of numerical data
+pandas: get summary of numerical data
 df.describe()
 
 Jupyter: magic command to enable Matplotlib
@@ -141,28 +141,31 @@ train_set, test_set = train_test_split()
 NumPy: create array with shuffled indexes
 np.random.permutation(len(data))
 
+pandas: segment and sort data values into bins
+pandas.cut
+
 ScikitLearn: create a stratified test set
 StratifiedShuffleSplit
 
-Pandas: create a correlation matrix
-data.corr()
+pandas: create a correlation matrix
+df.corr(numeric_only=True)
 
-Pandas: create scatter plots
+pandas: create scatter plots
 scatter_matrix()
 
-Pandas: remove rows with a missing value
+pandas: remove rows with a missing value
 data.dropna()
 
-Pandas: remove columns
+pandas: remove columns
 data.drop()
 
-Pandas: fill in missing data
+pandas: fill in missing data
 data[column].fillna(median, inplace=True)
 
 ScikitLearn: fill in missing values
 Imputer
 
-Pandas: map categorical data to integers
+pandas: map categorical data to integers
 col.factorize()
 
 ScikitLearn: one-hot encode categorical data
@@ -170,6 +173,9 @@ OneHotEncoder
 
 ScikitLearn: min-max scale numerical data
 MinMaxScaler
+
+pandas: perform a log operation on a column
+col.apply(np.log)
 
 ScikitLearn: standardize numerical data
 StandardScaler
@@ -188,3 +194,317 @@ RandomSearchCV
 
 ScikitLearn: run trained pipeline
 pipeline.transform()
+
+predict values
+regression
+
+predict classes
+classification
+
+ScikitLearn: stochastic gradient descent (SGD)
+SGDClassifier
+
+ScikitLearn: confusion matrix
+confusion_matrix()
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{TP}{TP+FP}</annotation></semantics></math>
+precision
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{TP}{TP+FN}</annotation></semantics></math>
+recall<br />
+TPR<br />
+sensitivity
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>2</mn><mrow><mfrac><mn>1</mn><mtext mathvariant="normal">precision</mtext></mfrac><mo>+</mo><mfrac><mn>1</mn><mtext mathvariant="normal">recall</mtext></mfrac></mrow></mfrac><annotation encoding="application/x-tex">\frac{2}{\frac{1}{\text{precision}} + \frac{1}{\text{recall}}}</annotation></semantics></math>
+F₁
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mtext mathvariant="normal">precision</mtext><mo>×</mo><mtext mathvariant="normal">recall</mtext></mrow><mrow><mrow><mtext mathvariant="normal">precision </mtext><mspace width="0.333em"></mspace></mrow><mo>+</mo><mtext mathvariant="normal">recall</mtext></mrow></mfrac><annotation encoding="application/x-tex">\frac{\text{precision}\times \text{recall}}{\text{precision }+ \text{recall}}</annotation></semantics></math>
+F₁
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mfrac><mrow><mi>F</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow><mn>2</mn></mfrac></mrow></mfrac><annotation encoding="application/x-tex">\frac{TP}{TP+\frac{FN+FP}{2}}</annotation></semantics></math>
+F₁
+
+ScikitLearn: cross-validation score
+cross_val_score()
+
+ScikitLearn: cross-validate on test set
+cross_val_predict()
+
+ScikitLearn: get data to plot precision &amp; recall, also precision vs. recall
+precision_recall_curve()
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>T</mi><mi>N</mi></mrow><mrow><mi>T</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{TN}{TN+FP}</annotation></semantics></math>
+TNR<br />
+specificity
+
+1 - TNR
+FPR
+
+The receiver operating characteric (ROC) curve plots
+sensitivity vs. 1 - specificity
+
+ScikitLearn: get data to plot receiver operating characteric (ROC) curve
+roc_curve()
+
+NumPy: create array of random integers
+np.random.randint()
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo>=</mo><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><msub><mi>θ</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>θ</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>θ</mi><mi>n</mi></msub><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\hat{y}=\theta_0+\theta_1x_1+\theta_2x_2+\cdots +\theta_nx_n</annotation></semantics></math>
+Linear Regression model prediction
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo>=</mo><msub><mi>h</mi><mi>θ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐱</mtext></mrow><annotation encoding="application/x-tex">\hat{y}=h_{\theta}(\textbf{x})=\theta^T\cdot \textbf{x}</annotation></semantics></math>
+vectorized Linear Regression model prediction
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐗</mtext><mo>,</mo><msub><mi>h</mi><mi>θ</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">MSE(\textbf{X}, h_{\theta})=\frac{1}{m}\sum_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}  \right)^2</annotation></semantics></math>
+MSE cost function for a Linear Regression model
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>θ</mi><mo accent="true">̂</mo></mover><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐗</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐲</mtext></mrow><annotation encoding="application/x-tex">\hat{\theta}=(\textbf{X}^T\cdot \textbf{X})^{-1}\cdot \textbf{X}^T\cdot \textbf{y}</annotation></semantics></math>
+normal equation
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>δ</mi><mrow><mi>δ</mi><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mn>2</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><msubsup><mi>x</mi><mi>j</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\frac{\delta}{\delta\theta_j}=\frac{2}{m}\sum_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}\right)x_j^{(i)}</annotation></semantics></math>
+partial derivatives of the cost function
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>∇</mi><mi>θ</mi></msub><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mfrac><mi>δ</mi><mrow><mi>δ</mi><msub><mi>θ</mi><mn>0</mn></msub></mrow></mfrac><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mfrac><mi>δ</mi><mrow><mi>δ</mi><msub><mi>θ</mi><mn>1</mn></msub></mrow></mfrac><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>⋮</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mfrac><mi>δ</mi><mrow><mi>δ</mi><msub><mi>θ</mi><mi>n</mi></msub></mrow></mfrac><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mi>m</mi></mfrac><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐗</mtext><mo>⋅</mo><mi>θ</mi><mo>−</mo><mtext mathvariant="bold">𝐲</mtext><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\nabla _{\theta}MSE(\theta)=\begin{pmatrix} \frac{\delta}{\delta\theta_0}MSE(\theta) \\\frac{\delta}{\delta\theta_1}MSE(\theta)  \\\vdots \\\frac{\delta}{\delta\theta_n}MSE(\theta)\end{pmatrix}=\frac{2}{m}\textbf{X}^T\cdot (\textbf{X}\cdot \theta-\textbf{y})</annotation></semantics></math>
+gradient vector of the cost function
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>θ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">next step</mtext><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>=</mo><mi>θ</mi><mo>−</mo><mi>η</mi><msub><mi>∇</mi><mi>θ</mi></msub><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\theta^{(\text{next step})}=\theta - \eta\nabla _{\theta}MSE(\theta)</annotation></semantics></math>
+gradient descent step
+
+ScikitLearn: Stochastic GD
+SGDRegressor
+
+ScikitLearn: Mini-batch GD
+SGDRegressor
+
+ScikitLearn: polynomial regression
+PolynomialFeatures
+
+Generalization error due to wrong assumptions is called _____.
+bias
+
+A model's excessive sensitivity to small variations in training data is called _____.
+variance
+
+Noisiness in the data causes _____.
+irreducible error
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mtext mathvariant="normal">MSE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>α</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>θ</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">J(\theta)=\text{MSE}(\theta)+\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2</annotation></semantics></math>
+ridge regression cost function
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>θ</mi><mo accent="true">̂</mo></mover><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐗</mtext><mo>+</mo><mi>α</mi><mtext mathvariant="bold">𝐀</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐲</mtext></mrow><annotation encoding="application/x-tex">\hat\theta=\left(\textbf{X}^T\cdot \textbf{X}+\alpha \textbf{A}\right)^{-1}\cdot \textbf{X}^T\cdot \textbf{y}</annotation></semantics></math>
+ridge regression closed-form solution
+
+ScikitLearn: ridge regression
+Ridge<br />
+SGDRegressor(penalty="l2")
+
+LASSO regression
+Least Absolute Shrinkage and Selection Operator regression
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mtext mathvariant="normal">MSE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>α</mi><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">J(\theta)=\text{MSE}(\theta)+\alpha\sum_{i=1}^{n}\left|\theta_i\right|</annotation></semantics></math>
+LASSO regression cost function
+
+ScikitLearn: LASSO regression
+Lasso<br />
+SGDRegressor(penalty="l1")
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mtext mathvariant="normal">MSE</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>r</mi><mi>α</mi><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>+</mo><mfrac><mrow><mn>1</mn><mo>−</mo><mi>r</mi></mrow><mn>2</mn></mfrac><mi>α</mi><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>θ</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">J(\theta)=\text{MSE}(\theta)+r\alpha\sum_{i=1}^{n}\left|\theta_i\right|+\frac{1-r}{2}\alpha\sum_{i=1}^{n}\theta_i^2</annotation></semantics></math>
+Elastic Net cost function
+
+ScikitLearn: Elastic Net
+ElasticNet
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>p</mi><mo accent="true">̂</mo></mover><mo>=</mo><msub><mi>h</mi><mi>θ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>σ</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\hat{p}=h_\theta(\textbf{x})=\sigma(\theta^T\cdot \textbf{x})</annotation></semantics></math>
+Logistic Regression model estimated probability
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mtext mathvariant="normal">exp</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sigma(t)=\frac{1}{1+\text{exp}(-t)}</annotation></semantics></math>
+logistic function
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">[</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mover><mi>l</mi><mo accent="true">̂</mo></mover><mi>o</mi><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>l</mi><mi>o</mi><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mover><mi>p</mi><mo accent="true">̂</mo></mover><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\hat log\left(p^{(i)}\right)+\left(1-y^{(i)}\right)log\left( 1-\hat p^{(i)} \right)\right]</annotation></semantics></math>
+Logistic Regression cost function (log loss)
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>δ</mi><mrow><mi>δ</mi><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mi>σ</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><msubsup><mi>x</mi><mi>j</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\frac{\delta}{\delta\theta_j}J(\theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\sigma\left(\theta^T\cdot \textbf{x}^{(i)}\right)-y^{(i)}\right)x_j^{(i)}</annotation></semantics></math>
+logistic cost function partial derivatives
+
+ScikitLearn: logistic regression
+LogisticRegression
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>k</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐱</mtext></mrow><annotation encoding="application/x-tex">s_k(\textbf{x})=\left(\theta^{(k)} \right)^T\cdot \textbf{x}</annotation></semantics></math>
+SoftMax score for class k
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>k</mi></msub><mo>=</mo><mi>σ</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐬</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mi>e</mi><mi>x</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>s</mi><mi>k</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>K</mi></munderover><mi>e</mi><mi>x</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>s</mi><mi>j</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\hat{p}_k=\sigma(\textbf{s}(\textbf{x}))_k=\frac{exp(s_k(\textbf{x}))}{\sum_{j=1}^{K}exp(s_j(\textbf{x}))}</annotation></semantics></math>
+SoftMax function
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>Θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>K</mi></munderover><msubsup><mi>y</mi><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup><mi>l</mi><mi>o</mi><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}y_k^{(i)}log\left(\hat{p}_k^{(i)}\right)</annotation></semantics></math>
+cross entropy cost function
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>∇</mi><msup><mi>θ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup></msub><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>Θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup><mo>−</mo><msubsup><mi>y</mi><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">\nabla_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{p}_k^{(i)}-y_k^{(i)}\right)\textbf{x}^{(i)}</annotation></semantics></math>
+cross entropy gradient vector for class k
+
+ScikitLearn: linear support vector machine
+LinearSVC<br />
+LinearSVR
+
+ScikitLearn: nonlinear support vector machine
+pipeline w. PolynomialFeatures &amp; LinearSVC<br />
+SVC<br />
+SVR
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>𝐱</mi><mo>,</mo><mtext mathvariant="italic">𝑙</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>e</mi><mi>x</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mi>γ</mi><msup><mrow><mo stretchy="true" form="prefix">∥</mo><mi>𝐱</mi><mo>−</mo><mtext mathvariant="italic">𝑙</mtext><mo stretchy="true" form="postfix">∥</mo></mrow><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex"> \phi (\mathbf{x}, \textit{l})=exp\left(-\gamma \left\| \mathbf{x}-\textit{l} \right\|^2\right)</annotation></semantics></math>
+Gaussian radial basis function (RBF)
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">max(0, 1-t)</annotation></semantics></math>
+hinge loss function
+
+ScikitLearn: decision tree
+DecisionTreeClassifier<br />
+DecisionTreeRegressor
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>=</mo><mn>1</mn><mo>−</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">G_i=1-\sum_{k=1}^{n}p_{i,k}^2</annotation></semantics></math>
+Gini impurity
+
+ScikitLearn: decision tree algorithm
+Classification and Regression Tree (CART)
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo>,</mo><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><msub><mi>m</mi><mtext mathvariant="normal">left</mtext></msub><mi>m</mi></mfrac><msub><mi>G</mi><mtext mathvariant="normal">left</mtext></msub><mo>+</mo><mfrac><msub><mi>m</mi><mtext mathvariant="normal">right</mtext></msub><mi>m</mi></mfrac><msub><mi>G</mi><mtext mathvariant="normal">right</mtext></msub></mrow><annotation encoding="application/x-tex">J(k,t_k)=\frac{m_{\text{left}}}{m}G_{\text{left}}+\frac{m_{\text{right}}}{m}G_{\text{right}}</annotation></semantics></math>
+CART cost function for classification
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>i</mi></msub><mo>=</mo><mi>−</mi><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></msub><mtext mathvariant="normal">log</mtext><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">H_i=-\sum_{k=1}^{n}p_{i,k}\text{log}(p_{i,k})</annotation></semantics></math>
+entropy
+
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo>,</mo><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><msub><mi>m</mi><mtext mathvariant="normal">left</mtext></msub><mi>m</mi></mfrac><msub><mtext mathvariant="normal">MSE</mtext><mtext mathvariant="normal">left</mtext></msub><mo>+</mo><mfrac><msub><mi>m</mi><mtext mathvariant="normal">right</mtext></msub><mi>m</mi></mfrac><msub><mtext mathvariant="normal">MSE</mtext><mtext mathvariant="normal">right</mtext></msub></mrow><annotation encoding="application/x-tex">J(k,t_k)=\frac{m_{\text{left}}}{m}\text{MSE}_{\text{left}}+\frac{m_{\text{right}}}{m}\text{MSE}_{\text{right}}</annotation></semantics></math>
+CART cost function for regression
+
+ScikitLearn: voting classifier
+VotingClassifier
+
+sampling is performed with replacement
+bagging
+
+sampling is performed without replacement
+pasting
+
+ScikitLearn: bagging classifier
+BaggingClassifier
+
+ScikitLearn: pasting classifier
+BaggingClassifier(bootstrap=False)
+
+ScikitLearn: use the out-of-bag set for validation
+BaggingClassifier(oob_score=True)
+
+ScikitLearn: bagging a decision tree
+RandomForestClassifier<br />
+BaggingClassifier w/ a DecisionTreeClassifier
+
+ScikitLearn: make forests of extremely random trees
+ExtraTreeClassifier<br />
+ExtraTreeRegressor
+
+creating a strong learner from weak learners
+boosting
+
+Sequentially add predictors to an ensemble, each one correcting its predecessor by weighting the misclassified instances.
+AdaBoost
+
+ScikitLearn: AdaBoost classifier
+AdaBoostClassifier
+
+Sequentially add predictors to an ensemble, trying to fit the new predictor to residual errors of the previous predictor.
+Gradient Boost
+
+ScikitLearn: Gradient Boost regressor
+GradiengBoostingRegressor
+
+training a model to aggregate predictions of predictors in an ensemble
+stacking
+
+ScikitLearn: stacking
+not supported
+
+ScikitLearn: PCA dimensionality reduction
+PCA<br />
+IncrementalPCA<br />
+KernelPCA
+
+ScikitLearn: randomized PCA
+PCA(svd_solver="randomized")
+
+ScikitLearn: LLE dimensionality reduction
+LocallyLinearEmbedding
+
+TensorFlow: variable
+tf.Variable(3, name="x")
+
+TensorFlow: variable initialization node
+init = tf.global_variable_initializer()
+
+TensorFlow: initialize variables
+sess.run(init)
+
+TensorFlow: session
+with tf.Session() as sess:
+
+TensorFlow: interactive
+sess = tf.InteractiveSession()
+
+TensorFlow: default graph
+tf.get_default_graph()
+
+TensorFlow: new graph
+graph = tf.graph()<br />
+with graph.as_default:
+
+TensorFlow: constant
+X = tf.constant(...)
+
+TensorFlow: transpose matrix
+XT = tf.transpose(X)
+
+TensorFlow: matrix multiply
+theta = tf.matmul(...)
+
+TensorFlow: evaluate
+theta_value = theta.eval()
+
+TensorFlow: update a variable
+training_op = tf.assign(...)
+
+TensorFlow: autodiff
+gradients = tf.gradients(mse, [theta])[0]
+
+TensorFlow: gradient descent
+optimizer = tf.train.GradientDescentOptimizer(...)
+
+TensorFlow: momentum
+optimizer = tf.train.MomentumOptimizer(...)
+
+TensorFlow: specify data to be passed in
+A = tf.placeholder(tf.float32, shape=(None, 3))
+
+TensorFlow: pass in data
+B_val = B.eval(feed_dict={A: [[1, 2, 3]]})
+
+TensorFlow: create saver node
+saver = tf.train.Saver()
+
+TensorFlow: save model
+save_path = saver.save(sess, "/tmp/my_model.ckpt")
+
+TensorFlow: restore model
+saver.restore(sess, "/tmp/my_model.ckpt")
+
+TensorFlow: restore graph
+saver = tf.train.import_meta_graph(sess, "/tmp/my_model.ckpt.meta")
+
+TensorFlow: name scope
+with tf.name_scope("loss") as scope:
+
+TensorFlow: variable scope
+with tf.variable_scope("relu", reuse=True):
+
+Machine Learning is great for
+- complex problems for which we have no algorithmic solution<br />
+- to replace long lists of hand-tuned rules<br />
+- to build systems that adapt to fluctuating environments<br />
+- data mining and visualization
