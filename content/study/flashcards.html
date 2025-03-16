@@ -46,11 +46,12 @@ date: 2020-01-02
             </div>
         </div>
     </div>
-
+      
     <div id="countDiv" style="display:none">
         <div class="input-group mb-3 col-sm-offset-2 col-xs-10">
             <input type="number" id="count" class="form-control" placeholder="Count" aria-label="Count">
             <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="c=document.getElementById('count');c.value=5;c.dispatchEvent(new Event('change'))">5</button>
                 <button class="btn btn-outline-secondary" type="button" onclick="window.start()">Start</button>
             </div>
         </div>

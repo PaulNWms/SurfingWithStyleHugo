@@ -725,3 +725,21 @@ A Hamilton path
 
 If G is a connected simple graph with more than 2 vertices, then G has a Hamilton circuit if _____. (Theorem 7.5.3)
 the degree of each vertex is at least n/2.
+
+Order of Dijkstra's Algorithm
+O(n²) (comparisons and additions)
+
+r = e - v + 2 in a planar graph
+Euler's Theorem (Theorem 7.7.1)
+
+e ≤ 3v - 6 in a planar graph
+Euler's Theorem, Corollary 1
+
+e ≤ 2v - 4 in a planar graph with no circuits of length 3
+Euler's Theorem, Corollary 2
+
+A graph is nonplanar IFF it contains a subgraph homeomorphic to
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mn>3</mn><mo>,</mo><mn>3</mn></mrow></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_{3,3}\text{ or }K_5</annotation></semantics></math>
+
+If an m-ary tree of height h has l leaves, then h ≥ _____.
+h ≥ ⌈logₘl⌉
