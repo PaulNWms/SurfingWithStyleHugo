@@ -147,19 +147,45 @@ function drawCard() {
         current = cards.pop() as Card
     }
     else if (wrongPile.length) {
-        alert("" + ui.remaining + " cards remaining.")
+        const dialog = document.createElement('dialog');
+        dialog.textContent = `${ui.remaining} cards remaining.`;
+        document.body.appendChild(dialog);
+        dialog.showModal();
+        setTimeout(() => {
+            dialog.close();
+            dialog.remove();
+        }, 2000);
         cards = shuffleCards(wrongPile)
         wrongPile = []
         current = cards.pop() as Card
     }
     else {
-        alert("Congratulations!")
+        const dialog = document.createElement('dialog');
+        dialog.innerHTML = `
+            <p>Congratulations!</p>
+            <div style="display: flex; justify-content: flex-end; gap: 8px;">
+                <button onclick="continueWithNextCards(5)">Next 5</button>
+                <button onclick="this.closest('dialog').close(); this.closest('dialog').remove();">OK</button>
+            </div>
+        `;
+        document.body.appendChild(dialog);
+        dialog.showModal();
         selectDeckDiv.style.display = "block"
         fromToDiv.style.display = "none"
         countDiv.style.display = "none"
         mainDiv.style.display = "none"
     }
     showQuestion(current, false)
+}
+
+function continueWithNextCards(count: number) {
+    const dialog = document.querySelector('dialog');
+    if (dialog) {
+        dialog.close();
+        dialog.remove();
+    }
+    partialDeck = partialDeck.slice(ui.total)
+    start()
 }
 
 function flipCard() {
@@ -252,4 +278,5 @@ let wrongPile: Card[] = [];
     w.flipCard = flipCard;
     w.setRight = setRight;
     w.setWrong = setWrong;
+    w.continueWithNextCards = continueWithNextCards;
 })();
