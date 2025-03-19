@@ -124,6 +124,7 @@ function selectDeck() {
 
 function selectRange() {
     partialDeck = fullDeck.slice(ui.from - 1, ui.to)
+    partialDeck = shuffleCards(partialDeck)
     selectDeckDiv.style.display = "block"
     fromToDiv.style.display = "block"
     countDiv.style.display = "block"
@@ -132,8 +133,8 @@ function selectRange() {
 }
 
 function start() {
-    cards = shuffleCards(partialDeck)
-    cards = cards.slice(0, ui.count)
+    cards = partialDeck.slice(0, ui.count)
+    cards = shuffleCards(cards)
     selectDeckDiv.style.display = "none"
     fromToDiv.style.display = "none"
     countDiv.style.display = "none"
@@ -148,13 +149,14 @@ function drawCard() {
     }
     else if (wrongPile.length) {
         const dialog = document.createElement('dialog');
-        dialog.textContent = `${ui.remaining} cards remaining.`;
+        dialog.innerHTML = `
+            <p>${ui.remaining} cards remaining.</p>
+            <div style="display: flex; justify-content: flex-end; gap: 8px;">
+                <button onclick="this.closest('dialog').close(); this.closest('dialog').remove();">OK</button>
+            </div>
+        `;
         document.body.appendChild(dialog);
         dialog.showModal();
-        setTimeout(() => {
-            dialog.close();
-            dialog.remove();
-        }, 2000);
         cards = shuffleCards(wrongPile)
         wrongPile = []
         current = cards.pop() as Card
