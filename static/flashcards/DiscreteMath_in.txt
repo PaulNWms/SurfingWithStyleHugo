@@ -768,3 +768,12 @@ mᵏ
 
 If an m-ary tree of height h has l leaves, then h ≥ _____.  (Theorem 8.1.5 Corollary 1)
 h ≥ ⌈logₘl⌉
+
+A sorting algorithm based on binary comparisons has at least _____ comparisons.  (Theorem 8.4.1)
+⌈log n!⌉
+
+A sorting algorithm is as efficient as possible if it has _____ complexity.
+O(n log n)
+
+The number of comparisons needed to merge sort a list with n elements is _____.  (Theorem 8.4.2)
+O(n log n)
