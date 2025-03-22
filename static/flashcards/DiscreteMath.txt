@@ -656,10 +656,10 @@ partition
 A relation R on a set S is called a _____ if it is reflexive, antisymmetric, and transitive.
 partial ordering
 
-The elements a nd b of a poset are called _____ if either a ⪯ b or b ⪯ a.
+The elements a and b of a poset are called _____ if either a ⪯ b or b ⪯ a.
 comparable
 
-When a and b are elements or R such that neither a ⪯ b nor b ⪯ a, a and b are called _____.
+When a and b are elements of R such that neither a ⪯ b nor b ⪯ a, a and b are called _____.
 incomparable
 
 If (S,⪯) is a poset and every two elements of S are comparable, S is called ______.
@@ -741,5 +741,32 @@ Euler's Theorem, Corollary 2
 A graph is nonplanar IFF it contains a subgraph homeomorphic to
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mrow><mn>3</mn><mo>,</mo><mn>3</mn></mrow></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_{3,3}\text{ or }K_5</annotation></semantics></math>
 
-If an m-ary tree of height h has l leaves, then h ≥ _____.
+An undirected graph is a tree if there is _____. (Theorem 8.1.1)
+a unique simple path between any 2 of its vertices
+
+A tree with n vertices has _____ edges. (Theorem 8.1.2)
+n - 1
+
+A full m-ary tree with n vertices has _____ internal vertices. (Theorem 8.1.4)
+i = (n - 1)/m
+
+A full m-ary tree with n vertices has _____ leaves. (Theorem 8.1.4)
+l = [(m - 1)n + 1]/m
+
+A full m-ary tree with i internal vertices has _____ vertices. (Theorem 8.1.3 &amp; 4)
+n = mi + 1
+
+A full m-ary tree with i internal vertices has _____ leaves. (Theorem 8.1.4)
+l = (m - 1)i + 1
+
+A full m-ary tree with l leaves has _____ vertices. (Theorem 8.1.4)
+n = (ml - 1)/(m - 1)
+
+A full m-ary tree with l leaves has _____ internal vertices. (Theorem 8.1.4)
+i = (l - 1)/(m - 1)
+
+There are at most _____ leaves in an m-ary tree of height h. (Theorem 8.1.5)
+mᵏ
+
+If an m-ary tree of height h has l leaves, then h ≥ _____. (Theorem 8.1.5 Corollary 1)
 h ≥ ⌈logₘl⌉
