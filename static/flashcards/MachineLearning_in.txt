@@ -508,3 +508,22 @@ Machine Learning is great for
 - to replace long lists of hand-tuned rules
 - to build systems that adapt to fluctuating environments
 - data mining and visualization
+
+The most common step function used in Perceptrons is the _____.
+Heaviside step function
+
+heaviside(z)
+0 if z < 0
+1 if z ≥ 0
+
+sgn(0)
+-1 if z < 0
+ 0 if z = 0
++1 if z > 0
+
+Cells that fire together, wire together.
+Hebb's rule
+
+$$w_{i,j}^{\text{(next step)}}=w_{i,j}+\eta(y_j-\hat y_j)x_i$$
+Perceptron learning rule
+
