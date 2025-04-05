@@ -1,7 +1,7 @@
 ---
 title: Python Objects
 description: 
-date: 2023-12-17
+date: 2023-12-17T23:49
 keywords: 
 draft: false
 tags:

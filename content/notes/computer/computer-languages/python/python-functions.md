@@ -1,7 +1,7 @@
 ---
 title: Python Functions
 description: 
-date: 2023-12-19
+date: 2023-12-19T21:33
 keywords: 
 draft: false
 tags:

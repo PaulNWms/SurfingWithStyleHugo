@@ -1,7 +1,7 @@
 ---
 title: PowerShell COM Client
 description: 
-date: 2023-11-04
+date: 2023-11-04T15:38
 keywords: 
 draft: false
 tags:

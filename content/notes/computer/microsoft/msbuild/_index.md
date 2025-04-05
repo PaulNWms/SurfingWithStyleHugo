@@ -27,11 +27,11 @@ Minimal project template:
     <Compile Include="helloworld.cs" />
   </ItemGroup>  
   <Target Name="Build">  
-    <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
-    <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />
+
+
   </Target>  
   <Target Name="Clean">  
-    <Delete Files="$(OutputPath)$(AssemblyName).exe" />
+
   </Target>  
   <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
 </Project>  

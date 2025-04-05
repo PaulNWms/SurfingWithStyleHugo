@@ -116,6 +116,19 @@ class Zettel {
     [string] ToString() {
         return $this.Name, $this.get_ChildrenCount()
     }
+
+    static [string[]] ConvertMathPage($lines) {
+        $mathPattern = '(\$\$.*?\$\$)|(\$.*\$)'
+        for ($i = 0; $i -lt $lines.Count; $i++) {
+            $regexMatches = [Regex]::Matches($lines[$i], $mathPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
+            if ($regexMatches.Count -ne 0) {
+                $lines[$i] | pandoc -f html+tex_math_dollars -t html --mathml --columns=300 -o junk.txt
+                $output = Get-Content .\junk.txt
+                $lines[$i] = [System.Text.Encoding]::UTF8.GetString([System.Text.Encoding]::Default.GetBytes($output))
+            }
+        }
+        return $lines
+    }
 }
 
 # Delete temp and target folders
@@ -224,9 +237,9 @@ $content | Out-File -Force -FilePath "$PSScriptRoot\content\$targetDir\_index.md
 # Rewrite links to standard markdown format and new path
 $imagePattern = '!\[\[(.*?)]]'
 $linkPattern = '\[\[(.*?)]]'
-$mathJaxPattern = '(\$\$.*?\$\$)|(\$.*\$)'
 foreach ($page in $pages.Values) {
     $lines = Get-Content $page.FileName
+    $lines = [Zettel]::ConvertMathPage($lines)
     for ($i = 0; $i -lt $lines.Count; $i++) {
         # Use standard markdown image tags
         $regexMatches = [Regex]::Matches($lines[$i], $imagePattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
@@ -244,14 +257,6 @@ foreach ($page in $pages.Values) {
             $target = [Zettel]::TransformLinkToFilename($link)
             $targetPage = $pages[$target]
             $lines[$i] = $lines[$i].Replace($match.Groups[0], "[$link](/$targetUrlBase/$($targetPage.TargetPath))")
-        }
-
-        # Escape underscores in MathJax
-        $regexMatches = [Regex]::Matches($lines[$i], $mathJaxPattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
-        foreach ($match in $regexMatches) {
-            $eqn = $match.Groups[0].Value
-            $eqn = $eqn -replace '_', '\_'
-            $lines[$i] = $lines[$i].Replace($match.Groups[0].Value, $eqn)
         }
     }
 

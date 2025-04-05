@@ -1,7 +1,7 @@
 ---
 title: Python Lists
 description: 
-date: 2023-12-18
+date: 2023-12-18T20:44
 keywords: 
 draft: false
 tags:

@@ -84,8 +84,8 @@ Measures of Spread
 3. Standard Deviation
 4. Variance
 
-$$\sigma^2 = \frac{1}{n} \sum\_{i=1}^n{(x\_i-\bar{x})^2} \quad or \quad \sigma^2 = \frac{1}{n-1} \sum\_{i=1}^n{(x\_i-\bar{x})^2}$$
-$$\sigma = \sqrt{\sigma^2} = \sqrt{\frac{1}{n} \sum\_{i=1}^n{(x\_i-\bar{x})^2}} \quad or \quad \sigma = \sqrt{\frac{1}{n-1} \sum\_{i=1}^n{(x\_i-\bar{x})^2}}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mspace width="1.0em"></mspace><mi>o</mi><mi>r</mi><mspace width="1.0em"></mspace><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sigma^2 = \frac{1}{n} \sum_{i=1}^n{(x_i-\bar{x})^2} \quad or \quad \sigma^2 = \frac{1}{n-1} \sum_{i=1}^n{(x_i-\bar{x})^2}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><msup><mi>σ</mi><mn>2</mn></msup></msqrt><mo>=</mo><msqrt><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow></msqrt><mspace width="1.0em"></mspace><mi>o</mi><mi>r</mi><mspace width="1.0em"></mspace><mi>σ</mi><mo>=</mo><msqrt><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sigma^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n{(x_i-\bar{x})^2}} \quad or \quad \sigma = \sqrt{\frac{1}{n-1} \sum_{i=1}^n{(x_i-\bar{x})^2}}</annotation></semantics></math>
 
 Calculating the 5 Number Summary
 1. Minimum: The smallest number in the dataset.
@@ -111,26 +111,26 @@ Beware of [Simpson's Paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)
 Probability of opposite event: 1 - P
 Probability of composite event: P * P * P ... * P
 
-$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mi>!</mi></mrow><mrow><mi>k</mi><mi>!</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\binom{n}{k} = \frac{n!}{k!(n-k)!}</annotation></semantics></math>
 
 Binomial outcomes are events that have 2 outcomes.  The outcome probabilities follow a binomial distribution:
 
-$$\frac{n!}{k!(n-k)!} \times p^k(1-p)^{(n-k)}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>n</mi><mi>!</mi></mrow><mrow><mi>k</mi><mi>!</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>!</mi></mrow></mfrac><mo>×</mo><msup><mi>p</mi><mi>k</mi></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">\frac{n!}{k!(n-k)!} \times p^k(1-p)^{(n-k)}</annotation></semantics></math>
 
 Conditional Probability:
 
-$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(A|B) = \frac{P(A \cap B)}{P(B)}</annotation></semantics></math>
 
 Sensitivity: probability a test is positive if the condition is true (true positive)
 Specitivity: probability a test is negative if the condition is false (true positive)
 
 Bayes' Rule:
 
-$$P(A|B) = \frac{P(B|A)\cdot P(A)}{P(B)}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(A|B) = \frac{P(B|A)\cdot P(A)}{P(B)}</annotation></semantics></math>
 
 Normal Distribution:
 
-$$f(x\mid \mu ,\sigma ^{2})={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>∣</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mi>π</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow></msqrt></mfrac><msup><mi>e</mi><mrow><mi>−</mi><mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">f(x\mid \mu ,\sigma ^{2})={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}</annotation></semantics></math>
 
 A sampling distribution is the distribution of a statistic.
 
@@ -275,7 +275,7 @@ Linear regression is notated as: ŷ = b₀ + b₁x₁
 
 The least squares algorithm finds the line that minimizes:
 
-$$\sum\limits\_{i=1}^n(y\_i - \hat{y}\_i)^2$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><msub><mover><mi>y</mi><mo accent="true">̂</mo></mover><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sum\limits_{i=1}^n(y_i - \hat{y}_i)^2</annotation></semantics></math>
 
 The R-squared value is the square of the correlation coefficient.
 

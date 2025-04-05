@@ -26,9 +26,9 @@ y = (w₁ + p(q - q')α)x + (w₂ + (q - q')α)
 
 Mean Absolute Error:
 
-$$Error = \frac{1}{m}\sum\_{i=1}^m{|y - \hat y|}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi>r</mi><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">|</mo><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">Error = \frac{1}{m}\sum_{i=1}^m{|y - \hat y|}</annotation></semantics></math>
 Mean Squared Error:
-$$Error = \frac{1}{2m}\sum\_{i=1}^m{(y - \hat y)^2}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi>r</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">Error = \frac{1}{2m}\sum_{i=1}^m{(y - \hat y)^2}</annotation></semantics></math>
 
 ```python
 # Example: calculate MSE explicitly to update line (don't actually use this)
@@ -72,8 +72,8 @@ Perceptron:
 
 Entropy in a set for 2 classes and multi-class:
 
-$$entropy = -\frac{m}{m+n}log\_2(\frac{m}{m+n})-\frac{n}{m+n}log\_2(\frac{n}{m+n})$$
-$$entropy = -\sum\_{i=1}^n p\_i\log\_2(p\_i)$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mi>m</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mfrac><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>m</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mfrac><mi>n</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mfrac><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">entropy = -\frac{m}{m+n}log_2(\frac{m}{m+n})-\frac{n}{m+n}log_2(\frac{n}{m+n})</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>y</mi><mo>=</mo><mi>−</mi><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>p</mi><mi>i</mi></msub><msub><mo>log</mo><mn>2</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">entropy = -\sum_{i=1}^n p_i\log_2(p_i)</annotation></semantics></math>
 
 As entropy increases, knowledge decreases, and vice versa.
 
@@ -81,7 +81,7 @@ Information gain is a change in entropy.
 
 When you split a dataset, the information gain is the difference between the entropy of the parent and the average entropy of the children.
 
-$$InformationGain = Entropy(Parent) - (\frac{m}{m+n}Entropy(Child₁) + \frac{n}{m+n}Entropy(Child₂))$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>n</mi><mi>f</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>G</mi><mi>a</mi><mi>i</mi><mi>n</mi><mo>=</mo><mi>E</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>P</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>m</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mfrac><mi>E</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mi>h</mi><mi>i</mi><mi>l</mi><mi>d</mi><mi>₁</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mfrac><mi>n</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></mfrac><mi>E</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mi>h</mi><mi>i</mi><mi>l</mi><mi>d</mi><mi>₂</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">InformationGain = Entropy(Parent) - (\frac{m}{m+n}Entropy(Child₁) + \frac{n}{m+n}Entropy(Child₂))</annotation></semantics></math>
 
 The decision tree algorithm looks a the possible splits that each column gives, calculates the information gain, and picks the largest one.
 
@@ -97,7 +97,7 @@ P(spam|'easy','money') ∝ P('easy'|spam)⋅P('money'|spam)⋅P(spam)
 
 Error in Support Vector Machines:  ERROR = C⋅CLASSIFICATION_ERROR + MARGIN_ERROR
 
-$$Margin = \frac{2}{|W|} \qquad Error = |W|^2$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>i</mi><mi>n</mi><mo>=</mo><mfrac><mn>2</mn><mrow><mo stretchy="true" form="prefix">|</mo><mi>W</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mspace width="2.0em"></mspace><mi>E</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi>r</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">|</mo><mi>W</mi><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">Margin = \frac{2}{|W|} \qquad Error = |W|^2</annotation></semantics></math>
 
 SVMs can have linear, polynomial or radial basis function (RBF) kernels.
 
@@ -132,8 +132,8 @@ Type 2 Error (Error of the second kind, or False Negative): In the medical examp
 Precision: TP / (TP + FP) - Think: murder trial
 Recall:    TP / (TP + FN) - Think: parachute manufacturer
 
-$$HarmonicMean= \frac{2xy}{x+y} \qquad F\_1 = 2\cdot\frac{Precision\times Recall}{Precision+Recall}$$
-$$F\_\beta = (1+N^2) \cdot \frac{\text{Precision} \cdot \text{Recall}}{N^2 \cdot \text{Precision} + \text{Recall}} = \frac{\text{Precision} \cdot \text{Recall}}{\frac{N^2}{1+N^2}\text{Precision} + \frac{1}{1+N^2}\text{Recall}}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mi>a</mi><mi>r</mi><mi>m</mi><mi>o</mi><mi>n</mi><mi>i</mi><mi>c</mi><mi>M</mi><mi>e</mi><mi>a</mi><mi>n</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>x</mi><mi>y</mi></mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mfrac><mspace width="2.0em"></mspace><msub><mi>F</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mo>⋅</mo><mfrac><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>×</mo><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>+</mo><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">HarmonicMean= \frac{2xy}{x+y} \qquad F_1 = 2\cdot\frac{Precision\times Recall}{Precision+Recall}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>β</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mfrac><mrow><mtext mathvariant="normal">Precision</mtext><mo>⋅</mo><mtext mathvariant="normal">Recall</mtext></mrow><mrow><msup><mi>N</mi><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Precision</mtext><mo>+</mo><mtext mathvariant="normal">Recall</mtext></mrow></mfrac><mo>=</mo><mfrac><mrow><mtext mathvariant="normal">Precision</mtext><mo>⋅</mo><mtext mathvariant="normal">Recall</mtext></mrow><mrow><mfrac><msup><mi>N</mi><mn>2</mn></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>N</mi><mn>2</mn></msup></mrow></mfrac><mtext mathvariant="normal">Precision</mtext><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>N</mi><mn>2</mn></msup></mrow></mfrac><mtext mathvariant="normal">Recall</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_\beta = (1+N^2) \cdot \frac{\text{Precision} \cdot \text{Recall}}{N^2 \cdot \text{Precision} + \text{Recall}} = \frac{\text{Precision} \cdot \text{Recall}}{\frac{N^2}{1+N^2}\text{Precision} + \frac{1}{1+N^2}\text{Recall}}</annotation></semantics></math>
 
 The area under the Receiver Operating Characteristic (ROC) Curve is 1 for a perfect split, and .5 for a random split.
 
@@ -173,8 +173,8 @@ Some Supervised Learning Models available in scikit-learn
 
 Backpropagation:
 
-$$\delta^h\_j = \sum{W\_{jk}\delta^0\_kf'(h\_j)}$$
-$$\Delta w\_{ij} = \eta \delta^h\_jx\_i$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>δ</mi><mi>j</mi><mi>h</mi></msubsup><mo>=</mo><mo>∑</mo><mrow><msub><mi>W</mi><mrow><mi>j</mi><mi>k</mi></mrow></msub><msubsup><mi>δ</mi><mi>k</mi><mn>0</mn></msubsup><mi>f</mi><mi>′</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>h</mi><mi>j</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\delta^h_j = \sum{W_{jk}\delta^0_kf&#39;(h_j)}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>η</mi><msubsup><mi>δ</mi><mi>j</mi><mi>h</mi></msubsup><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\Delta w_{ij} = \eta \delta^h_jx_i</annotation></semantics></math>
 
 2 popular methods for unsupervised machine learning:
 - Clustering
@@ -369,7 +369,7 @@ Bag of Words
 - each entry in the matrix is a word frequency
 - compare sentences in the matrix using cosine similarity
 
-$$\cos(\theta) = \frac{a \cdot b}{\|a\| \cdot \|b\|}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow><mrow><mo stretchy="false" form="postfix">∥</mo><mi>a</mi><mo stretchy="false" form="postfix">∥</mo><mi>⋅</mi><mo stretchy="false" form="postfix">∥</mo><mi>b</mi><mo stretchy="false" form="postfix">∥</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos(\theta) = \frac{a \cdot b}{\|a\| \cdot \|b\|}</annotation></semantics></math>
 
 TF-IDF (term frequency * inverse document frequency)
 

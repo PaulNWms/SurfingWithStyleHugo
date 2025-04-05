@@ -22,5 +22,9 @@ params:
   themeVariant: zen-dark
 
 outputs:
-home: [ "HTML", "RSS", "JSON"]
+  home: [ "HTML", "RSS", "SEARCH" ]
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # default is false

@@ -13,7 +13,7 @@ The Go template language uses double brackets `{{ ... }}` to insert variables or
 - `site` accesses variables for the whole site
 - `hugo` accesses compiler variables
 
-In order to access things, you need to know where Hugo stores them.  To get the page title, you'd use `<h1>{{$.Title}}</h1>` but to get the subtitle it's `<h2>{{$.Params.Subtitle}}</h2>`.
+<p>In order to access things, you need to know where Hugo stores them. To get the page title, you'd use `</p> <h1 id="title">{{$.Title}}</h1> <p>` but to get the subtitle it's `</p> <h2 id="params.subtitle">{{$.Params.Subtitle}}</h2> <p>`.</p>
 
 ---
 # References

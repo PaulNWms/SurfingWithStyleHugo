@@ -1,7 +1,7 @@
 ---
 title: VC++ Extensions
 description: 
-date: 2023-11-23
+date: 2023-11-23T09:01
 keywords: 
 draft: false
 tags:

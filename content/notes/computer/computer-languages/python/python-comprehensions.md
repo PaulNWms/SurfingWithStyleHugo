@@ -1,7 +1,7 @@
 ---
 title: Python Comprehensions
 description: 
-date: 2023-12-19
+date: 2023-12-19T19:17
 keywords: 
 draft: false
 tags:

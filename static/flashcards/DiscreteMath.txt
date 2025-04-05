@@ -136,7 +136,7 @@ disjoint
 
 A - B = {x|x ∈ A ∧ x ∉ B}
 difference<br />
-compelement of B w/ respect to A
+complement of B w/ respect to A
 
 A̅ = {x|x ∉ A}
 complement

@@ -1,6 +1,6 @@
 ---
 title: PowerShell
-date: 2023-10-27
+date: 2023-10-27T09:20
 description: 
 keywords: 
 draft: false

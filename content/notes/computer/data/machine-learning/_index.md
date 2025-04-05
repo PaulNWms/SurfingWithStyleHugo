@@ -86,19 +86,19 @@ Multioutput classification output multiple multiclass labels.
 
 Linear regression model prediction
 
-$$\hat{y}=\theta\_0+\theta\_1x\_1+\theta\_2x\_2+\cdots +\theta\_nx\_n$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo>=</mo><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><msub><mi>θ</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>θ</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>θ</mi><mi>n</mi></msub><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\hat{y}=\theta_0+\theta_1x_1+\theta_2x_2+\cdots +\theta_nx_n</annotation></semantics></math>
 
 Vectorized form
 
-$$\hat{y}=h\_\theta(\textbf{x})=\theta^T\cdot \textbf{x}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo>=</mo><msub><mi>h</mi><mi>θ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐱</mtext></mrow><annotation encoding="application/x-tex">\hat{y}=h_\theta(\textbf{x})=\theta^T\cdot \textbf{x}</annotation></semantics></math>
 
 Cost function of the linear regression model
 
-$$MSE(\textbf{X},h\_\theta)=\frac{1}{m}\sum\_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}\right)^2$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐗</mtext><mo>,</mo><msub><mi>h</mi><mi>θ</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">MSE(\textbf{X},h_\theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\theta^T\cdot \textbf{x}^{(i)}-y^{(i)}\right)^2</annotation></semantics></math>
 
 Normal equation
 
-$$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}\right)^{-1}\cdot\textbf{X}^T\cdot\textbf{y}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>θ</mi><mo accent="true">̂</mo></mover><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐗</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐲</mtext></mrow><annotation encoding="application/x-tex">\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}\right)^{-1}\cdot\textbf{X}^T\cdot\textbf{y}</annotation></semantics></math>
 
 ```py
 X_b = np.c_[np.ones((100, 1)), X]
@@ -112,7 +112,7 @@ Preprocess the data with Scikit-Learn's `StandardScalar`
 ### Batch Gradient Descent
 Partial derivatives of the cost function
 
-$$\frac{\delta}{\delta\theta\_j}=\frac{2}{m}\sum\_{i=1}^{m}\left(\theta^T\cdot\textbf{x}^{(i)}-y^{(i)}\right)x\_j^{(i)}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>δ</mi><mrow><mi>δ</mi><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mn>2</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><msubsup><mi>x</mi><mi>j</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\frac{\delta}{\delta\theta_j}=\frac{2}{m}\sum_{i=1}^{m}\left(\theta^T\cdot\textbf{x}^{(i)}-y^{(i)}\right)x_j^{(i)}</annotation></semantics></math>
 
 Gradient vector of the cost function
 
@@ -126,7 +126,7 @@ $$\nabla_\theta MSE(\theta)=\begin{pmatrix}
 
 Gradient descent step
 
-$$\theta^{(\text{next step})}=\theta-\eta\nabla\_\theta MSE(\theta)$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>θ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">next step</mtext><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>=</mo><mi>θ</mi><mo>−</mo><mi>η</mi><msub><mi>∇</mi><mi>θ</mi></msub><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\theta^{(\text{next step})}=\theta-\eta\nabla_\theta MSE(\theta)</annotation></semantics></math>
 
 ### Stochastic Gradient Descent
 ```py
@@ -136,8 +136,8 @@ sgd_reg.fit(X, y.ravel())
 ### Regularized Linear Models
 - Ridge regression adds a regularization term to the cost function, forcing the learning algorithm to keep the weights as small as possible.
 
-$$J(\theta)=MSE(\theta)+\alpha\frac{1}{2}\sum\_{i=1}^{n}\theta\_i^2$$
-$$\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}+\alpha\textbf{A}\right)^{-1}\cdot\textbf{X}^T\cdot \textbf{y}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>α</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>θ</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">J(\theta)=MSE(\theta)+\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>θ</mi><mo accent="true">̂</mo></mover><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐗</mtext><mo>+</mo><mi>α</mi><mtext mathvariant="bold">𝐀</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐗</mtext><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐲</mtext></mrow><annotation encoding="application/x-tex">\hat{\theta}=\left(\textbf{X}^T\cdot\textbf{X}+\alpha\textbf{A}\right)^{-1}\cdot\textbf{X}^T\cdot \textbf{y}</annotation></semantics></math>
 ```py
 ridge_reg = Ridge(alpha=1, solver="cholesky")
 ridge_reg.fit(X, y)
@@ -146,7 +146,7 @@ ridge_reg.predict([1.5](/notes/))
 
 - Lasso regression tends to completely eliminate the weights of the least important features.
 
-$$J(\theta)=MSE(\theta)+\alpha\sum\_{i=1}^{n}\left|\theta\_i\right|$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>α</mi><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">J(\theta)=MSE(\theta)+\alpha\sum_{i=1}^{n}\left|\theta_i\right|</annotation></semantics></math>
 ```py
 lasso_reg = Lasso(alpha=0.1)
 lasso_reg.fit(X, y)
@@ -155,7 +155,7 @@ lasso_reg.predict([1.5](/notes/))
 
 - Elastic Net is a combination of the two.
 
-$$J(\theta)=MSE(\theta)+r\alpha\sum\_{i=1}^{n}\left|\theta\_i\right|+\frac{1-r}{2}\alpha\frac{1}{2}\sum\_{i=1}^{n}\theta\_i^2$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>M</mi><mi>S</mi><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>r</mi><mi>α</mi><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">|</mo></mrow><mo>+</mo><mfrac><mrow><mn>1</mn><mo>−</mo><mi>r</mi></mrow><mn>2</mn></mfrac><mi>α</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>θ</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">J(\theta)=MSE(\theta)+r\alpha\sum_{i=1}^{n}\left|\theta_i\right|+\frac{1-r}{2}\alpha\frac{1}{2}\sum_{i=1}^{n}\theta_i^2</annotation></semantics></math>
 ```py
 from sklearn.linear_model import ElasticNet
 elastic_net = ElasticNet(alpha=0.1, l1_ratio=0.5)
@@ -167,15 +167,15 @@ elastic_net.predict([1.5](/notes/))
 ### Logistic regression
 estimates the probability that an instance belongs to a particular class.
 
-$$\hat{p}=h\_\theta(\textbf{x})=\sigma\left(\theta^T\cdot\textbf{x}\right)$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>p</mi><mo accent="true">̂</mo></mover><mo>=</mo><msub><mi>h</mi><mi>θ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>σ</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\hat{p}=h_\theta(\textbf{x})=\sigma\left(\theta^T\cdot\textbf{x}\right)</annotation></semantics></math>
 
 The logistic regression loss function is convex
 
-$$J(\theta)=-\frac{1}{m}\sum\_{i=1}^{m}\left[y^{(i)}\text{log}\left(\hat{p}^{(I)}\right)+\left(1-y^{(i)}\right)\text{log}\left(1-\hat{p}^{(I)}\right)\right]$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">[</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mtext mathvariant="normal">log</mtext><mrow><mo stretchy="true" form="prefix">(</mo><msup><mover><mi>p</mi><mo accent="true">̂</mo></mover><mrow><mo stretchy="true" form="prefix">(</mo><mi>I</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mtext mathvariant="normal">log</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mover><mi>p</mi><mo accent="true">̂</mo></mover><mrow><mo stretchy="true" form="prefix">(</mo><mi>I</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\text{log}\left(\hat{p}^{(I)}\right)+\left(1-y^{(i)}\right)\text{log}\left(1-\hat{p}^{(I)}\right)\right]</annotation></semantics></math>
 
 and its derivative is
 
-$$\frac{\delta}{\delta\theta\_j}=\frac{1}{m}\sum\_{i=1}^{m}\left(\sigma\left( \theta^T\cdot \textbf{x}^{(i)}-y^{(I)} \right) \right)x\_j^{(I)}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>δ</mi><mrow><mi>δ</mi><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><mi>σ</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mi>T</mi></msup><mo>⋅</mo><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>I</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><msubsup><mi>x</mi><mi>j</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>I</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\frac{\delta}{\delta\theta_j}=\frac{1}{m}\sum_{i=1}^{m}\left(\sigma\left( \theta^T\cdot \textbf{x}^{(i)}-y^{(I)} \right) \right)x_j^{(I)}</annotation></semantics></math>
 
 To train a logistic regression model
 ```py
@@ -188,23 +188,23 @@ log_reg.fit(X, y)
 
 Softmax score for class _k_
 
-$$s\_k(\textbf{x})=\left(\theta^{(k)}\right)^T\cdot\textbf{x}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>k</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐱</mtext></mrow><annotation encoding="application/x-tex">s_k(\textbf{x})=\left(\theta^{(k)}\right)^T\cdot\textbf{x}</annotation></semantics></math>
 
 Softmax function
 
-$$\hat{p}\_k=\sigma(\textbf{s}(\textbf{x}))\_k=\frac{exp(s\_k(\textbf{x}))}{\sum\_{j=1}^{K}exp(s\_j(\textbf{x}))}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>k</mi></msub><mo>=</mo><mi>σ</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐬</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mi>e</mi><mi>x</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>s</mi><mi>k</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>K</mi></munderover><mi>e</mi><mi>x</mi><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>s</mi><mi>j</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\hat{p}_k=\sigma(\textbf{s}(\textbf{x}))_k=\frac{exp(s_k(\textbf{x}))}{\sum_{j=1}^{K}exp(s_j(\textbf{x}))}</annotation></semantics></math>
 
 Softmax prediction
 
-$$\hat{y}=\underset{k}{\text{argmax }}\sigma(\textbf{s}(\textbf{x}))\_k=\underset{k}{\text{argmax }}s\_k(\textbf{x})=\underset{k}{\text{argmax }}\left(\left(\theta^{(k)}\right)^T\cdot\textbf{x}\right)$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo>=</mo><munder><mrow><mtext mathvariant="normal">argmax </mtext><mspace width="0.333em"></mspace></mrow><mi>k</mi></munder><mi>σ</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐬</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mi>k</mi></msub><mo>=</mo><munder><mrow><mtext mathvariant="normal">argmax </mtext><mspace width="0.333em"></mspace></mrow><mi>k</mi></munder><msub><mi>s</mi><mi>k</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munder><mrow><mtext mathvariant="normal">argmax </mtext><mspace width="0.333em"></mspace></mrow><mi>k</mi></munder><mrow><mo stretchy="true" form="prefix">(</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>θ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>T</mi></msup><mo>⋅</mo><mtext mathvariant="bold">𝐱</mtext><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\hat{y}=\underset{k}{\text{argmax }}\sigma(\textbf{s}(\textbf{x}))_k=\underset{k}{\text{argmax }}s_k(\textbf{x})=\underset{k}{\text{argmax }}\left(\left(\theta^{(k)}\right)^T\cdot\textbf{x}\right)</annotation></semantics></math>
 
 Cross entropy cost function
 
-$$J(\Theta)=-\frac{1}{m}\sum\_{i=1}^{m}\sum\_{k=1}^{K}y\_k^{(i)}\text{log}\left(\hat{p}\_k^{(i)}\right)$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>Θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>K</mi></munderover><msubsup><mi>y</mi><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup><mtext mathvariant="normal">log</mtext><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">J(\Theta)=-\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}y_k^{(i)}\text{log}\left(\hat{p}_k^{(i)}\right)</annotation></semantics></math>
 
 Cross entropy gradient vector
 
-$$\nabla\_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum\_{i=1}^{m}\left(\hat{p}\_k^{(i)}-y\_k^{(i)}\right)\textbf{x}^{(i)}$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>∇</mi><msup><mi>θ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>k</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup></msub><mi>J</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>Θ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup><mo>−</mo><msubsup><mi>y</mi><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><msup><mtext mathvariant="bold">𝐱</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">\nabla_{\theta^{(k)}}J(\Theta)=\frac{1}{m}\sum_{i=1}^{m}\left(\hat{p}_k^{(i)}-y_k^{(i)}\right)\textbf{x}^{(i)}</annotation></semantics></math>
 
 ```py
 softmax_reg = LogisticRegression(multi_class="multinomial", solver="lbfgs", C=10)
@@ -256,7 +256,7 @@ poly_kernel_svm_clf.fit(X, y)
 
 Gaussian radial bias function (RBF)
 
-$$\phi\_\gamma(\textbf{x},l)=\text{exp}\left(-\gamma\left\|\textbf{x}-l\right\|^2\right)$$
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϕ</mi><mi>γ</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="bold">𝐱</mtext><mo>,</mo><mi>l</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mtext mathvariant="normal">exp</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>−</mi><mi>γ</mi><msup><mrow><mo stretchy="true" form="prefix">∥</mo><mtext mathvariant="bold">𝐱</mtext><mo>−</mo><mi>l</mi><mo stretchy="true" form="postfix">∥</mo></mrow><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\phi_\gamma(\textbf{x},l)=\text{exp}\left(-\gamma\left\|\textbf{x}-l\right\|^2\right)</annotation></semantics></math>
 
 Increasing `gamma` makes the bell-shape curve narrower.
 

@@ -1,7 +1,7 @@
 ---
 title: Python Classes
 description: 
-date: 2023-12-19
+date: 2023-12-19T21:45
 keywords: 
 draft: false
 tags:

@@ -509,6 +509,9 @@ Machine Learning is great for
 - to build systems that adapt to fluctuating environments<br />
 - data mining and visualization
 
+LTU
+linear threshold unit
+
 The most common step function used in Perceptrons is the _____.
 Heaviside step function
 
@@ -526,4 +529,11 @@ Hebb's rule
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>w</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mtext mathvariant="normal">(next step)</mtext></msubsup><mo>=</mo><msub><mi>w</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>+</mo><mi>η</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>y</mi><mi>j</mi></msub><mo>−</mo><msub><mover><mi>y</mi><mo accent="true">̂</mo></mover><mi>j</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">w_{i,j}^{\text{(next step)}}=w_{i,j}+\eta(y_j-\hat y_j)x_i</annotation></semantics></math>
 Perceptron learning rule
+
+gradient descent using reverse-mode autodiff
+backpropagation
+
+offers a SciKit-Learn-compatible API
+tf.contrib.learn.SKCompat
+
 

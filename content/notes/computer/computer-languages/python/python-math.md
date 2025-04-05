@@ -1,7 +1,7 @@
 ---
 title: Python Math
 description: 
-date: 2023-12-18
+date: 2023-12-18T05:54
 keywords: 
 draft: false
 tags:
