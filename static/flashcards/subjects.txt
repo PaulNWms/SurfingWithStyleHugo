@@ -1,6 +1,9 @@
+AZ-204
 CSharp
 DesignPatterns
 DiscreteMath
 Git
+Operations
 MachineLearning
 SOLID
+SQL

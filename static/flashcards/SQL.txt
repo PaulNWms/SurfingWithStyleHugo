@@ -1,0 +1,237 @@
+1NF
+no duplicate records
+every column is atomic
+
+2NF
+1NF + there are no composite keys, or
+1NF + all of the composite key attributes are necessary
+
+3NF
+2NF + every non-prime attribute must be dependent on every candidate key
+
+BCNF
+3NF + functional dependencies are dependencies on a superkey
+
+4NF
+BCNF + multivalued dependencies depend on superkeys
+
+5NF
+4NF + join dependencies follow key constraints
+
+DKNF
+a table is subject only to domain constraints and key constraints
+
+Query Step 1
+Cartesion product (cross join)
+
+Query Step 2
+apply the ON filter (join condition)
+
+Query Step 3
+add outer rows
+
+Query Step 4
+apply the WHERE filter
+
+Query Step 5
+group
+
+Query Step 6
+apply CUBE or ROLLUP
+
+Query Step 7
+apply the HAVING filter
+
+Query Step 8
+process the SELECT list
+
+Query Step 9
+apply the DISTINCT clause
+
+Query Step 10
+apply the ORDER BY clause
+
+Query Step 11
+apply the TOP operation
+
+4 physical table structures
+heap
+clustered index
+nonclustered index on a heap
+nonclustered index on a clustered table
+
+steps of query compilation
+parsing
+algebrization
+optimization
+
+algebrizer input
+parse tree
+
+algebrizer output
+query processor tree
+
+tasks of the algebrizer
+operator flattening
+name resolution
+type derivation
+aggregate binding
+grouping binding
+
+the optimizer chooses these scans when you filter based on the first key columns of the index
+clustered index seek & ordered partial scans
+covering nonclustered index seek + ordered partial scans
+
+the optimizer chooses an unordered nonclustered index scan + lookups when
+the query is selective enough
+the optimal index does not cover it
+the index does not maintain the sought keys in ordered
+
+Query Tuning Step 1
+analyze waits at the instance level
+
+Query Tuning Step 2
+correlate waits with queues
+
+Query Tuning Step 3
+determine a course of action
+
+Query Tuning Step 4
+drill down to the database/file level
+
+Query Tuning Step 5
+drill down to the process level
+
+Query Tuning Step 6
+tune indexes/queries
+
+display showplan as text
+SET_SHOWPLAN_TEXT ON/OFF
+SET_SHOWPLAN_ALL ON/OFF
+
+create XML showplan with runtime information
+SET STATISTICS XML ON/OFF;
+
+convenient tool for benchmarking a single query interactively
+SET STATISTICS TIME ON;
+
+display SHOWPLAN_ALL plus actual statement execution
+SET STATISTICS PROFILE ON
+
+clear execution plans of a particular database
+DBCC FLUSHPROCINDB(<db_id>);
+
+drill down to the database/file level with
+sys.dm_io_virtual_file_stats
+
+scans that involve sequential scan of all pages belonging to the table
+table scan
+unordered clustered index scan
+unordered covering nonclustered index scan
+
+scans that perform full scan of the leaf level of an index following the linked list
+ordered clustered index scan
+ordered covering nonclustered index scan
+
+create XML showplan of estimated execution plan
+SET SET_SHOWPLAN_XML ON/OFF
+
+correlate waits with queues with
+sys.dm_os_performance_counters
+
+info about index fragmentation
+sys.dm_db_index_physical_stats
+
+display I/O related info about statements
+SET STATISTICS IO ON
+
+legacy DMV which contains info about cached execution plans
+sys.syscacheobjects
+
+preferred trace event on a development machine
+showplan XML Statistics Profile
+
+tracing guidelines
+don't trace w/ the profiler GUI
+don't trace to a table
+trace to a separate disk drive
+be selective about events & columns
+use filtering to zero in on relevant events
+
+DMF restores trace file to table format
+sys.fn_trace_gettable
+
+reset the wait stats
+DBCC SQLPERF('sys.dm_os_wait_stats', CLEAR)
+
+DMV that shows optimization info
+sys.dm_exec_query_optimizer_info
+
+SP parses input query string and returns query template and arg defn.
+sp_get_query_template
+
+analyze waits at the instance level with
+sys.dm_os_wait_stats
+
+tools for correlating waits w/ queues
+System Monitor
+sys.dm_os_performance_counters
+
+clear the procedure cached
+DBCC FREEPROCCACHE
+
+clear data from cached
+DBCC DROPCLEANBUFFERS
+
+T-SQL-specific table operators
+APPLY
+PIVOT
+UNPIVOT
+
+a rebind means
+one or more of the correlated parameters of the join changed and the inner side must be reevaluated
+
+a rewind means
+none of the correlated parameters changed and the prior inner result set might be used
+
+scan used for small-range queries
+nonclustered seek + ordered partial scan + lookups
+
+DMV contains handles to cached query plans
+sys.dm_exec_plan_attributes
+
+query to produce sample table from existing table
+SELECT * FROM mytable TABLESAMPLE(1000 ROWS)
+
+DMV used for analyzing waits
+sys.dm_os_wait_stats
+
+rebinds + rewinds should equal
+the number of rows processed on the outer side of a join
+
+SP to produce a plan guide for a query
+sp_create_plan_guide
+
+DMV shows running traces
+sys.traces
+
+DMV returns handle of each query currently in the procedure cached
+sys.dm_exec_query_stats
+
+DMV contains info about cached query execution plans
+sys.dm_exec_cached_plans
+
+DMF for analyzing I/O at the database/file level
+sys.dm_io_virtual_file_stats
+
+structure that keeps track of data belonging to a heap
+index allocation map (IAM)
+
+DMF returns XML showplan for any query in the procedure cached
+sys.dm_exec_query_plan
+
+DMF returns text associated w/ cached query
+sys.dm_exec_sql_text
+
+DMV gives usage counts of index operations
+sys.dm_db_index_usage_stats

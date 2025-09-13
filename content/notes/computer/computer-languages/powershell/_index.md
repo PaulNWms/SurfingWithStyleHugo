@@ -6,6 +6,12 @@ keywords:
 draft: false
 tags:
 ---
+To install the latest PowerShell, in a cmd window (not PS)
+
+```cmd
+winget install --id Microsoft.PowerShell --source winget
+```
+
 - [PowerShell COM Client](/notes/computer/computer-languages/powershell/powershell-com-client)
 
 ```powershell

@@ -34,6 +34,7 @@ parent: Microsoft
 - [Security](/notes/computer/microsoft/azure/security)
 - [Governance](/notes/computer/microsoft/azure/governance)
 - [Cost Management](/notes/computer/microsoft/azure/cost-management)
+- [Power BI](/notes/computer/microsoft/azure/power-bi)
 
 ---
 # References

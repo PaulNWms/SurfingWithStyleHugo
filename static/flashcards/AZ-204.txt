@@ -1,0 +1,151 @@
+migrate an IIS or Tomcat website with
+App Service Migration Assistant
+
+Azure Container Registry (ACR) tiers
+Basic
+Standard
+Premium
+
+New registry
+az acr create
+
+Log in to the registry
+az acr login
+
+Enable admin user for registry
+az acr update
+
+Fetch a Docker image
+docker pull
+
+Name a Docker image
+docker tag
+
+Put a Docker image in the registry
+docker push
+
+Use _____ to build and push a Docker image to the registry
+the quick task feature in ACR Tasks
+
+View all Container images in the registry
+az acr repository list
+
+New container instance
+az container create
+
+--restart-policy for ACI
+Always - default
+Never - run at most once
+OnFailure - run at least once
+
+An ACI lives in a
+container group
+
+Common ways to deploy a website
+Azure Container Instances
+Azure Container Apps
+Azure App Service
+
+Azure Function bindings are defined in
+function.json
+
+Serverless hosting options for Azure Functions
+Consumption
+Premium
+
+Not quite serverless hosting options for Azure Functions
+Azure App Service
+Dedicated
+Kubernetes
+
+What CANNOT be included as part of the function.json file for an Azure function?
+Function timeout setting
+
+What is the minimum App Service plan you can use to gain access to SSL certificate management and Production Azure SLAs?
+S1
+
+You'll need to choose between ____ when deploying a registry.
+Basic
+Standard
+Premium
+
+Which hosting service is most appropriate when you want a serverless experience for Kubernetes-style apps, which can span many microservices?
+Azure Container Apps
+
+Which command can you use to deploy a new Azure container app?
+az containerapp create --resource-group myRG --name myContainerApp
+
+Types of Blob Storage
+Block
+Append
+Page
+
+General use storage
+block blob
+
+Storage optimized for append operations
+append blob
+
+Used primarily for virtual hard drive (VHD) files
+page blob
+
+tiers for block blobs
+hot (default, frequent access)
+cool (30-90 days)
+cold (90+ days)
+archive (must rehydrate, 180+ days)
+
+blob URI
+https://<storage-account>.blob.core.windows.net
+
+A Cosmos DB request unit consists of
+CPU
+memory
+IOPS
+
+Cosmos DB throughput options
+Provisioned Manual
+Provisioned Autoscale
+Serverless
+
+Azure Cosmos DB consistency levels
+1. Strong
+5. Eventual
+3. Session
+2. Bounded staleness
+4. Consistent prefix
+
+In the case of OAuth, what resource is responsible for validating your token after authenticating?
+The resource server, such as an Azure web app.
+
+create a Docker container
+docker build --tag=<tag_name>[:<version>] <dockerfile_dir> 
+
+list Docker containers
+docker image ls 
+
+remove a Docker image
+docker image rm <image_id>
+
+download a Docker image
+docker pull <image_name>
+
+upload a Docker image
+docker push <image_name>
+
+create a new Docker container
+docker run <image_name>
+
+executes a command inside a Docker container
+docker exec -it <container> <command>
+
+ACR container tag format
+<acr_name>.azurecr.io/[repository_name][:version]
+
+login to an ACR
+az acr login --name <acr_name>
+
+
+
+
+

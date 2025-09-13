@@ -12,6 +12,9 @@ tags:
 - [Symptoms](/notes/health/symptoms)
 - [Sickness](/notes/health/sickness)
 - [emergency care](/notes/)
+- [Generations](/notes/health/generations)
+- [Learning](/notes/health/learning)
+- [Stem Cells](/notes/health/stem-cells)
 
 ---
 # References

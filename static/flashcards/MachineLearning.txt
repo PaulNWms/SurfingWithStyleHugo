@@ -536,4 +536,7 @@ backpropagation
 offers a SciKit-Learn-compatible API
 tf.contrib.learn.SKCompat
 
+run TensorBoard
+$ tensorboard --logdir tf_logs/
+
 

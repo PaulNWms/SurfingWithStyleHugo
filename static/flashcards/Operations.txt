@@ -1,0 +1,230 @@
+Provisioning: ImprovCheck is followed by
+GenealogyAndBomValidation
+
+Provisioning: ProvisionInitializeInMteos is followed by
+ValidateDutSerialNumberMteos
+
+Provisioning: ValidateMotherboardSerialNumber is followed by
+UpdateDutTimeUTC
+
+Provisioning: UnlockDevice is followed by
+CompareOsReleaseName
+
+Provisioning: CopyOsFiles is followed by
+ConfigureUefiTpmSetting
+
+Provisioning: SetBatteryLevel is followed by
+ValidateBatteryCycleCountAndHvt
+
+Provisioning: ValidateCpuType is followed by
+ValidateMemSize
+
+Provisioning: WaitUntilChargedEnoughForFusingAndCapsuleUpdates is followed by
+LogPreSpecializeBatteryLevelMeasurement
+
+Provisioning: UpdateProvisioningCapsules is followed by
+PerformFusing
+
+Provisioning: UnlockDevice is followed by
+PerformBatteryAuthCheckAndReAuthenticateIfRequired
+
+Provisioning: PreSpecializeUpdateSettings is followed by
+RebootMteosAndRecreateConnection
+
+Provisioning: CopyToolsToDutImagingDrive is followed by
+Specialize
+
+Provisioning: WaitUntilChargedEnoughForCustomerOsInstallation is followed by
+RebootMteos
+
+Provisioning: ProvisionInitializeInWinpe is followed by
+UpdateCustomerOs
+
+Provisioning: RebootWinPE is followed by
+ReportActResults
+
+Provisioning: FinalizeBatteryInProvisioning is followed by
+ShutdownEndOfProvisioning
+
+Provisioning: GenealogyAndBomValidation is followed by
+ProvisionInitializeInMteos
+
+Provisioning: ValidateDutSerialNumberMteos is followed by
+ValidateMotherboardSerialNumber
+
+Provisioning: UpdateDutTimeUTC is followed by
+UnlockDevice
+
+Provisioning: CompareOsReleaseName is followed by
+CopyOsFiles
+
+Provisioning: ConfigureUefiTpmSetting is followed by
+SetBatteryLevel
+
+Provisioning: ValidateBatteryCycleCountAndHvt is followed by
+ValidateCpuType
+
+Provisioning: ValidateMemSize is followed by
+WaitUntilChargedEnoughForFusingAndCapsuleUpdates
+
+Provisioning: LogPreSpecializeBatteryLevelMeasurement is followed by
+UpdateProvisioningCapsules
+
+Provisioning: PerformFusing is followed by
+UnlockDevice
+
+Provisioning: PerformBatteryAuthCheckAndReAuthenticateIfRequired is followed by
+PreSpecializeUpdateSettings
+
+Provisioning: RebootMteosAndRecreateConnection is followed by
+CopyToolsToDutImagingDrive
+
+Provisioning: Specialize is followed by
+WaitUntilChargedEnoughForCustomerOsInstallation
+
+Provisioning: RebootMteos is followed by
+ProvisionInitializeInWinpe
+
+Provisioning: UpdateCustomerOs is followed by
+RebootWinPE
+
+Provisioning: ReportActResults is followed by
+FinalizeBatteryInProvisioning
+
+Rollback: ImProvCheck is followed by
+GenealogyAndBomValidation
+
+Rollback: RollbackInitializeInWinpe is followed by
+ValidateDutSerialNumberWinPE
+
+Rollback: ExecuteRollbackStepsInWinPE is followed by
+RebootWinPE
+
+Rollback: RollbackInitializeInMteos is followed by
+UpdateDutTimeUTC
+
+Rollback: SetRollbackBatteryLevel is followed by
+ValidateBatteryCycleCountAndHvt
+
+Rollback: EnableReclaim is followed by
+RebootMteosAndRecreateConnection
+
+Rollback: VerifyReclaimIsSuccesful is followed by
+UnlockDeviceInFOS
+
+Rollback: BatteryLevelCheck is followed by
+WaitUntilChargedEnoughForFusingAndCapsuleUpdates
+
+Rollback: UpdateRollbackCapsules is followed by
+UnlockDeviceInFOS
+
+Rollback: VerifyTpmNotOwned is followed by
+PerformBatteryAuthCheckAndReAuthenticateIfRequired
+
+Rollback: RestoreDppFromServer is followed by
+WaitForBatteryLevellingInRollback
+
+Rollback: GenealogyAndBomValidation is followed by
+RollbackInitializeInWinpe
+
+Rollback: ValidateDutSerialNumberWinPE is followed by
+ExecuteRollbackStepsInWinPE
+
+Rollback: RebootWinPE is followed by
+RollbackInitializeInMteos
+
+Rollback: UpdateDutTimeUTC is followed by
+SetRollbackBatteryLevel
+
+Rollback: ValidateBatteryCycleCountAndHvt is followed by
+EnableReclaim
+
+Rollback: RebootMteosAndRecreateConnection is followed by
+VerifyReclaimIsSuccesful
+
+Rollback: UnlockDeviceInFOS is followed by
+BatteryLevelCheck
+
+Rollback: WaitUntilChargedEnoughForFusingAndCapsuleUpdates is followed by
+UpdateRollbackCapsules
+
+Rollback: UnlockDeviceInFOS is followed by
+VerifyTpmNotOwned
+
+Rollback: PerformBatteryAuthCheckAndReAuthenticateIfRequired is followed by
+RestoreDppFromServer
+
+MBFRU: ImprovCheck is followed by
+GenealogyAndBomValidation
+
+MBFRU: MbfruInitializeInMteos is followed by
+WriteDutSerialnumberFromGenealogy
+
+MBFRU: ValidateMotherboardSerialNumber is followed by
+LogCpuType
+
+MBFRU: ValidateMemSize is followed by
+UpdateDutTimeUTC
+
+MBFRU: WaitUntilChargedEnoughForFusingAndCapsuleUpdates is followed by
+UpdateMbfruCapsules
+
+MBFRU: UnlockDeviceInFOS is followed by
+PerformFusing
+
+MBFRU: PreSpecializeUpdateSettings is followed by
+CopyToolsToDutImagingDrive
+
+MBFRU: RebootMteosAndRecreateConnection is followed by
+CheckSMBIOS
+
+MBFRU: DumpSmbiosInMteos is followed by
+VerifyTpmNotOwned
+
+MBFRU: FinalizeQcMfgMode is followed by
+ActivateSecureBootInMteos
+
+MBFRU: LockUefiFirmware is followed by
+RebootMteosAndRecreateConnection
+
+MBFRU: VerifySecureBootEnabled is followed by
+VerifyCustomerModeEnabled
+
+MBFRU: FinishAndReportOutputGenealogy is followed by
+ShutdownInMteos
+
+MBFRU: GenealogyAndBomValidation is followed by
+MbfruInitializeInMteos
+
+MBFRU: WriteDutSerialnumberFromGenealogy is followed by
+ValidateMotherboardSerialNumber
+
+MBFRU: LogCpuType is followed by
+ValidateMemSize
+
+MBFRU: UpdateDutTimeUTC is followed by
+WaitUntilChargedEnoughForFusingAndCapsuleUpdates
+
+MBFRU: UpdateMbfruCapsules is followed by
+UnlockDeviceInFOS
+
+MBFRU: PerformFusing is followed by
+PreSpecializeUpdateSettings
+
+MBFRU: CopyToolsToDutImagingDrive is followed by
+RebootMteosAndRecreateConnection
+
+MBFRU: CheckSMBIOS is followed by
+DumpSmbiosInMteos
+
+MBFRU: VerifyTpmNotOwned is followed by
+FinalizeQcMfgMode
+
+MBFRU: ActivateSecureBootInMteos is followed by
+LockUefiFirmware
+
+MBFRU: RebootMteosAndRecreateConnection is followed by
+VerifySecureBootEnabled
+
+MBFRU: VerifyCustomerModeEnabled is followed by
+FinishAndReportOutputGenealogy

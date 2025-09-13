@@ -7,6 +7,7 @@ tags:
 ---
 - [Discrete Math](/notes/math/discrete-math)
 - [Concrete Math](/notes/)
+- [Matrices](/notes/math/matrices)
 
 
 ---

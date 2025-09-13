@@ -6,6 +6,8 @@ keywords:
 draft: false
 tags:
   - DataScience
+  - ML
+  - AI
 ---
 Machine Learning is the art of programming computers so they can learn from data.
 
@@ -14,6 +16,12 @@ In practice, ML is mostly done in [Python](/notes/computer/computer-languages/py
  - [TensorFlow](/notes/computer/data/machine-learning/tensorflow) for deep learning
 
 ![image](/img/GRRso1KXwAAnFS5.jpg)
+
+Scikit-Learn ML Map
+![image](/img/ml_map.svg)
+Periodic Table of ML
+
+![image](/img/Pasted%20image%2020250427175153.png)
 
 ML algorithms can be grouped into these categories:
 

@@ -1,5 +1,5 @@
 ---
-title: Runnng Object Table (ROT)
+title: Running Object Table (ROT)
 date: 2023-09-18T20:52
 draft: false
 tags:

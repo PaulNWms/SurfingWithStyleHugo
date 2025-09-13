@@ -548,17 +548,26 @@ $$\{a_n\} \textrm{ is a solution to an LHRR of degree } k$$
 $$\textrm{LHRR: } r^k - c_1r^{k-1} - \cdots - c_k = 0$$
 LHRR of degree k with k roots: characteristic equation
 
-$$\textrm{LHRR: } a_n = \alpha_1 r_1^n + \alpha_2 r_2^2 + \cdots + \alpha_k r_k^n$$
+$$\textrm{LHRR: } a_n = \alpha_1 r_1^n + \alpha_2 r_2^n + \cdots + \alpha_k r_k^n$$
 LHRR of degree k with k roots: closed form
 
 $$f(n) = af(n/b) + g(n)$$
 divide-and-conquer recurrence relation
 
-$$\begin{align}\text{Time complexity of }f(n) = af(n/b) + c\\\text{ (Theorem 5.3.1)}\end{align}$$
-$$\begin{align*}O(n^{log_{b}a}) \text{ if } a > 1\\O(log(n)) \text{ if } a = 1\end{align*}$$
+$$\begin{align}\text{Time complexity of }f(n) = af(n/b) + c\\\text{ when } a > 1\text{ (Theorem 5.3.1)}\end{align}$$
+$$O(n^{log_{b}a})$$
 
-$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ (Theorem 5.3.2)}\end{align}$$
-$$\begin{align*}O(n^{d})\text{ if } a < b^{d}\\ O(n^{d}\text{ log } n) \text{ if } a = b^{d}\\ O(n^{log_{b}a}) \text{ if } a > b^{d}\end{align*}$$
+$$\begin{align}\text{Time complexity of }f(n) = af(n/b) + c\\\text{ when } a = 1\text{ (Theorem 5.3.1)}\end{align}$$
+$$O(log(n))$$
+
+$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a < b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
+$$O(n^{d})$$
+
+$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a = b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
+$$O(n^{d}\text{ log } n)$$
+
+$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a > b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
+$$O(n^{log_{b}a})$$
 
 |A ⋃ B| = |A| + |B| - |A ⋂ B|
 Prinicple of Inclusion-Exclusion for 2 sets
@@ -566,7 +575,7 @@ Prinicple of Inclusion-Exclusion for 2 sets
 |A ⋃ B ⋃ C| = |A| + |B| + |C| - |A ⋂ B| - |A ⋂ C| - |B ⋂ C| + |A ⋂ B ⋂ C|
 Prinicple of Inclusion-Exclusion for 3 sets
 
-$$\begin{align}\left| A_1\cup A_2\cup\cdots\cup A_n\right| = \sum_{1\le i\le n}\left| A_i \right| -\\\sum_{1\le i\lt j\le n}\left| A_i\cap A_j\right|+\sum_{1\le i\lt j\lt k\le n}\left| A_i\cap A_j\cap A_k\right|-\\\cdots +(-1)^{n+1}\left| A_1\cup A_2\cup\cdots\cup A_n\right|\end{align}$$
+$$\begin{align}\left| A_1\cup A_2\cup\cdots\cup A_n\right| = \sum_{1\le i\le n}\left| A_i \right| -\\\sum_{1\le i\lt j\le n}\left| A_i\cap A_j\right|+\sum_{1\le i\lt j\lt k\le n}\left| A_i\cap A_j\cap A_k\right|-\\\cdots +(-1)^{n+1}\left| A_1\cap A_2\cap\cdots\cap A_n\right|\end{align}$$
 Prinicple of Inclusion-Exclusion
 
 $$\begin{align}N(P'_1P'_2\cdots P'_n) = N - \sum_{1\le i\le n}N(P_i) +\\\sum_{1\le i\lt j\le n}N(P_iP_j)-\sum_{1\le i\lt j\lt k\le n}N(P_iP_jP_k)+\\\cdots +(-1)^nN(P_1P_2\cdots P_n)\end{align}$$

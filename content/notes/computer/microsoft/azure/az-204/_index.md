@@ -6,6 +6,12 @@ tags:
   - "#Azure"
   - AZ-204
 ---
+- [Shared Responsibility Model](/notes/computer/microsoft/azure/az-204/shared-responsibility-model)
+- [Azure VM Deployment](/notes/computer/microsoft/azure/az-204/azure-vm-deployment)
+- [Azure Container Groups](/notes/computer/microsoft/azure/az-204/azure-container-groups)
+- [Azure Container Apps](/notes/computer/microsoft/azure/az-204/azure-container-apps)
+- [Azure App Service](/notes/computer/microsoft/azure/az-204/azure-app-service)
+- [Azure Functions](/notes/computer/microsoft/azure/az-204/azure-functions)
 - [Implement IaaS Solutions](/notes/computer/microsoft/azure/az-204/implement-iaas-solutions)
 
 ---

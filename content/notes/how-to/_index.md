@@ -7,6 +7,7 @@ tags:
 ---
 - [Elon Musk's Algorithm](/notes/how-to/elon-musks-algorithm)
 - [Code Reviews](/notes/how-to/code-reviews)
+- [Change](/notes/how-to/change)
 
 ---
 # References

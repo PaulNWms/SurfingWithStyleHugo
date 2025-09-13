@@ -6,7 +6,7 @@ keywords:
 draft: false
 tags:
 ---
-[Set Operations](/notes/math/discrete-math/sets/set-operations)
+[Set Operation](/notes/math/discrete-math/set/set-operation)
 
 ---
 # References

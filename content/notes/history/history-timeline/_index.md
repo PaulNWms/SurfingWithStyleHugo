@@ -42,7 +42,7 @@ tags:
 - [Aztecs - Wikipedia](https://en.wikipedia.org/wiki/Aztecs) - 1325-1521
 - [Maya civilization - Wikipedia](https://en.wikipedia.org/wiki/Maya_civilization) - 250-1697
 - [Toltec Empire - Wikipedia](https://en.wikipedia.org/wiki/Toltec_Empire) - 674-1122
-- [Crusades](/notes/history-timeline/crusades) - 1096-1221
+- [Crusades](/notes/history/crusades) - 1096-1221
 - [Norman Conquest - Wikipedia](https://en.wikipedia.org/wiki/Norman_Conquest) - 1066
 - [History of Normandy - Wikipedia](https://en.wikipedia.org/wiki/History_of_Normandy) - 790-1030
 - [Zapotec civilization - Wikipedia](https://en.wikipedia.org/wiki/Zapotec_civilization) - <span style="color:gray">700 BC</span>-1521 AD
@@ -76,27 +76,30 @@ tags:
 ---
 ## Geological history
 
-- [Quaternary Period - Wikipedia](https://en.wikipedia.org/wiki/Quaternary)
-    - [Holocene - Wikipedia](https://en.wikipedia.org/wiki/Holocene) - 11,700 BP-present
-    - [Pleistocene Epoch - Wikipedia](https://en.wikipedia.org/wiki/Pleistocene) -  2.6 million BP
-        - [Younger Dryas - Wikipedia](https://en.wikipedia.org/wiki/Younger_Dryas) - 12,900-11,700 BP
-        - [Bølling–Allerød warming - Wikipedia](https://en.wikipedia.org/wiki/B%C3%B8lling%E2%80%93Aller%C3%B8d_warming) - 14,700-12,700 BP
-        - [Lascaux Cave- Wikipedia](https://en.wikipedia.org/wiki/Lascaux) - 17,000 BCE
-        - [Last Glacial Maximum - Wikipedia](https://en.wikipedia.org/wiki/Last_Glacial_Maximum) - 20,000 BP
-        - [Blombos Cave - Wikipedia](https://en.wikipedia.org/wiki/Blombos_Cave) - 100,000 BCE
-        - [Eemian Interglacial (MIS 5e)- Wikipedia](https://en.wikipedia.org/wiki/Eemian) - 130,000-115,000 BP
-        - [Illinoian (stage) (MIS 6) - Wikipedia](https://en.wikipedia.org/wiki/Illinoian_(stage)) - 190,000-130,000 BP
-        - [Marine Isotope Stage 7 (MIS 7) Interglacial - Wikipedia](https://en.wikipedia.org/wiki/Marine_isotope_stages) - 245,000-190,000 BP
-- [Neogene - Wikipedia](https://en.wikipedia.org/wiki/Neogene)
-    - [Pliocene Epoch - Wikipedia](https://en.wikipedia.org/wiki/Pliocene) - 5.3-2.6 million BP
-    - [Miocene Epoch - Wikipedia](https://en.wikipedia.org/wiki/Miocene) - 23-5.3 million BP
-- [Paleogene Period- Wikipedia](https://en.wikipedia.org/wiki/Paleogene)
-    - [Oligocene Epoch- Wikipedia](https://en.wikipedia.org/wiki/Oligocene) -  34-23 Million BP
-    - [Eocene Epoch- Wikipedia](https://en.wikipedia.org/wiki/Eocene)- 56-34 Million BP
-    - [Paleocene Epoch- Wikipedia](https://en.wikipedia.org/wiki/Paleocene) - 66-56 million BP
-- [Cretaceous Period - Wikipedia](https://en.wikipedia.org/wiki/Cretaceous) - 145-66 million BP
-- [Jurassic Period - Wikipedia](https://en.wikipedia.org/wiki/Jurassic) - 201-145 million BP
-- [Triassic Period - Wikipedia](https://en.wikipedia.org/wiki/Triassic) - 252-201 million BP
+- [Cenozoic Era - Wikipedia](https://en.wikipedia.org/wiki/Cenozoic)
+    - [Quaternary Period - Wikipedia](https://en.wikipedia.org/wiki/Quaternary)
+        - [Holocene - Wikipedia](https://en.wikipedia.org/wiki/Holocene) - 11,700 BP-present
+        - [Pleistocene Epoch - Wikipedia](https://en.wikipedia.org/wiki/Pleistocene) -  2.6 million BP
+            - [Younger Dryas - Wikipedia](https://en.wikipedia.org/wiki/Younger_Dryas) - 12,900-11,700 BP
+            - [Bølling–Allerød warming - Wikipedia](https://en.wikipedia.org/wiki/B%C3%B8lling%E2%80%93Aller%C3%B8d_warming) - 14,700-12,700 BP
+            - [Lascaux Cave- Wikipedia](https://en.wikipedia.org/wiki/Lascaux) - 17,000 BCE
+            - [Last Glacial Maximum - Wikipedia](https://en.wikipedia.org/wiki/Last_Glacial_Maximum) - 20,000 BP
+            - [Blombos Cave - Wikipedia](https://en.wikipedia.org/wiki/Blombos_Cave) - 100,000 BCE
+            - [Eemian Interglacial (MIS 5e)- Wikipedia](https://en.wikipedia.org/wiki/Eemian) - 130,000-115,000 BP
+            - [Illinoian (stage) (MIS 6) - Wikipedia](https://en.wikipedia.org/wiki/Illinoian_(stage)) - 190,000-130,000 BP
+            - [Marine Isotope Stage 7 (MIS 7) Interglacial - Wikipedia](https://en.wikipedia.org/wiki/Marine_isotope_stages) - 245,000-190,000 BP
+    - [Neogene - Wikipedia](https://en.wikipedia.org/wiki/Neogene)
+        - [Pliocene Epoch - Wikipedia](https://en.wikipedia.org/wiki/Pliocene) - 5.3-2.6 million BP
+        - [Miocene Epoch - Wikipedia](https://en.wikipedia.org/wiki/Miocene) - 23-5.3 million BP
+    - [Paleogene Period- Wikipedia](https://en.wikipedia.org/wiki/Paleogene)
+        - [Oligocene Epoch- Wikipedia](https://en.wikipedia.org/wiki/Oligocene) -  34-23 Million BP
+        - [Eocene Epoch- Wikipedia](https://en.wikipedia.org/wiki/Eocene)- 56-34 Million BP
+        - [Paleocene Epoch- Wikipedia](https://en.wikipedia.org/wiki/Paleocene) - 66-56 million BP
+- [Mesozoic Era - Wikipedia](https://en.wikipedia.org/wiki/Mesozoic)
+    - [Cretaceous Period - Wikipedia](https://en.wikipedia.org/wiki/Cretaceous) - 145-66 million BP
+    - [Jurassic Period - Wikipedia](https://en.wikipedia.org/wiki/Jurassic) - 201-145 million BP
+    - [Triassic Period - Wikipedia](https://en.wikipedia.org/wiki/Triassic) - 252-201 million BP
+- [Paleozoic Era - Wikipedia](https://en.wikipedia.org/wiki/Paleozoic)- 541-252 million BP
 
 ---
 # References

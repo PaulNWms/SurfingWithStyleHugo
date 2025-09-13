@@ -87,7 +87,8 @@ Because this is a lot of boilerplate and is also error prone, you'll want to use
 - [COM Events](/notes/computer/microsoft/com/com-events) (not to be confused with [event objects](https://learn.microsoft.com/en-us/windows/win32/sync/event-objects), or various UI framework events)
 - [COM Apartment Models](/notes/computer/microsoft/com/com-apartment-models)
 - [Component Categories](/notes/computer/microsoft/com/component-categories)
-
+- [SCM](/notes/computer/microsoft/com/scm)
+- [Persistence](/notes/computer/microsoft/com/persistence)
 ## Types
 
 A large number of related types are part of  [OLE automation ](https://learn.microsoft.com/en-us/windows/win32/api/_automat/), here are a few of the more common ones.

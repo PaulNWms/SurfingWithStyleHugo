@@ -6,7 +6,7 @@ keywords:
 draft: true
 tags:
 ---
-
+[SSH](/notes/computer/linux/ssh)
 
 ---
 # References
