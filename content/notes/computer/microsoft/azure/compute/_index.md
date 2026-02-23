@@ -8,7 +8,7 @@ tags:
 - [Virtual Machines](/notes/computer/microsoft/azure/compute/virtual-machines)
 - [Scale Sets](/notes/computer/microsoft/azure/compute/scale-sets)
 - [App Services](/notes/computer/microsoft/azure/app-services)
-- [Azure Container Instances (ACI)](/notes/computer/microsoft/azure/az-204/azure-container-groups/azure-container-instances-aci)
+- [Azure Container Instances (ACI)](/notes/computer/microsoft/azure/az-204/azure-containers/azure-container-groups/azure-container-instances-aci)
 - [Azure Kubernetes Service](/notes/computer/microsoft/azure/compute/azure-kubernetes-service)
 - [Azure Virtual Desktop](/notes/computer/microsoft/azure/compute/azure-virtual-desktop)
 - [Azure Functions](/notes/computer/microsoft/azure/az-204/azure-functions)

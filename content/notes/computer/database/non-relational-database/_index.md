@@ -19,9 +19,9 @@ tags:
 
 ### Non-Relational Stores
 - [Azure Table Storage](/notes/computer/database/non-relational-database/azure-table-storage)
-- [Azure Blob Storage](/notes/computer/database/non-relational-database/azure-blob-storage)
+- [Azure Blob Storage](/notes/computer/microsoft/azure/az-204/azure-blob-storage)
 - [Azure File Storage](/notes/computer/database/non-relational-database/azure-file-storage)
-- [Azure Cosmos DB](/notes/computer/database/non-relational-database/azure-cosmos-db)
+- [Azure Cosmos DB](/notes/computer/microsoft/azure/az-204/azure-cosmos-db)
 - [Time Series Data](/notes/computer/database/non-relational-database/time-series-data)
 - [JSON](/notes/computer/database/non-relational-database/json) and [CSV](/notes/computer/database/non-relational-database/csv)
 

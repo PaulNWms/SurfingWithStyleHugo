@@ -6,6 +6,8 @@ keywords:
 draft: false
 tags:
 ---
+![image](/img/Pasted%20image%2020240921151240.png)
+
 ```lang-none
 Abstract Factory
 - A Factory represents a "family" of objects that it can create

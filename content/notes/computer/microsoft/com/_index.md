@@ -7,6 +7,7 @@ tags:
   - ATL
 description:
 ---
+
 ## TL;DR
 
 - Writing a COM client is pretty easy, especially in .NET.

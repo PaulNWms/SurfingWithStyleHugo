@@ -161,6 +161,22 @@ function drawCard() {
         wrongPile = []
         current = cards.pop() as Card
     }
+    else if (partialDeck.slice(ui.total).length === 0) {
+        const dialog = document.createElement('dialog');
+        dialog.innerHTML = `
+            <p>Congratulations!  Session complete</p>
+            <div style="display: flex; justify-content: flex-end; gap: 8px;">
+                <button onclick="this.closest('dialog').close(); this.closest('dialog').remove();">Close</button>
+            </div>
+        `;
+        document.body.appendChild(dialog);
+        dialog.showModal();
+        selectDeckDiv.style.display = "block"
+        fromToDiv.style.display = "none"
+        countDiv.style.display = "none"
+        mainDiv.style.display = "none"
+        return
+    }
     else {
         const dialog = document.createElement('dialog');
         dialog.innerHTML = `
@@ -176,6 +192,7 @@ function drawCard() {
         fromToDiv.style.display = "none"
         countDiv.style.display = "none"
         mainDiv.style.display = "none"
+        return
     }
     showQuestion(current, false)
 }

@@ -1,3 +1,82 @@
+$$f(n) = af(n/b) + g(n)$$
+divide-and-conquer recurrence relation
+
+$$\begin{align}\text{Time complexity of }f(n) = af(n/b) + c\\\text{ when } a > 1\text{ (Theorem 5.3.1)}\end{align}$$
+$$O(n^{log_{b}a})$$
+
+$$\begin{align}\text{Time complexity of }f(n) = af(n/b) + c\\\text{ when } a = 1\text{ (Theorem 5.3.1)}\end{align}$$
+$$O(log(n))$$
+
+$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a < b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
+$$O(n^{d})$$
+
+$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a = b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
+$$O(n^{d}\text{ log } n)$$
+
+$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a > b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
+$$O(n^{log_{b}a})$$
+
+the number of r-combinations of a set of n elements
+$${n \choose r} = \frac{n!}{r!(n-r)!}$$
+
+$$P(n,r) = \frac{n!}{(n - r)!}$$
+r-permutations w/o repetition (Theorem 4.3.1)
+
+$$C(n,r) = {n \choose r} = \frac{n!}{r!(n - r)!}$$
+r-combinations w/o repetition (Theorem 4.3.2)
+
+$$P(n,r) = n^r$$
+r-permutations w/ repetition
+
+$$C(n + r - 1, r) = \frac{(n + r - 1)!}{r!(n - r)!}$$
+r-combinations w/ repetition
+
+converse of p → q
+q → p
+
+contrapositive of p → q
+¬q → ¬p
+
+If f is a  function from A to B, A is the ____ of f and B is the ____ of f.
+domain
+codomain
+
+If f(a) = b, b is the ____ of a.
+image
+
+If f(a) = b, a is the ____ of b.
+pre-image
+
+f is ____ if f(x) ≠ f(y) whenever x ≠ y.
+one-to-one
+injective
+
+<img src="/img/one-to-one.jpg" alt="one-to-one" />
+one-to-one
+
+f is ____ IFF ∀b: b ∈ B, ∃a: a ∈ A with f(a) = b
+onto
+surjective
+
+<img src="/img/onto.jpg" alt="onto" />
+onto
+
+f is a _____ if it is both one-to-one and onto.
+one-to-one correspondence
+bijection
+
+<img src="/img/one-to-one_and_onto.jpg" alt="one-to-one and onto" />
+one-to-one and onto
+
+A function that is not _____ is not invertible.
+one-to-one
+
+<img src="/img/neither.jpg" alt="neither one-to-one nor onto" />
+neither one-to-one nor onto
+
+<img src="/img/not_a_function.jpg" alt="not a function" />
+not a function
+
 ∧ connective
 conjunction
 
@@ -13,17 +92,14 @@ implication
 ↔ connective
 biconditional
 
-converse of p → q
-q → p
-
-contrapositive of p → q
-¬q → ¬p
-
 A compound proposition that is always true is a ____.
 tautology
 
 A compound proposition that is always false is a ____.
 contradiction
+
+A proposition that is neither a tautology nor a contradiction is a ____.
+contingency
 
 ____ are formed from existing propositions using logical operators.
 Compound propositions
@@ -192,46 +268,6 @@ membership table
 Computer implementation of sets sometimes use ____ to indicate membership.
 bit strings
  
-If f is a  function from A to B, A is the ____ of f and B is the ____ of f.
-domain
-codomain
-
-If f(a) = b, b is the ____ of a.
-image
-
-If f(a) = b, a is the ____ of b.
-pre-image
-
-f is ____ if f(x) ≠ f(y) whenever x ≠ y.
-one-to-one
-injective
-
-<img src="/img/one-to-one.jpg" alt="one-to-one" />
-one-to-one
-
-f is ____ IFF ∀b: b ∈ B, ∃a: a ∈ A with f(a) = b
-onto
-surjective
-
-<img src="/img/onto.jpg" alt="onto" />
-onto
-
-f is a _____ if it is both one-to-one and onto.
-one-to-one correspondence
-bijection
-
-<img src="/img/one-to-one_and_onto.jpg" alt="one-to-one and onto" />
-one-to-one and onto
-
-A function that is not _____ is not invertible.
-one-to-one
-
-<img src="/img/neither.jpg" alt="neither one-to-one nor onto" />
-neither one-to-one nor onto
-
-<img src="/img/not_a_function.jpg" alt="not a function" />
-not a function
-
 (f  ∘ g)(a) = f(g(a))
 composition
 
@@ -430,9 +466,6 @@ r-permutation
 an unordered arrangement of r elements of a set
 r-combination
 
-the number of r-combinations of a set of n elements
-$${n \choose r}$$
-
 time complexity of consecutive loops
 Sum Rule
 
@@ -449,23 +482,11 @@ Generalized Pigeonhole Principle (Theorem 4.2.2)
 Every sequence of n² + 1 distinct real numbers contains a subsequence of length n + 1 that is either strictly increasing or strictly decreasing.
 Theorem 4.2.3
 
-$$P(n,r) = \frac{n!}{(n - r)!}$$
-r-permutations w/o repetition (Theorem 4.3.1)
-
-$$C(n,r) = \frac{n!}{r!(n - r)!}$$
-r-combinations w/o repetition (Theorem 4.3.2)
-
 C(n + 1,k) = C(n,k - 1) + C(n,k)
 Pascal's Identity
 
 $$(x + y)^n = \sum_{k=0}^{n} C(n,k)x^{n - k}y^k$$
 Binomial Theorem
-
-$$P(n,r) = n^r$$
-r-permutations w/ repetition
-
-$$C(n + r - 1, r) = \frac{(n + r - 1)!}{r!(n - r)!}$$
-r-combinations w/ repetition
 
 $$\sum_{k=0}^{n} C(n,k) = \textrm{____ (Theorem 4.3.4)}$$
 $$2^n$$
@@ -550,24 +571,6 @@ LHRR of degree k with k roots: characteristic equation
 
 $$\textrm{LHRR: } a_n = \alpha_1 r_1^n + \alpha_2 r_2^n + \cdots + \alpha_k r_k^n$$
 LHRR of degree k with k roots: closed form
-
-$$f(n) = af(n/b) + g(n)$$
-divide-and-conquer recurrence relation
-
-$$\begin{align}\text{Time complexity of }f(n) = af(n/b) + c\\\text{ when } a > 1\text{ (Theorem 5.3.1)}\end{align}$$
-$$O(n^{log_{b}a})$$
-
-$$\begin{align}\text{Time complexity of }f(n) = af(n/b) + c\\\text{ when } a = 1\text{ (Theorem 5.3.1)}\end{align}$$
-$$O(log(n))$$
-
-$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a < b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
-$$O(n^{d})$$
-
-$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a = b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
-$$O(n^{d}\text{ log } n)$$
-
-$$\begin{align}\text{Time complexity of } f(n) = af(n/b) + cn^{d}\\\text{ when } a > b^{d}\text{ (Theorem 5.3.2)}\end{align}$$
-$$O(n^{log_{b}a})$$
 
 |A ⋃ B| = |A| + |B| - |A ⋂ B|
 Prinicple of Inclusion-Exclusion for 2 sets

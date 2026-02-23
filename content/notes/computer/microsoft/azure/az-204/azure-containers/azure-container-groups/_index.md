@@ -8,7 +8,7 @@ tags:
 ---
 Container Groups
 - Top-level resource
-- One or more [Azure Container Instances (ACI)](/notes/computer/microsoft/azure/az-204/azure-container-groups/azure-container-instances-aci)
+- One or more [Azure Container Instances (ACI)](/notes/computer/microsoft/azure/az-204/azure-containers/azure-container-groups/azure-container-instances-aci)
 - Designed for related code
 
 ---

@@ -20,7 +20,7 @@ Consider:
 - Azure Kubernetes Service (AKS) for more advanced features and access to Kubernetes APIs
 - Azure Container Apps for a more fully managed experience
 
-Stored in the [Azure Container Registry (ACR)](/notes/computer/microsoft/azure/az-204/azure-container-groups/azure-container-instances-aci/azure-container-registry-acr)
+Stored in the [Azure Container Registry (ACR)](/notes/computer/microsoft/azure/az-204/azure-containers/azure-container-groups/azure-container-instances-aci/azure-container-registry-acr)
 
 ---
 # References

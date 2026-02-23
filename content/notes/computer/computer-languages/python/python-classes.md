@@ -7,6 +7,12 @@ draft: false
 tags:
   - Python
 ---
+## Class Functions for Constructing an Object
+
+- `__new__` Allocate memory for a new object and send it to the `__init__` function (you don't interact with this one)
+- `__init__` Receive a new object from the `__new__` function as a "self" parameter
+
+
 ```python
 class MyInt:
     '''Docstring for MyInt'''
