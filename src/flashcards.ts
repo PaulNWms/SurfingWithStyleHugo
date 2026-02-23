@@ -182,7 +182,7 @@ function drawCard() {
         dialog.innerHTML = `
             <p>Congratulations!</p>
             <div style="display: flex; justify-content: flex-end; gap: 8px;">
-                <button onclick="continueWithNextCards(5)">Next 5</button>
+                <button onclick="continueWithNextCards()">Next ${Math.min(ui.total, partialDeck.length)}</button>
                 <button onclick="this.closest('dialog').close(); this.closest('dialog').remove();">OK</button>
             </div>
         `;
@@ -197,7 +197,7 @@ function drawCard() {
     showQuestion(current, false)
 }
 
-function continueWithNextCards(count: number) {
+function continueWithNextCards() {
     const dialog = document.querySelector('dialog');
     if (dialog) {
         dialog.close();
