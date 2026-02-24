@@ -1,6 +1,6 @@
 ---
 title: "Virtual Network"
-date: 2023-05-11T06:53-0800
+date: 2023-05-11T06:53:00-08:00
 draft: false
 tags: 
   - "#Azure"

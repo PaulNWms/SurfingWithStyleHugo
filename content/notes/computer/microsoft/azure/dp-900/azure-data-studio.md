@@ -1,7 +1,7 @@
 ---
 title: Azure Data Studio
 description: 
-date: 2024-06-22T15:12
+date: 2024-06-22T15:12:00Z
 keywords: 
 draft: false
 tags:

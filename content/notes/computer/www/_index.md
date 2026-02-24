@@ -1,6 +1,6 @@
 ---
 title: WWW
-date: 2023-09-24T21:00
+date: 2023-09-24T21:00:00Z
 draft: false
 tags:
   - "#WWW"

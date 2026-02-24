@@ -1,7 +1,7 @@
 ---
 title: Functions
 description: 
-date: 2025-04-10T06:43
+date: 2025-04-10T06:43:00Z
 keywords: 
 draft: false
 tags:

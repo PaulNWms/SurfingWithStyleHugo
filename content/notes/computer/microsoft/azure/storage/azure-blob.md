@@ -1,6 +1,6 @@
 ---
 title: Azure Blob
-date: 2023-05-31T06:17-0800
+date: 2023-05-31T06:17:00-08:00
 draft: false
 tags:
   - "#Azure"

@@ -1,6 +1,6 @@
 ---
 title: Azure
-date: 2023-05-06T09:22-0800
+date: 2023-05-06T09:22:00-08:00
 draft: false
 tags:
   - Azure

@@ -1,6 +1,6 @@
 ---
 title: Registry
-date: 2023-08-05T08:40-0800
+date: 2023-08-05T08:40:00-08:00
 draft: false
 tags:
   - "#COM"

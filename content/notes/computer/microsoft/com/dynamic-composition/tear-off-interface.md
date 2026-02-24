@@ -1,7 +1,7 @@
 ---
 title: Tear-Off Interface
 description: 
-date: 2023-11-08T06:31
+date: 2023-11-08T06:31:00Z
 keywords: 
 draft: false
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Azure App Service
 description: 
-date: 2025-05-17T08:09
+date: 2025-05-17T08:09:00Z
 keywords: 
 draft: false
 tags:

@@ -1,6 +1,6 @@
 ---
 title: OpenCV Thresholding
-date: 2023-05-22T06:22-0800
+date: 2023-05-22T06:22:00-08:00
 draft: false
 tags:
   - "#OpenCV"

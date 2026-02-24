@@ -1,6 +1,6 @@
 ---
 title: Persistence
-date: 2023-09-04T10:51-0800
+date: 2023-09-04T10:51:00-08:00
 draft: false
 tags:
   - "#COM"

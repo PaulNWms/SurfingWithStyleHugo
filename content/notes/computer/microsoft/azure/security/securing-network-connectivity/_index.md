@@ -1,6 +1,6 @@
 ---
 title: "Securing Network Connectivity"
-date: 2023-05-13T15:53-0800
+date: 2023-05-13T15:53:00-08:00
 draft: false
 tags: 
   - "#Azure"

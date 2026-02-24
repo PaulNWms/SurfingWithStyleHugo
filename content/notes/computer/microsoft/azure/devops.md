@@ -1,6 +1,6 @@
 ---
 title: "DevOps"
-date: 2023-05-13T08:55-0800
+date: 2023-05-13T08:55:00-08:00
 draft: false
 tags: 
   - "#Azure"

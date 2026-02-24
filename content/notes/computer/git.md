@@ -1,6 +1,6 @@
 ---
 title: Git
-date: 2023-10-27T08:34
+date: 2023-10-27T08:34:00Z
 description: 
 keywords: 
 draft: false

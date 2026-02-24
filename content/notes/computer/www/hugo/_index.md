@@ -1,6 +1,6 @@
 ---
 title: Hugo
-date: 2023-10-06T22:53
+date: 2023-10-06T22:53:00Z
 draft: false
 tags:
   - "#Hugo"

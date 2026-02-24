@@ -1,6 +1,6 @@
 ---
 title: "Azure Kubernetes Service"
-date: 2023-05-11T05:36-0800
+date: 2023-05-11T05:36:00-08:00
 draft: false
 tags: 
   - "#Azure"

@@ -1,7 +1,7 @@
 ---
 title: Karnaugh Map
 description: 
-date: 2025-04-30T05:33
+date: 2025-04-30T05:33:00Z
 keywords: 
 draft: false
 tags:

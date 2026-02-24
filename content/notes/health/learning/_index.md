@@ -1,7 +1,7 @@
 ---
 title: Learning
 description: 
-date: 2025-04-11T21:01
+date: 2025-04-11T21:01:00Z
 keywords: 
 draft: false
 tags:

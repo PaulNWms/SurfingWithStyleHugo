@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning Service"
-date: 2023-05-13T09:21-0800
+date: 2023-05-13T09:21:00-08:00
 draft: false
 tags: 
   - "#Azure"

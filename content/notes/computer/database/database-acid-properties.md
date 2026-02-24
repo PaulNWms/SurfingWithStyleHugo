@@ -1,7 +1,7 @@
 ---
 title: Database ACID Properties
 description: 
-date: 2024-01-20T17:20
+date: 2024-01-20T17:20:00Z
 keywords: 
 draft: false
 tags:

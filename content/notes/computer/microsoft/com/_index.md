@@ -1,6 +1,6 @@
 ---
 title: COM
-date: 2023-09-21T05:29
+date: 2023-09-21T05:29:00Z
 draft: false
 tags:
   - COM

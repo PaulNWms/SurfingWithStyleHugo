@@ -1,7 +1,7 @@
 ---
 title: ATL CComPtr
 description: 
-date: 2023-11-02T19:47
+date: 2023-11-02T19:47:00Z
 keywords: 
 draft: false
 tags:

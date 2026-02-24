@@ -1,6 +1,6 @@
 ---
 title: History Timeline
-date: 2023-05-27T09:44-0800
+date: 2023-05-27T09:44:00-08:00
 draft: false
 tags:
   - "#history"

@@ -1,6 +1,6 @@
 ---
 title: "Azure Marketplace"
-date: 2023-05-10T20:03-0800
+date: 2023-05-10T20:03:00-08:00
 draft: false
 tags: 
   - "#Azure"

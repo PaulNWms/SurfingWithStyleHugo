@@ -1,6 +1,6 @@
 ---
 title: Data Science
-date: 2023-10-26T23:22
+date: 2023-10-26T23:22:00Z
 description: 
 keywords: 
 draft: false

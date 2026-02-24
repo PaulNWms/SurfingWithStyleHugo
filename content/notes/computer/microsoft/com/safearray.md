@@ -1,6 +1,6 @@
 ---
 title: SafeArray
-date: 2023-09-16T19:55
+date: 2023-09-16T19:55:00Z
 draft: false
 tags:
   - "#Win32"

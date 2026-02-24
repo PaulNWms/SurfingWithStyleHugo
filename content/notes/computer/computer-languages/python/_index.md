@@ -1,7 +1,7 @@
 ---
 title: Python
 description: 
-date: 2023-10-26T21:59
+date: 2023-10-26T21:59:00Z
 keywords: 
 draft: false
 tags:

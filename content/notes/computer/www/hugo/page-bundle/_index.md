@@ -1,7 +1,7 @@
 ---
 title: Hugo Page Bundle
 description: 
-date: 2023-10-25T20:45
+date: 2023-10-25T20:45:00Z
 keywords: 
 draft: false
 tags:

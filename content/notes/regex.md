@@ -1,7 +1,7 @@
 ---
 title: Regex
 description:
-date: 2025-10-25T17:04
+date: 2025-10-25T17:04:00Z
 keywords:
 draft: false
 tags:

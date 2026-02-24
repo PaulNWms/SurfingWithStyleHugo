@@ -1,7 +1,7 @@
 ---
 title: COM+ Objects
 description: 
-date: 2023-12-01T06:05
+date: 2023-12-01T06:05:00Z
 keywords: 
 draft: false
 tags:

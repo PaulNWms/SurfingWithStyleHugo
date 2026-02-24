@@ -1,6 +1,6 @@
 ---
 title: JavaScript
-date: 2023-10-07T06:04
+date: 2023-10-07T06:04:00Z
 draft: false
 tags:
   - WWW

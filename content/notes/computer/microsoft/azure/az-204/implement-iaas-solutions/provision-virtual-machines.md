@@ -1,6 +1,6 @@
 ---
 title: "Provision Virtual Machines"
-date: 2023-07-24T23:16-0800
+date: 2023-07-24T23:16:00-08:00
 draft: false
 tags: 
   - "#Azure"

@@ -1,7 +1,7 @@
 ---
 title: Neural Networks
 description: 
-date: 2024-09-07T13:30
+date: 2024-09-07T13:30:00Z
 keywords: 
 draft: false
 tags:

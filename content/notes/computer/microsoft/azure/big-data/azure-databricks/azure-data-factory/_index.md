@@ -1,7 +1,7 @@
 ---
 title: Azure Data Factory
 description: 
-date: 2024-03-10T19:24
+date: 2024-03-10T19:24:00Z
 keywords: 
 draft: false
 tags:

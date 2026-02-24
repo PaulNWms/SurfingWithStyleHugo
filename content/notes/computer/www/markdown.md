@@ -1,6 +1,6 @@
 ---
 title: Markdown
-date: 2023-10-07T06:10
+date: 2023-10-07T06:10:00Z
 draft: false
 tags:
   - Hugo

@@ -1,7 +1,7 @@
 ---
 title: IDispatch
 description: 
-date: 2023-12-17T07:58
+date: 2023-12-17T07:58:00Z
 keywords: 
 draft: false
 tags:

@@ -1,6 +1,6 @@
 ---
 title: OpenCV Convolution and Image Filtering
-date: 2023-06-07T05:11-0800
+date: 2023-06-07T05:11:00-08:00
 draft: false
 tags:
   - "#OpenCV"

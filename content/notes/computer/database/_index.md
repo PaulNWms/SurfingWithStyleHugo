@@ -1,6 +1,6 @@
 ---
 title: Database
-date: 2023-08-26T13:38-0800
+date: 2023-08-26T13:38:00-08:00
 draft: false
 tags:
   - "#database"

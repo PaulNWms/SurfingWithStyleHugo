@@ -1,6 +1,6 @@
 ---
 title: "Azure Container Registry (ACR)"
-date: 2023-05-11T05:38-0800
+date: 2023-05-11T05:38:00-08:00
 draft: false
 tags: 
   - "#Azure"

@@ -1,6 +1,6 @@
 ---
 title: Data Analysis
-date: 2023-10-26T23:20
+date: 2023-10-26T23:20:00Z
 description: 
 keywords: 
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: Digital Image Formation
-date: 2023-05-15T06:01-0800
+date: 2023-05-15T06:01:00-08:00
 draft: false
 tags:
   - "#OpenCV"

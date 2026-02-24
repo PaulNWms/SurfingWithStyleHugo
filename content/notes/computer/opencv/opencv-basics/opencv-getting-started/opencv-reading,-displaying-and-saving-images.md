@@ -1,6 +1,6 @@
 ---
 title: "Reading, Displaying and Saving Images"
-date: 2023-05-21T08:13-0800
+date: 2023-05-21T08:13:00-08:00
 draft: false
 tags: 
   - "#OpenCV"

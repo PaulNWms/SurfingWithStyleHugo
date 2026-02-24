@@ -1,6 +1,6 @@
 ---
 title: "Multiple Inheritance"
-date: 2023-08-26T08:57-0800
+date: 2023-08-26T08:57:00-08:00
 draft: false
 tags: 
   - "#CPP"

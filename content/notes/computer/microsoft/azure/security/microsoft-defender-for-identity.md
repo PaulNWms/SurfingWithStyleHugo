@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Defender for Identity"
-date: 2023-05-13T23:41-0800
+date: 2023-05-13T23:41:00-08:00
 draft: false
 tags: 
   - "#Azure"

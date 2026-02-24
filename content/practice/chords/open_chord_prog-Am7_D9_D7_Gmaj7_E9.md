@@ -1,6 +1,6 @@
 ---
 title: "Am7 D9 D7 Gmaj7 E9"
-date: 2021-01-10T10:14:17-0800
+date: 2021-01-10T10:14:17-08:00
 tags: [open chord prog]
 ---
 

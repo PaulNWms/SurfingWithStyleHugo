@@ -1,6 +1,6 @@
 ---
 title: "Microsoft"
-date: 2023-07-22T19:21-0800
+date: 2023-07-22T19:21:00-08:00
 draft: false
 tags: 
   - "#computer"

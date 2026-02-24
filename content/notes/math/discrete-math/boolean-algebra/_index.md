@@ -1,7 +1,7 @@
 ---
 title: Boolean Algebra
 description: 
-date: 2025-04-27T09:19
+date: 2025-04-27T09:19:00Z
 keywords: 
 draft: false
 tags:

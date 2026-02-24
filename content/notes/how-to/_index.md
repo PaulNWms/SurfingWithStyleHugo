@@ -1,6 +1,6 @@
 ---
 title: How To
-date: 2023-10-02T07:57
+date: 2023-10-02T07:57:00Z
 draft: false
 tags:
   - HowTo

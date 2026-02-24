@@ -1,7 +1,7 @@
 ---
 title: DCOM
 description: 
-date: 2023-11-22T07:00
+date: 2023-11-22T07:00:00Z
 keywords: 
 draft: false
 tags:

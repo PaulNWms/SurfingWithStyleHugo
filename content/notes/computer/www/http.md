@@ -1,6 +1,6 @@
 ---
 title: HTTP
-date: 2023-10-07T06:35
+date: 2023-10-07T06:35:00Z
 draft: false
 tags:
   - WWW

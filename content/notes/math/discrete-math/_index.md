@@ -1,7 +1,7 @@
 ---
 title: Discrete Math
 description: 
-date: 2025-03-29T08:13
+date: 2025-03-29T08:13:00Z
 keywords: 
 draft: false
 tags:

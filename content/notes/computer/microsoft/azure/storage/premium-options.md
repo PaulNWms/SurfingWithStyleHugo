@@ -1,6 +1,6 @@
 ---
 title: Premium Options
-date: 2023-05-31T06:50-0800
+date: 2023-05-31T06:50:00-08:00
 draft: false
 tags:
   - "#Azure"

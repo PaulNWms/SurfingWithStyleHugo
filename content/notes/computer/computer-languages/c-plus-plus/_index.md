@@ -1,6 +1,6 @@
 ---
 title: C++
-date: 2023-08-25T20:38-0800
+date: 2023-08-25T20:38:00-08:00
 draft: false
 tags:
   - "#CPP"

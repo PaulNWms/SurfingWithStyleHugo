@@ -1,6 +1,6 @@
 ---
 title: IEnumXXX
-date: 2023-08-12T12:26-0800
+date: 2023-08-12T12:26:00-08:00
 draft: false
 tags:
   - "#COM"

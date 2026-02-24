@@ -1,7 +1,7 @@
 ---
 title: OpenCV Live Video
 description: 
-date: 2023-12-22T06:47
+date: 2023-12-22T06:47:00Z
 keywords: 
 draft: false
 tags:

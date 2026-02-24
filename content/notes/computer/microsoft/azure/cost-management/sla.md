@@ -1,6 +1,6 @@
 ---
 title: "SLA"
-date: 2023-05-14T00:12-0800
+date: 2023-05-14T00:12:00-08:00
 draft: false
 tags: 
   - "#Azure"

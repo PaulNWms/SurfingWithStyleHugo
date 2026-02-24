@@ -1,6 +1,6 @@
 ---
 title: Other Interfaces
-date: 2023-08-18T20:44-0800
+date: 2023-08-18T20:44:00-08:00
 draft: false
 tags:
   - "#COM"

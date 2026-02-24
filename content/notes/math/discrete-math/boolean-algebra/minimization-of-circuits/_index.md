@@ -1,7 +1,7 @@
 ---
 title: Minimization of Circuits
 description: 
-date: 2025-04-27T09:22
+date: 2025-04-27T09:22:00Z
 keywords: 
 draft: false
 tags:

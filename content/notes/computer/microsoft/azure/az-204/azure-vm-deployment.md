@@ -1,7 +1,7 @@
 ---
 title: Azure VM Deployment
 description: 
-date: 2025-05-15T06:59
+date: 2025-05-15T06:59:00Z
 keywords: 
 draft: false
 tags:

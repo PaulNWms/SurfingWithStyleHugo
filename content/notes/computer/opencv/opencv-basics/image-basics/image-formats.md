@@ -1,6 +1,6 @@
 ---
 title: Image Formats
-date: 2023-05-15T06:13-0800
+date: 2023-05-15T06:13:00-08:00
 draft: false
 tags:
   - "#OpenCV"

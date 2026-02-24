@@ -1,7 +1,7 @@
 ---
 title: Azure Table Storage
 description: 
-date: 2024-06-22T11:49
+date: 2024-06-22T11:49:00Z
 keywords: 
 draft: false
 tags:

@@ -1,7 +1,7 @@
 ---
 title: COM interop
 description: 
-date: 2024-01-27T07:01
+date: 2024-01-27T07:01:00Z
 keywords: 
 draft: false
 tags:

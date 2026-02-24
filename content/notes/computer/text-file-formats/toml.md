@@ -1,6 +1,6 @@
 ---
 title: TOML
-date: 2023-10-08T07:40
+date: 2023-10-08T07:40:00Z
 draft: false
 tags:
   - computer

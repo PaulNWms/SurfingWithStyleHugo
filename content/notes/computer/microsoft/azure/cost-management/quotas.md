@@ -1,6 +1,6 @@
 ---
 title: "Quotas"
-date: 2023-05-14T00:05-0800
+date: 2023-05-14T00:05:00-08:00
 draft: false
 tags: 
   - "#Azure"

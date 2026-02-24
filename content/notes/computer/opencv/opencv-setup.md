@@ -1,7 +1,7 @@
 ---
 title: OpenCV Setup
 description: 
-date: 2023-12-22T07:39
+date: 2023-12-22T07:39:00Z
 keywords: 
 draft: false
 tags:

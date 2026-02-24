@@ -15,14 +15,14 @@ params:
   disableBreadcrumb: false
   disableNextPrev: false
   disableLandingPageButton: true
-  disableMermaid: false
+  mermaid.force: true
   customMermaidURL: https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js
   titleSeparator: "::"
   alwaysopen: false
   themeVariant: zen-dark
 
 outputs:
-  home: [ "HTML", "RSS", "SEARCH" ]
+  home: [ "HTML", "RSS" ]
 
 markup:
   goldmark:

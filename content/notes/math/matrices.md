@@ -1,7 +1,7 @@
 ---
 title: Matrices
 description: 
-date: 2024-09-07T14:07
+date: 2024-09-07T14:07:00Z
 keywords: 
 draft: false
 tags:

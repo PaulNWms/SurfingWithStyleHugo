@@ -1,7 +1,7 @@
 ---
 title: Azure Container Apps
 description: 
-date: 2025-05-15T21:34
+date: 2025-05-15T21:34:00Z
 keywords: 
 draft: false
 tags:

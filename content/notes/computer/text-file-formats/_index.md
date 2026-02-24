@@ -1,6 +1,6 @@
 ---
 title: Text File Formats
-date: 2023-10-08T07:11
+date: 2023-10-08T07:11:00Z
 draft: false
 tags:
   - computer

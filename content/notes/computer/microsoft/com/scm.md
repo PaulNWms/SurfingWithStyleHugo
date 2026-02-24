@@ -1,7 +1,7 @@
 ---
 title: SCM
 description: 
-date: 2024-05-01T18:12
+date: 2024-05-01T18:12:00Z
 keywords: 
 draft: false
 tags:

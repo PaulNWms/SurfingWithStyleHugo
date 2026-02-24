@@ -1,6 +1,6 @@
 ---
 title: MediaPipe Human Pose Estimation
-date: 2023-06-12T06:16-0800
+date: 2023-06-12T06:16:00-08:00
 draft: false
 tags:
   - "#OpenCV"

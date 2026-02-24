@@ -1,6 +1,6 @@
 ---
 title: "Azure Synapse Analytics"
-date: 2023-05-13T09:12-0800
+date: 2023-05-13T09:12:00-08:00
 draft: false
 tags: 
   - "#Azure"

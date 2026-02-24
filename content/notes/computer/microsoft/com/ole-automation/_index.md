@@ -1,7 +1,7 @@
 ---
 title: OLE Automation
 description: 
-date: 2023-12-23T08:04
+date: 2023-12-23T08:04:00Z
 keywords: 
 draft: false
 tags:

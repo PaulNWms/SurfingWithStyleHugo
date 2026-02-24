@@ -1,6 +1,6 @@
 ---
 title: Machine Learning
-date: 2023-10-26T23:36
+date: 2023-10-26T23:36:00Z
 description: 
 keywords: 
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: Azure Containers
 description: 
-date: 2025-08-27T13:38
+date: 2025-08-27T13:38:00Z
 keywords: 
 draft: false
 tags:

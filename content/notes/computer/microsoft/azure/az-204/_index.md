@@ -1,6 +1,6 @@
 ---
 title: AZ-204
-date: 2023-05-27T22:18-0800
+date: 2023-05-27T22:18:00-08:00
 draft: false
 tags:
   - "#Azure"

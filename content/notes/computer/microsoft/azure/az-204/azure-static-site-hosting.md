@@ -1,7 +1,7 @@
 ---
 title: Azure Static Site Hosting
 description: 
-date: 2025-05-22T18:54
+date: 2025-05-22T18:54:00Z
 keywords: 
 draft: false
 tags:

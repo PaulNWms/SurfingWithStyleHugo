@@ -1,7 +1,7 @@
 ---
 title: ACID
 description: 
-date: 2024-06-22T11:12
+date: 2024-06-22T11:12:00Z
 keywords: 
 draft: false
 tags:

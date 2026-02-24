@@ -1,6 +1,6 @@
 ---
 title: OpenCV Face and Landmarks Detection
-date: 2023-06-10T07:43-0800
+date: 2023-06-10T07:43:00-08:00
 draft: false
 tags:
   - "#OpenCV"

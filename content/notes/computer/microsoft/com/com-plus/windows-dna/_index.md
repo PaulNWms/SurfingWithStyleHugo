@@ -1,7 +1,7 @@
 ---
 title: Windows DNA
 description: 
-date: 2023-11-22T06:27
+date: 2023-11-22T06:27:00Z
 keywords: 
 draft: false
 tags:

@@ -1,7 +1,7 @@
 ---
 title: ATL CComObject
 description: 
-date: 2023-11-03T17:45
+date: 2023-11-03T17:45:00Z
 keywords: 
 draft: false
 tags:

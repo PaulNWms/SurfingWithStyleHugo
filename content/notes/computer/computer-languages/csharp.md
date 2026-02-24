@@ -1,6 +1,6 @@
 ---
 title: CSharp
-date: 2023-10-27T09:12
+date: 2023-10-27T09:12:00Z
 description: 
 keywords: 
 draft: false

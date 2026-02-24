@@ -1,6 +1,6 @@
 ---
 title: "Defense in Depth"
-date: 2023-05-13T15:50-0800
+date: 2023-05-13T15:50:00-08:00
 draft: false
 tags: 
   - "#Azure"

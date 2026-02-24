@@ -1,7 +1,7 @@
 ---
 title: Global Interface Table (GIT)
 description: 
-date: 2023-12-12T07:22
+date: 2023-12-12T07:22:00Z
 keywords: 
 draft: false
 tags:

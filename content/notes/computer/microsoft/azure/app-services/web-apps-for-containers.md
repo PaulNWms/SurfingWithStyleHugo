@@ -1,6 +1,6 @@
 ---
 title: "Web Apps for Containers"
-date: 2023-05-11T05:30-0800
+date: 2023-05-11T05:30:00-08:00
 draft: false
 tags: 
   - "#Azure"

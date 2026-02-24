@@ -1,6 +1,6 @@
 ---
 title: "Azure Databricks"
-date: 2023-05-13T09:11-0800
+date: 2023-05-13T09:11:00-08:00
 draft: false
 tags: 
   - "#Azure"

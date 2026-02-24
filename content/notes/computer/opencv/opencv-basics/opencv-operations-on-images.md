@@ -1,6 +1,6 @@
 ---
 title: OpenCV Operations on Images
-date: 2023-05-22T06:07-0800
+date: 2023-05-22T06:07:00-08:00
 draft: false
 tags:
   - "#OpenCV"

@@ -1,7 +1,7 @@
 ---
 title: ATL Critical Sections
 description: 
-date: 2023-11-03T17:44
+date: 2023-11-03T17:44:00Z
 keywords: 
 draft: false
 tags:

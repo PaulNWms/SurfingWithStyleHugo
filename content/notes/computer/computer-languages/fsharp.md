@@ -1,6 +1,6 @@
 ---
 title: FSharp
-date: 2023-10-27T09:18
+date: 2023-10-27T09:18:00Z
 description: 
 keywords: 
 draft: false

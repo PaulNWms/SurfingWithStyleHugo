@@ -1,6 +1,6 @@
 ---
 title: TypeScript
-date: 2023-10-07T06:06
+date: 2023-10-07T06:06:00Z
 draft: false
 tags:
   - WWW

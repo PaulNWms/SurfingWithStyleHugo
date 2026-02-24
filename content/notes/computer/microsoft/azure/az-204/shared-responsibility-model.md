@@ -1,7 +1,7 @@
 ---
 title: Shared Responsibility Model
 description: 
-date: 2025-05-15T06:42
+date: 2025-05-15T06:42:00Z
 keywords: 
 draft: false
 tags:

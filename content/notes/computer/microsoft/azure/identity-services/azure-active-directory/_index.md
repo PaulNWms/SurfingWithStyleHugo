@@ -1,6 +1,6 @@
 ---
 title: "Azure Active Directory"
-date: 2023-05-11T07:39-0800
+date: 2023-05-11T07:39:00-08:00
 draft: false
 tags: 
   - "#Azure"

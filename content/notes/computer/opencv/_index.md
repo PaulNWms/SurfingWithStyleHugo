@@ -1,6 +1,6 @@
 ---
 title: "OpenCV"
-date: 2023-05-15T05:30-0800
+date: 2023-05-15T05:30:00-08:00
 draft: false
 tags: 
   - "#OpenCV" 

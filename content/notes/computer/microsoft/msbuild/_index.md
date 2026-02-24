@@ -1,6 +1,6 @@
 ---
 title: MSBuild
-date: 2023-10-27T09:25
+date: 2023-10-27T09:25:00Z
 description: 
 keywords: 
 draft: false

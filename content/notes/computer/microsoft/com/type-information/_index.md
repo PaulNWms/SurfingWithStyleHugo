@@ -1,6 +1,6 @@
 ---
 title: Type Information
-date: 2023-09-02T18:24-0800
+date: 2023-09-02T18:24:00-08:00
 draft: false
 tags:
   - "#COM"

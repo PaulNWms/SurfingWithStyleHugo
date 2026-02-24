@@ -1,7 +1,7 @@
 ---
 title: HRESULT
 description: 
-date: 2023-12-29T13:54
+date: 2023-12-29T13:54:00Z
 keywords: 
 draft: false
 tags:

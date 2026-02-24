@@ -1,7 +1,7 @@
 ---
 title: ATL CComVariant
 description: 
-date: 2023-11-02T20:19
+date: 2023-11-02T20:19:00Z
 keywords: 
 draft: false
 tags:

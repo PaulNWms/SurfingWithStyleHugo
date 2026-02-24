@@ -1,6 +1,6 @@
 ---
 title: OpenCV Deep Learning
-date: 2023-06-09T19:02-0800
+date: 2023-06-09T19:02:00-08:00
 draft: false
 tags:
   - "#OpenCV"

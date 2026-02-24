@@ -1,6 +1,6 @@
 ---
 title: Governance
-date: 2023-05-13T23:45-0800
+date: 2023-05-13T23:45:00-08:00
 draft: false
 tags:
   - "#Azure"

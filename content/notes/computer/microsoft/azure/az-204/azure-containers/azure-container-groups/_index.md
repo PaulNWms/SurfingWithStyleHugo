@@ -1,7 +1,7 @@
 ---
 title: Azure Container Groups
 description: 
-date: 2025-05-15T21:03
+date: 2025-05-15T21:03:00Z
 keywords: 
 draft: false
 tags:

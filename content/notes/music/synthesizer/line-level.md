@@ -1,7 +1,7 @@
 ---
 title: Line Level
 description:
-date: 2025-12-09T20:53
+date: 2025-12-09T20:53:00Z
 keywords:
 draft: false
 tags:

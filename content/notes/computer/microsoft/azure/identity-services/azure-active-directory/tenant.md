@@ -1,6 +1,6 @@
 ---
 title: Tenant
-date: 2023-05-11T07:43-0800
+date: 2023-05-11T07:43:00-08:00
 draft: false
 tags:
   - "#Azure"

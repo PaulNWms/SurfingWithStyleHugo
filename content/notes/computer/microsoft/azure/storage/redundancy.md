@@ -1,6 +1,6 @@
 ---
 title: Redundancy
-date: 2023-05-31T06:29-0800
+date: 2023-05-31T06:29:00-08:00
 draft: false
 tags:
   - "#Azure"

@@ -1,6 +1,6 @@
 ---
 title: Deep Learning
-date: 2023-10-26T23:25
+date: 2023-10-26T23:25:00Z
 description: 
 keywords: 
 draft: false

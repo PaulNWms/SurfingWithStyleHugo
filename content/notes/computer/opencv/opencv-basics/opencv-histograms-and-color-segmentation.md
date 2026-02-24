@@ -1,6 +1,6 @@
 ---
 title: OpenCV Histograms and Color Segmentation
-date: 2023-06-03T07:51-0800
+date: 2023-06-03T07:51:00-08:00
 draft: false
 tags:
   - "#OpenCV"

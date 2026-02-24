@@ -1,6 +1,6 @@
 ---
 title: Security
-date: 2023-05-13T15:48-0800
+date: 2023-05-13T15:48:00-08:00
 draft: false
 tags:
   - "#Azure"

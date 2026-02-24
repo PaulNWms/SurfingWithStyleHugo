@@ -1,6 +1,6 @@
 ---
 title: OpenCV Contour and Shape Analysis
-date: 2023-06-03T09:17-0800
+date: 2023-06-03T09:17:00-08:00
 draft: false
 tags:
   - "#OpenCV"

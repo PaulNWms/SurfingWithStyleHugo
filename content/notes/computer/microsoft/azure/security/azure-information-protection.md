@@ -1,6 +1,6 @@
 ---
 title: "Azure Information Protection"
-date: 2023-05-13T23:35-0800
+date: 2023-05-13T23:35:00-08:00
 draft: false
 tags: 
   - "#Azure"

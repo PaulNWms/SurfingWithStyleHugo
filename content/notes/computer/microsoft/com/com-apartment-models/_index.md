@@ -1,6 +1,6 @@
 ---
 title: COM Apartment Models
-date: 2023-09-22T22:32
+date: 2023-09-22T22:32:00Z
 draft: false
 tags:
   - "#COM"

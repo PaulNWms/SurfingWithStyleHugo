@@ -1,6 +1,6 @@
 ---
 title: OpenCV ArUco Markers
-date: 2023-06-09T07:18-0800
+date: 2023-06-09T07:18:00-08:00
 draft: false
 tags:
   - "#OpenCV"

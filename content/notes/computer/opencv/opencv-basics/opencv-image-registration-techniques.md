@@ -1,6 +1,6 @@
 ---
 title: OpenCV Image Registration Techniques
-date: 2023-06-08T22:04-0800
+date: 2023-06-08T22:04:00-08:00
 draft: false
 tags:
   - "#OpenCV"

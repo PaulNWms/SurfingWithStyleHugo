@@ -1,6 +1,6 @@
 ---
 title: Enlarged Prostate
-date: 2023-07-26T07:42-0800
+date: 2023-07-26T07:42:00-08:00
 draft: true
 tags:
   - "#health"

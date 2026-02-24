@@ -1,7 +1,7 @@
 ---
 title: COM ActiveX
 description: 
-date: 2023-11-11T11:36
+date: 2023-11-11T11:36:00Z
 keywords: 
 draft: false
 tags:

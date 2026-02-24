@@ -1,6 +1,6 @@
 ---
 title: Design Patterns
-date: 2023-10-27T08:41
+date: 2023-10-27T08:41:00Z
 description: 
 keywords: 
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: HTML
-date: 2023-10-07T05:28
+date: 2023-10-07T05:28:00Z
 draft: false
 tags:
   - WWW

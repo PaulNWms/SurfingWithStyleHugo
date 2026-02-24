@@ -1,6 +1,6 @@
 ---
 title: "IaaS"
-date: 2023-05-10T19:52-0800
+date: 2023-05-10T19:52:00-08:00
 draft: false
 tags: 
   - "#Azure" 

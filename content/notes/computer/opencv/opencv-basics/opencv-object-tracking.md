@@ -1,6 +1,6 @@
 ---
 title: OpenCV Object Tracking
-date: 2023-06-11T09:05-0800
+date: 2023-06-11T09:05:00-08:00
 draft: false
 tags:
   - "#OpenCV"

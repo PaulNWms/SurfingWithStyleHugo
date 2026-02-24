@@ -1,7 +1,7 @@
 ---
 title: Elon Musk's Algorithm
 description: 
-date: 2023-10-21T21:37
+date: 2023-10-21T21:37:00Z
 keywords: 
 draft: false
 tags:

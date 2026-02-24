@@ -1,6 +1,6 @@
 ---
 title: Image Basics
-date: 2023-05-15T05:34-0800
+date: 2023-05-15T05:34:00-08:00
 draft: false
 tags:
   - OpenCV

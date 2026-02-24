@@ -1,7 +1,7 @@
 ---
 title: Go Template Language
 description: 
-date: 2023-10-26T06:03
+date: 2023-10-26T06:03:00Z
 keywords: 
 draft: false
 tags:

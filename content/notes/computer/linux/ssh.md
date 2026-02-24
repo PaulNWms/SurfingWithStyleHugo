@@ -1,7 +1,7 @@
 ---
 title: SSH
 description: 
-date: 2024-07-18T21:15
+date: 2024-07-18T21:15:00Z
 keywords: 
 draft: false
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Serverless (FaaS)
-date: 2023-05-10T19:56-0800
+date: 2023-05-10T19:56:00-08:00
 draft: false
 tags:
   - "#Azure"

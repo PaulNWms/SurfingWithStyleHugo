@@ -1,6 +1,6 @@
 ---
 title: Portal
-date: 2023-05-10T19:33-0800
+date: 2023-05-10T19:33:00-08:00
 draft: false
 tags:
   - "#Azure"

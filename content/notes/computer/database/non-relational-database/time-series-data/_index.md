@@ -1,7 +1,7 @@
 ---
 title: Time Series Data
 description: 
-date: 2024-06-22T12:05
+date: 2024-06-22T12:05:00Z
 keywords: 
 draft: false
 tags:

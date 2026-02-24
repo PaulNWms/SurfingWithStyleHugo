@@ -1,6 +1,6 @@
 ---
 title: "Tags"
-date: 2023-05-14T00:07-0800
+date: 2023-05-14T00:07:00-08:00
 draft: false
 tags: 
   - "#Azure"

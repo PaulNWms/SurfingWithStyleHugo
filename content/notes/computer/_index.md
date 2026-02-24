@@ -1,6 +1,6 @@
 ---
 title: Computer
-date: 2023-10-08T07:10
+date: 2023-10-08T07:10:00Z
 draft: false
 tags:
   - computer

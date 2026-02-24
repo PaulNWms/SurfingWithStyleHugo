@@ -1,7 +1,7 @@
 ---
 title: "Digital Audio"
 description:
-date: 2025-10-22T19:21
+date: 2025-10-22T19:21:00Z
 keywords:
 draft: true
 tags: 

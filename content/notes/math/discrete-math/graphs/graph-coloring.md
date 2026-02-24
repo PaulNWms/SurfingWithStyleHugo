@@ -1,7 +1,7 @@
 ---
 title: Graph Coloring
 description: 
-date: 2025-03-29T08:15
+date: 2025-03-29T08:15:00Z
 keywords: 
 draft: false
 tags:

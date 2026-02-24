@@ -1,6 +1,6 @@
 ---
 title: SOLID
-date: 2023-10-27T08:42
+date: 2023-10-27T08:42:00Z
 description: 
 keywords: 
 draft: false

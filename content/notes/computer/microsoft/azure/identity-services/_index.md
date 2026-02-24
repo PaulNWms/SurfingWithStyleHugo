@@ -1,6 +1,6 @@
 ---
 title: Identity Services
-date: 2023-05-11T07:37-0800
+date: 2023-05-11T07:37:00-08:00
 draft: false
 tags:
   - "#Azure"

@@ -1,7 +1,7 @@
 ---
 title: ROS roscore
 description: 
-date: 2023-12-04T20:50
+date: 2023-12-04T20:50:00Z
 keywords: 
 draft: false
 tags:

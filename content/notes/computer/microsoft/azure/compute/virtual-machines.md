@@ -1,6 +1,6 @@
 ---
 title: "Virtual Machines"
-date: 2023-05-11T05:17-0800
+date: 2023-05-11T05:17:00-08:00
 draft: false
 tags: 
   - "#Azure"

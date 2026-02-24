@@ -1,7 +1,7 @@
 ---
 title: COM Aggregation
 description: 
-date: 2023-11-08T06:32
+date: 2023-11-08T06:32:00Z
 keywords: 
 draft: false
 tags:

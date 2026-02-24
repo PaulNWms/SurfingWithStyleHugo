@@ -1,6 +1,6 @@
 ---
 title: Anemia
-date: 2023-05-08T05:39-0800
+date: 2023-05-08T05:39:00-08:00
 draft: false
 tags:
   - health

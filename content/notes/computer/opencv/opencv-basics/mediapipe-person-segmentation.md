@@ -1,6 +1,6 @@
 ---
 title: MediaPipe Person Segmentation
-date: 2023-06-12T07:30-0800
+date: 2023-06-12T07:30:00-08:00
 draft: false
 tags:
   - "#OpenCV"

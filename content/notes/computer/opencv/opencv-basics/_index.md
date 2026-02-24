@@ -1,6 +1,6 @@
 ---
 title: OpenCV Basics
-date: 2023-06-07T19:13-0800
+date: 2023-06-07T19:13:00-08:00
 draft: false
 tags:
   - "#OpenCV"

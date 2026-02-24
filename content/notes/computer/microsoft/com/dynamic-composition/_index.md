@@ -1,7 +1,7 @@
 ---
 title: Dynamic Composition
 description: 
-date: 2023-11-08T06:27
+date: 2023-11-08T06:27:00Z
 keywords: 
 draft: false
 tags:

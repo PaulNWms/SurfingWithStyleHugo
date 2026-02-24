@@ -1,6 +1,6 @@
 ---
 title: "Network Security Group (NSG)"
-date: 2023-05-13T23:28-0800
+date: 2023-05-13T23:28:00-08:00
 draft: false
 tags: 
   - "#Azure"

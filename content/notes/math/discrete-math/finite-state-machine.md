@@ -1,7 +1,7 @@
 ---
 title: Finite-State Machine
 description: 
-date: 2025-04-11T19:49
+date: 2025-04-11T19:49:00Z
 keywords: 
 draft: false
 tags:

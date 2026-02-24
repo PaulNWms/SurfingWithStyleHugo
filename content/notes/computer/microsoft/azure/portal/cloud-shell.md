@@ -1,6 +1,6 @@
 ---
 title: Cloud Shell
-date: 2023-05-10T19:34-0800
+date: 2023-05-10T19:34:00-08:00
 draft: false
 tags:
   - "#Azure"

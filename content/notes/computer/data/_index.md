@@ -1,6 +1,6 @@
 ---
 title: Data
-date: 2023-10-04T09:15
+date: 2023-10-04T09:15:00Z
 draft: false
 tags:
   - DP-900

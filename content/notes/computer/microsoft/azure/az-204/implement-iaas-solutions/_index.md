@@ -1,6 +1,6 @@
 ---
 title: "Implement IaaS Solutions"
-date: 2023-07-24T23:15-0800
+date: 2023-07-24T23:15:00-08:00
 draft: false
 tags: 
   - "#Azure"

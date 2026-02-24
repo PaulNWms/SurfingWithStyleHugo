@@ -1,7 +1,7 @@
 ---
 title: "Untitled"
 description:
-date: 2025-12-31T08:49
+date: 2025-12-31T08:49:00Z
 keywords:
 draft: true
 tags: 

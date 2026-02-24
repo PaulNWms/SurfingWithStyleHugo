@@ -1,7 +1,7 @@
 ---
 title: Graphs
 description: 
-date: 2025-03-29T09:23
+date: 2025-03-29T09:23:00Z
 keywords: 
 draft: false
 tags:

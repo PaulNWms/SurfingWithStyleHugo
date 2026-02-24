@@ -1,6 +1,6 @@
 ---
 title: CAP Theorem
-date: 2023-08-26T13:55-0800
+date: 2023-08-26T13:55:00-08:00
 draft: false
 tags:
   - "#database"

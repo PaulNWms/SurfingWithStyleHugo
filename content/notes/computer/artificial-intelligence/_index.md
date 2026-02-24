@@ -1,7 +1,7 @@
 ---
 title: Artificial Intelligence
 description: 
-date: 2025-04-11T21:46
+date: 2025-04-11T21:46:00Z
 keywords: 
 draft: false
 tags:

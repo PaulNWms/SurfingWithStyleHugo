@@ -1,7 +1,7 @@
 ---
 title: IClassFactory
 description: 
-date: 2023-11-28T05:52
+date: 2023-11-28T05:52:00Z
 keywords: 
 draft: false
 tags:

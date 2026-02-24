@@ -1,6 +1,6 @@
 ---
 title: Private Cloud
-date: 2023-05-10T20:26-0800
+date: 2023-05-10T20:26:00-08:00
 draft: false
 tags:
   - "#Azure"

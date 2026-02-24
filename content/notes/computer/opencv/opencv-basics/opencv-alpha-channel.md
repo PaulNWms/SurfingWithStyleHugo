@@ -1,6 +1,6 @@
 ---
 title: OpenCV Alpha Channel
-date: 2023-05-25T05:52-0800
+date: 2023-05-25T05:52:00-08:00
 draft: false
 tags:
   - "#OpenCV"

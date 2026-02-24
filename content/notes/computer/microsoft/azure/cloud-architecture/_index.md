@@ -1,6 +1,6 @@
 ---
 title: Cloud Architecture
-date: 2023-05-10T20:25-0800
+date: 2023-05-10T20:25:00-08:00
 draft: false
 tags:
   - "#Azure"

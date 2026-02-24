@@ -1,6 +1,6 @@
 ---
 title: Region
-date: 2023-05-10T20:31-0800
+date: 2023-05-10T20:31:00-08:00
 draft: false
 tags:
   - "#Azure"

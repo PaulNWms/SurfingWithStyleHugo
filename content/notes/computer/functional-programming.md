@@ -1,7 +1,7 @@
 ---
 title: Functional Programming
 description: 
-date: 2024-09-21T15:13
+date: 2024-09-21T15:13:00Z
 keywords: 
 draft: false
 tags:

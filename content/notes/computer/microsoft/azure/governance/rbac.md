@@ -1,6 +1,6 @@
 ---
 title: "RBAC"
-date: 2023-05-13T23:49-0800
+date: 2023-05-13T23:49:00-08:00
 draft: false
 tags: 
   - "#Azure"

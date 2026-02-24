@@ -1,7 +1,7 @@
 ---
 title: Hugo Front Matter
 description: 
-date: 2023-10-25T21:12
+date: 2023-10-25T21:12:00Z
 keywords: 
 draft: false
 tags:

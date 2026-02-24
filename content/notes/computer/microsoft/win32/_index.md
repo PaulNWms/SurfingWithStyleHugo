@@ -1,6 +1,6 @@
 ---
 title: Win32
-date: 2023-09-16T19:52
+date: 2023-09-16T19:52:00Z
 draft: false
 tags:
   - "#Win32"

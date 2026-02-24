@@ -1,6 +1,6 @@
 ---
 title: OpenCV Getting Started
-date: 2023-05-22T05:46-0800
+date: 2023-05-22T05:46:00-08:00
 draft: false
 tags:
   - "#OpenCV"

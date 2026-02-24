@@ -1,6 +1,6 @@
 ---
 title: OpenCV Lane Detection using Hough Transforms
-date: 2023-06-07T18:40-0800
+date: 2023-06-07T18:40:00-08:00
 draft: false
 tags:
   - "#OpenCV"

@@ -1,6 +1,6 @@
 ---
 title: Aromatase
-date: 2023-09-02T20:43-0800
+date: 2023-09-02T20:43:00-08:00
 draft: false
 tags:
   - "#health"

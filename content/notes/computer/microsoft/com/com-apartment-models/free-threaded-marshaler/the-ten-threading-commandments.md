@@ -1,7 +1,7 @@
 ---
 title: The Ten Threading Commandments
 description: 
-date: 2023-12-13T21:20
+date: 2023-12-13T21:20:00Z
 keywords: 
 draft: false
 tags:

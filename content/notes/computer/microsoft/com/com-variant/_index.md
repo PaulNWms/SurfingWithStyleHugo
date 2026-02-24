@@ -1,6 +1,6 @@
 ---
 title: COM VARIANT
-date: 2023-09-02T19:05-0800
+date: 2023-09-02T19:05:00-08:00
 draft: false
 tags:
   - "#COM"

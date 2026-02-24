@@ -1,7 +1,7 @@
 ---
 title: Supervised Learning
 description: 
-date: 2023-11-24T16:52
+date: 2023-11-24T16:52:00Z
 keywords: 
 draft: false
 tags:

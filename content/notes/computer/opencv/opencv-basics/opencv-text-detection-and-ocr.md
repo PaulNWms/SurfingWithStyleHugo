@@ -1,6 +1,6 @@
 ---
 title: OpenCV Text Detection and OCR
-date: 2023-06-14T05:24-0800
+date: 2023-06-14T05:24:00-08:00
 draft: false
 tags:
   - "#OpenCV"

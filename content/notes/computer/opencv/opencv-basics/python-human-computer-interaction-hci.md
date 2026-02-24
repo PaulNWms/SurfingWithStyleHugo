@@ -1,6 +1,6 @@
 ---
 title: Python Human-computer interaction (HCI)
-date: 2023-06-03T18:07-0800
+date: 2023-06-03T18:07:00-08:00
 draft: false
 tags:
   - "#OpenCV"

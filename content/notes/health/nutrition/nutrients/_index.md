@@ -1,6 +1,6 @@
 ---
 title: Nutrients
-date: 2023-05-08T05:35-0800
+date: 2023-05-08T05:35:00-08:00
 draft: false
 tags:
   - "#health"

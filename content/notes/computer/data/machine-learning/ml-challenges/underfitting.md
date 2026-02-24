@@ -1,7 +1,7 @@
 ---
 title: Underfitting
 description: 
-date: 2023-11-24T17:27
+date: 2023-11-24T17:27:00Z
 keywords: 
 draft: false
 tags:

@@ -1,6 +1,6 @@
 ---
 title: SQL
-date: 2023-10-27T08:26
+date: 2023-10-27T08:26:00Z
 description: 
 keywords: 
 draft: false

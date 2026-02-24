@@ -1,6 +1,6 @@
 ---
 title: "Web Apps"
-date: 2023-05-11T05:29-0800
+date: 2023-05-11T05:29:00-08:00
 draft: false
 tags: 
   - "#Azure"

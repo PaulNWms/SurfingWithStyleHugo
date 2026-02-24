@@ -1,6 +1,6 @@
 ---
 title: VPN Gateway
-date: 2023-05-11T07:06-0800
+date: 2023-05-11T07:06:00-08:00
 draft: false
 tags:
   - "#Azure"

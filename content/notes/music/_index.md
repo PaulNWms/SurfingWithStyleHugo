@@ -1,7 +1,7 @@
 ---
 title: Music
 description:
-date: 2025-10-22T18:20
+date: 2025-10-22T18:20:00Z
 keywords:
 draft: false
 tags:

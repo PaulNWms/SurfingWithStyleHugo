@@ -1,6 +1,6 @@
 ---
 title: Public Cloud
-date: 2023-05-10T20:27-0800
+date: 2023-05-10T20:27:00-08:00
 draft: false
 tags:
   - "#Azure"

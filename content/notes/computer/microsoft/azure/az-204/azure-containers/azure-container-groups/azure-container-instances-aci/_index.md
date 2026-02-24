@@ -1,6 +1,6 @@
 ---
 title: Azure Container Instances (ACI)
-date: 2023-05-11T05:33-0800
+date: 2023-05-11T05:33:00-08:00
 draft: false
 tags:
   - "#Azure"

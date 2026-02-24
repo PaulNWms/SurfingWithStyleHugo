@@ -1,7 +1,7 @@
 ---
 title: Python Slicing
 description: 
-date: 2023-12-18T20:59
+date: 2023-12-18T20:59:00Z
 keywords: 
 draft: false
 tags:

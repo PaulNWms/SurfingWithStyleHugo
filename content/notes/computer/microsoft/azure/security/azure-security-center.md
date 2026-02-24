@@ -1,6 +1,6 @@
 ---
 title: "Azure Security Center"
-date: 2023-05-13T23:32-0800
+date: 2023-05-13T23:32:00-08:00
 draft: false
 tags: 
   - "#Azure"

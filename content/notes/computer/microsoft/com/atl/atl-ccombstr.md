@@ -1,7 +1,7 @@
 ---
 title: ATL CComBSTR
 description: 
-date: 2023-11-02T20:11
+date: 2023-11-02T20:11:00Z
 keywords: 
 draft: false
 tags:

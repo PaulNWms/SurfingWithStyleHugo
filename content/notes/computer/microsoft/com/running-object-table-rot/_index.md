@@ -1,6 +1,6 @@
 ---
 title: Running Object Table (ROT)
-date: 2023-09-18T20:52
+date: 2023-09-18T20:52:00Z
 draft: false
 tags:
   - "#COM"

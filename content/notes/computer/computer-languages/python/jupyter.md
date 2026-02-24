@@ -1,7 +1,7 @@
 ---
 title: Jupyter
 description: 
-date: 2023-12-17T22:52
+date: 2023-12-17T22:52:00Z
 keywords: 
 draft: false
 tags:

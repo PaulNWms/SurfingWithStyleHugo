@@ -1,6 +1,6 @@
 ---
 title: Blazor
-date: 2023-10-07T06:16
+date: 2023-10-07T06:16:00Z
 draft: false
 tags:
   - Microsoft

@@ -1,6 +1,6 @@
 ---
 title: Hugo Themes
-date: 2023-10-07T04:34
+date: 2023-10-07T04:34:00Z
 draft: false
 tags:
   - "#Hugo"

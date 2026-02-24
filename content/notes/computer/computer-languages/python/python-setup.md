@@ -1,7 +1,7 @@
 ---
 title: Python Setup
 description: 
-date: 2023-12-17T22:37
+date: 2023-12-17T22:37:00Z
 keywords: 
 draft: false
 tags:

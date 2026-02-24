@@ -1,6 +1,6 @@
 ---
 title: "Firewall"
-date: 2023-05-13T23:25-0800
+date: 2023-05-13T23:25:00-08:00
 draft: false
 tags: 
   - "#Azure"

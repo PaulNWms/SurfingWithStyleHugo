@@ -1,6 +1,6 @@
 ---
 title: OutProc Server
-date: 2023-09-02T21:07-0800
+date: 2023-09-02T21:07:00-08:00
 draft: false
 tags:
   - COM
