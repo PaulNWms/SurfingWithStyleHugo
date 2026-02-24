@@ -182,7 +182,7 @@ function drawCard() {
         dialog.innerHTML = `
             <p>Congratulations!</p>
             <div style="display: flex; justify-content: flex-end; gap: 8px;">
-                <button onclick="continueWithNextCards()">Next ${Math.min(ui.total, partialDeck.length)}</button>
+                <button onclick="continueWithNextCards()">Next ${Math.min(ui.total, partialDeck.slice(ui.total).length)}</button>
                 <button onclick="this.closest('dialog').close(); this.closest('dialog').remove();">OK</button>
             </div>
         `;
